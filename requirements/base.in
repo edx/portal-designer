@@ -7,3 +7,4 @@ django-waffle
 djangorestframework
 edx-auth-backends
 pytz
+wagtail>=1.13,<2.0

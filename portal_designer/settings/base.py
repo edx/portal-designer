@@ -23,7 +23,7 @@ INSTALLED_APPS = (
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
-    'django.contrib.staticfiles'
+    'django.contrib.staticfiles',
 )
 
 THIRD_PARTY_APPS = (
@@ -31,6 +31,8 @@ THIRD_PARTY_APPS = (
     'rest_framework_swagger',
     'social_django',
     'waffle',
+    'modelcluster',
+    'taggit',
 )
 
 PROJECT_APPS = (
@@ -38,10 +40,28 @@ PROJECT_APPS = (
     'portal_designer.apps.api',
 )
 
+WAGTAIL_APPS = (
+    'wagtail.wagtailforms',
+    'wagtail.wagtailredirects',
+    'wagtail.wagtailembeds',
+    'wagtail.wagtailsites',
+    'wagtail.wagtailusers',
+    'wagtail.wagtailsnippets',
+    'wagtail.wagtaildocs',
+    'wagtail.wagtailimages',
+    'wagtail.wagtailsearch',
+    'wagtail.wagtailadmin',
+    'wagtail.wagtailcore',
+)
+
 INSTALLED_APPS += THIRD_PARTY_APPS
 INSTALLED_APPS += PROJECT_APPS
+INSTALLED_APPS += WAGTAIL_APPS
 
 MIDDLEWARE_CLASSES = (
+    'waffle.middleware.WaffleMiddleware',
+    'wagtail.wagtailcore.middleware.SiteMiddleware',
+    'wagtail.wagtailredirects.middleware.RedirectMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.locale.LocaleMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -51,7 +71,6 @@ MIDDLEWARE_CLASSES = (
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'social_django.middleware.SocialAuthExceptionMiddleware',
-    'waffle.middleware.WaffleMiddleware',
 )
 
 ROOT_URLCONF = 'portal_designer.urls'
@@ -103,9 +122,8 @@ MEDIA_URL = '/media/'
 # STATIC FILE CONFIGURATION
 # See: https://docs.djangoproject.com/en/dev/ref/settings/#static-root
 STATIC_ROOT = root('assets')
-
 # See: https://docs.djangoproject.com/en/dev/ref/settings/#static-url
-STATIC_URL = '/static/'
+STATIC_URL = '/assets/'
 
 # See: https://docs.djangoproject.com/en/dev/ref/contrib/staticfiles/#std:setting-STATICFILES_DIRS
 STATICFILES_DIRS = (
@@ -129,6 +147,7 @@ TEMPLATES = [
                 'django.template.context_processors.media',
                 'django.template.context_processors.static',
                 'django.template.context_processors.tz',
+                'django.template.context_processors.request',
                 'django.contrib.messages.context_processors.messages',
                 'portal_designer.apps.core.context_processors.core',
             ),
@@ -239,3 +258,5 @@ LOGGING = {
         },
     }
 }
+
+WAGTAIL_SITE_NAME = 'Portal Designer'

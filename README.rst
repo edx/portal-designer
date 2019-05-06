@@ -6,14 +6,7 @@ portal_designer  |Travis|_ |Codecov|_
 .. |Codecov| image:: http://codecov.io/github/edx/portal_designer/coverage.svg?branch=master
 .. _Codecov: http://codecov.io/github/edx/portal_designer?branch=master
 
-The ``README.rst`` file should start with a brief description of the repository, which sets it in the context of other repositories under the ``edx`` organization. It should make clear where this fits in to the overall edX codebase. You may also want to provide a brief overview of the code in this repository, including the main components and useful entry points for starting to understand the code in more detail, or link to a comparable description in your repo's docs.
-
-Documentation
--------------
-.. |ReadtheDocs| image:: https://readthedocs.org/projects/portal_designer/badge/?version=latest
-.. _ReadtheDocs: http://portal_designer.readthedocs.io/en/latest/
-
-`Documentation <https://portal_designer.readthedocs.io/en/latest/>`_ is hosted on Read the Docs. The source is hosted in this repo's `docs <https://github.com/edx/portal_designer/tree/master/docs>`_ directory. To contribute, please open a PR against this repo.
+Portal-designer is used to create create configuration and pages that will be read via API and built by the learner-portal static site renderer (https://github.com/edx/frontend-app-learner-portal)
 
 License
 -------

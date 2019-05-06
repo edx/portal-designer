@@ -1,10 +1,10 @@
 Getting Started
 ===============
 
-If you have not already done so, create/activate a `virtualenv`_. Unless otherwise stated, assume all terminal code
-below is executed within the virtualenv.
+** Requires a working edx devstack to function properly **
 
-.. _virtualenv: https://virtualenvwrapper.readthedocs.org/en/latest/
+1) Run `make dev.provision` to provision a new environment.
+2) Run `make dev.init` to start the app and run migrations
 
 
 Install dependencies

@@ -33,4 +33,4 @@ docker exec -t edx.devstack.lms  bash -c "source /edx/app/edxapp/edxapp_env && p
 docker exec -t edx.devstack.lms bash -c "source /edx/app/edxapp/edxapp_env && python /edx/app/edxapp/edx-platform/manage.py lms --settings=devstack_docker create_dot_application --grant-type client-credentials --client-id '${name}-backend-service-key' --client-secret '${name}-backend-service-secret' ${name}-backend-service ${name}_worker"
 
 # Restart portal_designer app
-docker-compose restart portal_designer
+docker-compose stop portal_designer
