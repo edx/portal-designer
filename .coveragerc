@@ -1,0 +1,12 @@
+[run]
+branch = True
+data_file = .coverage
+source=portal_designer
+omit =
+    portal_designer/settings*
+    portal_designer/conf*
+    *wsgi.py
+    *migrations*
+    *admin.py
+    *static*
+    *templates*

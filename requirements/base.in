@@ -1,0 +1,10 @@
+# Core requirements for using this application
+
+Django>=1.8,<2.0          # Web application framework
+django-extensions
+django-rest-swagger
+django-waffle
+djangorestframework
+edx-auth-backends
+pytz
+wagtail>=1.13,<2.0
