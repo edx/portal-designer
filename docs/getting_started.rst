@@ -19,8 +19,8 @@ Dependencies can be installed via the command below.
 Local/Private Settings
 ----------------------
 When developing locally, it may be useful to have settings overrides that you do not wish to commit to the repository.
-If you need such overrides, create a file :file:`portal_designer/settings/private.py`. This file's values are
-read by :file:`portal_designer/settings/local.py`, but ignored by Git.
+If you need such overrides, create a file :file:`designer/settings/private.py`. This file's values are
+read by :file:`designer/settings/local.py`, but ignored by Git.
 
 
 Configure edX OAuth
@@ -33,7 +33,7 @@ provider and updating the Django settings for this project with the client crede
 A new OAuth 2.0 client can be created at ``http://localhost:18000/admin/oauth2_provider/application/``.
     1. Click the :guilabel:`Add Application` button.
     2. Leave the user field blank.
-    3. Specify the name of this service, ``portal_designer``, as the client name.
+    3. Specify the name of this service, ``designer``, as the client name.
     4. Set the :guilabel:`URL` to the root path of this service: ``http://localhost:8003/``.
     5. Set the :guilabel:`Redirect URL` to the complete endpoint: ``http://localhost:18808/complete/edx-oauth2/``.
     6. Copy the :guilabel:`Client ID` and :guilabel:`Client Secret` values. They will be used later.
@@ -42,7 +42,7 @@ A new OAuth 2.0 client can be created at ``http://localhost:18000/admin/oauth2_p
     9. Click :guilabel:`Save`.
 
 Now that you have the client credentials, you can update your settings (ideally in
-:file:`portal_designer/settings/local.py`). The table below describes the relevant settings.
+:file:`designer/settings/local.py`). The table below describes the relevant settings.
 
 +-----------------------------------+----------------------------------+--------------------------------------------------------------------------+
 | Setting                           | Description                      | Value                                                                    |

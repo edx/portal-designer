@@ -2,28 +2,28 @@ version: "2.1"
 services:
   mysql:
     image: mysql:5.6
-    container_name: portal_designer.mysql
+    container_name: designer.mysql
     environment:
       MYSQL_ROOT_PASSWORD: ""
       MYSQL_ALLOW_EMPTY_PASSWORD: "yes"
-      MYSQL_DATABASE: "portal_designer"
+      MYSQL_DATABASE: "designer"
     networks:
       - devstack_default
     volumes:
-      - portal_designer_mysql:/var/lib/mysql
+      - designer_mysql:/var/lib/mysql
 
-  portal_designer:
-    # Uncomment this line to use the official portal_designer base image
-    # image: edxops/portal_designer:devstack
+  designer:
+    # Uncomment this line to use the official designer base image
+    # image: edxops/designer:devstack
     build:
       context: .
       dockerfile: Dockerfile
 
-    container_name: portal_designer.app
+    container_name: designer.app
     volumes:
-      - .:/edx/app/portal_designer/portal_designer
+      - .:/edx/app/designer/designer
 
-    command: bash -c 'while true; do python /edx/app/portal_designer/portal_designer/manage.py runserver 0.0.0.0:18808; sleep 2; done'
+    command: bash -c 'while true; do python /edx/app/designer/designer/manage.py runserver 0.0.0.0:18808; sleep 2; done'
 
     ports:
       - "18808:18808"
@@ -37,7 +37,7 @@ services:
     tty: true
 
     environment:
-      DJANGO_SETTINGS_MODULE: portal_designer.settings.devstack
+      DJANGO_SETTINGS_MODULE: designer.settings.devstack
 
 
 networks:
@@ -45,4 +45,4 @@ networks:
     external: true
 
 volumes:
-  portal_designer_mysql:
+  designer_mysql:

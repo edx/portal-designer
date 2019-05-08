@@ -1,19 +1,19 @@
-portal_designer  |Travis|_ |Codecov|_
+designer  |Travis|_ |Codecov|_
 ===================================================
-.. |Travis| image:: https://travis-ci.org/edx/portal_designer.svg?branch=master
-.. _Travis: https://travis-ci.org/edx/portal_designer
+.. |Travis| image:: https://travis-ci.org/edx/designer.svg?branch=master
+.. _Travis: https://travis-ci.org/edx/designer
 
-.. |Codecov| image:: http://codecov.io/github/edx/portal_designer/coverage.svg?branch=master
-.. _Codecov: http://codecov.io/github/edx/portal_designer?branch=master
+.. |Codecov| image:: http://codecov.io/github/edx/designer/coverage.svg?branch=master
+.. _Codecov: http://codecov.io/github/edx/designer?branch=master
 
-Portal-designer is used to create create configuration and pages that will be read via API and built by the learner-portal static site renderer (https://github.com/edx/frontend-app-learner-portal)
+designer is used to create create configuration and pages that will be read via API and built by the learner-portal static site renderer (https://github.com/edx/frontend-app-learner-portal)
 
 License
 -------
 
 The code in this repository is licensed under version 3 of the AGPL unless otherwise noted. Please see the LICENSE_ file for details.
 
-.. _LICENSE: https://github.com/edx/portal_designer/blob/master/LICENSE
+.. _LICENSE: https://github.com/edx/designer/blob/master/LICENSE
 
 How To Contribute
 -----------------

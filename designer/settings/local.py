@@ -1,4 +1,4 @@
-from portal_designer.settings.base import *
+from designer.settings.base import *
 
 DEBUG = True
 

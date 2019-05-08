@@ -28,7 +28,7 @@ help:
 	@echo "  validate                   run tests, quality, and PII annotation checks"
 	@echo "  start-devstack             run a local development copy of the server"
 	@echo "  open-devstack              open a shell on the server started by start-devstack"
-	@echo "  pkg-devstack               build the portal_designer image from the latest configuration and code"
+	@echo "  pkg-devstack               build the designer image from the latest configuration and code"
 	@echo "  detect_changed_source_translations       check if translation files are up-to-date"
 	@echo "  validate_translations      install fake translations and check if translation files are up-to-date"
 	@echo ""
@@ -60,15 +60,15 @@ production-requirements:
 	pip install -qr requirements.txt --exists-action w
 
 test: clean test_requirements
-	coverage run ./manage.py test portal_designer --settings=portal_designer.settings.test
+	coverage run ./manage.py test designer --settings=designer.settings.test
 	coverage report
 
 quality: quality_requirements
-	pycodestyle portal_designer *.py
-	pylint --rcfile=pylintrc portal_designer *.py
+	pycodestyle designer *.py
+	pylint --rcfile=pylintrc designer *.py
 
 pii_check:
-	DJANGO_SETTINGS_MODULE=portal_designer.settings.test \
+	DJANGO_SETTINGS_MODULE=designer.settings.test \
 	code_annotations django_find_annotations --config_file .pii_annotations.yml --lint --report --coverage
 
 validate: test quality pii_check
@@ -96,7 +96,7 @@ extract_translations:
 	python manage.py makemessages -l en -v1 -d djangojs
 
 dummy_translations:
-	cd portal_designer && i18n_tool dummy
+	cd designer && i18n_tool dummy
 
 compile_translations:
 	python manage.py compilemessages
@@ -110,22 +110,22 @@ push_translations:
 	tx push -s
 
 detect_changed_source_translations:
-	cd portal_designer && i18n_tool changed
+	cd designer && i18n_tool changed
 
 validate_translations: fake_translations detect_changed_source_translations
 
 # Docker commands below
 
 dev.provision:
-	bash ./provision-portal_designer.sh
+	bash ./provision-designer.sh
 
 dev.init: dev.up dev.migrate
 
 dev.makemigrations:
-	docker exec -it portal_designer.app bash -c 'cd /edx/app/portal_designer/portal_designer && python manage.py makemigrations'
+	docker exec -it designer.app bash -c 'cd /edx/app/designer/designer && python manage.py makemigrations'
 
 dev.migrate: # Migrates databases. Application and DB server must be up for this to work.
-	docker exec -it portal_designer.app bash -c 'cd /edx/app/portal_designer/portal_designer && make migrate'
+	docker exec -it designer.app bash -c 'cd /edx/app/designer/designer && make migrate'
 
 dev.up: # Starts all containers
 	docker-compose up -d --build
@@ -134,13 +134,13 @@ dev.down: # Kills containers and all of their data that isn't in volumes
 	docker-compose down
 
 dev.destroy: dev.down #Kills containers and destroys volumnes
-	docker volume rm portal_designer_portal_designer_mysql
+	docker volume rm designer_designer_mysql
 
 dev.stop: # Stops containers so they can be restarted
 	docker-compose stop
 
 %-shell: ## Run a shell on the specified service container
-	docker exec -it portal_designer.$* bash
+	docker exec -it designer.$* bash
 
 %-logs: ## View the logs of the specified service container
 	docker-compose logs -f --tail=500 $*

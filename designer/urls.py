@@ -1,4 +1,4 @@
-"""portal_designer URL Configuration
+"""designer URL Configuration
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/1.11/topics/http/urls/
 Examples:
@@ -25,14 +25,14 @@ from wagtail.wagtailadmin import urls as wagtailadmin_urls
 from wagtail.wagtaildocs import urls as wagtaildocs_urls
 from wagtail.wagtailcore import urls as wagtail_urls
 
-from portal_designer.apps.core import views as core_views
+from designer.apps.core import views as core_views
 
 admin.autodiscover()
 
 urlpatterns = oauth2_urlpatterns + [
     url(r'^admin/', include(admin.site.urls)),
-    url(r'^api/', include('portal_designer.apps.api.urls', namespace='api')),
-    url(r'^api-docs/', get_swagger_view(title='portal_designer API')),
+    url(r'^api/', include('designer.apps.api.urls', namespace='api')),
+    url(r'^api-docs/', get_swagger_view(title='designer API')),
     # Use the same auth views for all logins, including those originating from the browseable API.
     url(r'^api-auth/', include(oauth2_urlpatterns, namespace='rest_framework')),
     url(r'^auto_auth/$', core_views.AutoAuth.as_view(), name='auto_auth'),

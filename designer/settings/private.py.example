@@ -1,0 +1,6 @@
+
+SOCIAL_AUTH_EDX_OAUTH2_KEY = 'designer-sso-key'
+SOCIAL_AUTH_EDX_OAUTH2_SECRET = 'designer-sso-secret'
+SOCIAL_AUTH_EDX_OAUTH2_URL_ROOT = 'http://127.0.0.1:8000/oauth2'
+BACKEND_SERVICE_EDX_OAUTH2_KEY = 'designer-backend-service-key'
+BACKEND_SERVICE_EDX_OAUTH2_SECRET = 'designer-backend-service-secret'

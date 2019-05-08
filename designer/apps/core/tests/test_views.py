@@ -8,7 +8,7 @@ from django.test import TestCase
 from django.test.utils import override_settings
 import mock
 
-from portal_designer.apps.core.constants import Status
+from designer.apps.core.constants import Status
 
 
 User = get_user_model()
