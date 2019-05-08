@@ -53,7 +53,7 @@ quality_requirements:
 doc_requirements:
 	pip install -qr requirements/doc.txt --exists-action w
 
-prod_requirements:
+production-requirements:
 	pip install -qr requirements.txt --exists-action w
 
 test: clean test_requirements
