@@ -41,6 +41,9 @@ clean:
 
 requirements: dev_requirements
 
+static:
+	python manage.py collectstatic --noinput
+
 dev_requirements:
 	pip install -qr requirements/dev.txt --exists-action w
 
