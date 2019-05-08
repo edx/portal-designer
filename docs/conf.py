@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 #
-# portal_designer documentation build configuration file, created by
+# designer documentation build configuration file, created by
 # sphinx-quickstart on Sun Feb 17 11:46:20 2013.
 #
 # This file is execfile()d with the current directory set to its containing dir.
@@ -48,7 +48,7 @@ source_suffix = '.rst'
 master_doc = 'index'
 
 # General information about the project.
-project = u'portal_designer'
+project = u'designer'
 copyright = edx_theme.COPYRIGHT
 author = u'edX'
 
@@ -173,7 +173,7 @@ html_static_path = ['_static']
 # html_file_suffix = None
 
 # Output file base name for HTML help builder.
-htmlhelp_basename = 'portal_designerdoc'
+htmlhelp_basename = 'designerdoc'
 
 
 # -- Options for LaTeX output --------------------------------------------------
@@ -192,7 +192,7 @@ latex_elements = {
 # Grouping the document tree into LaTeX files. List of tuples
 # (source start file, target name, title, author, documentclass [howto/manual]).
 latex_documents = [
-    ('index', 'portal_designer.tex', u'portal_designer Documentation',
+    ('index', 'designer.tex', u'designer Documentation',
      u'edX', 'manual'),
 ]
 
@@ -222,7 +222,7 @@ latex_documents = [
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
 man_pages = [
-    ('index', 'portal_designer', u'portal_designer Documentation',
+    ('index', 'designer', u'designer Documentation',
      [u'edX'], 1)
 ]
 
@@ -236,8 +236,8 @@ man_pages = [
 # (source start file, target name, title, author,
 #  dir menu entry, description, category)
 texinfo_documents = [
-    ('index', 'portal_designer', u'portal_designer Documentation',
-     u'edX', 'portal_designer', 'portal_designer',
+    ('index', 'designer', u'designer Documentation',
+     u'edX', 'designer', 'designer',
      'Miscellaneous'
      ),
 ]

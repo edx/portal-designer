@@ -1,8 +1,8 @@
 from os import environ
 import yaml
 
-from portal_designer.settings.base import *
-from portal_designer.settings.utils import get_env_setting
+from designer.settings.base import *
+from designer.settings.utils import get_env_setting
 
 
 DEBUG = False
@@ -18,7 +18,7 @@ DICT_UPDATE_KEYS = ('JWT_AUTH',)
 
 FILE_STORAGE_BACKEND = {}
 
-CONFIG_FILE = get_env_setting('PORTAL_DESIGNER_CFG')
+CONFIG_FILE = get_env_setting('DESIGNER_CFG')
 with open(CONFIG_FILE, encoding='utf-8') as f:
     config_from_yaml = yaml.load(f)
 

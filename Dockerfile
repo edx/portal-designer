@@ -1,8 +1,8 @@
 FROM python:3.5
-WORKDIR /edx/app/portal_designer/portal_designer
-ADD requirements.txt /edx/app/portal_designer/portal_designer/
-ADD Makefile /edx/app/portal_designer/portal_designer/
-ADD requirements/ /edx/app/portal_designer/portal_designer/requirements/
+WORKDIR /edx/app/designer/designer
+ADD requirements.txt /edx/app/designer/designer/
+ADD Makefile /edx/app/designer/designer/
+ADD requirements/ /edx/app/designer/designer/requirements/
 RUN make requirements
-ADD . /edx/app/portal_designer/portal_designer
+ADD . /edx/app/designer/designer
 EXPOSE 18808

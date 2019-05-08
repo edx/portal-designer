@@ -8,7 +8,7 @@ root = lambda *x: join(abspath(PROJECT_ROOT), *x)
 
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = os.environ.get('PORTAL_DESIGNER_SECRET_KEY', 'insecure-secret-key')
+SECRET_KEY = os.environ.get('DESIGNER_SECRET_KEY', 'insecure-secret-key')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
@@ -36,8 +36,8 @@ THIRD_PARTY_APPS = (
 )
 
 PROJECT_APPS = (
-    'portal_designer.apps.core',
-    'portal_designer.apps.api',
+    'designer.apps.core',
+    'designer.apps.api',
 )
 
 WAGTAIL_APPS = (
@@ -73,10 +73,10 @@ MIDDLEWARE_CLASSES = (
     'social_django.middleware.SocialAuthExceptionMiddleware',
 )
 
-ROOT_URLCONF = 'portal_designer.urls'
+ROOT_URLCONF = 'designer.urls'
 
 # Python dotted path to the WSGI application used by Django's runserver.
-WSGI_APPLICATION = 'portal_designer.wsgi.application'
+WSGI_APPLICATION = 'designer.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/1.11/ref/settings/#databases
@@ -149,7 +149,7 @@ TEMPLATES = [
                 'django.template.context_processors.tz',
                 'django.template.context_processors.request',
                 'django.contrib.messages.context_processors.messages',
-                'portal_designer.apps.core.context_processors.core',
+                'designer.apps.core.context_processors.core',
             ),
             'debug': True,  # Django will only display debug pages if the global DEBUG setting is set to True.
         }
@@ -162,9 +162,9 @@ TEMPLATES = [
 # The purpose of customizing the cookie names is to avoid conflicts when
 # multiple Django services are running behind the same hostname.
 # Detailed information at: https://docs.djangoproject.com/en/dev/ref/settings/
-SESSION_COOKIE_NAME = 'portal_designer_sessionid'
-CSRF_COOKIE_NAME = 'portal_designer_csrftoken'
-LANGUAGE_COOKIE_NAME = 'portal_designer_language'
+SESSION_COOKIE_NAME = 'designer_sessionid'
+CSRF_COOKIE_NAME = 'designer_csrftoken'
+LANGUAGE_COOKIE_NAME = 'designer_language'
 # END COOKIE CONFIGURATION
 
 # AUTHENTICATION CONFIGURATION
@@ -259,4 +259,4 @@ LOGGING = {
     }
 }
 
-WAGTAIL_SITE_NAME = 'Portal Designer'
+WAGTAIL_SITE_NAME = 'Designer'

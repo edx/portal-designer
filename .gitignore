@@ -49,9 +49,9 @@ pii_report
 !django.mo
 !djangojs.po
 !djangojs.mo
-portal_designer/conf/locale/fake*/LC_MESSAGES/*.po
-portal_designer/conf/locale/fake*/LC_MESSAGES/*.mo
-portal_designer/conf/locale/messages.mo
+designer/conf/locale/fake*/LC_MESSAGES/*.po
+designer/conf/locale/fake*/LC_MESSAGES/*.mo
+designer/conf/locale/messages.mo
 
 
 # Mr Developer

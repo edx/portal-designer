@@ -4,7 +4,7 @@ from django.test import TestCase
 from django_dynamic_fixture import G
 from social_django.models import UserSocialAuth
 
-from portal_designer.apps.core.models import User
+from designer.apps.core.models import User
 
 
 # pylint: disable=no-member
