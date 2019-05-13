@@ -26,11 +26,13 @@ from wagtail.wagtaildocs import urls as wagtaildocs_urls
 from wagtail.wagtailcore import urls as wagtail_urls
 
 from designer.apps.core import views as core_views
+from designer.apps.api.v1.urls import wagtail_router
 
 admin.autodiscover()
 
 urlpatterns = oauth2_urlpatterns + [
     url(r'^admin/', include(admin.site.urls)),
+    url(r'^api/v1/', wagtail_router.urls),
     url(r'^api/', include('designer.apps.api.urls', namespace='api')),
     url(r'^api-docs/', get_swagger_view(title='designer API')),
     # Use the same auth views for all logins, including those originating from the browseable API.
@@ -39,7 +41,7 @@ urlpatterns = oauth2_urlpatterns + [
     url(r'^health/$', core_views.health, name='health'),
     url(r'^documents/', include(wagtaildocs_urls)),
     url(r'^pages/', include(wagtail_urls)),
-    url(r'^', include(wagtailadmin_urls)),
+    url(r'^cms/', include(wagtailadmin_urls)),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
 if settings.DEBUG and os.environ.get('ENABLE_DJANGO_TOOLBAR', False):  # pragma: no cover
