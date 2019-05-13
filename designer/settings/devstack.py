@@ -1,5 +1,7 @@
 from designer.settings.local import *
 
+DEBUG = True
+
 # Generic OAuth2 variables irrespective of SSO/backend service key types.
 OAUTH2_PROVIDER_URL = 'http://edx.devstack.lms:18000/oauth2'
 
@@ -22,3 +24,23 @@ JWT_AUTH['JWT_ISSUERS'].append({
     'ISSUER': 'http://localhost:18000/oauth2',
     'SECRET_KEY': 'lms-secret',
 })
+
+# CACHES = {
+#     'default': {
+#         'BACKEND': 'django.core.cache.backends.memcached.MemcachedCache',
+#         'LOCATION': os.environ.get('CACHE_LOCATION', 'memcached:11211'),
+#     }
+# }
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': os.environ.get('DB_NAME', 'designer'),
+        'USER': os.environ.get('DB_USER', 'root'),
+        'PASSWORD': os.environ.get('DB_PASSWORD', ''),
+        'HOST': os.environ.get('DB_HOST', 'designer.mysql'),
+        'PORT': os.environ.get('DB_PORT', 3306),
+        'ATOMIC_REQUESTS': False,
+        'CONN_MAX_AGE': 60,
+    }
+}
