@@ -38,7 +38,6 @@ THIRD_PARTY_APPS = (
 PROJECT_APPS = (
     'designer.apps.core',
     'designer.apps.api',
-    'designer.apps.pages',
 )
 
 WAGTAIL_APPS = (
