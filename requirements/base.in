@@ -6,5 +6,6 @@ django-rest-swagger
 django-waffle
 djangorestframework
 edx-auth-backends
+mysqlclient
 pytz
 wagtail>=1.13,<2.0

@@ -38,6 +38,7 @@ THIRD_PARTY_APPS = (
 PROJECT_APPS = (
     'designer.apps.core',
     'designer.apps.api',
+    'designer.apps.pages',
 )
 
 WAGTAIL_APPS = (
@@ -52,6 +53,7 @@ WAGTAIL_APPS = (
     'wagtail.wagtailsearch',
     'wagtail.wagtailadmin',
     'wagtail.wagtailcore',
+    'wagtail.api.v2',
 )
 
 INSTALLED_APPS += THIRD_PARTY_APPS
