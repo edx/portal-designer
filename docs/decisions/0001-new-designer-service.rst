@@ -45,7 +45,7 @@ Context
 ~~~~~~~~
 For each partner that wishes to have their own portal we will be generating
 a unique build of the application. What this means is that the frontend
-application will be build with the configuration for a site and exported into
+application will be built with the configuration for a site and exported into
 it's own directory. We will then be pointing unique URLs at each directory, so
 each customer has a custom URL pointing to custom code. As the majority of this
 work will happen outside of this application, we won't go into details here.
