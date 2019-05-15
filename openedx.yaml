@@ -4,8 +4,6 @@
 owner: tuchfarber
 supporting_teams: edx/enterprise
 nick: desg
-
-
 oeps:
   oep-2: True
   oep-7: True
