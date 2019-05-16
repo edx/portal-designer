@@ -145,3 +145,5 @@ dev.stop: # Stops containers so they can be restarted
 %-logs: ## View the logs of the specified service container
 	docker-compose logs -f --tail=500 $*
 
+attach:
+	docker attach designer.app
