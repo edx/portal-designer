@@ -84,3 +84,6 @@ private.py
 *.trace
 
 docs/_build/
+
+# Uploaded Media
+designer/media/

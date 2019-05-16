@@ -35,6 +35,8 @@ edx-drf-extensions==2.3.0
 edx-lint==1.3.0
 edx-opaque-keys==1.0.0
 edx-rest-api-client==1.9.2
+Faker==1.0.7
+factory_boy==2.12.0
 future==0.17.1
 html5lib==0.999999999
 idna==2.8
