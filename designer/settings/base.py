@@ -24,6 +24,7 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'wagtail.contrib.settings',
 )
 
 THIRD_PARTY_APPS = (
@@ -39,6 +40,7 @@ PROJECT_APPS = (
     'designer.apps.core',
     'designer.apps.api',
     'designer.apps.pages',
+    'designer.apps.sitebranding',
 )
 
 WAGTAIL_APPS = (
