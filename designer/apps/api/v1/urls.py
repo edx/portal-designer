@@ -10,6 +10,6 @@ wagtail_router.register_endpoint('pages', DesignerPagesAPIEndpoint)
 
 router = DefaultRouter()
 
-router.register(r'site/(?P<sitename>.+)/branding', SiteBrandingViewSet, base_name='sitebranding')
+router.register(r'site/(?P<hostname>.+)/branding', SiteBrandingViewSet, base_name='sitebranding')
 
 urlpatterns = router.urls

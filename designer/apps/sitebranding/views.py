@@ -13,7 +13,7 @@ class SiteBrandingViewSet(viewsets.ReadOnlyModelViewSet):
     permission_class = (AllowAny,)
 
     def get_queryset(self):
-        hostname = self.kwargs['sitename']
+        hostname = self.kwargs['hostname']
         queryset = SiteBranding.objects.filter(site__hostname=hostname)
 
         if queryset.exists():
