@@ -1,12 +1,13 @@
 """Create Site management command"""
+import re
 
 from django.contrib.auth.models import Group, Permission
 from django.core.management.base import BaseCommand, CommandError
 from django.db import transaction
+from wagtail.wagtailcore.models import Page, Site, Collection, GroupPagePermission, GroupCollectionPermission
 
 from designer.apps.pages.models import IndexPage
 
-from wagtail.wagtailcore.models import Page, Site, Collection, GroupPagePermission, GroupCollectionPermission
 
 MODERATOR_PERMISSIONS = {
     'page_permissions': ['add', 'edit', 'publish'],
@@ -99,12 +100,15 @@ class Command(BaseCommand):
         Creates a new Site complete with:
             - site
             - index page
-            - SiteBranding model
             - collection for images
             - groups & permissions (collection names, root page, title)
         """
         sitename = options['sitename']
         hostname = options['hostname']
+
+        valid_hostname = re.compile("^[a-zA-Z0-9\.\-]*$")
+        if not valid_hostname.match(hostname):
+            raise CommandError("Invalid hostname. Hostname should consist of letters, numbers, periods, and hyphens")
 
         index_page = self.create_index_page(sitename)
         site = Site.objects.create(
@@ -121,3 +125,4 @@ class Command(BaseCommand):
             collection=collection,
         )
 
+        self.stdout.write('Successfully created site "%s"' % sitename)
