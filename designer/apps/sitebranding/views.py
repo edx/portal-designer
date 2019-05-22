@@ -3,6 +3,7 @@ from .models import SiteBranding
 from .serializers import SiteBrandingSerializer
 from rest_framework import viewsets
 from rest_framework.permissions import AllowAny
+from rest_framework.exceptions import NotFound
 
 
 class SiteBrandingViewSet(viewsets.ReadOnlyModelViewSet):
@@ -12,4 +13,10 @@ class SiteBrandingViewSet(viewsets.ReadOnlyModelViewSet):
     permission_class = (AllowAny,)
 
     def get_queryset(self):
-        return SiteBranding.objects.filter(site__hostname=self.kwargs['sitename'])
+        hostname = self.kwargs['sitename']
+        queryset = SiteBranding.objects.filter(site__hostname=hostname)
+
+        if queryset.exists():
+            return queryset
+
+        raise NotFound()
