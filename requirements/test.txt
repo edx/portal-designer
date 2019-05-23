@@ -27,6 +27,8 @@ django==1.11.20
 djangorestframework==3.6.4
 edx-auth-backends==2.0.0
 edx-lint==1.1.2
+Faker==1.0.7
+factory_boy==2.12.0
 future==0.17.1
 html5lib==0.999999999
 idna==2.8
