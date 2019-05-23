@@ -1,4 +1,6 @@
-from os import environ
+import platform
+from os import environ, path
+import sys
 
 from django.core.exceptions import ImproperlyConfigured
 
