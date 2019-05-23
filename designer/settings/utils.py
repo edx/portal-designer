@@ -118,4 +118,4 @@ def get_logger_config(log_dir='/var/tmp',
             },
         })
 
-return logger_config
+    return logger_config
