@@ -1,5 +1,9 @@
 from designer.settings.local import *
 
+from designer.settings.utils import get_logger_config
+
+LOGGING = get_logger_config(debug=True, dev_env=True, local_loglevel='DEBUG')
+
 DEBUG = True
 
 # Generic OAuth2 variables irrespective of SSO/backend service key types.
