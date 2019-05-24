@@ -1,12 +1,18 @@
 # Core requirements for using this application
 
 Django>=1.8,<2.0          # Web application framework
+django-cors-headers
 django-extensions
 django-rest-swagger
+django-storages
 django-waffle
 djangorestframework
-edx-django-release-util
+djangorestframework-jwt
 edx-auth-backends
+edx-django-release-util
+edx-django-utils
+edx-drf-extensions
+edx_rest_api_client
 mysqlclient
 pytz
 wagtail>=1.13,<2.0
