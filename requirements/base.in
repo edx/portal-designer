@@ -5,6 +5,7 @@ django-extensions
 django-rest-swagger
 django-waffle
 djangorestframework
+edx-django-release-util
 edx-auth-backends
 mysqlclient
 pytz

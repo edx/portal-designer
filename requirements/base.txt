@@ -10,7 +10,7 @@ chardet==3.0.4            # via requests
 coreapi==2.3.3            # via django-rest-swagger, openapi-codec
 coreschema==0.0.4         # via coreapi
 defusedxml==0.6.0         # via python3-openid, social-auth-core
-django-extensions==2.1.6
+django-extensions==2.1.7
 django-modelcluster==3.1  # via wagtail
 django-rest-swagger==2.2.0
 django-taggit==0.22.2     # via wagtail
@@ -18,7 +18,8 @@ django-treebeard==4.3     # via wagtail
 django-waffle==0.16.0
 django==1.11.20
 djangorestframework==3.6.4
-edx-auth-backends==2.0.0
+edx-auth-backends==2.0.1
+edx-django-release-util==0.3.1
 future==0.17.1            # via pyjwkest
 html5lib==0.999999999     # via wagtail
 idna==2.8                 # via requests
@@ -34,15 +35,16 @@ pyjwkest==1.4.0           # via social-auth-core
 pyjwt==1.7.1              # via edx-auth-backends, social-auth-core
 python3-openid==3.1.0     # via social-auth-core
 pytz==2019.1
+pyyaml==5.1               # via edx-django-release-util
 requests-oauthlib==1.2.0  # via social-auth-core
-requests==2.21.0          # via coreapi, pyjwkest, requests-oauthlib, social-auth-core, wagtail
+requests==2.22.0          # via coreapi, pyjwkest, requests-oauthlib, social-auth-core, wagtail
 simplejson==3.16.0        # via django-rest-swagger
-six==1.12.0               # via django-extensions, edx-auth-backends, html5lib, pyjwkest, social-auth-app-django, social-auth-core
+six==1.12.0               # via django-extensions, edx-auth-backends, edx-django-release-util, html5lib, pyjwkest, social-auth-app-django, social-auth-core
 social-auth-app-django==1.2.0  # via edx-auth-backends
 social-auth-core[openidconnect]==1.7.0  # via edx-auth-backends, social-auth-app-django
 unidecode==1.0.23         # via wagtail
 uritemplate==3.0.0        # via coreapi
-urllib3==1.24.3           # via requests
+urllib3==1.25.3           # via requests
 wagtail==1.13.4
 webencodings==0.5.1       # via html5lib
 willow==1.0               # via wagtail

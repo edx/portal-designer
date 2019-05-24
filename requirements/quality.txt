@@ -18,9 +18,9 @@ coreapi==2.3.3
 coreschema==0.0.4
 coverage==4.5.3
 defusedxml==0.6.0
-distlib==0.2.8            # via caniusepython3
+distlib==0.2.9.post0      # via caniusepython3
 django-dynamic-fixture==2.0.0
-django-extensions==2.1.6
+django-extensions==2.1.7
 django-modelcluster==3.1
 django-nose==1.4.6
 django-rest-swagger==2.2.0
@@ -29,15 +29,16 @@ django-treebeard==4.3
 django-waffle==0.16.0
 django==1.11.20
 djangorestframework==3.6.4
-edx-auth-backends==2.0.0
-edx-lint==1.1.2
+edx-auth-backends==2.0.1
+edx-django-release-util==0.3.1
+edx-lint==1.2.1
 future==0.17.1
 html5lib==0.999999999
 idna==2.8
-isort==4.3.18
+isort==4.3.20
 itypes==1.1.0
 jinja2==2.10.1
-lazy-object-proxy==1.4.0
+lazy-object-proxy==1.4.1
 markupsafe==1.1.1
 mccabe==0.6.1
 mock==3.0.5
@@ -64,7 +65,7 @@ python3-openid==3.1.0
 pytz==2019.1
 pyyaml==5.1
 requests-oauthlib==1.2.0
-requests==2.21.0
+requests==2.22.0
 simplejson==3.16.0
 six==1.12.0
 snowballstemmer==1.2.1    # via pydocstyle
@@ -74,7 +75,7 @@ stevedore==1.30.1
 text-unidecode==1.2
 unidecode==1.0.23
 uritemplate==3.0.0
-urllib3==1.24.3
+urllib3==1.25.3
 wagtail==1.13.4
 webencodings==0.5.1
 willow==1.0
