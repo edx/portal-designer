@@ -10,7 +10,7 @@ chardet==3.0.4
 coreapi==2.3.3
 coreschema==0.0.4
 defusedxml==0.6.0
-django-extensions==2.1.6
+django-extensions==2.1.7
 django-modelcluster==3.1
 django-rest-swagger==2.2.0
 django-taggit==0.22.2
@@ -18,7 +18,8 @@ django-treebeard==4.3
 django-waffle==0.16.0
 django==1.11.20
 djangorestframework==3.6.4
-edx-auth-backends==2.0.0
+edx-auth-backends==2.0.1
+edx-django-release-util==0.3.1
 future==0.17.1
 gevent==1.4.0
 greenlet==0.4.15          # via gevent
@@ -39,14 +40,14 @@ python3-openid==3.1.0
 pytz==2019.1
 pyyaml==5.1
 requests-oauthlib==1.2.0
-requests==2.21.0
+requests==2.22.0
 simplejson==3.16.0
 six==1.12.0
 social-auth-app-django==1.2.0
 social-auth-core[openidconnect]==1.7.0
 unidecode==1.0.23
 uritemplate==3.0.0
-urllib3==1.24.3
+urllib3==1.25.3
 wagtail==1.13.4
 webencodings==0.5.1
 willow==1.0
