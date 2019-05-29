@@ -16,7 +16,7 @@ LOGGING = get_logger_config()
 # the values read from disk should UPDATE the pre-configured dicts.
 DICT_UPDATE_KEYS = ('JWT_AUTH',)
 
-FILE_STORAGE_BACKEND = {}
+MEDIA_STORAGE_BACKEND = {}
 
 CONFIG_FILE = get_env_setting('DESIGNER_CFG')
 with open(CONFIG_FILE, encoding='utf-8') as f:
@@ -33,7 +33,7 @@ with open(CONFIG_FILE, encoding='utf-8') as f:
     vars().update(config_from_yaml)
 
     # Load the files storage backend settings for django storages
-    vars().update(FILE_STORAGE_BACKEND)
+    vars().update(MEDIA_STORAGE_BACKEND)
 
 DB_OVERRIDES = dict(
     PASSWORD=environ.get('DB_MIGRATION_PASS', DATABASES['default']['PASSWORD']),
