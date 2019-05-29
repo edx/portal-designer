@@ -1,0 +1,92 @@
+{% extends "wagtailadmin/base.html" %}
+{% load i18n %}
+{% block titletag %}{% trans "Add New Site" %}{% endblock %}
+{% block extra_css %}
+    {{ block.super }}
+    <style>
+        .status-zone {
+            text-align: left;
+        }
+        .command-status span {
+            font-weight: bold;
+        }
+        .status-msg {
+            max-height: 200px;
+            overflow-y: auto;
+        }
+    </style>
+{% endblock %}
+{% block extra_js %}
+    {{ block.super }}
+
+    <script>
+        $(function() {
+            var siteContainer = $('#new-site-container');
+            var successElement = $('.status-msg.success', siteContainer);
+            var failureElement = $('.status-msg.failure', siteContainer);
+            var statusElement = $('.command-status span', siteContainer);
+
+            function resetMessages(){
+                successElement.html('');
+                failureElement.html('');
+                statusElement.text('');
+            };
+
+            siteContainer.on('change', 'form', function(e) {
+                resetMessages();
+            });
+
+            siteContainer.on('submit', 'form', function(e) {
+                e.preventDefault();
+                var form = $(this);
+                var workingElement = $('span.working', form);
+                var btnElement = $('button', form);
+                resetMessages();
+                btnElement.prop("disabled", true);
+                statusElement.text('Creating');
+                workingElement.addClass('icon-spinner');
+
+                $.post(this.action, form.serialize(), function (data) {
+                    successElement.html(data.success_message);
+                    failureElement.html(data.failure_message);
+                }).fail(function () {
+                    failureElement.html('{% trans "There was an error while creating site."%}');
+                    statusElement.text('Failed');
+                }).always(function () {
+                    statusElement.text('Finished');
+                    workingElement.removeClass('icon-spinner');
+                    btnElement.prop("disabled", false);
+                });
+            });
+        });
+    </script>
+{% endblock %}
+
+{% block content %}
+    {% include "wagtailadmin/shared/header.html" with title=action_str icon="media-full-inverse" %}
+    <div class="nice-padding" id="new-site-container">
+        <form action="{% url 'create-new-site' %}" method="POST">
+            {% csrf_token %}
+            <ul class="fields">
+                <li>
+                    <label for="sitename">{% trans "Sitename:" %}</label>
+                    <input id="sitename" type="text" name="sitename" placeholder="Example Company, Inc."/>
+                </li>
+                <li>
+                    <label for="hostname">{% trans "Hostname:" %}</label>
+                    <input id="hostname" type="text" name="hostname" placeholder="www.example.com"/>
+                </li>
+                <li>
+                    <span class="working icon"></span>
+                    <button type="submit" class="button bicolor icon icon-cogs">{% trans "Create Site" %}</button>
+                </li>
+            </ul>
+        </form>
+        <div><hr></div>
+        <div class="status-zone">
+            <div class="command-status"><p>{% trans "Creation Status:" %}&nbsp;<span></span></p></div>
+            <div class="status-msg success"></div>
+            <div class="status-msg failure"></div>
+        </div>
+    </div>
+{% endblock %}
