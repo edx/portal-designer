@@ -4,8 +4,8 @@ from wagtail.wagtailimages.edit_handlers import ImageChooserPanel
 from django.db import models
 import re
 from django.core.exceptions import ValidationError
-from modelcluster.fields import ParentalKey
-from designer.apps.pages.models import BrandedPage
+from modelcluster.fields import ForeignKey
+from designer.apps.pages.models import IndexPage
 
 
 def validate_hexadecimal_color(color):
@@ -31,9 +31,6 @@ class Branding(models.Model):
     # TODO: check appropriate max length
     # TODO: check that blank should not be false
 
-    # TODO: experimental, not sure if this is the right structure for this
-    # TODO: not sure about related_name
-    page = ParentalKey(BrandedPage, on_delete=models.CASCADE, related_name='branded_page')
 
     # TODO: find better place for program_title
     # TODO: what should go inplace of program title for the hero? page title?
@@ -82,7 +79,6 @@ class Branding(models.Model):
     )
 
     panels = [
-        FieldPanel('program_title'),
         ImageChooserPanel('cover_image'),
         ImageChooserPanel('texture_image'),
         MultiFieldPanel(
@@ -97,4 +93,8 @@ class Branding(models.Model):
     ]
 
 
-
+class IndexPageBranding(Branding):
+    """
+    Branding speficially for the Index Page (The site level home page)
+    """
+    page = ForeignKey(IndexPage, on_delete=models.CASCADE, related_name='index_page_branding')

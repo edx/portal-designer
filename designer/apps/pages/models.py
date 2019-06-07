@@ -5,18 +5,12 @@ from wagtail.wagtailcore.fields import RichTextField
 from wagtail.wagtailadmin.edit_handlers import FieldPanel, InlinePanel
 
 
-class BrandedPage(Page):
-
-    content_panels = Page.content_panels + [
-        InlinePanel('branded_page', label="Page Branding")
-    ]
-
-
-class IndexPage(BrandedPage):
+class IndexPage(Page):
     body = RichTextField(blank=True)
 
-    content_panels = BrandedPage.content_panels + [
+    content_panels = Page.content_panels + [
         FieldPanel('body', classname="full"),
+        InlinePanel('index_page_branding', label="Index Page Branding")
     ]
 
 
