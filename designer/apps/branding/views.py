@@ -1,5 +1,5 @@
 """ API for Site Branding """
-from .models import SiteBranding
+from .models import Branding
 from .serializers import SiteBrandingSerializer
 from rest_framework import viewsets
 from rest_framework.permissions import AllowAny
@@ -14,7 +14,7 @@ class SiteBrandingViewSet(viewsets.ReadOnlyModelViewSet):
 
     def get_queryset(self):
         hostname = self.kwargs['hostname']
-        queryset = SiteBranding.objects.filter(site__hostname=hostname)
+        queryset = Branding.objects.filter(site__hostname=hostname)
 
         if queryset.exists():
             return queryset

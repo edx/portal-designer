@@ -1,6 +1,6 @@
 """ Theming / Site Branding Serializers"""
 from rest_framework import serializers
-from .models import SiteBranding
+from .models import Branding
 from wagtail.wagtailimages.models import Image
 
 
@@ -54,7 +54,7 @@ class SiteBrandingSerializer(serializers.ModelSerializer):
     organization_logo = OrganizationLogoField(source='*')
 
     class Meta(object):
-        model = SiteBranding
+        model = Branding
         read_only = True
         fields = (
             'program_title',

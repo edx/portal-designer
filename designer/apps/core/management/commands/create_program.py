@@ -3,7 +3,11 @@ from django.core.management import BaseCommand, CommandError
 from django.db import transaction
 from wagtail.wagtailcore.models import Site
 from designer.apps.pages.models import ProgramPage
+# TODO: add tests for:
+# - if someone tries to make a program with invalid hostname
+# - happy path
 
+# TODO: currently there is no stopping creating two program pages with the same title
 
 class Command(BaseCommand):
     """

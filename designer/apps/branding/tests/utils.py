@@ -2,7 +2,7 @@ import factory
 from faker import Faker
 from faker.providers import color, lorem
 
-from designer.apps.sitebranding.models import SiteBranding
+from designer.apps.branding.models import Branding
 from designer.apps.core.tests.utils import ImageFactory, SiteFactory
 
 fake = Faker()
@@ -12,7 +12,7 @@ fake.add_provider(lorem)
 
 class SiteBrandingFactory(factory.django.DjangoModelFactory):
     class Meta:
-        model = SiteBranding
+        model = Branding
 
     site = factory.SubFactory(SiteFactory)
     cover_image = factory.SubFactory(ImageFactory)

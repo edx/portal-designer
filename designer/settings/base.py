@@ -43,7 +43,7 @@ PROJECT_APPS = (
     'designer.apps.core',
     'designer.apps.api',
     'designer.apps.pages',
-    'designer.apps.sitebranding',
+    'designer.apps.branding',
 )
 
 WAGTAIL_APPS = (

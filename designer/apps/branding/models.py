@@ -1,10 +1,11 @@
 """ Models related to the branding of individual sites """
-from wagtail.contrib.settings.models import BaseSetting, register_setting
 from wagtail.wagtailadmin.edit_handlers import FieldPanel, MultiFieldPanel
 from wagtail.wagtailimages.edit_handlers import ImageChooserPanel
 from django.db import models
 import re
 from django.core.exceptions import ValidationError
+from modelcluster.fields import ParentalKey
+from designer.apps.pages.models import BrandedPage
 
 
 def validate_hexadecimal_color(color):
@@ -23,13 +24,20 @@ def validate_hexadecimal_color(color):
     if re.match(r'#[\dA-Fa-f]{6}', color) is None:
         raise ValidationError("Incorrect format. Must follow hexadecimal format (ex. '#B62168')")
 
-@register_setting
-class SiteBranding(BaseSetting):
+
+class Branding(models.Model):
     # TODO: docstring
     # TODO: squash migrations
     # TODO: check appropriate max length
     # TODO: check that blank should not be false
-    program_title = models.CharField(max_length=128, blank=False, null=False, verbose_name='Program Title')
+
+    # TODO: experimental, not sure if this is the right structure for this
+    # TODO: not sure about related_name
+    page = ParentalKey(BrandedPage, on_delete=models.CASCADE, related_name='branded_page')
+
+    # TODO: find better place for program_title
+    # TODO: what should go inplace of program title for the hero? page title?
+    # program_title = models.CharField(max_length=128, blank=False, null=False, verbose_name='Program Title')
     cover_image = models.ForeignKey(
         'wagtailimages.Image',
         null=True,
