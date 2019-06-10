@@ -4,7 +4,7 @@ import uuid
 from django.db import models
 from wagtail.wagtailcore.models import Page
 from wagtail.wagtailcore.fields import RichTextField
-from wagtail.wagtailadmin.edit_handlers import FieldPanel
+from wagtail.wagtailadmin.edit_handlers import FieldPanel, InlinePanel
 
 
 class IndexPage(Page):
@@ -12,6 +12,7 @@ class IndexPage(Page):
 
     content_panels = Page.content_panels + [
         FieldPanel('body', classname="full"),
+        InlinePanel('index_page_branding', label="Index Page Branding", max_num=1),
     ]
 
 
@@ -21,4 +22,5 @@ class ProgramPage(Page):
 
     content_panels = Page.content_panels + [
         FieldPanel('body', classname="full"),
+        InlinePanel('program_page_branding', label="Program Page Branding", max_num=1),
     ]
