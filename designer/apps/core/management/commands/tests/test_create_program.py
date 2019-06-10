@@ -4,12 +4,13 @@ from designer.apps.pages.models import ProgramPage
 from designer.apps.core.tests.utils import SiteFactory
 
 from faker import Faker
-from faker.providers import lorem, company, internet
+from faker.providers import lorem, company, internet, misc
 
 fake = Faker()
 fake.add_provider(lorem)
 fake.add_provider(company)
 fake.add_provider(internet)
+fake.add_provider(misc)
 
 
 class TestCreateProgramCommand(TestCase):
@@ -19,9 +20,15 @@ class TestCreateProgramCommand(TestCase):
 
     def test_site_does_not_exist(self):
         """ Call `create_program` with a site that does not exist, should throw Command Error """
+        uuid = fake.uuid4()
 
         with self.assertRaises(CommandError) as context:
-            call_command('create_program', '--programname="Test Program"', '--hostname="fake.site.com"')
+            call_command(
+                'create_program',
+                '--programname="Test Program"',
+                '--hostname="fake.site.com"',
+                "--uuid=\"{}\"".format(uuid)
+            )
 
         self.assertTrue('There is no site for hostname ["fake.site.com"]' in str(context.exception))
 
@@ -40,13 +47,15 @@ class TestCreateProgramCommand(TestCase):
         call_command(
             'create_program',
             "--programname={}".format(program1_name),
-            "--hostname={}".format(hostname)
+            "--hostname={}".format(hostname),
+            "--uuid={}".format(fake.uuid4()),
         )
 
         call_command(
             'create_program',
             "--programname={}".format(program2_name),
-            "--hostname={}".format(hostname)
+            "--hostname={}".format(hostname),
+            "--uuid={}".format(fake.uuid4()),
         )
 
         # Check that a ProgramPage has been created with the following properties

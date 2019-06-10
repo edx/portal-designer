@@ -17,6 +17,7 @@ MODERATOR_PERMISSIONS = {
     'core_permissions': ['access_admin']
 }
 
+
 class Command(BaseCommand):
     """ Management command for creating new site, complete with site-specific user groups"""
     help = "Creates a new site and user group"
@@ -106,7 +107,7 @@ class Command(BaseCommand):
         sitename = options['sitename']
         hostname = options['hostname']
 
-        valid_hostname = re.compile("^[a-zA-Z0-9\.\-]*$")
+        valid_hostname = re.compile(r'^[a-zA-Z0-9.\-]*$')
         if not valid_hostname.match(hostname):
             raise CommandError("Invalid hostname. Hostname should consist of letters, numbers, periods, and hyphens")
 
