@@ -1,8 +1,10 @@
 import factory
+import random
 from faker import Faker
 from faker.providers import company, internet, lorem
 
 from wagtail.wagtailcore.models import Site, Page
+from wagtail.wagtailimages.models import Image
 
 from designer.apps.pages.models import IndexPage
 
@@ -40,3 +42,23 @@ class SiteFactory(factory.django.DjangoModelFactory):
     root_page = factory.LazyAttribute(
         lambda o: create_index_page(o.site_name)
     )
+
+
+class ImageFactory(factory.django.DjangoModelFactory):
+    class Meta:
+        model = Image
+
+    class Params:
+        image_title = ' '.join(fake.words(nb=3))
+
+    # title = factory.SelfAttribute('image_title')
+    title = factory.LazyAttribute(lambda o: o.image_title)
+    file = factory.LazyAttribute(
+        lambda o: "original_images/{filename}.{extension}".format(
+            filename=o.image_title.replace(' ', '-'),
+            extension=fake.file_extension(category='image')
+        )
+    )
+    width = random.randint(100, 10000)
+    height = random.randint(100, 10000)
+
