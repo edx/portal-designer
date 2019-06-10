@@ -6,6 +6,7 @@ import re
 from django.core.exceptions import ValidationError
 from modelcluster.fields import ParentalKey
 from designer.apps.pages.models import IndexPage, ProgramPage
+from wagtail.api import APIField
 
 
 def validate_hexadecimal_color(color):
@@ -92,12 +93,17 @@ class Branding(models.Model):
         FieldPanel('banner_border_color'),
     ]
 
+    api_fields = [
+        APIField('cover_image'),
+    ]
+
 
 class IndexPageBranding(Branding):
     """
     Branding specifically for the Index Page (The site level home page)
     """
     page = ParentalKey(IndexPage, on_delete=models.CASCADE, related_name='index_page_branding', unique=True)
+
 
 
 class ProgramPageBranding(Branding):
