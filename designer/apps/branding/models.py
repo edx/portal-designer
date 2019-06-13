@@ -94,6 +94,6 @@ class Branding(models.Model):
     api_fields = [
         APIField('cover_image', serializer=ImageField()),
         APIField('texture_image', serializer=ImageField()),
-        APIField('organization_logo', serializer=OrganizationLogoField()),
+        APIField('organization_logo', serializer=OrganizationLogoField(source='*')),
         APIField('banner_border_color'),
     ]
