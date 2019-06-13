@@ -4,10 +4,8 @@ from wagtail.wagtailimages.edit_handlers import ImageChooserPanel
 from django.db import models
 import re
 from django.core.exceptions import ValidationError
-from modelcluster.fields import ParentalKey
-from designer.apps.pages.models import IndexPage, ProgramPage
 from wagtail.api import APIField
-
+from .serializers import ImageField, OrganizationLogoField
 
 def validate_hexadecimal_color(color):
     """
@@ -94,20 +92,8 @@ class Branding(models.Model):
     ]
 
     api_fields = [
-        APIField('cover_image'),
+        APIField('cover_image', serializer=ImageField()),
+        APIField('texture_image', serializer=ImageField()),
+        APIField('organization_logo', serializer=OrganizationLogoField()),
+        APIField('banner_border_color'),
     ]
-
-
-class IndexPageBranding(Branding):
-    """
-    Branding specifically for the Index Page (The site level home page)
-    """
-    page = ParentalKey(IndexPage, on_delete=models.CASCADE, related_name='index_page_branding', unique=True)
-
-
-
-class ProgramPageBranding(Branding):
-    """
-    Branding specifically for the Program Page
-    """
-    page = ParentalKey(ProgramPage, on_delete=models.CASCADE, related_name='program_page_branding', unique=True)

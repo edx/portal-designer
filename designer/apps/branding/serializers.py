@@ -1,6 +1,5 @@
 """ Theming / Site Branding Serializers"""
 from rest_framework import serializers
-from .models import Branding
 
 
 class ImageField(serializers.ReadOnlyField):
@@ -42,22 +41,3 @@ class OrganizationLogoField(serializers.ReadOnlyField):
             'alt': value.organization_logo_alt_text,
         }
         return ret
-
-
-class BrandingSerializer(serializers.ModelSerializer):
-    """
-    Serializer for the SiteBranding model.
-    """
-    cover_image = ImageField()
-    texture_image = ImageField()
-    organization_logo = OrganizationLogoField(source='*')
-
-    class Meta(object):
-        model = Branding
-        read_only = True
-        fields = (
-            'cover_image',
-            'texture_image',
-            'organization_logo',
-            'banner_border_color',
-        )
