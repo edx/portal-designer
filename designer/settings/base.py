@@ -10,7 +10,7 @@ root = lambda *x: join(abspath(PROJECT_ROOT), *x)
 
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = os.environ.get('DESIGNER_SECRET_KEY', 'insecure-secret-key')
+SECRET_KEY = 'SET-ME-PLEASE'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
@@ -89,18 +89,19 @@ WSGI_APPLICATION = 'designer.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.',
-        'NAME': '',
-        'USER': '',
-        'PASSWORD': '',
-        'HOST': '',  # Empty for localhost through domain sockets or '127.0.0.1' for localhost through TCP.
+        'NAME': 'designer',
+        'USER': 'designer001',
+        'PASSWORD': 'password',
+        'HOST': 'localhost',  # Empty for localhost through domain sockets or '127.0.0.1' for localhost through TCP.
         'PORT': '',  # Set to empty string for default.
+        'ATOMIC_REQUESTS': False,
     }
 }
 
 # Internationalization
 # https://docs.djangoproject.com/en/dev/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'en'
 
 TIME_ZONE = 'UTC'
 
@@ -169,7 +170,7 @@ TEMPLATES = [
 # Detailed information at: https://docs.djangoproject.com/en/dev/ref/settings/
 SESSION_COOKIE_NAME = 'designer_sessionid'
 CSRF_COOKIE_NAME = 'designer_csrftoken'
-LANGUAGE_COOKIE_NAME = 'designer_language'
+LANGUAGE_COOKIE_NAME = 'openedx-language-preference'
 # END COOKIE CONFIGURATION
 
 # AUTHENTICATION CONFIGURATION
@@ -189,12 +190,14 @@ AUTO_AUTH_USERNAME_PREFIX = 'auto_auth_'
 SOCIAL_AUTH_STRATEGY = 'auth_backends.strategies.EdxDjangoStrategy'
 
  # Set these to the correct values for your OAuth2 provider (e.g., devstack)
-SOCIAL_AUTH_EDX_OAUTH2_KEY = 'replace-me'
-SOCIAL_AUTH_EDX_OAUTH2_SECRET = 'replace-me'
+SOCIAL_AUTH_EDX_OAUTH2_KEY = 'designer-sso-key'
+SOCIAL_AUTH_EDX_OAUTH2_SECRET = 'designer-sso-key'
 SOCIAL_AUTH_EDX_OAUTH2_URL_ROOT = 'replace-me'
+SOCIAL_AUTH_EDX_OAUTH2_ISSUER = "http://127.0.0.1:8000"
 SOCIAL_AUTH_EDX_OAUTH2_LOGOUT_URL = 'replace-me'
-BACKEND_SERVICE_EDX_OAUTH2_KEY = 'replace-me'
-BACKEND_SERVICE_EDX_OAUTH2_SECRET = 'replace-me'
+BACKEND_SERVICE_EDX_OAUTH2_KEY = 'designer-backend-service-key'
+BACKEND_SERVICE_EDX_OAUTH2_SECRET = 'designer-backend-service-secret'
+BACKEND_SERVICE_EDX_OAUTH2_PROVIDER_URL = "http://127.0.0.1:8000/oauth2"
 
 JWT_AUTH = {
     'JWT_ISSUERS': [],
@@ -203,6 +206,17 @@ JWT_AUTH = {
     'JWT_PAYLOAD_GET_USERNAME_HANDLER': lambda d: d.get('preferred_username'),
     'JWT_LEEWAY': 1,
     'JWT_DECODE_HANDLER': 'edx_rest_framework_extensions.auth.jwt.decoder.jwt_decode_handler',
+    'JWT_ISSUER': [
+        {
+            'AUDIENCE': 'SET-ME-PLEASE',
+            'ISSUER': 'http://127.0.0.1:8000/oauth2',
+            'SECRET_KEY': 'SET-ME-PLEASE'
+        }
+    ],
+    'JWT_PUBLIC_SIGNING_JWK_SET': None,
+    'JWT_AUTH_COOKIE_HEADER_PAYLOAD': 'edx-jwt-cookie-header-payload',
+    'JWT_AUTH_COOKIE_SIGNATURE': 'edx-jwt-cookie-signature',
+    'JWT_AUTH_REFRESH_COOKIE': 'edx-jwt-refresh-cookie'
 }
 
 # Request the user's permissions in the ID token
@@ -221,3 +235,38 @@ PLATFORM_NAME = 'Your Platform Name Here'
 LOGGING = get_logger_config(debug=DEBUG, dev_env=True, local_loglevel='DEBUG')
 
 WAGTAIL_SITE_NAME = 'Designer'
+
+CERTIFICATE_LANGUAGES= {
+    'en': 'English',
+    'es_419': 'Spanish'
+}
+DESIGNER_SERVICE_USER = 'designer_service_user'
+CSRF_COOKIE_SECURE = False
+
+EXTRA_APPS = []
+SESSION_EXPIRE_AT_BROWSER_CLOSE = False
+STATICFILES_STORAGE = "django.contrib.staticfiles.storage.StaticFilesStorage"
+CACHES = {
+    'default': {
+        'BACKEND': 'django.core.cache.backends.locmem.LocMemCache',
+    }
+}
+
+EDX_DRF_EXTENSIONS = {
+    "OAUTH2_USER_INFO_URL": "http://127.0.0.1:8000/oauth2/user_info"
+}
+API_ROOT = None
+MEDIA_STORAGE_BACKEND = {
+    'DEFAULT_FILE_STORAGE': 'django.core.files.storage.FileSystemStorage',
+    'MEDIA_ROOT': MEDIA_ROOT,
+    'MEDIA_URL': MEDIA_URL
+}
+# Set these to the correct values for your OAuth2/OpenID Connect provider (e.g., devstack)
+SOCIAL_AUTH_EDX_OIDC_KEY = 'designer-key'
+SOCIAL_AUTH_EDX_OIDC_SECRET = 'designer-secret'
+SOCIAL_AUTH_EDX_OIDC_URL_ROOT = 'http://127.0.0.1:8000/oauth2'
+SOCIAL_AUTH_EDX_OIDC_LOGOUT_URL = 'http://127.0.0.1:8000/logout'
+SOCIAL_AUTH_EDX_OIDC_ID_TOKEN_DECRYPTION_KEY = 'designer-secret'
+SOCIAL_AUTH_REDIRECT_IS_HTTPS = False
+SOCIAL_AUTH_EDX_OIDC_PUBLIC_URL_ROOT = 'http://127.0.0.1:8000/oauth2'
+SOCIAL_AUTH_EDX_OIDC_ISSUER = 'http://127.0.0.1:8000/oauth2'
