@@ -1,7 +1,10 @@
 """ Create Program management command """
+import uuid
+
 from django.core.management import BaseCommand, CommandError
 from django.db import transaction
 from wagtail.wagtailcore.models import Site
+
 from designer.apps.pages.models import ProgramPage
 
 
@@ -23,8 +26,13 @@ class Command(BaseCommand):
             help='Hostname of site associated with program',
             required=True
         )
+        parser.add_argument(
+            '--uuid',
+            help='UUID of the program from discovery',
+            required=True,
+        )
 
-    def create_program_page(self, site, program_name):
+    def create_program_page(self, site, program_name, program_uuid):
         """
         create a program page and make it a child of the site's index page
 
@@ -37,7 +45,8 @@ class Command(BaseCommand):
         """
 
         program_page = ProgramPage(
-            title="{} Program Page".format(program_name)
+            title="{} Program Page".format(program_name),
+            uuid=program_uuid,
         )
         index_page = site.root_page
         index_page.add_child(instance=program_page)
@@ -51,11 +60,17 @@ class Command(BaseCommand):
         """
         site_hostname = options['hostname']
         program_name = options['programname']
+        program_uuid = options['uuid']
 
         try:
             site = Site.objects.get(hostname=site_hostname)
         except Site.DoesNotExist:
             raise CommandError("There is no site for hostname [{}]".format(site_hostname))
 
-        self.create_program_page(site, program_name)
+        try:
+            program_uuid = uuid.UUID(program_uuid)
+        except ValueError:
+            raise CommandError("{} is not a valid UUID".format(program_uuid))
+
+        self.create_program_page(site, program_name, program_uuid)
         self.stdout.write('Successfully created program page for "%s"' % program_name)
