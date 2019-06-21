@@ -10,7 +10,7 @@ import modelcluster.fields
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('pages', '0003_indexpagebranding_programpagebranding'),
+        ('pages', '0005_indexpagebranding_programpagebranding'),
     ]
 
     operations = [

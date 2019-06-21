@@ -35,9 +35,10 @@ class IndexPageBranding(Branding):
 
 class ProgramPage(Page):
     body = RichTextField(blank=True)
-    uuid = models.UUIDField(editable=False, unique=True)
+    uuid = models.UUIDField(unique=True)
 
     content_panels = Page.content_panels + [
+        FieldPanel('uuid', classname="full"),
         FieldPanel('body', classname="full"),
         InlinePanel('branding', label="Program Page Branding", max_num=1),
     ]

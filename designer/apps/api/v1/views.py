@@ -6,46 +6,80 @@ from rest_framework.response import Response
 from rest_framework.views import APIView
 from rest_framework.permissions import AllowAny
 from wagtail.api.v2.endpoints import PagesAPIEndpoint
-from wagtail.api.v2.utils import BadRequestError, page_models_from_string
+from wagtail.api.v2.utils import BadRequestError, filter_page_type, page_models_from_string
+from wagtail.wagtailcore.models import Page, Site
 
-from designer.apps.api.filters import SiteQueryFilter
-from designer.apps.pages.models import ProgramPage
+from designer.apps.pages.models import IndexPage, ProgramPage
 
-class DesignerPagesAPIEndpoint(PagesAPIEndpoint):
-    permission_classes = (AllowAny, )
-    known_query_parameters = PagesAPIEndpoint.known_query_parameters.union([
-        'sitename',
-    ])
-    filter_backends = [SiteQueryFilter] + PagesAPIEndpoint.filter_backends
+DESIRED_PAGE_API_FIELDS = (
+    "body",
+    "branding",
+    "last_published_at",
+    "slug",
+    "title",
+    "type",
+    "uuid",
+)
+PAGE_API_FIELD_REPLACEMENT = {
+    "pk": "id"
+}
+# (INTERNAL_IDENTIFIER, EXTERNAL_IDENTIFIER) = ("pk", "id")
+
+class DesignerPagesAPIEndpoint(APIView):
+    """
+    Returns all pages and all their data. Can be filtered by page type and hostname via querystring.
+    """
+    # Note: Wagtail's page API didn't allow for retrieval of full details of multiple
+    # models and the effort to overwrite it was greater than to write a simple API.
+    # The code below is heavily influenced by the Wagtail API.
+    # permission_classes = (AllowAny, )
 
     def get_queryset(self):
-        '''
-            Copied from source and changed the site filtering to be based off
-            of query text rather than request.site
-        '''
-        request = self.request
-
-        # Allow pages to be filtered to a specific type
         try:
-            models = page_models_from_string(request.GET.get('type', 'wagtailcore.Page'))
+            models = page_models_from_string(self.request.GET.get('type', 'wagtailcore.Page'))
         except (LookupError, ValueError):
             raise BadRequestError("type doesn't exist")
 
         if not models:
             models = [Page]
-
         if len(models) == 1:
             queryset = models[0].objects.all()
         else:
             queryset = Page.objects.all()
-
-            # Filter pages by specified models
             queryset = filter_page_type(queryset, models)
-
-        # Get live pages that are not in a private section
-        queryset = queryset.public().live()
-
+        queryset = queryset.public().live().specific()
         return queryset
+
+    def get(self, request):
+        hostname = self.request.query_params.get('hostname')
+        queryset = self.get_queryset()
+        if hostname:
+            queryset = self.filter_by_hostname(queryset, hostname)
+
+        pages = [{**page.serializable_data(), **{'type': page._meta.model.__name__}} for page in queryset]
+        pages = self.filter_unwanted_keys(pages)
+
+        return Response(pages)
+
+    def filter_by_hostname(self, queryset, hostname):
+        try:
+            site = Site.objects.get(hostname=hostname)
+        except Site.DoesNotExist:
+            # Return no pages since none match the passed in hostname
+            return queryset.none()
+        return queryset.descendant_of(site.root_page, inclusive=True)
+
+    def filter_unwanted_keys(self, pages):
+        filtered_pages = []
+        for serialized_data in pages:
+            page = {}
+            for (key, value) in serialized_data.items():
+                if key in PAGE_API_FIELD_REPLACEMENT:
+                    page.update({PAGE_API_FIELD_REPLACEMENT[key]: value})
+                elif key in DESIRED_PAGE_API_FIELDS:
+                    page.update({key: value})
+            filtered_pages.append(page)
+        return filtered_pages
 
 class ProgramDetailView(APIView):
     """
