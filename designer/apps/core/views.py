@@ -3,7 +3,7 @@ import logging
 import uuid
 
 from django.db import transaction, connection, DatabaseError
-from django.http import JsonResponse
+from django.http import HttpResponse, JsonResponse
 from django.conf import settings
 from django.contrib.auth import get_user_model, login, authenticate
 from django.http import Http404
@@ -84,3 +84,14 @@ class AutoAuth(View):
         login(request, user)
 
         return redirect('/')
+
+def wagtail_admin_access_check(request):
+    """
+    When Wagtail tries to send a user to the cms login page, check if they are
+    already logged in. If they are redirect to an error page, showing they are
+    unauthorized to view that page. Otherwise, forward to the login page
+    """
+
+    if request.user.is_authenticated:
+        return HttpResponse('Unauthorized to access admin page', status=403)
+    return redirect('/login/?next=/cms/')
