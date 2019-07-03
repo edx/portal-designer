@@ -17,7 +17,7 @@ class IndexPage(Page):
 
 class ProgramPage(Page):
     body = RichTextField(blank=True)
-    uuid = models.UUIDField(editable=False, unique=True)
+    uuid = models.UUIDField(unique=True)
 
     content_panels = Page.content_panels + [
         FieldPanel('body', classname="full"),
