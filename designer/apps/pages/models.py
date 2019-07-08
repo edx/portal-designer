@@ -12,6 +12,9 @@ class IndexPage(Page):
 
     .. no_pii:
     """
+    parent_page_types = []
+    subpage_types = ['pages.ProgramPage']
+
     content_panels = Page.content_panels + [
         InlinePanel('branding', label="Index Page Branding", max_num=1),
     ]
@@ -33,6 +36,8 @@ class ProgramPage(Page):
     .. no_pii:
     """
     uuid = models.UUIDField(unique=True)
+    parent_page_types = ['pages.IndexPage']
+    subpage_types = []
 
     content_panels = Page.content_panels + [
         FieldPanel('uuid', classname="full"),
