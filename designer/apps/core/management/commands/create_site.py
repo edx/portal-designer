@@ -13,6 +13,7 @@ MODERATOR_PERMISSIONS = {
     'page_permissions': ['add', 'edit', 'publish'],
     'collection_permissions': [
         'add_image', 'change_image', 'delete_image',
+        'add_document', 'change_document', 'delete_document',
     ],
     'core_permissions': ['access_admin']
 }

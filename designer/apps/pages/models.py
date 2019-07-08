@@ -1,9 +1,14 @@
 """ Page models """
-from wagtail.wagtailcore.models import Page
-from wagtail.wagtailadmin.edit_handlers import FieldPanel, InlinePanel
-from modelcluster.fields import ParentalKey
-from designer.apps.branding.models import Branding
 from django.db import models
+from modelcluster.fields import ParentalKey
+from wagtail.wagtailadmin.edit_handlers import (FieldPanel, InlinePanel,
+                                                StreamFieldPanel)
+from wagtail.wagtailcore.blocks import CharBlock, StructBlock, URLBlock
+from wagtail.wagtailcore.fields import StreamField
+from wagtail.wagtailcore.models import Page
+from wagtail.wagtaildocs.blocks import DocumentChooserBlock
+
+from designer.apps.branding.models import Branding
 
 
 class IndexPage(Page):
@@ -36,11 +41,33 @@ class ProgramPage(Page):
     .. no_pii:
     """
     uuid = models.UUIDField(unique=True)
+    program_documents = StreamField(
+        [
+            ('file', StructBlock(
+                [
+                    ('display_text', CharBlock()),
+                    ('document', DocumentChooserBlock())
+                ],
+                icon='doc-full'
+            )),
+            ('link', StructBlock(
+                [
+                    ('display_text', CharBlock()),
+                    ('url', URLBlock()),
+                ],
+                icon='link'
+            ))
+        ],
+        blank=True,
+        verbose_name="Program Documents"
+    )
+
     parent_page_types = ['pages.IndexPage']
     subpage_types = []
 
     content_panels = Page.content_panels + [
         FieldPanel('uuid', classname="full"),
+        StreamFieldPanel('program_documents'),
         InlinePanel('branding', label="Program Page Branding", max_num=1),
     ]
 

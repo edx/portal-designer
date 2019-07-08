@@ -58,6 +58,23 @@ class TestDesignerPagesAPIEndpoint(TestCase):
             if page_type == 'ProgramPage':
                 expected_page_data['uuid'] = str(page.uuid)
 
+                expected_page_data['program_documents'] = []
+                for program_document in page.program_documents:
+                    if program_document.block_type == 'link':
+                        expected_page_data['program_documents'].append(
+                            {
+                                'display_text': program_document.value['display_text'],
+                                'url': program_document.value['url'],
+                            }
+                        )
+                    elif program_document.block_type == 'file':
+                        expected_page_data['program_documents'].append(
+                            {
+                                'display_text': program_document.value['display_text'],
+                                'document': program_document.value['document'].file.url,
+                            }
+                        )
+
             expected_data.append(expected_page_data)
 
         return expected_data
