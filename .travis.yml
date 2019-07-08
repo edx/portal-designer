@@ -14,5 +14,7 @@ script:
     - make validate_translations
     - make validate
     - make pii_check
+    - make quality
+    - make test
 after_success:
     - codecov

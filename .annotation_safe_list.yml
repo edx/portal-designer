@@ -29,9 +29,47 @@ social_django.Partial:
   ".. no_pii:": "This model has no PII"
 social_django.UserSocialAuth:
   ".. no_pii:": "This model has no PII"
+taggit.Tag:
+  ".. no_pii:": "This model has no PII"
+taggit.TaggedItem:
+  ".. no_pii:": "This model has no PII"
 waffle.Flag:
   ".. no_pii:": "This model has no PII"
 waffle.Sample:
   ".. no_pii:": "This model has no PII"
 waffle.Switch:
   ".. no_pii:": "This model has no PII"
+wagtailcore.Collection:
+  ".. no_pii:": "This model has no PII"
+wagtailcore.CollectionViewRestriction:
+  ".. no_pii:": "This model has no PII"
+wagtailcore.GroupCollectionPermission:
+  ".. no_pii:": "This model has no PII"
+wagtailcore.GroupPagePermission:
+  ".. no_pii:": "This model has no PII"
+wagtailcore.Page:
+  ".. no_pii:": "This model has no PII"
+wagtailcore.PageRevision:
+  ".. no_pii:": "This model has no PII"
+wagtailcore.PageViewRestriction:
+  ".. no_pii:": "This model has no PII"
+wagtailcore.Site:
+  ".. no_pii:": "This model has no PII"
+wagtaildocs.Document:
+  ".. no_pii:": "This model has no PII"
+wagtailembeds.Embed:
+  ".. no_pii:": "This model has no PII"
+wagtailforms.FormSubmission:
+  ".. no_pii:": "This model has no PII"
+wagtailimages.Image:
+  ".. no_pii:": "This model has no PII"
+wagtailimages.Rendition:
+  ".. no_pii:": "This model has no PII"
+wagtailredirects.Redirect:
+  ".. no_pii:": "This model has no PII"
+wagtailsearch.Query:
+  ".. no_pii:": "This model has no PII"
+wagtailsearch.QueryDailyHits:
+  ".. no_pii:": "This model has no PII"
+wagtailusers.UserProfile:
+    ".. no_pii:": "This model has no PII"

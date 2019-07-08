@@ -1,4 +1,6 @@
-# Create your views here.
+"""
+API view module
+"""
 import uuid
 
 from rest_framework import exceptions, serializers
@@ -29,6 +31,7 @@ class DesignerPagesAPIEndpoint(APIView):
 
     # Allow pages to be filtered to a specific type
     def get_queryset(self):
+        """Allows the user to 1+ Page-derived models to query"""
         try:
             models = page_models_from_string(self.request.GET.get('type', 'wagtailcore.Page'))
         except (LookupError, ValueError):
@@ -48,7 +51,8 @@ class DesignerPagesAPIEndpoint(APIView):
         queryset = queryset.public().live().specific()
         return queryset
 
-    def get(self, request):
+    def get(self, request):  # pylint: disable=unused-argument
+        """Returns a list of Page-derived objects, filtered by hostname"""
         hostname = self.request.query_params.get('hostname')
         queryset = self.get_queryset()
         if hostname:
@@ -87,6 +91,7 @@ class DesignerPagesAPIEndpoint(APIView):
         return pages
 
     def filter_by_hostname(self, queryset, hostname):
+        """Filters a queryset by the hostname of the site it's attached to"""
         try:
             site = Site.objects.get(hostname=hostname)
         except Site.DoesNotExist:
@@ -109,8 +114,8 @@ class ProgramDetailView(APIView):
     """
     permission_classes = (AllowAny, )
 
-    def get(self, *args, **kwargs):
-
+    def get(self, *args, **kwargs):  # pylint: disable=unused-argument
+        """Returns program details with 'programs' query param"""
         requested_programs = self.request.query_params.get('programs')
         if not requested_programs:
             return Response([])
@@ -139,6 +144,7 @@ class ProgramDetailView(APIView):
 
 
 def generate_frontend_url(request, program_page):
+    """Used to create the frontend URL based on the program page data"""
     url = '{scheme}://{hostname}/{slug}'.format(
         scheme='https' if request.is_secure() else 'https',
         hostname=program_page.get_site().hostname,

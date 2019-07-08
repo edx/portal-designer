@@ -1,3 +1,6 @@
+"""
+App Configuration for pages
+"""
 from django.apps import AppConfig
 
 

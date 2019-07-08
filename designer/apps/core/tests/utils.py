@@ -1,8 +1,10 @@
-import factory
+# pylint: disable=E1101
+"""Utilities to enabling testing of Site related code"""
 import random
+
+import factory
 from faker import Faker
 from faker.providers import company, internet, lorem
-
 from wagtail.wagtailcore.models import Site, Page
 from wagtail.wagtailimages.models import Image
 
@@ -42,6 +44,7 @@ def create_index_page(site_name):
 
 
 class SiteFactory(factory.django.DjangoModelFactory):
+    """Creates instance of Site for testing"""
     class Meta:
         model = Site
 
@@ -61,6 +64,7 @@ class SiteFactory(factory.django.DjangoModelFactory):
 
 
 class ImageFactory(factory.django.DjangoModelFactory):
+    """Creates instance of Image for testing"""
     class Meta:
         model = Image
 
