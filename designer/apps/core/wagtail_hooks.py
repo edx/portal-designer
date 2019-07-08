@@ -7,9 +7,11 @@ from wagtail.wagtailcore import hooks
 
 from designer.apps.core.wagtailadmin.views import SiteCreationView
 
+
 class NewSiteMenuItem(MenuItem):
     def is_shown(self, request):
         return request.user.is_staff
+
 
 @hooks.register('register_settings_menu_item')
 def register_new_site_menu_item():
@@ -19,6 +21,7 @@ def register_new_site_menu_item():
         classnames='icon icon-cogs',
         order=1000
     )
+
 
 @hooks.register('register_admin_urls')
 def register_admin_urls():
