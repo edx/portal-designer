@@ -30,16 +30,9 @@ class PageSerializer(serializers.ModelSerializer):
         )
 
 
-class IndexPageBrandingField(BrandingField):
-    def to_representation(self, value):
-        ret = super(IndexPageBrandingField, self).to_representation(value)
-        ret['site_title'] = value.site_title
-        return ret
-
-
 class IndexPageSerializer(serializers.ModelSerializer):
 
-    branding = IndexPageBrandingField(read_only=True, many=True)
+    branding = BrandingField(read_only=True, many=True)
 
     class Meta:
         model = IndexPage
@@ -48,21 +41,13 @@ class IndexPageSerializer(serializers.ModelSerializer):
             'title',
             'slug',
             'last_published_at',
-            'body',
             'branding',
         )
 
 
-class ProgramPageBrandingField(BrandingField):
-    def to_representation(self, value):
-        ret = super(ProgramPageBrandingField, self).to_representation(value)
-        ret['program_title'] = value.program_title
-        return ret
-
-
 class ProgramPageSerializer(serializers.ModelSerializer):
 
-    branding = ProgramPageBrandingField(read_only=True, many=True)
+    branding = BrandingField(read_only=True, many=True)
 
     class Meta:
         model = ProgramPage
@@ -72,6 +57,5 @@ class ProgramPageSerializer(serializers.ModelSerializer):
             'title',
             'slug',
             'last_published_at',
-            'body',
             'branding',
         )

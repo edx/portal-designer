@@ -24,7 +24,6 @@ def create_program_page(site, program_title=None):
     program_title = program_title if program_title else ' '.join([word.capitalize() for word in fake.words(nb=2)])
     program_page = ProgramPage(
         title="{} Program Page".format(program_title),
-        body=''.join(["<p>{}</p>".format(p) for p in fake.paragraphs(nb=5)]),
         uuid=fake.uuid4(),
     )
     index_page.add_child(instance=program_page)
