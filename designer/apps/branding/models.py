@@ -1,10 +1,10 @@
 """ Models related to the branding of individual sites """
+import re
+
+from django.core.exceptions import ValidationError
+from django.db import models
 from wagtail.wagtailadmin.edit_handlers import FieldPanel, MultiFieldPanel
 from wagtail.wagtailimages.edit_handlers import ImageChooserPanel
-from django.db import models
-import re
-from django.core.exceptions import ValidationError
-from modelcluster.models import ClusterableModel
 
 
 def validate_hexadecimal_color(color):
@@ -24,6 +24,8 @@ def validate_hexadecimal_color(color):
 class Branding(models.Model):
     """
     Base Branding model
+
+    .. no_pii:
     """
     cover_image = models.ForeignKey(
         'wagtailimages.Image',

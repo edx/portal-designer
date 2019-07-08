@@ -1,3 +1,4 @@
+# pylint: disable=E1101
 """ Page Factories """
 from faker import Faker
 from faker.providers import lorem, misc

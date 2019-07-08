@@ -10,6 +10,7 @@ class TestDesignerPagesAPIEndpoint(TestCase):
     """ Tests for DesignerPagesAPIEndpoint """
 
     def setUp(self):
+        super(TestDesignerPagesAPIEndpoint, self).setUp()
         self.url = reverse('api:v1:pages')
 
         # Create a site and associated branding

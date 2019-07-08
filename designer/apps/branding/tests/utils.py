@@ -1,3 +1,5 @@
+# pylint: disable=E1101
+"""Utilities to enabling testing of Branding related code"""
 import factory
 from faker import Faker
 from faker.providers import color, lorem, company
@@ -14,6 +16,7 @@ fake.add_provider(company)
 
 
 class BrandingFactory(factory.django.DjangoModelFactory):
+    """Creates instance of Branding for testing"""
     class Meta:
         model = Branding
 
@@ -25,6 +28,7 @@ class BrandingFactory(factory.django.DjangoModelFactory):
 
 
 class IndexPageBrandingFactory(BrandingFactory):
+    """Creates instance of IndexPageBranding for testing"""
     class Meta:
         model = IndexPageBranding
 
@@ -36,6 +40,7 @@ class IndexPageBrandingFactory(BrandingFactory):
 
 
 class ProgramPageBrandingFactory(BrandingFactory):
+    """Creates instance of ProgramPageBranding for testing"""
     class Meta:
         model = ProgramPageBranding
 
