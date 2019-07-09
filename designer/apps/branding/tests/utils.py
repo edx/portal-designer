@@ -35,7 +35,6 @@ class IndexPageBrandingFactory(BrandingFactory):
     class Params:
         site = factory.SubFactory(SiteFactory)
 
-    site_title = factory.LazyAttribute(lambda o: o.site.site_name)
     page = factory.LazyAttribute(lambda o: o.site.root_page)
 
 
@@ -48,10 +47,8 @@ class ProgramPageBrandingFactory(BrandingFactory):
         title = factory.LazyAttribute(lambda l: ' '.join([word.capitalize() for word in fake.words(nb=2)]))
         site = factory.SubFactory(SiteFactory)
 
-    program_title = factory.LazyAttribute(lambda o: o.title)
     page = factory.LazyAttribute(lambda o: create_program_page(
         site=o.site,
-        program_title=o.title,
     ))
 
 

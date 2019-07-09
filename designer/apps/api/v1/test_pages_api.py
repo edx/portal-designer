@@ -38,7 +38,6 @@ class TestDesignerPagesAPIEndpoint(TestCase):
             page_branding = page.branding.first()
             expected_page_data = {
                 "type": "pages.{}".format(page_type),
-                "body": page.body,
                 "title": page.title,
                 "slug": page.slug,
                 "last_published_at": Page.objects.get(id=page.id).last_published_at.isoformat().replace('+00:00', 'Z'),
@@ -56,10 +55,7 @@ class TestDesignerPagesAPIEndpoint(TestCase):
             }
 
             # Special cases
-            if page_type == 'IndexPage':
-                expected_page_data['branding'][0]['site_title'] = page_branding.site_title
-            elif page_type == 'ProgramPage':
-                expected_page_data['branding'][0]['program_title'] = page_branding.program_title
+            if page_type == 'ProgramPage':
                 expected_page_data['uuid'] = str(page.uuid)
 
             expected_data.append(expected_page_data)
