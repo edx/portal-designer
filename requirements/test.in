@@ -7,5 +7,7 @@ coverage
 django-nose
 django-dynamic-fixture    # library to create dynamic model instances for testing purposes
 edx-lint
+Faker
+factory_boy
 mock
 nose-ignore-docstring

@@ -85,6 +85,7 @@ class AutoAuth(View):
 
         return redirect('/')
 
+
 def wagtail_admin_access_check(request):
     """
     When Wagtail tries to send a user to the cms login page, check if they are
