@@ -43,6 +43,10 @@ if os.environ.get('ENABLE_DJANGO_TOOLBAR', False):
 
     DEBUG_TOOLBAR_PATCH_SETTINGS = False
 
+    DEBUG_TOOLBAR_CONFIG = {
+        'SHOW_TOOLBAR_CALLBACK': (lambda __: True),
+    }
+
 INTERNAL_IPS = ('127.0.0.1',)
 # END TOOLBAR CONFIGURATION
 

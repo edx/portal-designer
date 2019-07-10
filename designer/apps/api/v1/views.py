@@ -43,7 +43,7 @@ class DesignerPagesAPIEndpoint(APIView):
         if len(models) == 1:
             queryset = models[0].objects.all()
         else:
-            queryset = Page.objects.all()
+            queryset = Page.objects.select_related('site').all()
 
             # Filter pages by specified models
             queryset = filter_page_type(queryset, models)

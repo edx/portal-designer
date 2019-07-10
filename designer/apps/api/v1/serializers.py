@@ -1,4 +1,4 @@
-""" Serialzers for Page APIs """
+""" Serializers for Page APIs """
 from rest_framework import serializers
 from wagtail.wagtailcore.models import Page
 from designer.apps.pages.models import IndexPage, ProgramPage
@@ -46,8 +46,11 @@ class IndexPageSerializer(serializers.ModelSerializer):
 
 
 class ProgramPageSerializer(serializers.ModelSerializer):
-
+    """
+    Serializer for the Program Page
+    """
     branding = BrandingField(read_only=True, many=True)
+    hostname = serializers.SerializerMethodField()
 
     class Meta:
         model = ProgramPage
@@ -58,4 +61,8 @@ class ProgramPageSerializer(serializers.ModelSerializer):
             'slug',
             'last_published_at',
             'branding',
+            'hostname'
         )
+
+    def get_hostname(self, obj):
+        return obj.get_site().hostname
