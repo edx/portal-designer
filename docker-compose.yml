@@ -11,6 +11,9 @@ services:
       - devstack_default
     volumes:
       - designer_mysql:/var/lib/mysql
+    # Uncomment these lines to access the database from localhost
+    # ports:
+    #  - "3307:3306"
 
   designer:
     # Uncomment this line to use the official designer base image
@@ -18,16 +21,12 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-
     container_name: designer.app
     volumes:
       - .:/edx/app/designer/designer
-
     command: bash -c 'while true; do python /edx/app/designer/designer/manage.py runserver 0.0.0.0:18808; sleep 2; done'
-
     ports:
       - "18808:18808"
-
     depends_on:
       - mysql
     networks:
@@ -35,9 +34,9 @@ services:
     # Allows attachment to this container using 'docker attach <containerID>'.
     stdin_open: true
     tty: true
-
     environment:
       DJANGO_SETTINGS_MODULE: designer.settings.devstack
+      ENABLE_DJANGO_TOOLBAR: 1
 
 
 networks:
