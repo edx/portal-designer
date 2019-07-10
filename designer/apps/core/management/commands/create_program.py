@@ -31,14 +31,21 @@ class Command(BaseCommand):
             help='UUID of the program from discovery',
             required=True,
         )
+        parser.add_argument(
+            '--idp_slug',
+            help='IDP slug of the program',
+            required=True,
+        )
 
-    def create_program_page(self, site, program_name, program_uuid):
+    def create_program_page(self, site, program_name, program_uuid, idp_slug):
         """
         create a program page and make it a child of the site's index page
 
         Args:
             site: (Site) site that this program is under
             program_name: (str) name of program
+            program_uuid: UUID for the program
+            idp_slug: (str) IDP Slug
 
         Returns:
             (ProgramPage) home page for the program
@@ -47,6 +54,7 @@ class Command(BaseCommand):
         program_page = ProgramPage(
             title="{} Program Page".format(program_name),
             uuid=program_uuid,
+            idp_slug=idp_slug
         )
         index_page = site.root_page
         index_page.add_child(instance=program_page)
@@ -61,6 +69,7 @@ class Command(BaseCommand):
         site_hostname = options['hostname']
         program_name = options['programname']
         program_uuid = options['uuid']
+        idp_slug = options['idp_slug']
 
         try:
             site = Site.objects.get(hostname=site_hostname)
@@ -72,5 +81,5 @@ class Command(BaseCommand):
         except ValueError:
             raise CommandError("{} is not a valid UUID".format(program_uuid))
 
-        self.create_program_page(site, program_name, program_uuid)
+        self.create_program_page(site, program_name, program_uuid, idp_slug)
         self.stdout.write('Successfully created program page for "%s"' % program_name)

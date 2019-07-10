@@ -81,7 +81,8 @@ class ProgramPageSerializer(serializers.ModelSerializer):
             'last_published_at',
             'program_documents',
             'branding',
-            'hostname'
+            'hostname',
+            'idp_slug',
         )
 
     def get_hostname(self, obj):

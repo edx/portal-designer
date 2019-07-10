@@ -57,6 +57,8 @@ class TestDesignerPagesAPIEndpoint(TestCase):
             # Special cases
             if page_type == 'ProgramPage':
                 expected_page_data['uuid'] = str(page.uuid)
+                expected_page_data['idp_slug'] = str(page.idp_slug)
+                expected_page_data['hostname'] = str(page.get_site().hostname)
 
                 expected_page_data['program_documents'] = []
                 for program_document in page.program_documents:

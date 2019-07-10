@@ -75,6 +75,7 @@ class ProgramPageCreationTests(TestCase):
         ret = {
             'title': ' '.join([word.capitalize() for word in fake.words(nb=2)]) + " Program Page",
             'uuid': fake.uuid4(),
+            'idp_slug': fake.slug(),
             'branding-TOTAL_FORMS': '1',
             'branding-INITIAL_FORMS': '0',
             'branding-0-cover_image': ImageFactory().id,

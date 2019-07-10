@@ -71,6 +71,7 @@ def create_program_page(site, program_title=None):
         title="{} Program Page".format(program_title),
         uuid=fake.uuid4(),
         program_documents=_create_program_documents(),
+        idp_slug=fake.slug(),
     )
     index_page.add_child(instance=program_page)
     program_page.save_revision().publish()

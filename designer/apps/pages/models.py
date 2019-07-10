@@ -41,6 +41,7 @@ class ProgramPage(Page):
     .. no_pii:
     """
     uuid = models.UUIDField(unique=True)
+    idp_slug = models.SlugField(max_length=255, verbose_name='IDP Slug', default='')
     program_documents = StreamField(
         [
             ('file', StructBlock(
@@ -67,6 +68,7 @@ class ProgramPage(Page):
 
     content_panels = Page.content_panels + [
         FieldPanel('uuid', classname="full"),
+        FieldPanel('idp_slug'),
         StreamFieldPanel('program_documents'),
         InlinePanel('branding', label="Program Page Branding", max_num=1),
     ]
