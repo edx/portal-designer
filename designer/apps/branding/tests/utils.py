@@ -44,7 +44,6 @@ class ProgramPageBrandingFactory(BrandingFactory):
         model = ProgramPageBranding
 
     class Params:
-        title = factory.LazyAttribute(lambda l: ' '.join([word.capitalize() for word in fake.words(nb=2)]))
         site = factory.SubFactory(SiteFactory)
 
     page = factory.LazyAttribute(lambda o: create_program_page(

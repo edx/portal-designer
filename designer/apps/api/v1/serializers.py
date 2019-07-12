@@ -45,10 +45,29 @@ class IndexPageSerializer(serializers.ModelSerializer):
         )
 
 
+class ProgramDocumentField(serializers.PrimaryKeyRelatedField):
+    def to_representation(self, value):
+        if value.block_type == 'link':
+            ret = {
+                'display_text': value.value['display_text'],
+                'url': value.value['url'],
+            }
+        elif value.block_type == 'file':
+            ret = {
+                'display_text': value.value['display_text'],
+                'document': value.value['document'].file.url,
+            }
+        else:
+            raise ValueError("[{}] is not a valid block_type for a ProgramDocument")
+
+        return ret
+
+
 class ProgramPageSerializer(serializers.ModelSerializer):
     """
     Serializer for the Program Page
     """
+    program_documents = ProgramDocumentField(read_only=True, many=True)
     branding = BrandingField(read_only=True, many=True)
     hostname = serializers.SerializerMethodField()
 
@@ -60,6 +79,7 @@ class ProgramPageSerializer(serializers.ModelSerializer):
             'title',
             'slug',
             'last_published_at',
+            'program_documents',
             'branding',
             'hostname'
         )
