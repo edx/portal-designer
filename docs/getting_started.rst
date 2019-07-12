@@ -1,11 +1,39 @@
 Getting Started
 ===============
 
-** Requires a working edx devstack to function properly **
+** Before moving forward Portal Designer Requires a working edx `devstack <https://github.com/edx/devstack>`_
+to function properly **
 
-1) Run `make dev.provision` to provision a new environment.
-2) Run `make dev.init` to start the app and run migrations
 
+Initialize and Provision
+------------------------
+
+1) Start the edX devstack before running the provision.  Provision currently relies on devstack.
+2) Run `make dev.provision` to provision a new environment.
+3) Run `make dev.init` to start the app and run migrations
+
+After Initialization
+--------------------
+
+The :file:`Makefile` includes numerous commands to start the service, but the basic commands are the following.
+
+This command can be used to start the Docker containers to run the portal-designer servers
+.. code-block:: bash
+    $ make dev.up
+
+This command will open the shell to the designer container for manual commands
+.. code-block:: bash
+    $ make app-shell
+
+This command will open the logs in the designer container
+.. code-block:: bash
+    make designer-logs
+
+Once the server is up and running you can view the Designer Server at
+    http://localhost:18808/cms
+
+Advanced Setup Outside Docker
+=============================
 
 Install dependencies
 --------------------
