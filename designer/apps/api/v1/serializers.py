@@ -4,20 +4,6 @@ from wagtail.wagtailcore.models import Page
 from designer.apps.pages.models import IndexPage, ProgramPage
 
 
-class BrandingField(serializers.PrimaryKeyRelatedField):
-    def to_representation(self, value):
-        ret = {
-            'cover_image': value.cover_image.file.url,
-            'texture_image': value.texture_image.file.url,
-            'organization_logo': {
-                'url': value.organization_logo_image.file.url,
-                'alt': value.organization_logo_alt_text,
-            },
-            'banner_border_color': value.banner_border_color,
-        }
-        return ret
-
-
 class PageSerializer(serializers.ModelSerializer):
 
     class Meta:
@@ -30,9 +16,28 @@ class PageSerializer(serializers.ModelSerializer):
         )
 
 
-class IndexPageSerializer(serializers.ModelSerializer):
+class BrandedPageSerializerMixin(object):
+    def get_branding(self, obj):
+        branding = obj.branding.first()
 
-    branding = BrandingField(read_only=True, many=True)
+        if not branding:
+            return {}
+
+        ret = {
+            'cover_image': branding.cover_image.file.url,
+            'texture_image': branding.texture_image.file.url,
+            'organization_logo': {
+                'url': branding.organization_logo_image.file.url,
+                'alt': branding.organization_logo_alt_text,
+            },
+            'banner_border_color': branding.banner_border_color,
+        }
+        return ret
+
+
+class IndexPageSerializer(BrandedPageSerializerMixin, serializers.ModelSerializer):
+
+    branding = serializers.SerializerMethodField()
 
     class Meta:
         model = IndexPage
@@ -45,14 +50,42 @@ class IndexPageSerializer(serializers.ModelSerializer):
         )
 
 
-class ProgramDocumentField(serializers.PrimaryKeyRelatedField):
-    def to_representation(self, value):
+class ProgramPageSerializer(BrandedPageSerializerMixin, serializers.ModelSerializer):
+    """
+    Serializer for the Program Page
+    """
+    program_documents = serializers.SerializerMethodField()
+    branding = serializers.SerializerMethodField()
+    hostname = serializers.SerializerMethodField()
+    program_homepage = serializers.SerializerMethodField()
+
+    class Meta:
+        model = ProgramPage
+        fields = (
+            'id',
+            'uuid',
+            'title',
+            'slug',
+            'last_published_at',
+            'program_documents',
+            'program_homepage',
+            'branding',
+            'hostname',
+            'idp_slug',
+        )
+
+    def get_program_documents(self, obj):
+        program_documents = obj.program_documents.first()
+
+        if not program_documents:
+            return {}
+
         ret = {
-            'display': value.display,
-            'header': value.header,
+            'display': program_documents.display,
+            'header': program_documents.header,
             'documents': [],
         }
-        for document in value.documents:
+        for document in program_documents.documents:
             if document.block_type == 'link':
                 ret['documents'].append({
                     'display_text': document.value['display_text'],
@@ -69,27 +102,23 @@ class ProgramDocumentField(serializers.PrimaryKeyRelatedField):
         return ret
 
 
-class ProgramPageSerializer(serializers.ModelSerializer):
-    """
-    Serializer for the Program Page
-    """
-    program_documents = ProgramDocumentField(read_only=True, many=True)
-    branding = BrandingField(read_only=True, many=True)
-    hostname = serializers.SerializerMethodField()
+    def get_program_homepage(self, obj):
+        program_homepage = obj.program_homepage.first()
 
-    class Meta:
-        model = ProgramPage
-        fields = (
-            'id',
-            'uuid',
-            'title',
-            'slug',
-            'last_published_at',
-            'program_documents',
-            'branding',
-            'hostname',
-            'idp_slug',
-        )
+        if not program_homepage:
+            return {}
+
+        ret = {
+            'display': program_homepage.display,
+            'header': program_homepage.header,
+            'description': program_homepage.description,
+            'link': {
+                'display_text': program_homepage.link_display_text,
+                'url': program_homepage.link_url,
+            }
+        }
+        return ret
+
 
     def get_hostname(self, obj):
         return obj.get_site().hostname

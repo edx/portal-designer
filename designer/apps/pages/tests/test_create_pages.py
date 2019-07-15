@@ -73,25 +73,58 @@ class ProgramPageCreationTests(TestCase):
 
         return ret
 
-    def _create_program_page_data(self):
+    def _create_program_page_data(self, branding=True, program_documents=True, program_homepage=True):
         """
         Generate program page data for testing
         """
-
+        program_name = ' '.join([word.capitalize() for word in fake.words(nb=2)])
         ret = {
-            'title': ' '.join([word.capitalize() for word in fake.words(nb=2)]) + " Program Page",
+            'title': program_name + " Program Page",
             'uuid': fake.uuid4(),
             'idp_slug': fake.slug(),
-            'branding-TOTAL_FORMS': '1',
-            'branding-INITIAL_FORMS': '0',
-            'branding-0-cover_image': ImageFactory().id,
-            'branding-0-texture_image': ImageFactory().id,
-            'branding-0-organization_logo_image': ImageFactory().id,
-            'branding-0-organization_logo_alt_text': fake.sentence(),
-            'branding-0-banner_border_color': fake.safe_hex_color(),
         }
 
-        ret.update(self._create_program_documents())
+        if branding:
+            ret.update({
+                'branding-TOTAL_FORMS': '1',
+                'branding-INITIAL_FORMS': '0',
+                'branding-0-cover_image': ImageFactory().id,
+                'branding-0-texture_image': ImageFactory().id,
+                'branding-0-organization_logo_image': ImageFactory().id,
+                'branding-0-organization_logo_alt_text': fake.sentence(),
+                'branding-0-banner_border_color': fake.safe_hex_color(),
+            })
+        else:
+            ret.update({
+                'branding-TOTAL_FORMS': '0',
+                'branding-INITIAL_FORMS': '0',
+            })
+
+        if program_homepage:
+            ret.update({
+                'program_homepage-TOTAL_FORMS': '1',
+                'program_homepage-INITIAL_FORMS': '0',
+                'program_homepage-0-display': True,
+                'program_homepage-0-header': ' '.join([word.capitalize() for word in fake.words(nb=3)]),
+                'program_homepage-0-description': "<ul>{}</ul>".format(
+                    ["<li>{}</li>".format(s) for s in fake.sentences(nb=4)]
+                ),
+                'program_homepage-0-link_display_text': "Return to {} homepage".format(program_name),
+                'program_homepage-0-link_url': fake.url(),
+            })
+        else:
+            ret.update({
+                'program_homepage-TOTAL_FORMS': '0',
+                'program_homepage-INITIAL_FORMS': '0',
+            })
+
+        if program_documents:
+            ret.update(self._create_program_documents())
+        else:
+            ret.update({
+                'program_documents-TOTAL_FORMS': '0',
+                'program_documents-INITIAL_FORMS': '0',
+            })
 
         return ret
 
@@ -129,5 +162,12 @@ class ProgramPageCreationTests(TestCase):
         """ Verify the successful creation of a program page """
 
         data = self._create_program_page_data()
+
+        self._assert_can_create(self.site_page, ProgramPage, data)
+
+    def test_can_create_simple_program_page(self):
+        """ Verify the successful creation of a program page without branding, program_documents or program_homepage """
+
+        data = self._create_program_page_data(branding=False, program_documents=False, program_homepage=False)
 
         self._assert_can_create(self.site_page, ProgramPage, data)
