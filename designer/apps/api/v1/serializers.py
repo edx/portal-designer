@@ -4,20 +4,6 @@ from wagtail.wagtailcore.models import Page
 from designer.apps.pages.models import IndexPage, ProgramPage
 
 
-class BrandingField(serializers.PrimaryKeyRelatedField):
-    def to_representation(self, value):
-        ret = {
-            'cover_image': value.cover_image.file.url,
-            'texture_image': value.texture_image.file.url,
-            'organization_logo': {
-                'url': value.organization_logo_image.file.url,
-                'alt': value.organization_logo_alt_text,
-            },
-            'banner_border_color': value.banner_border_color,
-        }
-        return ret
-
-
 class PageSerializer(serializers.ModelSerializer):
 
     class Meta:
@@ -30,9 +16,41 @@ class PageSerializer(serializers.ModelSerializer):
         )
 
 
-class IndexPageSerializer(serializers.ModelSerializer):
+class BrandedPageSerializerMixin(object):
 
-    branding = BrandingField(read_only=True, many=True)
+    def get_branding(self, obj):
+        """
+        Get serialized version of branding for the given obj.
+
+        Note:
+            This should only be used with a serializer that has a 'branding' field that is being serialized via the
+            SerializerMethodField.
+
+        Args:
+            obj: (ModelSerializer) The branded page currently being serialized.
+
+        Returns:
+            (dict) Serialized version of the branding for the given obj
+        """
+        branding = obj.branding.first()
+
+        if not branding:
+            return {}
+
+        return {
+            'cover_image': branding.cover_image.file.url,
+            'texture_image': branding.texture_image.file.url,
+            'organization_logo': {
+                'url': branding.organization_logo_image.file.url,
+                'alt': branding.organization_logo_alt_text,
+            },
+            'banner_border_color': branding.banner_border_color,
+        }
+
+
+class IndexPageSerializer(BrandedPageSerializerMixin, serializers.ModelSerializer):
+
+    branding = serializers.SerializerMethodField()
 
     class Meta:
         model = IndexPage
@@ -45,14 +63,51 @@ class IndexPageSerializer(serializers.ModelSerializer):
         )
 
 
-class ProgramDocumentField(serializers.PrimaryKeyRelatedField):
-    def to_representation(self, value):
+class ProgramPageSerializer(BrandedPageSerializerMixin, serializers.ModelSerializer):
+    """
+    Serializer for the Program Page
+    """
+    program_documents = serializers.SerializerMethodField()
+    branding = serializers.SerializerMethodField()
+    hostname = serializers.SerializerMethodField()
+    external_program_website = serializers.SerializerMethodField()
+
+    class Meta:
+        model = ProgramPage
+        fields = (
+            'id',
+            'uuid',
+            'title',
+            'slug',
+            'last_published_at',
+            'program_documents',
+            'external_program_website',
+            'branding',
+            'hostname',
+            'idp_slug',
+        )
+
+    def get_program_documents(self, obj):
+        """
+        Get serialized version of program_documents for the given obj
+
+        Args:
+            obj: (ProgramPage) The program page currently being serialized.
+
+        Returns:
+            (dict) Serialized version of the program_documents for the given obj
+        """
+        program_documents = obj.program_documents.first()
+
+        if not program_documents:
+            return {}
+
         ret = {
-            'display': value.display,
-            'header': value.header,
+            'display': program_documents.display,
+            'header': program_documents.header,
             'documents': [],
         }
-        for document in value.documents:
+        for document in program_documents.documents:
             if document.block_type == 'link':
                 ret['documents'].append({
                     'display_text': document.value['display_text'],
@@ -68,28 +123,39 @@ class ProgramDocumentField(serializers.PrimaryKeyRelatedField):
 
         return ret
 
+    def get_external_program_website(self, obj):
+        """
+        Get serialized version of external_program_website for the given obj
 
-class ProgramPageSerializer(serializers.ModelSerializer):
-    """
-    Serializer for the Program Page
-    """
-    program_documents = ProgramDocumentField(read_only=True, many=True)
-    branding = BrandingField(read_only=True, many=True)
-    hostname = serializers.SerializerMethodField()
+        Args:
+            obj: (ProgramPage) The program page currently being serialized.
 
-    class Meta:
-        model = ProgramPage
-        fields = (
-            'id',
-            'uuid',
-            'title',
-            'slug',
-            'last_published_at',
-            'program_documents',
-            'branding',
-            'hostname',
-            'idp_slug',
-        )
+        Returns:
+            (dict) Serialized version of the external_program_website for the given obj
+        """
+        external_program_website = obj.external_program_website.first()
+
+        if not external_program_website:
+            return {}
+
+        return {
+            'display': external_program_website.display,
+            'header': external_program_website.header,
+            'description': external_program_website.description,
+            'link': {
+                'display_text': external_program_website.link_display_text,
+                'url': external_program_website.link_url,
+            }
+        }
 
     def get_hostname(self, obj):
+        """
+        Get serialized version of hostname for the given obj
+
+        Args:
+            obj: (ProgramPage) The program page currently being serialized.
+
+        Returns:
+            (str) Serialized version of the hostname for the given obj
+        """
         return obj.get_site().hostname

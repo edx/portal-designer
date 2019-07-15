@@ -1,10 +1,14 @@
 """ Page models """
+import re
 from django.db import models
 from modelcluster.fields import ParentalKey
 from wagtail.wagtailadmin.edit_handlers import (
     FieldPanel,
     InlinePanel,
     StreamFieldPanel,
+    RichTextField,
+    RichTextFieldPanel,
+    MultiFieldPanel,
 )
 from wagtail.wagtailcore.blocks import CharBlock, StructBlock, URLBlock
 from wagtail.wagtailcore.fields import StreamField
@@ -51,8 +55,86 @@ class ProgramPage(Page):
     content_panels = Page.content_panels + [
         FieldPanel('uuid', classname="full"),
         FieldPanel('idp_slug'),
+        InlinePanel('external_program_website', label="External Program Website", max_num=1),
         InlinePanel('program_documents', label="Program Documents", max_num=1),
         InlinePanel('branding', label="Program Page Branding", max_num=1),
+    ]
+
+
+class ExternalProgramWebsite(models.Model):
+    """
+    Section on the Program Page linking back to the externally hosted program website and describing what learners can
+    expect to find there.
+    For example, for the program "Masters in Potions Ingredients Science", this section may include a link to the
+    "hogwarts.edu" website which would be hosted and managed by Hogwarts.  The description would explain what learners
+    can expect to find at "hogwarts.edu".  For example, "Chat with a professor", "Add or drop a course", "Contact St.
+    Mungo's Poison Control Hotline".
+
+    .. no_pii:
+    """
+    DEFAULT_DESCRIPTION = re.sub(
+        r'>\s+<',
+        r'><',
+        """
+        <p>Go to your program's portal to:</p>
+        <ul>
+            <li>Add or drop courses</li>
+            <li>Finance Department</li>
+            <li>Contact an advisor</li>
+            <li>Get your grade</li>
+            <li>Program wide discussions</li>
+            <li>and more</li>
+        </ul>
+        """
+    ).strip()
+
+    display = models.BooleanField(
+        blank=False,
+        null=False,
+        default=True,
+        verbose_name="Display This Section",
+    )
+    header = models.CharField(
+        max_length=128,
+        verbose_name='Header',
+        blank=False,
+        null=False,
+        default='Manage Your Degree'
+    )
+    description = RichTextField(
+        max_length=512,
+        verbose_name='description',
+        blank=False,
+        null=False,
+        features=('bold', 'italic', 'ol', 'ul'),
+        default=DEFAULT_DESCRIPTION,
+    )
+    link_display_text = models.CharField(
+        blank=False,
+        null=False,
+        max_length=128,
+        verbose_name="Display Text"
+    )
+    link_url = models.URLField(
+        blank=False,
+        null=False,
+        verbose_name="URL",
+    )
+
+    page = ParentalKey(ProgramPage, on_delete=models.CASCADE, related_name='external_program_website', unique=True)
+
+    panels = [
+        FieldPanel('display'),
+        FieldPanel('header'),
+        RichTextFieldPanel('description'),
+        MultiFieldPanel(
+            [
+                FieldPanel('link_display_text'),
+                FieldPanel('link_url'),
+            ],
+            heading='Link to Homepage',
+            classname='collapsible',
+        )
     ]
 
 
