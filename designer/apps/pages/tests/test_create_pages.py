@@ -39,7 +39,13 @@ class ProgramPageCreationTests(TestCase):
         Create program document data for testing
         """
         doc_count = randint(0, 6)
-        ret = {'program_documents-count': str(doc_count)}
+        ret = {
+            'program_documents-TOTAL_FORMS': '1',
+            'program_documents-INITIAL_FORMS': '0',
+            'program_documents-0-display': True,
+            'program_documents-0-header': "{} Documents".format(fake.word().capitalize()),
+            'program_documents-0-documents-count': str(doc_count),
+        }
 
         for i in range(doc_count):
             display_text = ' '.join([word.capitalize() for word in fake.words(nb=3)])
@@ -48,21 +54,21 @@ class ProgramPageCreationTests(TestCase):
             if bool(getrandbits(1)):
                 # generate a link type document
                 ret.update({
-                    "program_documents-{}-type".format(i): 'link',
-                    "program_documents-{}-value-url".format(i): fake.url(),
-                    "program_documents-{}-value-display_text".format(i): "{} Link".format(display_text),
-                    "program_documents-{}-order".format(i): str(i),
-                    "program_documents-{}-deleted".format(i): '',
+                    "program_documents-0-documents-{}-type".format(i): 'link',
+                    "program_documents-0-documents-{}-value-url".format(i): fake.url(),
+                    "program_documents-0-documents-{}-value-display_text".format(i): "{} Link".format(display_text),
+                    "program_documents-0-documents-{}-order".format(i): str(i),
+                    "program_documents-0-documents-{}-deleted".format(i): '',
                 })
 
             else:
                 # generate a file type document
                 ret.update({
-                    "program_documents-{}-type".format(i): 'file',
-                    "program_documents-{}-value-document".format(i): DocumentFactory().id,
-                    "program_documents-{}-value-display_text".format(i): "{} File".format(display_text),
-                    "program_documents-{}-order".format(i): str(i),
-                    "program_documents-{}-deleted".format(i): '',
+                    "program_documents-0-documents-{}-type".format(i): 'file',
+                    "program_documents-0-documents-{}-value-document".format(i): DocumentFactory().id,
+                    "program_documents-0-documents-{}-value-display_text".format(i): "{} File".format(display_text),
+                    "program_documents-0-documents-{}-order".format(i): str(i),
+                    "program_documents-0-documents-{}-deleted".format(i): '',
                 })
 
         return ret
@@ -103,7 +109,16 @@ class ProgramPageCreationTests(TestCase):
             args=[child_model._meta.app_label, child_model._meta.model_name, parent.pk]
         )
         response = self.client.post(url, data, follow=True)
-        self.assertEqual(200, response.status_code)
+        if response.status_code != 200:
+            if 'form' not in response.context:
+                self.fail('Creating page failed unusually')
+
+            form = response.context['form']
+            if not form.errors:
+                self.fail('Creating a page failed for unknown reason')
+
+            errors = '\n'.join(['  {}:\n    {}'.format(key, '\n'.join(values)) for key, values in form.errors.items()])
+            self.fail("Creating a page failed for the following reasons:\n{}".format(errors))
 
         try:
             child_model.objects.get(slug=data['slug'])
