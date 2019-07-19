@@ -1,6 +1,7 @@
 from designer.settings.base import *
 
 DEBUG = True
+ALLOWED_HOSTS = ['*']
 
 # CACHE CONFIGURATION
 # See: https://docs.djangoproject.com/en/dev/ref/settings/#caches
