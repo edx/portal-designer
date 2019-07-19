@@ -2,7 +2,7 @@
 from django.core.urlresolvers import reverse
 from django.test import TestCase
 from designer.apps.core.tests.utils import DEFAULT_WAGTAIL_PAGES
-from designer.apps.branding.tests.utils import create_branded_site, create_branded_program_page
+from designer.apps.pages.tests.utils import create_branded_site, create_program_page
 from wagtail.wagtailcore.models import Page
 
 
@@ -17,8 +17,8 @@ class TestDesignerPagesAPIEndpoint(TestCase):
         self.site = create_branded_site()
 
         # Create 2 programs under that site and associated branding
-        self.program1_page = create_branded_program_page(self.site)
-        self.program2_page = create_branded_program_page(self.site)
+        self.program1_page = create_program_page(self.site, branding=True, program_documents=True)
+        self.program2_page = create_program_page(self.site, branding=True, program_documents=True)
 
     @classmethod
     def _get_expected_data(cls, pages, include_default_pages=False):
@@ -51,7 +51,7 @@ class TestDesignerPagesAPIEndpoint(TestCase):
                         },
                         "banner_border_color": page_branding.banner_border_color,
                     },
-                ]
+                ] if page_branding else []
             }
 
             # Special cases
@@ -60,22 +60,30 @@ class TestDesignerPagesAPIEndpoint(TestCase):
                 expected_page_data['idp_slug'] = str(page.idp_slug)
                 expected_page_data['hostname'] = str(page.get_site().hostname)
 
-                expected_page_data['program_documents'] = []
-                for program_document in page.program_documents:
-                    if program_document.block_type == 'link':
-                        expected_page_data['program_documents'].append(
-                            {
-                                'display_text': program_document.value['display_text'],
-                                'url': program_document.value['url'],
-                            }
-                        )
-                    elif program_document.block_type == 'file':
-                        expected_page_data['program_documents'].append(
-                            {
-                                'display_text': program_document.value['display_text'],
-                                'document': program_document.value['document'].file.url,
-                            }
-                        )
+                program_documents = page.program_documents.first()
+                if program_documents:
+                    expected_page_data['program_documents'] = [{
+                        'display': program_documents.display,
+                        'header': program_documents.header,
+                        'documents': [],
+                    }]
+                    for document in program_documents.documents:
+                        if document.block_type == 'link':
+                            expected_page_data['program_documents'][0]['documents'].append(
+                                {
+                                    'display_text': document.value['display_text'],
+                                    'url': document.value['url'],
+                                }
+                            )
+                        elif document.block_type == 'file':
+                            expected_page_data['program_documents'][0]['documents'].append(
+                                {
+                                    'display_text': document.value['display_text'],
+                                    'document': document.value['document'].file.url,
+                                }
+                            )
+                else:
+                    expected_page_data['program_documents'] = []
 
             expected_data.append(expected_page_data)
 
@@ -102,24 +110,63 @@ class TestDesignerPagesAPIEndpoint(TestCase):
 
             # Assert that the branding data is the same
             if 'branding' in expected_page:
-                # Assert organization logo is the same
-                self.assertDictEqual(
-                    expected_page['branding'][0]['organization_logo'],
-                    actual_page['branding'][0]['organization_logo']
-                )
 
-                # Remove 'organization_logo' we no longer need to check it
-                expected_page['branding'][0].pop('organization_logo')
+                if expected_page['branding']:
 
-                # Assert that all fields under 'branding' are the same
-                for k in expected_page['branding'][0].keys():
-                    self.assertEqual(expected_page['branding'][0][k], actual_page['branding'][0][k])
+                    # Assert organization logo is the same
+                    self.assertDictEqual(
+                        expected_page['branding'][0]['organization_logo'],
+                        actual_page['branding'][0]['organization_logo']
+                    )
+
+                    # Remove 'organization_logo' we no longer need to check it
+                    expected_page['branding'][0].pop('organization_logo')
+
+                    # Assert that all fields under 'branding' are the same
+                    for k in expected_page['branding'][0].keys():
+                        self.assertEqual(expected_page['branding'][0][k], actual_page['branding'][0][k])
+
+                else:
+                    # Both lists should be empty
+                    self.assertEqual(expected_page['branding'], actual_page['branding'])
 
                 # Remove 'branding' from expected_data, we no longer need to check that
                 expected_page.pop('branding')
 
             else:
                 self.assertNotIn('branding', actual_page)
+
+            # Assert that the program_document data is the same
+            if 'program_documents' in expected_page:
+
+                if expected_page['program_documents']:
+
+                    # Assert that the documents are the same and in the correct order
+                    expected_docs = expected_page['program_documents'][0]['documents']
+                    actual_docs = actual_page['program_documents'][0]['documents']
+                    for expected_doc, actual_doc in zip(expected_docs, actual_docs):
+                        self.assertDictEqual(expected_doc, actual_doc)
+
+                    # Remove 'documents' we no longer need to check it
+                    expected_page['program_documents'][0].pop('documents')
+
+                    # Assert that all the other fields under 'program_documents' are the same
+                    for k in expected_page['program_documents'][0].keys():
+                        self.assertEqual(
+                            expected_page['program_documents'][0][k],
+                            actual_page['program_documents'][0][k]
+                        )
+
+                else:
+
+                    # Both should be empty
+                    self.assertEqual(expected_page['program_documents'], actual_page['program_documents'])
+
+                # Remove 'program_documents' we no longer need to check it
+                expected_page.pop('program_documents')
+
+            else:
+                self.assertNotIn('program_documents', actual_page)
 
             # Assert the rest of the fields match
             for k in expected_page.keys():
@@ -144,7 +191,7 @@ class TestDesignerPagesAPIEndpoint(TestCase):
         # Create a second site
         site2 = create_branded_site()
         # Create a number of programs for that site
-        site2_program_pages = [create_branded_program_page(site2) for __ in range(3)]
+        site2_program_pages = [create_program_page(site2) for __ in range(3)]
 
         # Verify that only the pages associated with site2 are in the response
         expected_data = self._get_expected_data([site2.root_page] + site2_program_pages)
@@ -161,7 +208,7 @@ class TestDesignerPagesAPIEndpoint(TestCase):
         # Create a second site
         site2 = create_branded_site()
         # Create a number of programs for that site
-        site2_program_pages = [create_branded_program_page(site2) for __ in range(3)]
+        site2_program_pages = [create_program_page(site2) for __ in range(3)]
 
         # Verify that when querying for 'IndexPage's all IndexPages are returned
         expected_data = self._get_expected_data([

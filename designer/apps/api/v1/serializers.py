@@ -47,18 +47,24 @@ class IndexPageSerializer(serializers.ModelSerializer):
 
 class ProgramDocumentField(serializers.PrimaryKeyRelatedField):
     def to_representation(self, value):
-        if value.block_type == 'link':
-            ret = {
-                'display_text': value.value['display_text'],
-                'url': value.value['url'],
-            }
-        elif value.block_type == 'file':
-            ret = {
-                'display_text': value.value['display_text'],
-                'document': value.value['document'].file.url,
-            }
-        else:
-            raise ValueError("[{}] is not a valid block_type for a ProgramDocument")
+        ret = {
+            'display': value.display,
+            'header': value.header,
+            'documents': [],
+        }
+        for document in value.documents:
+            if document.block_type == 'link':
+                ret['documents'].append({
+                    'display_text': document.value['display_text'],
+                    'url': document.value['url'],
+                })
+            elif document.block_type == 'file':
+                ret['documents'].append({
+                    'display_text': document.value['display_text'],
+                    'document': document.value['document'].file.url,
+                })
+            else:
+                raise ValueError("[{}] is not a valid block_type for a ProgramDocument")
 
         return ret
 
