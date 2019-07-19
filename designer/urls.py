@@ -43,7 +43,7 @@ urlpatterns = oauth2_urlpatterns + [
     url(r'^cms/login/$', core_views.wagtail_admin_access_check),
     url(r'^cms/logout/$', RedirectView.as_view(url='/logout/')),
     url(r'^cms/', include(wagtailadmin_urls)),
-    url(r'', RedirectView.as_view(url='/cms/'))
+    url(r'^$', RedirectView.as_view(url='/cms/'))
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
 if settings.DEBUG and os.environ.get('ENABLE_DJANGO_TOOLBAR', False):  # pragma: no cover
