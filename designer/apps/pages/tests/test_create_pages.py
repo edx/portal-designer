@@ -81,7 +81,6 @@ class ProgramPageCreationTests(TestCase):
         ret = {
             'title': program_name + " Program Page",
             'uuid': fake.uuid4(),
-            'idp_slug': fake.slug(),
         }
 
         if branding:

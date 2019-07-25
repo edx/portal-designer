@@ -48,13 +48,11 @@ class ProgramPage(Page):
     .. no_pii:
     """
     uuid = models.UUIDField(unique=True)
-    idp_slug = models.SlugField(max_length=255, verbose_name='IDP Slug', default='')
     parent_page_types = ['pages.IndexPage']
     subpage_types = []
 
     content_panels = Page.content_panels + [
         FieldPanel('uuid', classname="full"),
-        FieldPanel('idp_slug'),
         InlinePanel('external_program_website', label="External Program Website", max_num=1),
         InlinePanel('program_documents', label="Program Documents", max_num=1),
         InlinePanel('branding', label="Program Page Branding", max_num=1),
