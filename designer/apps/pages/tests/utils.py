@@ -9,8 +9,13 @@ from faker.providers import internet, lorem, misc
 
 from designer.apps.branding.tests.utils import BrandingFactory
 from designer.apps.core.tests.utils import DocumentFactory, SiteFactory
-from designer.apps.pages.models import (IndexPageBranding, ProgramDocuments,
-                                        ProgramPage, ProgramPageBranding)
+from designer.apps.pages.models import (
+    IndexPageBranding,
+    ProgramDocuments,
+    ProgramPage,
+    ProgramPageBranding,
+    ExternalProgramWebsite,
+)
 
 fake = Faker()
 fake.add_provider(lorem)
@@ -40,6 +45,23 @@ class ProgramPageBrandingFactory(BrandingFactory):
     page = factory.LazyAttribute(lambda o: create_program_page(
         site=o.site,
     ))
+
+
+class ExternalProgramWebsiteFactory(factory.django.DjangoModelFactory):
+    """
+    Create ExternalProgramWebsite for testing
+    """
+    class Meta:
+        model = ExternalProgramWebsite
+
+    display = factory.LazyAttribute(lambda l: fake.boolean())
+    header = factory.LazyAttribute(lambda l: ' '.join([word.capitalize() for word in fake.words(nb=3)]))
+    description = factory.LazyAttribute(lambda l: "<ul>{}</ul>".format(
+        ["<li>{}</li>".format(s) for s in fake.sentences(nb=4)]
+    ))
+    link_display_text = factory.LazyAttribute(lambda l: fake.sentence())
+    link_url = factory.LazyAttribute(lambda l: fake.url())
+    page = factory.LazyAttribute(lambda o: create_program_page(site=SiteFactory()))
 
 
 def _create_program_documents():
@@ -95,7 +117,13 @@ class ProgramDocumentsFactory(factory.django.DjangoModelFactory):
     page = factory.LazyAttribute(lambda l: create_program_page(site=SiteFactory()))
 
 
-def create_program_page(site, program_title=None, branding=False, program_documents=False):
+def create_program_page(
+        site,
+        program_title=None,
+        branding=False,
+        program_documents=False,
+        external_program_website=False
+):
     """
     Create Program Page for Test Data
     Args:
@@ -103,6 +131,7 @@ def create_program_page(site, program_title=None, branding=False, program_docume
         program_title: (str) Program Title, one will be auto-generated if not set
         branding: (bool) if True generates branding data for this page
         program_documents: (bool) if True generates program_documents for this page
+        external_program_website: (bool) if True generates external_program_website for this page
 
     Returns:
         (ProgramPage) Program Page with test data
@@ -122,6 +151,9 @@ def create_program_page(site, program_title=None, branding=False, program_docume
 
     if program_documents:
         ProgramDocumentsFactory(page=program_page)
+
+    if external_program_website:
+        ExternalProgramWebsiteFactory(page=program_page)
 
     return program_page
 

@@ -17,8 +17,18 @@ class TestDesignerPagesAPIEndpoint(TestCase):
         self.site = create_branded_site()
 
         # Create 2 programs under that site and associated branding
-        self.program1_page = create_program_page(self.site, branding=True, program_documents=True)
-        self.program2_page = create_program_page(self.site, branding=True, program_documents=True)
+        self.program1_page = create_program_page(
+            self.site,
+            branding=True,
+            program_documents=True,
+            external_program_website=True
+        )
+        self.program2_page = create_program_page(
+            self.site,
+            branding=True,
+            program_documents=True,
+            external_program_website=True
+        )
 
     @classmethod
     def _get_expected_data(cls, pages, include_default_pages=False):
@@ -41,17 +51,15 @@ class TestDesignerPagesAPIEndpoint(TestCase):
                 "title": page.title,
                 "slug": page.slug,
                 "last_published_at": Page.objects.get(id=page.id).last_published_at.isoformat().replace('+00:00', 'Z'),
-                "branding": [
-                    {
-                        "cover_image": page_branding.cover_image.file.url,
-                        "texture_image": page_branding.texture_image.file.url,
-                        "organization_logo": {
-                            "url": page_branding.organization_logo_image.file.url,
-                            "alt": page_branding.organization_logo_alt_text,
-                        },
-                        "banner_border_color": page_branding.banner_border_color,
+                "branding": {
+                    "cover_image": page_branding.cover_image.file.url,
+                    "texture_image": page_branding.texture_image.file.url,
+                    "organization_logo": {
+                        "url": page_branding.organization_logo_image.file.url,
+                        "alt": page_branding.organization_logo_alt_text,
                     },
-                ] if page_branding else []
+                    "banner_border_color": page_branding.banner_border_color,
+                } if page_branding else {}
             }
 
             # Special cases
@@ -62,28 +70,42 @@ class TestDesignerPagesAPIEndpoint(TestCase):
 
                 program_documents = page.program_documents.first()
                 if program_documents:
-                    expected_page_data['program_documents'] = [{
+                    expected_page_data['program_documents'] = {
                         'display': program_documents.display,
                         'header': program_documents.header,
                         'documents': [],
-                    }]
+                    }
                     for document in program_documents.documents:
                         if document.block_type == 'link':
-                            expected_page_data['program_documents'][0]['documents'].append(
+                            expected_page_data['program_documents']['documents'].append(
                                 {
                                     'display_text': document.value['display_text'],
                                     'url': document.value['url'],
                                 }
                             )
                         elif document.block_type == 'file':
-                            expected_page_data['program_documents'][0]['documents'].append(
+                            expected_page_data['program_documents']['documents'].append(
                                 {
                                     'display_text': document.value['display_text'],
                                     'document': document.value['document'].file.url,
                                 }
                             )
                 else:
-                    expected_page_data['program_documents'] = []
+                    expected_page_data['program_documents'] = {}
+
+                external_program_website = page.external_program_website.first()
+                if external_program_website:
+                    expected_page_data['external_program_website'] = {
+                        'display': external_program_website.display,
+                        'header': external_program_website.header,
+                        'description': external_program_website.description,
+                        'link': {
+                            'display_text': external_program_website.link_display_text,
+                            'url': external_program_website.link_url,
+                        }
+                    }
+                else:
+                    expected_page_data['external_program_website'] = {}
 
             expected_data.append(expected_page_data)
 
@@ -115,16 +137,16 @@ class TestDesignerPagesAPIEndpoint(TestCase):
 
                     # Assert organization logo is the same
                     self.assertDictEqual(
-                        expected_page['branding'][0]['organization_logo'],
-                        actual_page['branding'][0]['organization_logo']
+                        expected_page['branding']['organization_logo'],
+                        actual_page['branding']['organization_logo']
                     )
 
                     # Remove 'organization_logo' we no longer need to check it
-                    expected_page['branding'][0].pop('organization_logo')
+                    expected_page['branding'].pop('organization_logo')
 
                     # Assert that all fields under 'branding' are the same
-                    for k in expected_page['branding'][0].keys():
-                        self.assertEqual(expected_page['branding'][0][k], actual_page['branding'][0][k])
+                    for k in expected_page['branding'].keys():
+                        self.assertEqual(expected_page['branding'][k], actual_page['branding'][k])
 
                 else:
                     # Both lists should be empty
@@ -142,19 +164,19 @@ class TestDesignerPagesAPIEndpoint(TestCase):
                 if expected_page['program_documents']:
 
                     # Assert that the documents are the same and in the correct order
-                    expected_docs = expected_page['program_documents'][0]['documents']
-                    actual_docs = actual_page['program_documents'][0]['documents']
+                    expected_docs = expected_page['program_documents']['documents']
+                    actual_docs = actual_page['program_documents']['documents']
                     for expected_doc, actual_doc in zip(expected_docs, actual_docs):
                         self.assertDictEqual(expected_doc, actual_doc)
 
                     # Remove 'documents' we no longer need to check it
-                    expected_page['program_documents'][0].pop('documents')
+                    expected_page['program_documents'].pop('documents')
 
                     # Assert that all the other fields under 'program_documents' are the same
-                    for k in expected_page['program_documents'][0].keys():
+                    for k in expected_page['program_documents'].keys():
                         self.assertEqual(
-                            expected_page['program_documents'][0][k],
-                            actual_page['program_documents'][0][k]
+                            expected_page['program_documents'][k],
+                            actual_page['program_documents'][k]
                         )
 
                 else:
