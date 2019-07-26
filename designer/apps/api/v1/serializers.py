@@ -84,7 +84,6 @@ class ProgramPageSerializer(BrandedPageSerializerMixin, serializers.ModelSeriali
             'external_program_website',
             'branding',
             'hostname',
-            'idp_slug',
         )
 
     def get_program_documents(self, obj):
