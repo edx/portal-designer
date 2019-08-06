@@ -36,4 +36,4 @@ Ask questions and discuss this project on `Slack <https://openedx.slack.com/mess
 Getting Started
 -----------------
 
-Head over to :file:`docs/getting_started.rst` for the initial steps on getting started with Portal Designer
+Check out `the initial steps <docs/getting_started.rst>`_ for getting started with Portal Designer
