@@ -5,7 +5,7 @@
 #    make upgrade
 #
 beautifulsoup4==4.6.0
-boto==2.49.0
+boto3==1.9.201
 certifi==2019.6.16
 chardet==3.0.4
 coreapi==2.3.3
