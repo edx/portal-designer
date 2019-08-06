@@ -1,10 +1,10 @@
 designer  |Travis|_ |Codecov|_
 ===================================================
-.. |Travis| image:: https://travis-ci.org/edx/designer.svg?branch=master
-.. _Travis: https://travis-ci.org/edx/designer
+.. |Travis| image:: https://travis-ci.org/edx/portal-designer.svg?branch=master
+.. _Travis: https://travis-ci.org/edx/portal-designer
 
-.. |Codecov| image:: http://codecov.io/github/edx/designer/coverage.svg?branch=master
-.. _Codecov: http://codecov.io/github/edx/designer?branch=master
+.. |Codecov| image:: http://codecov.io/github/edx/portal-designer/coverage.svg?branch=master
+.. _Codecov: http://codecov.io/github/edx/portal-designer?branch=master
 
 designer is used to create create configuration and pages that will be read via API and built by the
 learner-portal static site renderer (https://github.com/edx/frontend-app-learner-portal)
@@ -15,7 +15,7 @@ License
 The code in this repository is licensed under version 3 of the AGPL unless otherwise noted.
 Please see the LICENSE_ file for details.
 
-.. _LICENSE: https://github.com/edx/designer/blob/master/LICENSE
+.. _LICENSE: https://github.com/edx/portal-designer/blob/master/LICENSE
 
 How To Contribute
 -----------------
@@ -36,4 +36,4 @@ Ask questions and discuss this project on `Slack <https://openedx.slack.com/mess
 Getting Started
 -----------------
 
-Head over to :file:`docs/getting_started.rst` for the initial steps on getting started with Portal Designer
+Check out the `initial steps <docs/getting_started.rst>`_ for getting started with Portal Designer
