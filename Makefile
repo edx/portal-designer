@@ -133,7 +133,7 @@ dev.up: # Starts all containers
 dev.down: # Kills containers and all of their data that isn't in volumes
 	docker-compose down
 
-dev.destroy: dev.down #Kills containers and destroys volumnes
+dev.destroy: dev.down #Kills containers and destroys volumes. If you get an error after running this, also run: docker volume rm portal-designer_designer_mysql
 	docker volume rm designer_designer_mysql
 
 dev.stop: # Stops containers so they can be restarted
