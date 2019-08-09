@@ -12,8 +12,8 @@ services:
     volumes:
       - designer_mysql:/var/lib/mysql
     # Uncomment these lines to access the database from localhost
-    # ports:
-    #  - "3307:3306"
+    ports:
+      - "3307:3306"
 
   designer:
     # Uncomment this line to use the official designer base image
