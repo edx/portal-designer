@@ -14,7 +14,8 @@ supported:
 - Global moderators: Can manage all sites
 - Administrators: Can manage everything
 
-Staff users should be automatically granted some level of access when they login (they should not see an error page).
+Some users are designed as "staff" in edx-platform's LMS (Learning Management System). Staff users should be
+automatically granted some level of access when they login (they should not see an error page).
 
 Decision
 ========
@@ -60,3 +61,4 @@ References
 - Wagtail permissions: https://docs.wagtail.io/en/latest/topics/permissions.html
 - Roles based access control: https://github.com/edx/edx-rbac/blob/master/docs/how_to_guide.rst
 - JWT cookies: https://github.com/edx/edx-platform/blob/master/openedx/core/djangoapps/oauth_dispatch/docs/decisions/0009-jwt-in-session-cookie.rst
+- User and group permissions for edx.org (private repo): https://github.com/edx/app-permissions
