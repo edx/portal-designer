@@ -25,7 +25,7 @@ class IndexPage(Page):
     .. no_pii:
     """
     parent_page_types = []
-    subpage_types = ['pages.ProgramPage']
+    subpage_types = ['pages.EnterprisePage', 'pages.ProgramPage']
 
     content_panels = Page.content_panels + [
         InlinePanel('branding', label="Index Page Branding", max_num=1),
@@ -192,3 +192,28 @@ class ProgramPageBranding(Branding):
     .. no_pii:
     """
     page = ParentalKey(ProgramPage, on_delete=models.CASCADE, related_name='branding', unique=True)
+
+
+class EnterprisePage(Page):
+    """
+    Used to store information for a program on a site
+
+    .. no_pii:
+    """
+    uuid = models.UUIDField(unique=True)
+    parent_page_types = ['pages.IndexPage']
+    subpage_types = []
+
+    content_panels = Page.content_panels + [
+        FieldPanel('uuid', classname="full"),
+        InlinePanel('branding', label="Enterprise Page Branding", max_num=1),
+    ]
+
+
+class EnterprisePageBranding(Branding):
+    """
+    Branding specifically for the Enterprise Page
+
+    .. no_pii:
+    """
+    page = ParentalKey(EnterprisePage, on_delete=models.CASCADE, related_name='branding', unique=True)
