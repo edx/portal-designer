@@ -5,9 +5,10 @@ Getting Started
 Initialize and Provision
 ------------------------
 1) Start and provision the edX `devstack <https://github.com/edx/devstack>`_, as portal designer currently relies on devstack
-2) Clone the portal designer repo and cd into that directory
-3) Run *make dev.provision* to provision a new portal designer environment
-4) Run *make dev.init* to start the portal designer app and run migrations
+2) Verify that your devstack virtual environment is active before proceeding
+3) Clone the portal designer repo and cd into that directory
+4) Run *make dev.provision* to provision a new portal designer environment
+5) Run *make dev.init* to start the portal designer app and run migrations
 
 Viewing Designer
 ------------------------
