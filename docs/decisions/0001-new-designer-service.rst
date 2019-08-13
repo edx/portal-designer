@@ -3,7 +3,7 @@ New Designer Service
 Status
 ======
 
-Draft (May 9 2019)
+Accepted
 
 Context
 =======
