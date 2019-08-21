@@ -3,15 +3,16 @@
 from __future__ import unicode_literals
 
 from django.db import migrations
-from django.core import management
-from django.contrib.auth.models import Group, Permission
 
-def create_observers_group(self, *args, **kwargs):
+def create_observers_group(apps, schema_editor, *args, **kwargs):
+    Group = apps.get_model('auth', 'Group')
+    Permission = apps.get_model('auth', 'Permission')
     Observers_group = Group.objects.create(name='Observers')
     access_admin = Permission.objects.get(codename='access_admin')
     Observers_group.permissions.add(access_admin)
 
-def delete_observers_group(self, *args, **kwargs):
+def delete_observers_group(apps, schema_editor, *args, **kwargs):
+    Group = apps.get_model('auth', 'Group')
     Group.objects.get(name='Observers').delete()
 
 class Migration(migrations.Migration):
