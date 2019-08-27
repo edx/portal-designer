@@ -11,12 +11,13 @@ from wagtail.api.v2.utils import BadRequestError, filter_page_type, page_models_
 from wagtail.wagtailcore.models import Page, Site
 
 from designer.apps.pages.models import ProgramPage
-from .serializers import PageSerializer, IndexPageSerializer, ProgramPageSerializer
+from .serializers import PageSerializer, IndexPageSerializer, ProgramPageSerializer, EnterprisePageSerializer
 
 
 PAGE_TYPE_SERIALIZERS = {
     'pages.IndexPage': IndexPageSerializer,
     'pages.ProgramPage': ProgramPageSerializer,
+    'pages.EnterprisePage': EnterprisePageSerializer,
 }
 
 
