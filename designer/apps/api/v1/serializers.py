@@ -158,3 +158,18 @@ class ProgramPageSerializer(BrandedPageSerializerMixin, serializers.ModelSeriali
             (str) Serialized version of the hostname for the given obj
         """
         return obj.get_site().hostname
+
+
+class EnterprisePageSerializer(BrandedPageSerializerMixin, serializers.ModelSerializer):
+
+    branding = serializers.SerializerMethodField()
+
+    class Meta:
+        model = IndexPage
+        fields = (
+            'id',
+            'title',
+            'slug',
+            'last_published_at',
+            'branding',
+        )
