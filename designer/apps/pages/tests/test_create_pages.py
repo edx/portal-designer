@@ -44,7 +44,7 @@ class PageCreationMixin(object):
             'uuid': fake.uuid4(),
         }
 
-        if (page_type == 'enterprise'):
+        if page_type == 'enterprise':
             ret.update({
                 'contact_email': fake.email(),
             })
