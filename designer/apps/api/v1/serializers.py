@@ -171,6 +171,7 @@ class EnterprisePageSerializer(BrandedPageSerializerMixin, serializers.ModelSeri
             'uuid',
             'title',
             'slug',
+            'contact_email',
             'last_published_at',
             'branding',
         )
