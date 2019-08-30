@@ -1,7 +1,7 @@
 """ Serializers for Page APIs """
 from rest_framework import serializers
 from wagtail.wagtailcore.models import Page
-from designer.apps.pages.models import IndexPage, ProgramPage
+from designer.apps.pages.models import EnterprisePage, IndexPage, ProgramPage
 
 
 class PageSerializer(serializers.ModelSerializer):
@@ -165,9 +165,10 @@ class EnterprisePageSerializer(BrandedPageSerializerMixin, serializers.ModelSeri
     branding = serializers.SerializerMethodField()
 
     class Meta:
-        model = IndexPage
+        model = EnterprisePage
         fields = (
             'id',
+            'uuid',
             'title',
             'slug',
             'last_published_at',
