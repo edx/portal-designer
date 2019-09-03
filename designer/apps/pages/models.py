@@ -196,16 +196,22 @@ class ProgramPageBranding(Branding):
 
 class EnterprisePage(Page):
     """
-    Used to store information for a program on a site
+    Used to store information for an Enterprise on a site
 
     .. no_pii:
     """
     uuid = models.UUIDField(unique=True)
+    contact_email = models.EmailField(
+        blank=True,
+        max_length=254,
+        verbose_name='Learning Coordinator Email Address',
+    )
     parent_page_types = ['pages.IndexPage']
     subpage_types = []
 
     content_panels = Page.content_panels + [
         FieldPanel('uuid', classname="full"),
+        FieldPanel('contact_email', classname="full"),
         InlinePanel('branding', label="Enterprise Page Branding", max_num=1),
     ]
 

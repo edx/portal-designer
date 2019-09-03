@@ -34,7 +34,7 @@ class PageCreationMixin(object):
         self.site = SiteFactory()
         self.site_page = self.site.root_page
 
-    def _create_page_data(self, branding=True):
+    def _create_page_data(self, page_type=None, branding=True):
         """
         Generate program page data for testing
         """
@@ -43,6 +43,11 @@ class PageCreationMixin(object):
             'title': page_name + " Page",
             'uuid': fake.uuid4(),
         }
+
+        if page_type == 'enterprise':
+            ret.update({
+                'contact_email': fake.email(),
+            })
 
         if branding:
             ret.update({
@@ -141,7 +146,7 @@ class ProgramPageCreationTests(PageCreationMixin, TestCase):
         """
         Generate program page data for testing
         """
-        page_name, page_data = self._create_page_data(branding)
+        page_name, page_data = self._create_page_data(branding=branding)
 
         if external_program_website:
             page_data.update({
@@ -196,7 +201,7 @@ class EnterprisePageCreationTests(PageCreationMixin, TestCase):
     def test_can_create_enterprise_page(self):
         """ Verify the successful creation of a enterprise page """
 
-        _, data = self._create_page_data()
+        _, data = self._create_page_data(page_type="enterprise")
 
         self._assert_can_create(self.site_page, EnterprisePage, data)
 
@@ -205,6 +210,6 @@ class EnterprisePageCreationTests(PageCreationMixin, TestCase):
         Verify the successful creation of a enterprise page without branding
         """
 
-        _, data = self._create_page_data(branding=False)
+        _, data = self._create_page_data(page_type="enterprise", branding=False)
 
         self._assert_can_create(self.site_page, EnterprisePage, data)
