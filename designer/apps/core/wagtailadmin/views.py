@@ -2,6 +2,7 @@ from io import StringIO
 
 from django.contrib.auth.decorators import login_required
 from django.core import management
+from django.core.exceptions import PermissionDenied
 from django.http import JsonResponse
 from django.template.defaultfilters import linebreaks
 from django.utils.decorators import method_decorator
@@ -14,9 +15,8 @@ class SiteCreationView(TemplateView):
     """
     template_name = 'wagtailadmin/site_creation.html'
 
-    @method_decorator(login_required)
     def dispatch(self, request, *args, **kwargs):
-        if not request.user.is_staff:
+        if not request.user.has_perm('add_site'):
             raise PermissionDenied
         return super(SiteCreationView, self).dispatch(request, *args, **kwargs)
 
@@ -24,6 +24,9 @@ class SiteCreationView(TemplateView):
         """
         Runs create_site management command
         """
+        if not request.user.has_perm('add_site'):
+            raise PermissionDenied
+
         sitename = request.POST.get('sitename')
         hostname = request.POST.get('hostname')
 

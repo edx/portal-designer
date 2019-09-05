@@ -27,6 +27,7 @@ from wagtail.wagtaildocs import urls as wagtaildocs_urls
 from wagtail.wagtailcore import urls as wagtail_urls
 
 from designer.apps.core import views as core_views
+from designer.apps.core.wagtailadmin.views import SiteCreationView
 
 admin.autodiscover()
 
@@ -41,7 +42,7 @@ urlpatterns = oauth2_urlpatterns + [
     url(r'^pages/', include(wagtail_urls)),
     url(r'^cms/login/$', core_views.wagtail_admin_access_check),
     url(r'^cms/logout/$', RedirectView.as_view(url='/logout/')),
-    url(r'^cms/sites/new/$', RedirectView.as_view(url='/cms/create_site/')),
+    url(r'^cms/sites/new/$', SiteCreationView.as_view(), name='create-new-site'),
     url(r'^cms/', include(wagtailadmin_urls)),
     url(r'^$', RedirectView.as_view(url='/cms/'))
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
