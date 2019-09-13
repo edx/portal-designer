@@ -16,6 +16,7 @@ from wagtail.wagtailcore.models import Page
 from wagtail.wagtaildocs.blocks import DocumentChooserBlock
 
 from designer.apps.branding.models import Branding
+from designer.apps.pages.utils import is_valid_child_page
 
 
 class IndexPage(Page):
@@ -57,6 +58,13 @@ class ProgramPage(Page):
         InlinePanel('program_documents', label="Program Documents", max_num=1),
         InlinePanel('branding', label="Program Page Branding", max_num=1),
     ]
+
+    @classmethod
+    def can_exist_under(cls, parent):
+        can_exist_under_parent = super(ProgramPage, cls).can_exist_under(parent)
+        parent_child_pages = parent.get_descendants()
+        is_valid_child = is_valid_child_page(cls, parent_child_pages)
+        return can_exist_under_parent and is_valid_child
 
 
 class ExternalProgramWebsite(models.Model):
@@ -214,6 +222,15 @@ class EnterprisePage(Page):
         FieldPanel('contact_email', classname="full"),
         InlinePanel('branding', label="Enterprise Page Branding", max_num=1),
     ]
+
+    @classmethod
+    def can_exist_under(cls, parent):
+        can_exist_under_parent = super(EnterprisePage, cls).can_exist_under(parent)
+        parent_child_pages = parent.get_descendants()
+        if parent_child_pages:
+            return False
+        is_valid_child = is_valid_child_page(cls, parent_child_pages)
+        return can_exist_under_parent and is_valid_child
 
 
 class EnterprisePageBranding(Branding):
