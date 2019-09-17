@@ -34,7 +34,7 @@ class PageCreationMixin(object):
         self.site = SiteFactory()
         self.site_page = self.site.root_page
 
-    def _create_page_data(self, page_type=None, branding=True):
+    def _create_page_data(self, branding=True):
         """
         Generate program page data for testing
         """
@@ -43,11 +43,6 @@ class PageCreationMixin(object):
             'title': page_name + " Page",
             'uuid': fake.uuid4(),
         }
-
-        if page_type == 'enterprise':
-            ret.update({
-                'contact_email': fake.email(),
-            })
 
         if branding:
             ret.update({
@@ -66,42 +61,6 @@ class PageCreationMixin(object):
             })
 
         return page_name, ret
-
-    def _assert_can_create(self, parent, child_model, data):
-        """ Assert that a page of type `child_model` can be created with `data` under `parent` """
-
-        assert self.client.login(username=self.staff.username, password=self.staff_password)
-
-        if 'slug' not in data and 'title' in data:
-            data['slug'] = slugify(data['title'])
-        data['action-publish'] = 'action-publish'
-
-        url = reverse(
-            'wagtailadmin_pages:add',
-            args=[child_model._meta.app_label, child_model._meta.model_name, parent.pk]
-        )
-        response = self.client.post(url, data, follow=True)
-        if response.status_code != 200:
-            if 'form' not in response.context:
-                self.fail('Creating page failed unusually')
-
-            form = response.context['form']
-            if not form.errors:
-                self.fail('Creating a page failed for unknown reason')
-
-            errors = '\n'.join(['  {}:\n    {}'.format(key, '\n'.join(values)) for key, values in form.errors.items()])
-            self.fail("Creating a page failed for the following reasons:\n{}".format(errors))
-
-        try:
-            child_model.objects.get(slug=data['slug'])
-        except child_model.DoesNotExist:
-            self.fail("Page not created")
-
-
-class ProgramPageCreationTests(PageCreationMixin, TestCase):
-    """
-    Tests for Program Page Creation
-    """
 
     def _create_program_documents(self):
         """
@@ -129,7 +88,6 @@ class ProgramPageCreationTests(PageCreationMixin, TestCase):
                     "program_documents-0-documents-{}-order".format(i): str(i),
                     "program_documents-0-documents-{}-deleted".format(i): '',
                 })
-
             else:
                 # generate a file type document
                 ret.update({
@@ -176,6 +134,79 @@ class ProgramPageCreationTests(PageCreationMixin, TestCase):
 
         return page_data
 
+    def _create_enterprise_page_data(self, branding=True, contact_email=True):
+        """
+        Generate enterprise page data for testing
+        """
+        _, page_data = self._create_page_data(branding=branding)
+
+        if contact_email:
+            page_data.update({
+                'contact_email': fake.email(),
+            })
+
+        return page_data
+
+    def _assert_can_create(self, parent, child_model, data):
+        """ Assert that a page of type `child_model` can be created with `data` under `parent` """
+
+        assert self.client.login(username=self.staff.username, password=self.staff_password)
+
+        if 'slug' not in data and 'title' in data:
+            data['slug'] = slugify(data['title'])
+        data['action-publish'] = 'action-publish'
+
+        url = reverse(
+            'wagtailadmin_pages:add',
+            args=[child_model._meta.app_label, child_model._meta.model_name, parent.pk]
+        )
+        response = self.client.post(url, data, follow=True)
+        if response.status_code != 200:
+            if 'form' not in response.context:
+                self.fail('Creating page failed unusually')
+
+            form = response.context['form']
+            if not form.errors:
+                self.fail('Creating a page failed for unknown reason')
+
+            errors = '\n'.join(['  {}:\n    {}'.format(key, '\n'.join(values)) for key, values in form.errors.items()])
+            self.fail("Creating a page failed for the following reasons:\n{}".format(errors))
+
+        try:
+            child_model.objects.get(slug=data['slug'])
+        except child_model.DoesNotExist:
+            self.fail("Page not created")
+
+    def _assert_cannot_create(self, parent, child_model, data):
+        """
+        Assert that a page of type `child_model` cannot be created with `data` under `parent`
+        """
+
+        assert self.client.login(username=self.staff.username, password=self.staff_password)
+
+        if 'slug' not in data and 'title' in data:
+            data['slug'] = slugify(data['title'])
+        data['action-publish'] = 'action-publish'
+
+        url = reverse(
+            'wagtailadmin_pages:add',
+            args=[child_model._meta.app_label, child_model._meta.model_name, parent.pk]
+        )
+
+        self.client.post(url, data, follow=True)
+
+        try:
+            child_model.objects.get(slug=data['slug'])
+            self.fail("Page was successfully created when it should not have been.")
+        except child_model.DoesNotExist:
+            pass
+
+
+class ProgramPageCreationTests(PageCreationMixin, TestCase):
+    """
+    Tests for Program Page Creation
+    """
+
     def test_can_create_program_page(self):
         """ Verify the successful creation of a program page """
 
@@ -192,6 +223,25 @@ class ProgramPageCreationTests(PageCreationMixin, TestCase):
 
         self._assert_can_create(self.site_page, ProgramPage, data)
 
+    def test_can_create_multiple_program_pages(self):
+        """
+        Verify the successful creation of multiple program pages.
+        """
+        first_page_data = self._create_program_page_data()
+        second_page_data = self._create_program_page_data()
+        self._assert_can_create(self.site_page, ProgramPage, first_page_data)
+        self._assert_can_create(self.site_page, ProgramPage, second_page_data)
+
+    def test_cannot_create_program_page(self):
+        """
+        Verify the unsuccessful creation of a program page when its sibling page(s)
+        are of a different type.
+        """
+        enterprise_page_data = self._create_enterprise_page_data()
+        program_page_data = self._create_program_page_data()
+        self._assert_can_create(self.site_page, EnterprisePage, enterprise_page_data)
+        self._assert_cannot_create(self.site_page, ProgramPage, program_page_data)
+
 
 class EnterprisePageCreationTests(PageCreationMixin, TestCase):
     """
@@ -201,7 +251,7 @@ class EnterprisePageCreationTests(PageCreationMixin, TestCase):
     def test_can_create_enterprise_page(self):
         """ Verify the successful creation of a enterprise page """
 
-        _, data = self._create_page_data(page_type="enterprise")
+        data = self._create_enterprise_page_data()
 
         self._assert_can_create(self.site_page, EnterprisePage, data)
 
@@ -210,6 +260,25 @@ class EnterprisePageCreationTests(PageCreationMixin, TestCase):
         Verify the successful creation of a enterprise page without branding
         """
 
-        _, data = self._create_page_data(page_type="enterprise", branding=False)
+        data = self._create_enterprise_page_data(branding=False)
 
         self._assert_can_create(self.site_page, EnterprisePage, data)
+
+    def test_cannot_create_multiple_enterprise_pages(self):
+        """
+        Verify the successful creation of multiple enterprise pages.
+        """
+        first_page_data = self._create_enterprise_page_data()
+        second_page_data = self._create_enterprise_page_data()
+        self._assert_can_create(self.site_page, EnterprisePage, first_page_data)
+        self._assert_cannot_create(self.site_page, EnterprisePage, second_page_data)
+
+    def test_cannot_create_enterprise_page(self):
+        """
+        Verify the unsuccessful creation of a program page when its sibling page(s)
+        are of a different type.
+        """
+        program_page_data = self._create_program_page_data()
+        enterprise_page_data = self._create_enterprise_page_data()
+        self._assert_can_create(self.site_page, ProgramPage, program_page_data)
+        self._assert_cannot_create(self.site_page, EnterprisePage, enterprise_page_data)
