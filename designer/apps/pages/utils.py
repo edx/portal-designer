@@ -13,9 +13,7 @@ def is_valid_child_page(cls, parent_child_pages):
 
     .. no_pii:
     """
-    is_valid_child = True
     for child_page in parent_child_pages:
         if cls is not child_page.specific_class:
-            is_valid_child = False
-            break
-    return is_valid_child
+            return False
+    return True
