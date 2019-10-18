@@ -10,12 +10,14 @@ from wagtail.wagtailadmin.edit_handlers import (
     RichTextFieldPanel,
     MultiFieldPanel,
 )
+from wagtail.wagtailimages.edit_handlers import ImageChooserPanel
 from wagtail.wagtailcore.blocks import CharBlock, StructBlock, URLBlock
 from wagtail.wagtailcore.fields import StreamField
 from wagtail.wagtailcore.models import Page
 from wagtail.wagtaildocs.blocks import DocumentChooserBlock
 
 from designer.apps.branding.models import Branding
+from designer.apps.branding.utils import validate_hexadecimal_color
 from designer.apps.pages.utils import is_valid_child_page
 
 
@@ -27,19 +29,6 @@ class IndexPage(Page):
     """
     parent_page_types = []
     subpage_types = ['pages.EnterprisePage', 'pages.ProgramPage']
-
-    content_panels = Page.content_panels + [
-        InlinePanel('branding', label="Index Page Branding", max_num=1),
-    ]
-
-
-class IndexPageBranding(Branding):
-    """
-    Branding specifically for the Index Page (The site level home page)
-
-    .. no_pii:
-    """
-    page = ParentalKey(IndexPage, on_delete=models.CASCADE, related_name='branding', unique=True)
 
 
 class ProgramPage(Page):
@@ -201,6 +190,28 @@ class ProgramPageBranding(Branding):
     """
     page = ParentalKey(ProgramPage, on_delete=models.CASCADE, related_name='branding', unique=True)
 
+    cover_image = models.ForeignKey(
+        'wagtailimages.Image',
+        null=True,
+        blank=False,
+        on_delete=models.SET_NULL,
+        related_name='+',
+        verbose_name='Cover Image'
+    )
+    texture_image = models.ForeignKey(
+        'wagtailimages.Image',
+        null=True,
+        blank=False,
+        on_delete=models.SET_NULL,
+        related_name='+',
+        verbose_name='Texture Image'
+    )
+
+    panels = Branding.panels + [
+        ImageChooserPanel('cover_image'),
+        ImageChooserPanel('texture_image'),
+    ]
+
 
 class EnterprisePage(Page):
     """
@@ -240,3 +251,15 @@ class EnterprisePageBranding(Branding):
     .. no_pii:
     """
     page = ParentalKey(EnterprisePage, on_delete=models.CASCADE, related_name='branding', unique=True)
+
+    banner_background_color = models.CharField(
+        max_length=7,
+        blank=True,
+        null=True,
+        default='#FFFFFF',
+        validators=[validate_hexadecimal_color],
+    )
+
+    panels = Branding.panels + [
+        FieldPanel('banner_background_color'),
+    ]

@@ -45,22 +45,44 @@ class TestDesignerPagesAPIEndpoint(TestCase):
 
         for page in pages:
             page_type = page._meta.model.__name__
-            page_branding = page.branding.first()
+            try:
+                page_branding = page.branding.first()
+            except AttributeError:
+                page_branding = None
             expected_page_data = {
                 "type": "pages.{}".format(page_type),
                 "title": page.title,
                 "slug": page.slug,
                 "last_published_at": Page.objects.get(id=page.id).last_published_at.isoformat().replace('+00:00', 'Z'),
-                "branding": {
-                    "cover_image": page_branding.cover_image.file.url,
-                    "texture_image": page_branding.texture_image.file.url,
-                    "organization_logo": {
-                        "url": page_branding.organization_logo_image.file.url,
-                        "alt": page_branding.organization_logo_alt_text,
-                    },
-                    "banner_border_color": page_branding.banner_border_color,
-                } if page_branding else {}
             }
+            if page_type != 'IndexPage':
+                expected_page_data.update({
+                    "branding": {},
+                })
+
+                if page_branding:
+                    expected_page_data['branding'].update({
+                        "organization_logo": {
+                            "url": page_branding.organization_logo_image.file.url,
+                            "alt": page_branding.organization_logo_alt_text,
+                        },
+                        "banner_border_color": page_branding.banner_border_color,
+                    })
+                    cover_image = getattr(page_branding, 'cover_image', None)
+                    texture_image = getattr(page_branding, 'texture_image', None)
+                    banner_background_color = getattr(page_branding, 'banner_background_color', None)
+                    if cover_image:
+                        expected_page_data['branding'].update({
+                            "cover_image": page_branding.cover_image.file.url,
+                        })
+                    if texture_image:
+                        expected_page_data['branding'].update({
+                            "texture_image": page_branding.texture_image.file.url,
+                        })
+                    if banner_background_color:
+                        expected_page_data['branding'].update({
+                            "banner_background_color": page_branding.banner_background_color,
+                        })
 
             # Special cases
             if page_type == 'ProgramPage':

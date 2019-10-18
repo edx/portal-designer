@@ -8,9 +8,8 @@ from faker import Faker
 from faker.providers import internet, lorem, misc
 
 from designer.apps.branding.tests.utils import BrandingFactory
-from designer.apps.core.tests.utils import DocumentFactory, SiteFactory
+from designer.apps.core.tests.utils import DocumentFactory, SiteFactory, ImageFactory
 from designer.apps.pages.models import (
-    IndexPageBranding,
     ProgramDocuments,
     ProgramPage,
     ProgramPageBranding,
@@ -21,17 +20,6 @@ fake = Faker()
 fake.add_provider(lorem)
 fake.add_provider(misc)
 fake.add_provider(internet)
-
-
-class IndexPageBrandingFactory(BrandingFactory):
-    """Creates instance of IndexPageBranding for testing"""
-    class Meta:
-        model = IndexPageBranding
-
-    class Params:
-        site = factory.SubFactory(SiteFactory)
-
-    page = factory.LazyAttribute(lambda o: o.site.root_page)
 
 
 class ProgramPageBrandingFactory(BrandingFactory):
@@ -45,6 +33,9 @@ class ProgramPageBrandingFactory(BrandingFactory):
     page = factory.LazyAttribute(lambda o: create_program_page(
         site=o.site,
     ))
+
+    cover_image = factory.SubFactory(ImageFactory)
+    texture_image = factory.SubFactory(ImageFactory)
 
 
 class ExternalProgramWebsiteFactory(factory.django.DjangoModelFactory):
@@ -161,8 +152,7 @@ def create_branded_site():
     """
     Create a branded Site
     Returns:
-        (Site) Site with associated IndexPageBranding
+        (Site) Site
     """
     site = SiteFactory()
-    IndexPageBrandingFactory(site=site)
     return site

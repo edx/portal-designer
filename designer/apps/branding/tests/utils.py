@@ -18,8 +18,6 @@ class BrandingFactory(factory.django.DjangoModelFactory):
     class Meta:
         model = Branding
 
-    cover_image = factory.SubFactory(ImageFactory)
-    texture_image = factory.SubFactory(ImageFactory)
     organization_logo_image = factory.SubFactory(ImageFactory)
     organization_logo_alt_text = factory.LazyAttribute(lambda l: fake.bs())
     banner_border_color = factory.LazyAttribute(lambda l: fake.safe_hex_color())
