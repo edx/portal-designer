@@ -148,9 +148,9 @@ def create_program_page(
     return program_page
 
 
-def create_branded_site():
+def create_site():
     """
-    Create a branded Site
+    Create a Site
     Returns:
         (Site) Site
     """

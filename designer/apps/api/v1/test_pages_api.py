@@ -2,7 +2,7 @@
 from django.core.urlresolvers import reverse
 from django.test import TestCase
 from designer.apps.core.tests.utils import DEFAULT_WAGTAIL_PAGES
-from designer.apps.pages.tests.utils import create_branded_site, create_program_page
+from designer.apps.pages.tests.utils import create_site, create_program_page
 from wagtail.wagtailcore.models import Page
 
 
@@ -14,7 +14,7 @@ class TestDesignerPagesAPIEndpoint(TestCase):
         self.url = reverse('api:v1:pages')
 
         # Create a site and associated branding
-        self.site = create_branded_site()
+        self.site = create_site()
 
         # Create 2 programs under that site and associated branding
         self.program1_page = create_program_page(
@@ -232,7 +232,7 @@ class TestDesignerPagesAPIEndpoint(TestCase):
         """ Verify that when the pages api is called with a hostname specified only pages associated with that site are
         returned """
         # Create a second site
-        site2 = create_branded_site()
+        site2 = create_site()
         # Create a number of programs for that site
         site2_program_pages = [create_program_page(site2) for __ in range(3)]
 
@@ -249,7 +249,7 @@ class TestDesignerPagesAPIEndpoint(TestCase):
     def test_filter_by_page_type(self):
         """ Verify that when filtering by page type the appropriate pages are returned """
         # Create a second site
-        site2 = create_branded_site()
+        site2 = create_site()
         # Create a number of programs for that site
         site2_program_pages = [create_program_page(site2) for __ in range(3)]
 
