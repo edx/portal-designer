@@ -2,7 +2,7 @@
 from django.core.urlresolvers import reverse
 from django.test import TestCase
 from designer.apps.core.tests.utils import DEFAULT_WAGTAIL_PAGES
-from designer.apps.pages.tests.utils import create_branded_site, create_program_page
+from designer.apps.pages.tests.utils import create_site, create_program_page
 from wagtail.wagtailcore.models import Page
 
 
@@ -14,7 +14,7 @@ class TestDesignerPagesAPIEndpoint(TestCase):
         self.url = reverse('api:v1:pages')
 
         # Create a site and associated branding
-        self.site = create_branded_site()
+        self.site = create_site()
 
         # Create 2 programs under that site and associated branding
         self.program1_page = create_program_page(
@@ -45,22 +45,44 @@ class TestDesignerPagesAPIEndpoint(TestCase):
 
         for page in pages:
             page_type = page._meta.model.__name__
-            page_branding = page.branding.first()
+            try:
+                page_branding = page.branding.first()
+            except AttributeError:
+                page_branding = None
             expected_page_data = {
                 "type": "pages.{}".format(page_type),
                 "title": page.title,
                 "slug": page.slug,
                 "last_published_at": Page.objects.get(id=page.id).last_published_at.isoformat().replace('+00:00', 'Z'),
-                "branding": {
-                    "cover_image": page_branding.cover_image.file.url,
-                    "texture_image": page_branding.texture_image.file.url,
-                    "organization_logo": {
-                        "url": page_branding.organization_logo_image.file.url,
-                        "alt": page_branding.organization_logo_alt_text,
-                    },
-                    "banner_border_color": page_branding.banner_border_color,
-                } if page_branding else {}
             }
+            if page_type != 'IndexPage':
+                expected_page_data.update({
+                    "branding": {},
+                })
+
+                if page_branding:
+                    expected_page_data['branding'].update({
+                        "organization_logo": {
+                            "url": page_branding.organization_logo_image.file.url,
+                            "alt": page_branding.organization_logo_alt_text,
+                        },
+                        "banner_border_color": page_branding.banner_border_color,
+                    })
+                    cover_image = getattr(page_branding, 'cover_image', None)
+                    texture_image = getattr(page_branding, 'texture_image', None)
+                    banner_background_color = getattr(page_branding, 'banner_background_color', None)
+                    if cover_image:
+                        expected_page_data['branding'].update({
+                            "cover_image": page_branding.cover_image.file.url,
+                        })
+                    if texture_image:
+                        expected_page_data['branding'].update({
+                            "texture_image": page_branding.texture_image.file.url,
+                        })
+                    if banner_background_color:
+                        expected_page_data['branding'].update({
+                            "banner_background_color": page_branding.banner_background_color,
+                        })
 
             # Special cases
             if page_type == 'ProgramPage':
@@ -210,7 +232,7 @@ class TestDesignerPagesAPIEndpoint(TestCase):
         """ Verify that when the pages api is called with a hostname specified only pages associated with that site are
         returned """
         # Create a second site
-        site2 = create_branded_site()
+        site2 = create_site()
         # Create a number of programs for that site
         site2_program_pages = [create_program_page(site2) for __ in range(3)]
 
@@ -227,7 +249,7 @@ class TestDesignerPagesAPIEndpoint(TestCase):
     def test_filter_by_page_type(self):
         """ Verify that when filtering by page type the appropriate pages are returned """
         # Create a second site
-        site2 = create_branded_site()
+        site2 = create_site()
         # Create a number of programs for that site
         site2_program_pages = [create_program_page(site2) for __ in range(3)]
 

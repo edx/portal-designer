@@ -37,9 +37,11 @@ class BrandedPageSerializerMixin(object):
         if not branding:
             return {}
 
-        return {
-            'cover_image': branding.cover_image.file.url,
-            'texture_image': branding.texture_image.file.url,
+        cover_image = getattr(branding, 'cover_image', None)
+        texture_image = getattr(branding, 'texture_image', None)
+        banner_background_color = getattr(branding, 'banner_background_color', None)
+
+        serialized_branding = {
             'organization_logo': {
                 'url': branding.organization_logo_image.file.url,
                 'alt': branding.organization_logo_alt_text,
@@ -47,11 +49,26 @@ class BrandedPageSerializerMixin(object):
             'banner_border_color': branding.banner_border_color,
         }
 
+        if cover_image:
+            serialized_branding.update({
+                'cover_image': cover_image.file.url,
+            })
+        if texture_image:
+            serialized_branding.update({
+                'texture_image': texture_image.file.url,
+            })
+        if banner_background_color:
+            serialized_branding.update({
+                'banner_background_color': banner_background_color,
+            })
 
-class IndexPageSerializer(BrandedPageSerializerMixin, serializers.ModelSerializer):
+        return serialized_branding
 
-    branding = serializers.SerializerMethodField()
 
+class IndexPageSerializer(serializers.ModelSerializer):
+    """
+    Serializer for the Index Page
+    """
     class Meta:
         model = IndexPage
         fields = (
@@ -59,7 +76,6 @@ class IndexPageSerializer(BrandedPageSerializerMixin, serializers.ModelSerialize
             'title',
             'slug',
             'last_published_at',
-            'branding',
         )
 
 

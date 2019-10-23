@@ -1,24 +1,8 @@
 """ Models related to the branding of individual sites """
-import re
-
-from django.core.exceptions import ValidationError
 from django.db import models
 from wagtail.wagtailadmin.edit_handlers import FieldPanel, MultiFieldPanel
 from wagtail.wagtailimages.edit_handlers import ImageChooserPanel
-
-
-def validate_hexadecimal_color(color):
-    """
-    Returns true if color is a string in the format hexadecimal format
-    ex: '#B62168', '#00a2e4'
-    Args:
-        color: (str) string representing hexadecimal color
-
-    Returns:
-        is_valid_hexadecimal_color: (bool) True if `color` is in valid hexadecimal format
-    """
-    if re.match(r'#[\dA-Fa-f]{6}', color) is None:
-        raise ValidationError("Incorrect format. Must follow hexadecimal format (ex. '#B62168' or '#00a2e4')")
+from designer.apps.branding.utils import validate_hexadecimal_color
 
 
 class Branding(models.Model):
@@ -27,22 +11,6 @@ class Branding(models.Model):
 
     .. no_pii:
     """
-    cover_image = models.ForeignKey(
-        'wagtailimages.Image',
-        null=True,
-        blank=False,
-        on_delete=models.SET_NULL,
-        related_name='+',
-        verbose_name='Cover Image'
-    )
-    texture_image = models.ForeignKey(
-        'wagtailimages.Image',
-        null=True,
-        blank=False,
-        on_delete=models.SET_NULL,
-        related_name='+',
-        verbose_name='Texture Image'
-    )
     organization_logo_image = models.ForeignKey(
         'wagtailimages.Image',
         null=True,
@@ -67,8 +35,6 @@ class Branding(models.Model):
     )
 
     panels = [
-        ImageChooserPanel('cover_image'),
-        ImageChooserPanel('texture_image'),
         MultiFieldPanel(
             [
                 ImageChooserPanel('organization_logo_image'),
