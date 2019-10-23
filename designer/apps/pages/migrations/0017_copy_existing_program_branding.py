@@ -21,7 +21,7 @@ def backwards(apps, schema_editor):
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('pages', '0016_auto_20191022_1238'),
+        ('pages', '0016_add_page_specific_branding'),
         ('branding', '0002_auto_20190703_1512')
     ]
 

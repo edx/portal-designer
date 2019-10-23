@@ -9,6 +9,7 @@ class Migration(migrations.Migration):
 
     dependencies = [
         ('branding', '0002_auto_20190703_1512'),
+        ('pages', '0017_copy_existing_program_branding'),
     ]
 
     operations = [
