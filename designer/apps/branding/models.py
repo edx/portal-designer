@@ -2,6 +2,7 @@
 from django.db import models
 from wagtail.wagtailadmin.edit_handlers import FieldPanel, MultiFieldPanel
 from wagtail.wagtailimages.edit_handlers import ImageChooserPanel
+from wagtail.wagtailimages.models import Image
 from designer.apps.branding.utils import validate_hexadecimal_color
 
 
@@ -12,7 +13,7 @@ class Branding(models.Model):
     .. no_pii:
     """
     organization_logo_image = models.ForeignKey(
-        'wagtailimages.Image',
+        Image,
         null=True,
         blank=False,
         on_delete=models.SET_NULL,
