@@ -1,16 +1,14 @@
 """ Core views. """
 import logging
 import uuid
-
-from django.db import transaction, connection, DatabaseError
-from django.http import HttpResponse, JsonResponse
+from designer.apps.core.constants import Status
 from django.conf import settings
 from django.contrib.auth import get_user_model, login, authenticate
+from django.db import transaction, connection, DatabaseError
 from django.http import Http404
+from django.http import HttpResponse, JsonResponse
 from django.shortcuts import redirect
 from django.views.generic import View
-
-from designer.apps.core.constants import Status
 
 logger = logging.getLogger(__name__)
 User = get_user_model()

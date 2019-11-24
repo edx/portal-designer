@@ -1,8 +1,7 @@
 """ Context processor tests. """
 
-from django.test import TestCase, override_settings, RequestFactory
-
 from designer.apps.core.context_processors import core
+from django.test import TestCase, override_settings, RequestFactory
 
 PLATFORM_NAME = 'Test Platform'
 

@@ -1,9 +1,11 @@
 """ Signals sent by  Core Models """
 
+from django.contrib.auth.models import Group
 from django.db.models.signals import post_save
 from django.dispatch import receiver
-from django.contrib.auth.models import Group
+
 from .models import User
+
 
 # When a new user is created, this signal is actually fired 3 times for 3 seperate sources
 # * Once by wagtail

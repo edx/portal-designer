@@ -3,9 +3,7 @@
 from __future__ import unicode_literals
 
 from django.db import migrations
-import wagtail.wagtailcore.blocks
-import wagtail.wagtailcore.fields
-import wagtail.wagtaildocs.blocks
+import wagtail.documents.blocks
 
 
 class Migration(migrations.Migration):
@@ -18,6 +16,6 @@ class Migration(migrations.Migration):
         migrations.AddField(
             model_name='programpage',
             name='program_documents',
-            field=wagtail.wagtailcore.fields.StreamField((('file', wagtail.wagtailcore.blocks.StructBlock((('display_text', wagtail.wagtailcore.blocks.CharBlock()), ('document', wagtail.wagtaildocs.blocks.DocumentChooserBlock())), icon='doc-full')), ('link', wagtail.wagtailcore.blocks.StructBlock((('display_text', wagtail.wagtailcore.blocks.CharBlock()), ('url', wagtail.wagtailcore.blocks.URLBlock())), icon='link'))), blank=True, verbose_name='Program Documents'),
+            field=wagtail.core.fields.StreamField((('file', wagtail.core.blocks.StructBlock((('display_text', wagtail.core.blocks.CharBlock()), ('document', wagtail.documents.blocks.DocumentChooserBlock())), icon='doc-full')), ('link', wagtail.core.blocks.StructBlock((('display_text', wagtail.core.blocks.CharBlock()), ('url', wagtail.core.blocks.URLBlock())), icon='link'))), blank=True, verbose_name='Program Documents'),
         ),
     ]

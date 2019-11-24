@@ -3,7 +3,7 @@ from django.core.urlresolvers import reverse
 from django.test import TestCase
 from designer.apps.core.tests.utils import DEFAULT_WAGTAIL_PAGES
 from designer.apps.pages.tests.utils import create_site, create_program_page
-from wagtail.wagtailcore.models import Page
+from wagtail.core.models import Page
 
 
 class TestDesignerPagesAPIEndpoint(TestCase):

@@ -1,13 +1,14 @@
 """ Tests for Core Signals """
 
-from django.test import TestCase
-from django.contrib.auth.models import Group
-from django_dynamic_fixture import G
 from designer.apps.core.models import User
+from django.contrib.auth.models import Group
+from django.test import TestCase
+from django_dynamic_fixture import G
 
 
 class PostSaveTests(TestCase):
     """ Tests for the post_save Signal """
+
     # if a user has proper staff status, logs in for the first time, add them to the group.
     def test_adds_user_to_observers_if_staff(self):
         user = G(User, is_staff=True)

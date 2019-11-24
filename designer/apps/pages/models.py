@@ -2,7 +2,7 @@
 import re
 from django.db import models
 from modelcluster.fields import ParentalKey
-from wagtail.wagtailadmin.edit_handlers import (
+from wagtail.admin.edit_handlers import (
     FieldPanel,
     InlinePanel,
     StreamFieldPanel,
@@ -10,11 +10,12 @@ from wagtail.wagtailadmin.edit_handlers import (
     RichTextFieldPanel,
     MultiFieldPanel,
 )
-from wagtail.wagtailimages.edit_handlers import ImageChooserPanel
-from wagtail.wagtailcore.blocks import CharBlock, StructBlock, URLBlock
-from wagtail.wagtailcore.fields import StreamField
-from wagtail.wagtailcore.models import Page
-from wagtail.wagtaildocs.blocks import DocumentChooserBlock
+from wagtail.images.edit_handlers import ImageChooserPanel
+from wagtail.core.blocks import CharBlock, StructBlock, URLBlock
+from wagtail.core.fields import StreamField
+from wagtail.core.models import Page
+from wagtail.images.models import Image
+from wagtail.documents.blocks import DocumentChooserBlock
 
 from designer.apps.branding.models import Branding
 from designer.apps.branding.utils import validate_hexadecimal_color
@@ -191,7 +192,7 @@ class ProgramPageBranding(Branding):
     page = ParentalKey(ProgramPage, on_delete=models.CASCADE, related_name='branding', unique=True)
 
     cover_image = models.ForeignKey(
-        'wagtailimages.Image',
+        Image,
         null=True,
         blank=False,
         on_delete=models.SET_NULL,
@@ -199,7 +200,7 @@ class ProgramPageBranding(Branding):
         verbose_name='Cover Image'
     )
     texture_image = models.ForeignKey(
-        'wagtailimages.Image',
+        Image,
         null=True,
         blank=False,
         on_delete=models.SET_NULL,

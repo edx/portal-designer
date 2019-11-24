@@ -3,6 +3,7 @@
 from __future__ import unicode_literals
 
 import designer.apps.branding.utils
+from wagtail.images.models import Image
 from django.db import migrations, models
 import django.db.models.deletion
 

@@ -1,12 +1,9 @@
-from io import StringIO
-
-from django.contrib.auth.decorators import login_required
 from django.core import management
 from django.core.exceptions import PermissionDenied
 from django.http import JsonResponse
 from django.template.defaultfilters import linebreaks
-from django.utils.decorators import method_decorator
 from django.views.generic import TemplateView
+from io import StringIO
 
 
 class SiteCreationView(TemplateView):

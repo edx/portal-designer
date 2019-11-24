@@ -1,10 +1,9 @@
 """ Tests for core models. """
 
+from designer.apps.core.models import User
 from django.test import TestCase
 from django_dynamic_fixture import G
 from social_django.models import UserSocialAuth
-
-from designer.apps.core.models import User
 
 
 class UserTests(TestCase):

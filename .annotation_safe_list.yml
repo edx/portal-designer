@@ -39,37 +39,37 @@ waffle.Sample:
   ".. no_pii:": "This model has no PII"
 waffle.Switch:
   ".. no_pii:": "This model has no PII"
-wagtailcore.Collection:
+core.Collection:
   ".. no_pii:": "This model has no PII"
-wagtailcore.CollectionViewRestriction:
+core.CollectionViewRestriction:
   ".. no_pii:": "This model has no PII"
-wagtailcore.GroupCollectionPermission:
+core.GroupCollectionPermission:
   ".. no_pii:": "This model has no PII"
-wagtailcore.GroupPagePermission:
+core.GroupPagePermission:
   ".. no_pii:": "This model has no PII"
-wagtailcore.Page:
+core.Page:
   ".. no_pii:": "This model has no PII"
-wagtailcore.PageRevision:
+core.PageRevision:
   ".. no_pii:": "This model has no PII"
-wagtailcore.PageViewRestriction:
+core.PageViewRestriction:
   ".. no_pii:": "This model has no PII"
-wagtailcore.Site:
+core.Site:
   ".. no_pii:": "This model has no PII"
-wagtaildocs.Document:
+documents.Document:
   ".. no_pii:": "This model has no PII"
-wagtailembeds.Embed:
+embeds.Embed:
   ".. no_pii:": "This model has no PII"
-wagtailforms.FormSubmission:
+forms.FormSubmission:
   ".. no_pii:": "This model has no PII"
-wagtailimages.Image:
+images.Image:
   ".. no_pii:": "This model has no PII"
-wagtailimages.Rendition:
+images.Rendition:
   ".. no_pii:": "This model has no PII"
-wagtailredirects.Redirect:
+redirects.Redirect:
   ".. no_pii:": "This model has no PII"
-wagtailsearch.Query:
+search.Query:
   ".. no_pii:": "This model has no PII"
-wagtailsearch.QueryDailyHits:
+search.QueryDailyHits:
   ".. no_pii:": "This model has no PII"
-wagtailusers.UserProfile:
+users.UserProfile:
     ".. no_pii:": "This model has no PII"
