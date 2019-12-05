@@ -39,7 +39,7 @@ class HealthTests(TestCase):
             }
         }
 
-        self.assertJSONEqual(response.content, expected_data)
+        self.assertJSONEqual(response.content.decode(), expected_data)
 
 
 class AutoAuthTests(TestCase):
