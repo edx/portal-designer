@@ -262,12 +262,3 @@ MEDIA_STORAGE_BACKEND = {
     'MEDIA_ROOT': MEDIA_ROOT,
     'MEDIA_URL': MEDIA_URL
 }
-# Set these to the correct values for your OAuth2/OpenID Connect provider (e.g., devstack)
-SOCIAL_AUTH_EDX_OIDC_KEY = 'designer-key'
-SOCIAL_AUTH_EDX_OIDC_SECRET = 'designer-secret'
-SOCIAL_AUTH_EDX_OIDC_URL_ROOT = 'http://127.0.0.1:8000/oauth2'
-SOCIAL_AUTH_EDX_OIDC_LOGOUT_URL = 'http://127.0.0.1:8000/logout'
-SOCIAL_AUTH_EDX_OIDC_ID_TOKEN_DECRYPTION_KEY = 'designer-secret'
-SOCIAL_AUTH_REDIRECT_IS_HTTPS = False
-SOCIAL_AUTH_EDX_OIDC_PUBLIC_URL_ROOT = 'http://127.0.0.1:8000/oauth2'
-SOCIAL_AUTH_EDX_OIDC_ISSUER = 'http://127.0.0.1:8000/oauth2'
