@@ -17,13 +17,13 @@ django-rest-swagger==2.2.0
 django-storages==1.9.1
 django-taggit==0.22.2     # via wagtail
 django-treebeard==4.3.1   # via wagtail
-django-waffle==0.19.0
+django-waffle==0.20.0
 django==1.11.28
 djangorestframework-jwt==1.11.0
 djangorestframework==3.6.4
 edx-auth-backends==3.0.2
 edx-django-release-util==0.3.6
-edx-django-utils==2.0.4
+edx-django-utils==3.0
 edx-drf-extensions==2.4.6
 edx-opaque-keys==2.0.1    # via edx-drf-extensions
 edx-rest-api-client==3.0.2
