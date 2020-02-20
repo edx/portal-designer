@@ -60,8 +60,7 @@ production-requirements:
 	pip install -qr requirements.txt --exists-action w
 
 test: clean test_requirements
-	coverage run ./manage.py test designer --settings=designer.settings.test
-	coverage report
+	python -Wd -m pytest
 
 quality: quality_requirements
 	pycodestyle designer *.py
