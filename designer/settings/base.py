@@ -64,7 +64,7 @@ INSTALLED_APPS += THIRD_PARTY_APPS
 INSTALLED_APPS += PROJECT_APPS
 INSTALLED_APPS += WAGTAIL_APPS
 
-MIDDLEWARE_CLASSES = (
+MIDDLEWARE = (
     'waffle.middleware.WaffleMiddleware',
     'wagtail.wagtailcore.middleware.SiteMiddleware',
     'wagtail.wagtailredirects.middleware.RedirectMiddleware',
