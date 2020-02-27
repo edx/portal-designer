@@ -1,4 +1,4 @@
-{% extends "wagtailadmin/base.html" %}
+{% extends "admin/base.html" %}
 {% load i18n %}
 {% block titletag %}{% trans "Add New Site" %}{% endblock %}
 {% block extra_css %}
@@ -63,7 +63,7 @@
 {% endblock %}
 
 {% block content %}
-    {% include "wagtailadmin/shared/header.html" with title=action_str icon="media-full-inverse" %}
+    {% include "admin/shared/header.html" with title=action_str icon="media-full-inverse" %}
     <div class="nice-padding" id="new-site-container">
         <form action="{% url 'create-new-site' %}" method="POST">
             {% csrf_token %}

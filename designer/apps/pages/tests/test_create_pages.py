@@ -7,7 +7,7 @@ from django.test import TestCase
 from django.utils.text import slugify
 from faker import Faker
 from faker.providers import color, internet, lorem, misc
-from wagtail.wagtailcore.models import Page
+from wagtail.core.models import Page
 
 from designer.apps.core.tests.utils import (DocumentFactory, ImageFactory,
                                             SiteFactory, UserFactory)

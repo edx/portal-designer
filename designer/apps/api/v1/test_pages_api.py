@@ -3,7 +3,7 @@ from django.core.urlresolvers import reverse
 from django.test import TestCase
 from designer.apps.core.tests.utils import DEFAULT_WAGTAIL_PAGES
 from designer.apps.pages.tests.utils import create_site, create_program_page
-from wagtail.wagtailcore.models import Page
+from wagtail.core.models import Page
 
 
 class TestDesignerPagesAPIEndpoint(TestCase):
@@ -213,6 +213,10 @@ class TestDesignerPagesAPIEndpoint(TestCase):
 
             # Assert the rest of the fields match
             for k in expected_page.keys():
+                print("expected_page: ")
+                print(expected_page[k])
+                print("actual_page: ")
+                print(actual_page[k])
                 self.assertEqual(expected_page[k], actual_page[k])
 
     def test_default_behavior(self):
