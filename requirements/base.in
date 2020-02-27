@@ -1,6 +1,5 @@
 # Core requirements for using this application
 
-Django>=1.8,<2.0          # Web application framework
 django-cors-headers
 django-extensions
 django-rest-swagger

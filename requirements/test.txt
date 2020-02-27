@@ -25,7 +25,6 @@ django-storages==1.9.1
 django-taggit==0.22.2
 django-treebeard==4.3.1
 django-waffle==0.20.0
-django==1.11.28
 djangorestframework-jwt==1.11.0
 djangorestframework==3.6.4
 edx-auth-backends==3.0.2
