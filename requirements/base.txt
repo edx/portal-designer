@@ -27,9 +27,9 @@ edx-django-release-util==0.3.6
 edx-django-utils==3.0
 edx-drf-extensions==3.0.0
 edx-opaque-keys==2.0.1    # via edx-drf-extensions
-edx-rest-api-client==4.0.1  # via -r requirements/base.in
+edx-rest-api-client==4.0.1
 future==0.18.2            # via pyjwkest
-html5lib==0.999999999     # via wagtail
+html5lib==1.0.1           # via wagtail
 idna==2.9                 # via requests
 itypes==1.1.0             # via coreapi
 jinja2==2.11.1            # via coreschema
@@ -64,10 +64,7 @@ stevedore==1.32.0         # via edx-opaque-keys
 unidecode==1.1.1          # via wagtail
 uritemplate==3.0.1        # via coreapi
 urllib3==1.25.8           # via requests
-wagtail==2.0
+wagtail==2.3              # via -r requirements/base.in
 webencodings==0.5.1       # via html5lib
 willow==1.1               # via wagtail
-zipp==1.2.0
-
-# The following packages are considered to be unsafe in a requirements file:
-# setuptools
+zipp==1.2.0               # via -r requirements/base.in

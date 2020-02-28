@@ -59,21 +59,17 @@ wagtaildocs.Document:
   ".. no_pii:": "This model has no PII"
 wagtailembeds.Embed:
   ".. no_pii:": "This model has no PII"
-contrib.forms.FormSubmission:
+wagtailforms.FormSubmission:
   ".. no_pii:": "This model has no PII"
 wagtailimages.Image:
   ".. no_pii:": "This model has no PII"
 wagtailimages.Rendition:
   ".. no_pii:": "This model has no PII"
-contrib.redirects.Redirect:
+wagtailredirects.Redirect:
   ".. no_pii:": "This model has no PII"
 wagtailsearch.Query:
   ".. no_pii:": "This model has no PII"
 wagtailsearch.QueryDailyHits:
   ".. no_pii:": "This model has no PII"
 wagtailusers.UserProfile:
-    ".. no_pii:": "This model has no PII"
-wagtailforms.FormSubmission:
-    ".. no_pii:": "This model has no PII"
-wagtailredirects.Redirect:
     ".. no_pii:": "This model has no PII"
