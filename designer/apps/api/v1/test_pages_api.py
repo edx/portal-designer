@@ -213,10 +213,6 @@ class TestDesignerPagesAPIEndpoint(TestCase):
 
             # Assert the rest of the fields match
             for k in expected_page.keys():
-                print("expected_page: ")
-                print(expected_page[k])
-                print("actual_page: ")
-                print(actual_page[k])
                 self.assertEqual(expected_page[k], actual_page[k])
 
     def test_default_behavior(self):
