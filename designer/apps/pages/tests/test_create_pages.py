@@ -2,13 +2,12 @@
 """ Test Creation of Pages """
 from random import getrandbits, randint
 
-from django.core.urlresolvers import reverse
 from django.test import TestCase
+from django.urls import reverse
 from django.utils.text import slugify
 from faker import Faker
 from faker.providers import color, internet, lorem, misc
 from wagtail.core.models import Page
-from wagtail.tests.utils.form_data import nested_form_data, rich_text
 
 from designer.apps.core.tests.utils import (DocumentFactory, ImageFactory,
                                             SiteFactory, UserFactory)
@@ -113,9 +112,9 @@ class PageCreationMixin(object):
                 'external_program_website-INITIAL_FORMS': '0',
                 'external_program_website-0-display': True,
                 'external_program_website-0-header': ' '.join([word.capitalize() for word in fake.words(nb=3)]),
-                'external_program_website-0-description': rich_text("<ul>{}</ul>".format(
+                'external_program_website-0-description': "<ul>{}</ul>".format(
                     ["<li>{}</li>".format(s) for s in fake.sentences(nb=4)]
-                )),
+                ),
                 'external_program_website-0-link_display_text': "Return to {} homepage".format(page_name),
                 'external_program_website-0-link_url': fake.url(),
             })
@@ -271,8 +270,8 @@ class EnterprisePageCreationTests(PageCreationMixin, TestCase):
         """
         first_page_data = self._create_enterprise_page_data()
         second_page_data = self._create_enterprise_page_data()
-        self._assert_can_create(self.site_page, EnterprisePage, nested_form_data(first_page_data))
-        self._assert_cannot_create(self.site_page, EnterprisePage, nested_form_data(second_page_data))
+        self._assert_can_create(self.site_page, EnterprisePage, first_page_data)
+        self._assert_cannot_create(self.site_page, EnterprisePage, second_page_data)
 
     def test_cannot_create_enterprise_page(self):
         """
@@ -281,5 +280,5 @@ class EnterprisePageCreationTests(PageCreationMixin, TestCase):
         """
         program_page_data = self._create_program_page_data()
         enterprise_page_data = self._create_enterprise_page_data()
-        self._assert_can_create(self.site_page, ProgramPage, nested_form_data(program_page_data))
-        self._assert_cannot_create(self.site_page, EnterprisePage, nested_form_data(enterprise_page_data))
+        self._assert_can_create(self.site_page, ProgramPage, program_page_data)
+        self._assert_cannot_create(self.site_page, EnterprisePage, enterprise_page_data)

@@ -21,7 +21,7 @@ coverage==5.0.3           # via -r requirements/test.txt, pytest-cov
 defusedxml==0.6.0         # via -r requirements/test.txt, python3-openid, social-auth-core
 distlib==0.3.0            # via caniusepython3
 django-cors-headers==3.2.1  # via -r requirements/test.txt
-django-dynamic-fixture==3.0.2  # via -r requirements/test.txt
+django-dynamic-fixture==3.0.3  # via -r requirements/test.txt
 django-extensions==2.2.8  # via -r requirements/test.txt
 django-modelcluster==4.4.1  # via -r requirements/test.txt, wagtail
 django-rest-swagger==2.2.0  # via -r requirements/test.txt
@@ -52,7 +52,7 @@ jinja2==2.11.1            # via -r requirements/test.txt, code-annotations, core
 lazy-object-proxy==1.4.3  # via -r requirements/test.txt, astroid
 markupsafe==1.1.1         # via -r requirements/test.txt, jinja2
 mccabe==0.6.1             # via -r requirements/test.txt, pylint
-mock==4.0.1               # via -r requirements/test.txt
+mock==3.0.5               # via -r requirements/test.txt
 more-itertools==8.2.0     # via -r requirements/test.txt, pytest
 mysqlclient==1.4.6        # via -r requirements/test.txt
 newrelic==5.8.0.136       # via -r requirements/test.txt, edx-django-utils
@@ -88,7 +88,7 @@ requests==2.23.0          # via -r requirements/test.txt, caniusepython3, coreap
 rest-condition==1.0.3     # via -r requirements/test.txt, edx-drf-extensions
 semantic-version==2.8.4   # via -r requirements/test.txt, edx-drf-extensions
 simplejson==3.17.0        # via -r requirements/test.txt, django-rest-swagger
-six==1.14.0               # via -r requirements/test.txt, astroid, django-dynamic-fixture, django-extensions, django-waffle, edx-auth-backends, edx-django-release-util, edx-drf-extensions, edx-lint, edx-opaque-keys, html5lib, packaging, pyjwkest, pylint, python-dateutil, social-auth-app-django, social-auth-core, stevedore, wagtail
+six==1.14.0               # via -r requirements/test.txt, astroid, django-dynamic-fixture, django-extensions, django-waffle, edx-auth-backends, edx-django-release-util, edx-drf-extensions, edx-lint, edx-opaque-keys, html5lib, mock, packaging, pyjwkest, pylint, python-dateutil, social-auth-app-django, social-auth-core, stevedore, wagtail
 slumber==0.7.1            # via -r requirements/test.txt, edx-rest-api-client
 snowballstemmer==2.0.0    # via pydocstyle
 social-auth-app-django==3.1.0  # via -r requirements/test.txt, edx-auth-backends
