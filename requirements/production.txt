@@ -37,6 +37,8 @@ greenlet==0.4.15          # via gevent
 gunicorn==20.0.4          # via -r requirements/production.in
 html5lib==1.0.1           # via -r requirements/base.txt, wagtail
 idna==2.9                 # via -r requirements/base.txt, requests
+importlib-metadata==1.5.0  # via -r requirements/base.txt, inflect
+inflect==3.0.2            # via -r requirements/base.txt
 itypes==1.1.0             # via -r requirements/base.txt, coreapi
 jinja2==2.11.1            # via -r requirements/base.txt, coreschema
 jmespath==0.9.5           # via boto3, botocore
@@ -75,7 +77,7 @@ urllib3==1.25.8           # via -r requirements/base.txt, botocore, requests
 wagtail==2.3              # via -r requirements/base.txt
 webencodings==0.5.1       # via -r requirements/base.txt, html5lib
 willow==1.1               # via -r requirements/base.txt, wagtail
-zipp==1.2.0               # via -r requirements/base.txt
+zipp==1.2.0               # via -r requirements/base.txt, importlib-metadata
 
 # The following packages are considered to be unsafe in a requirements file:
 # setuptools

@@ -25,7 +25,6 @@ django-storages==1.9.1    # via -r requirements/base.txt
 django-taggit==0.23.0     # via -r requirements/base.txt, wagtail
 django-treebeard==4.3.1   # via -r requirements/base.txt, wagtail
 django-waffle==0.20.0     # via -r requirements/base.txt, edx-django-utils, edx-drf-extensions
-django==1.11.28           # via -r requirements/base.txt, code-annotations, django-cors-headers, django-storages, django-taggit, django-treebeard, djangorestframework, edx-auth-backends, edx-django-release-util, edx-django-utils, edx-drf-extensions, rest-condition, wagtail
 djangorestframework-jwt==1.11.0  # via -r requirements/base.txt, edx-drf-extensions
 djangorestframework==3.11.0  # via -r requirements/base.txt, django-rest-swagger, edx-drf-extensions, rest-condition, wagtail
 draftjs-exporter==2.1.7   # via -r requirements/base.txt, wagtail
@@ -41,7 +40,8 @@ faker==4.0.1              # via -r requirements/test.in, factory-boy
 future==0.18.2            # via -r requirements/base.txt, pyjwkest
 html5lib==1.0.1           # via -r requirements/base.txt, wagtail
 idna==2.9                 # via -r requirements/base.txt, requests
-importlib-metadata==1.5.0  # via pluggy, pytest
+importlib-metadata==1.5.0  # via -r requirements/base.txt, inflect, pluggy, pytest
+inflect==3.0.2            # via -r requirements/base.txt
 isort==4.3.21             # via pylint
 itypes==1.1.0             # via -r requirements/base.txt, coreapi
 jinja2==2.11.1            # via -r requirements/base.txt, code-annotations, coreschema

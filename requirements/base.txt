@@ -4,7 +4,7 @@
 #
 #    make upgrade
 #
-beautifulsoup4==4.8.2     # via wagtail
+beautifulsoup4==4.6.0     # via wagtail
 certifi==2019.11.28       # via requests
 chardet==3.0.4            # via requests
 coreapi==2.3.3            # via django-rest-swagger, openapi-codec
@@ -27,10 +27,12 @@ edx-django-release-util==0.3.6  # via -r requirements/base.in
 edx-django-utils==3.0     # via -r requirements/base.in, edx-drf-extensions, edx-rest-api-client
 edx-drf-extensions==3.0.0  # via -r requirements/base.in
 edx-opaque-keys==2.0.1    # via edx-drf-extensions
-edx-rest-api-client==4.0.1
+edx-rest-api-client==4.0.1  # via -r requirements/base.in
 future==0.18.2            # via pyjwkest
 html5lib==1.0.1           # via wagtail
 idna==2.9                 # via requests
+importlib-metadata==1.5.0  # via inflect
+inflect==3.0.2            # via -r requirements/base.in
 itypes==1.1.0             # via coreapi
 jinja2==2.11.1            # via coreschema
 markupsafe==1.1.1         # via jinja2
@@ -40,7 +42,7 @@ newrelic==5.8.0.136       # via edx-django-utils
 oauthlib==3.1.0           # via requests-oauthlib, social-auth-core
 openapi-codec==1.3.2      # via django-rest-swagger
 pbr==5.4.4                # via stevedore
-pillow==7.0.0             # via wagtail
+pillow==5.4.1             # via wagtail
 psutil==1.2.1             # via edx-django-utils, edx-drf-extensions
 pycryptodomex==3.9.7      # via pyjwkest
 pyjwkest==1.3.2           # via edx-drf-extensions
@@ -48,7 +50,7 @@ pyjwt==1.7.1              # via djangorestframework-jwt, edx-auth-backends, edx-
 pymongo==3.10.1           # via edx-opaque-keys
 python-dateutil==2.8.0    # via -r requirements/base.in, edx-drf-extensions
 python3-openid==3.1.0     # via social-auth-core
-pytz==2019.3              # via -r requirements/base.in, django, django-modelcluster
+pytz==2019.3              # via -r requirements/base.in, django, django-modelcluster, wagtail
 pyyaml==5.3               # via edx-django-release-util
 requests-oauthlib==1.3.0  # via social-auth-core
 requests==2.23.0          # via coreapi, edx-drf-extensions, edx-rest-api-client, pyjwkest, requests-oauthlib, slumber, social-auth-core, wagtail
@@ -66,4 +68,4 @@ urllib3==1.25.8           # via requests
 wagtail==2.3              # via -r requirements/base.in
 webencodings==0.5.1       # via html5lib
 willow==1.1               # via wagtail
-zipp==1.2.0               # via -r requirements/base.in
+zipp==1.2.0               # via -r requirements/base.in, importlib-metadata
