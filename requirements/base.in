@@ -16,5 +16,7 @@ edx_rest_api_client
 mysqlclient
 pytz
 python-dateutil==2.8.0    # botocore has a <2.8.1 constraint. This is not a direct dependency and can be deleted (vs unpinned) when no longer needed
-wagtail>=1.13,<2.0
+wagtail==2.3     # wagtail>2.3 dropped support for django111
 zipp==1.2.0      # greater versions dropped Python 3.5 support
+mock<4.0.0      # mock>=4.0.0 dropped support for python3.5
+inflect<4.0.0   # inflect>=4.0.0 dropped support for python3.5

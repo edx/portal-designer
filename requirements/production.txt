@@ -5,8 +5,8 @@
 #    make upgrade
 #
 beautifulsoup4==4.6.0     # via -r requirements/base.txt, wagtail
-boto3==1.12.9             # via -r requirements/production.in
-botocore==1.15.9          # via boto3, s3transfer
+boto3==1.12.12            # via -r requirements/production.in
+botocore==1.15.12         # via boto3, s3transfer
 certifi==2019.11.28       # via -r requirements/base.txt, requests
 chardet==3.0.4            # via -r requirements/base.txt, requests
 coreapi==2.3.3            # via -r requirements/base.txt, django-rest-swagger, openapi-codec
@@ -14,16 +14,17 @@ coreschema==0.0.4         # via -r requirements/base.txt, coreapi
 defusedxml==0.6.0         # via -r requirements/base.txt, python3-openid, social-auth-core
 django-cors-headers==3.2.1  # via -r requirements/base.txt
 django-extensions==2.2.8  # via -r requirements/base.txt
-django-modelcluster==3.1  # via -r requirements/base.txt, wagtail
+django-modelcluster==4.4.1  # via -r requirements/base.txt, wagtail
 django-rest-swagger==2.2.0  # via -r requirements/base.txt
 django-storages==1.9.1    # via -r requirements/base.txt
-django-taggit==0.22.2     # via -r requirements/base.txt, wagtail
+django-taggit==0.23.0     # via -r requirements/base.txt, wagtail
 django-treebeard==4.3.1   # via -r requirements/base.txt, wagtail
 django-waffle==0.20.0     # via -r requirements/base.txt, edx-django-utils, edx-drf-extensions
-django==1.11.28           # via -r requirements/base.txt, django-cors-headers, django-storages, django-treebeard, edx-auth-backends, edx-django-release-util, edx-django-utils, edx-drf-extensions, rest-condition, wagtail
+django==1.11.28           # via -r requirements/base.txt, django-cors-headers, django-storages, django-taggit, django-treebeard, djangorestframework, edx-auth-backends, edx-django-release-util, edx-django-utils, edx-drf-extensions, rest-condition, wagtail
 djangorestframework-jwt==1.11.0  # via -r requirements/base.txt, edx-drf-extensions
-djangorestframework==3.6.4  # via -r requirements/base.txt, django-rest-swagger, edx-drf-extensions, rest-condition, wagtail
+djangorestframework==3.11.0  # via -r requirements/base.txt, django-rest-swagger, edx-drf-extensions, rest-condition, wagtail
 docutils==0.15.2          # via botocore
+draftjs-exporter==2.1.7   # via -r requirements/base.txt, wagtail
 edx-auth-backends==3.0.2  # via -r requirements/base.txt
 edx-django-release-util==0.3.6  # via -r requirements/base.txt
 edx-django-utils==3.0     # via -r requirements/base.txt, edx-drf-extensions, edx-rest-api-client
@@ -34,18 +35,21 @@ future==0.18.2            # via -r requirements/base.txt, pyjwkest
 gevent==1.4.0             # via -r requirements/production.in
 greenlet==0.4.15          # via gevent
 gunicorn==20.0.4          # via -r requirements/production.in
-html5lib==0.999999999     # via -r requirements/base.txt, wagtail
+html5lib==1.0.1           # via -r requirements/base.txt, wagtail
 idna==2.9                 # via -r requirements/base.txt, requests
+importlib-metadata==1.5.0  # via -r requirements/base.txt, inflect
+inflect==3.0.2            # via -r requirements/base.txt
 itypes==1.1.0             # via -r requirements/base.txt, coreapi
 jinja2==2.11.1            # via -r requirements/base.txt, coreschema
 jmespath==0.9.5           # via boto3, botocore
 markupsafe==1.1.1         # via -r requirements/base.txt, jinja2
+mock==3.0.5               # via -r requirements/base.txt
 mysqlclient==1.4.6        # via -r requirements/base.txt
 newrelic==5.8.0.136       # via -r requirements/base.txt, edx-django-utils
 oauthlib==3.1.0           # via -r requirements/base.txt, requests-oauthlib, social-auth-core
 openapi-codec==1.3.2      # via -r requirements/base.txt, django-rest-swagger
 pbr==5.4.4                # via -r requirements/base.txt, stevedore
-pillow==7.0.0             # via -r requirements/base.txt, wagtail
+pillow==5.4.1             # via -r requirements/base.txt, wagtail
 psutil==1.2.1             # via -r requirements/base.txt, edx-django-utils, edx-drf-extensions
 pycryptodomex==3.9.7      # via -r requirements/base.txt, pyjwkest
 pyjwkest==1.3.2           # via -r requirements/base.txt, edx-drf-extensions
@@ -54,7 +58,7 @@ pymongo==3.10.1           # via -r requirements/base.txt, edx-opaque-keys
 python-dateutil==2.8.0    # via -r requirements/base.txt, botocore, edx-drf-extensions
 python-memcached==1.59    # via -r requirements/production.in
 python3-openid==3.1.0     # via -r requirements/base.txt, social-auth-core
-pytz==2019.3              # via -r requirements/base.txt, django, django-modelcluster
+pytz==2019.3              # via -r requirements/base.txt, django, django-modelcluster, wagtail
 pyyaml==5.3               # via -r requirements/base.txt, -r requirements/production.in, edx-django-release-util
 requests-oauthlib==1.3.0  # via -r requirements/base.txt, social-auth-core
 requests==2.23.0          # via -r requirements/base.txt, coreapi, edx-drf-extensions, edx-rest-api-client, pyjwkest, requests-oauthlib, slumber, social-auth-core, wagtail
@@ -62,7 +66,7 @@ rest-condition==1.0.3     # via -r requirements/base.txt, edx-drf-extensions
 s3transfer==0.3.3         # via boto3
 semantic-version==2.8.4   # via -r requirements/base.txt, edx-drf-extensions
 simplejson==3.17.0        # via -r requirements/base.txt, django-rest-swagger
-six==1.14.0               # via -r requirements/base.txt, django-extensions, django-waffle, edx-auth-backends, edx-django-release-util, edx-drf-extensions, edx-opaque-keys, html5lib, pyjwkest, python-dateutil, python-memcached, social-auth-app-django, social-auth-core, stevedore
+six==1.14.0               # via -r requirements/base.txt, django-extensions, django-waffle, edx-auth-backends, edx-django-release-util, edx-drf-extensions, edx-opaque-keys, html5lib, mock, pyjwkest, python-dateutil, python-memcached, social-auth-app-django, social-auth-core, stevedore, wagtail
 slumber==0.7.1            # via -r requirements/base.txt, edx-rest-api-client
 social-auth-app-django==3.1.0  # via -r requirements/base.txt, edx-auth-backends
 social-auth-core==3.2.0   # via -r requirements/base.txt, edx-auth-backends, social-auth-app-django
@@ -70,10 +74,10 @@ stevedore==1.32.0         # via -r requirements/base.txt, edx-opaque-keys
 unidecode==1.1.1          # via -r requirements/base.txt, wagtail
 uritemplate==3.0.1        # via -r requirements/base.txt, coreapi
 urllib3==1.25.8           # via -r requirements/base.txt, botocore, requests
-wagtail==1.13.4           # via -r requirements/base.txt
+wagtail==2.3              # via -r requirements/base.txt
 webencodings==0.5.1       # via -r requirements/base.txt, html5lib
-willow==1.0               # via -r requirements/base.txt, wagtail
-zipp==1.2.0               # via -r requirements/base.txt
+willow==1.1               # via -r requirements/base.txt, wagtail
+zipp==1.2.0               # via -r requirements/base.txt, importlib-metadata
 
 # The following packages are considered to be unsafe in a requirements file:
 # setuptools

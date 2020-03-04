@@ -8,7 +8,7 @@ from rest_framework.response import Response
 from rest_framework.views import APIView
 from rest_framework.permissions import AllowAny
 from wagtail.api.v2.utils import BadRequestError, filter_page_type, page_models_from_string
-from wagtail.wagtailcore.models import Page, Site
+from wagtail.core.models import Page, Site
 
 from designer.apps.pages.models import ProgramPage
 from .serializers import PageSerializer, IndexPageSerializer, ProgramPageSerializer, EnterprisePageSerializer

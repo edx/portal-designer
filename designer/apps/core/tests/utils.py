@@ -5,9 +5,9 @@ import factory
 
 from faker import Faker
 from faker.providers import company, internet, lorem, misc, person
-from wagtail.wagtailcore.models import Site, Page
-from wagtail.wagtailimages.models import Image
-from wagtail.wagtaildocs.models import Document
+from wagtail.core.models import Site, Page
+from wagtail.images.models import Image
+from wagtail.documents.models import Document
 from designer.apps.core.models import User
 
 from designer.apps.pages.models import IndexPage

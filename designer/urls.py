@@ -22,9 +22,9 @@ from django.conf.urls.static import static
 from django.contrib import admin
 from django.views.generic import RedirectView
 from rest_framework_swagger.views import get_swagger_view
-from wagtail.wagtailadmin import urls as wagtailadmin_urls
-from wagtail.wagtaildocs import urls as wagtaildocs_urls
-from wagtail.wagtailcore import urls as wagtail_urls
+from wagtail.admin import urls as wagtailadmin_urls
+from wagtail.documents import urls as wagtaildocs_urls
+from wagtail.core import urls as wagtail_urls
 
 from designer.apps.core import views as core_views
 from designer.apps.core.wagtailadmin.views import SiteCreationView
