@@ -22,7 +22,7 @@ defusedxml==0.6.0         # via -r requirements/quality.txt, python3-openid, soc
 diff-cover==2.6.0         # via -r requirements/dev.in
 distlib==0.3.0            # via -r requirements/quality.txt, caniusepython3
 django-cors-headers==3.2.1  # via -r requirements/quality.txt
-django-debug-toolbar==1.11  # via -r requirements/dev.in
+django-debug-toolbar==2.2  # via -r requirements/dev.in
 django-dynamic-fixture==3.0.3  # via -r requirements/quality.txt
 django-extensions==2.2.8  # via -r requirements/quality.txt
 django-modelcluster==4.4.1  # via -r requirements/quality.txt, wagtail

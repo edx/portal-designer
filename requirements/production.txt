@@ -5,8 +5,8 @@
 #    make upgrade
 #
 beautifulsoup4==4.6.0     # via -r requirements/base.txt, wagtail
-boto3==1.12.14            # via -r requirements/production.in
-botocore==1.15.14         # via boto3, s3transfer
+boto3==1.12.15            # via -r requirements/production.in
+botocore==1.15.15         # via boto3, s3transfer
 certifi==2019.11.28       # via -r requirements/base.txt, requests
 chardet==3.0.4            # via -r requirements/base.txt, requests
 coreapi==2.3.3            # via -r requirements/base.txt, django-rest-swagger, openapi-codec

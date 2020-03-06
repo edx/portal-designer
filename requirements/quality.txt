@@ -90,7 +90,7 @@ requests==2.23.0          # via -r requirements/test.txt, caniusepython3, coreap
 rest-condition==1.0.3     # via -r requirements/test.txt, edx-drf-extensions
 semantic-version==2.8.4   # via -r requirements/test.txt, edx-drf-extensions
 simplejson==3.17.0        # via -r requirements/test.txt, django-rest-swagger
-six==1.14.0               # via -r requirements/test.txt, astroid, django-dynamic-fixture, django-extensions, django-waffle, edx-auth-backends, edx-django-release-util, edx-drf-extensions, edx-lint, edx-opaque-keys, html5lib, mock, packaging, pathlib2, pyjwkest, pylint, python-dateutil, mock==3.0.5, social-auth-core, stevedore, wagtail
+six==1.14.0               # via -r requirements/test.txt, astroid, django-dynamic-fixture, django-extensions, django-waffle, edx-auth-backends, edx-django-release-util, edx-drf-extensions, edx-lint, edx-opaque-keys, html5lib, mock, packaging, pathlib2, pyjwkest, pylint, python-dateutil, social-auth-app-django, social-auth-core, stevedore, wagtail
 slumber==0.7.1            # via -r requirements/test.txt, edx-rest-api-client
 snowballstemmer==2.0.0    # via pydocstyle
 git+https://github.com/python-social-auth/social-app-django.git@c00d23c2b45c3317bd35b15ad1b959338689cef8#egg=social-auth-app-django  # via -r requirements/test.txt, edx-auth-backends
