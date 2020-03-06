@@ -32,10 +32,10 @@ from designer.apps.core.wagtailadmin.views import SiteCreationView
 admin.autodiscover()
 
 urlpatterns = oauth2_urlpatterns + [
-    url(r'^api/', include('designer.apps.api.urls', namespace='api')),
+    url(r'^api/', include('designer.apps.api.urls')),
     url(r'^api-docs/', get_swagger_view(title='designer API')),
     # Use the same auth views for all logins, including those originating from the browseable API.
-    url(r'^api-auth/', include(oauth2_urlpatterns, namespace='rest_framework')),
+    url(r'^api-auth/', include(oauth2_urlpatterns)),
     url(r'^auto_auth/$', core_views.AutoAuth.as_view(), name='auto_auth'),
     url(r'^health/$', core_views.health, name='health'),
     url(r'^documents/', include(wagtaildocs_urls)),

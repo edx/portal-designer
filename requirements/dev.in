@@ -5,5 +5,5 @@
 
 diff-cover                # Changeset diff test coverage
 edx-i18n-tools            # For i18n_tool dummy
-django-debug-toolbar==1.11      # For debugging Django
+django-debug-toolbar      # For debugging Django
 #transifex-client          # For managing translations
