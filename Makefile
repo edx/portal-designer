@@ -1,5 +1,7 @@
 .DEFAULT_GOAL := test
 
+TOX = ''
+
 .PHONY: clean compile_translations dummy_translations extract_translations fake_translations help html_coverage \
 	migrate pull_translations push_translations quality pii_check requirements test update_translations validate \
 	dev_requirements test_requirements quality_requirements doc_requirements prod_requirements
@@ -33,6 +35,10 @@ help:
 	@echo "  validate_translations      install fake translations and check if translation files are up-to-date"
 	@echo ""
 
+ifdef TOXENV
+TOX := tox -- #to isolate each tox environment if TOXENV is defined
+endif
+
 clean:
 	find . -name '*.pyc' -delete
 	coverage erase
@@ -60,7 +66,7 @@ production-requirements:
 	pip install -qr requirements.txt --exists-action w
 
 test: clean test_requirements
-	python -Wd -m pytest
+	$(TOX)python -Wd -m pytest
 
 quality: quality_requirements
 	pycodestyle designer *.py

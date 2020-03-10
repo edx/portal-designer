@@ -2,14 +2,13 @@
 
 -r github.in              # Forks and other dependencies not yet on PyPI
 
-Django>=1.8
+Django>=1.8,<2.0          # Web application framework
 django-cors-headers
 django-extensions
 django-rest-swagger
 django-storages
 django-waffle
 djangorestframework
-djangorestframework-jwt
 edx-auth-backends
 edx-django-release-util
 edx-django-utils

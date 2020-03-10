@@ -12,3 +12,4 @@ mock==3.0.5
 pytest
 pytest-cov
 pytest-django
+tox
