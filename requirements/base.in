@@ -9,7 +9,6 @@ django-rest-swagger
 django-storages
 django-waffle
 djangorestframework
-djangorestframework-jwt
 edx-auth-backends
 edx-django-release-util
 edx-django-utils
