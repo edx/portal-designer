@@ -1,1 +1,1 @@
-<<<<<<< 1.11.29           # via -r requirements/base.txt, django-cors-headers, django-storages, django-taggit, django-treebeard, drf-jwt, edx-auth-backends, edx-django-release-util, edx-django-utils, edx-drf-extensions, rest-condition, wagtail
+django==1.11.29           # via -r requirements/base.txt, django-cors-headers, django-storages, django-taggit, django-treebeard, drf-jwt, edx-auth-backends, edx-django-release-util, edx-django-utils, edx-drf-extensions, rest-condition, wagtail
