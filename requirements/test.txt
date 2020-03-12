@@ -21,22 +21,22 @@ distlib==0.3.0            # via virtualenv
 django-cors-headers==3.2.1  # via -r requirements/base.txt
 django-dynamic-fixture==3.0.3  # via -r requirements/test.in
 django-extensions==2.2.8  # via -r requirements/base.txt
-django-modelcluster==4.4.1  # via -r requirements/base.txt, wagtail
+django-modelcluster==5.0.1  # via -r requirements/base.txt, wagtail
 django-rest-swagger==2.2.0  # via -r requirements/base.txt
 django-storages==1.9.1    # via -r requirements/base.txt
-django-taggit==0.23.0     # via -r requirements/base.txt, wagtail
+django-taggit==1.2.0      # via -r requirements/base.txt, wagtail
 django-treebeard==4.3.1   # via -r requirements/base.txt, wagtail
 django-waffle==0.20.0     # via -r requirements/base.txt, edx-django-utils, edx-drf-extensions
-djangorestframework==3.9.4  # via -r requirements/base.txt, django-rest-swagger, drf-jwt, edx-drf-extensions, rest-condition, wagtail
+djangorestframework==3.11.0  # via -r requirements/base.txt, django-rest-swagger, drf-jwt, edx-drf-extensions, rest-condition, wagtail
 draftjs-exporter==2.1.7   # via -r requirements/base.txt, wagtail
 drf-jwt==1.15.0           # via -r requirements/base.txt, edx-drf-extensions
 edx-auth-backends==3.0.2  # via -r requirements/base.txt
 edx-django-release-util==0.3.6  # via -r requirements/base.txt
 edx-django-utils==3.0     # via -r requirements/base.txt, edx-drf-extensions, edx-rest-api-client
-edx-drf-extensions==4.0.1  # via -r requirements/base.txt
+edx-drf-extensions==4.0.2  # via -r requirements/base.txt
 edx-lint==1.3.0           # via -r requirements/test.in
 edx-opaque-keys==2.0.1    # via -r requirements/base.txt, edx-drf-extensions
-edx-rest-api-client==4.0.1  # via -r requirements/base.txt
+edx-rest-api-client==5.0.1  # via -r requirements/base.txt
 factory-boy==2.12.0       # via -r requirements/test.in
 faker==4.0.1              # via -r requirements/test.in, factory-boy
 filelock==3.0.12          # via tox, virtualenv
@@ -61,7 +61,7 @@ openapi-codec==1.3.2      # via -r requirements/base.txt, django-rest-swagger
 packaging==20.3           # via pytest, tox
 pathlib2==2.3.5           # via pytest
 pbr==5.4.4                # via -r requirements/base.txt, stevedore
-pillow==5.4.1             # via -r requirements/base.txt, wagtail
+pillow==6.2.2             # via -r requirements/base.txt, wagtail
 pluggy==0.13.1            # via pytest, tox
 psutil==1.2.1             # via -r requirements/base.txt, edx-django-utils
 py==1.8.1                 # via pytest, tox
@@ -91,6 +91,7 @@ six==1.14.0               # via -r requirements/base.txt, astroid, django-dynami
 slumber==0.7.1            # via -r requirements/base.txt, edx-rest-api-client
 git+https://github.com/python-social-auth/social-app-django.git@c00d23c2b45c3317bd35b15ad1b959338689cef8#egg=social-auth-app-django  # via -r requirements/base.txt, edx-auth-backends
 social-auth-core==3.2.0   # via -r requirements/base.txt, edx-auth-backends, social-auth-app-django
+sqlparse==0.3.1           # via -r requirements/base.txt, django
 stevedore==1.32.0         # via -r requirements/base.txt, code-annotations, edx-opaque-keys
 text-unidecode==1.3       # via faker, python-slugify
 toml==0.10.0              # via tox
@@ -98,10 +99,10 @@ tox==3.14.5               # via -r requirements/test.in
 unidecode==1.1.1          # via -r requirements/base.txt, wagtail
 uritemplate==3.0.1        # via -r requirements/base.txt, coreapi
 urllib3==1.25.8           # via -r requirements/base.txt, requests
-virtualenv==20.0.9        # via tox
-wagtail==2.3              # via -r requirements/base.txt
+virtualenv==20.0.10       # via tox
+wagtail==2.7.1            # via -r requirements/base.txt
 wcwidth==0.1.8            # via pytest
 webencodings==0.5.1       # via -r requirements/base.txt, html5lib
-willow==1.1               # via -r requirements/base.txt, wagtail
+willow==1.3               # via -r requirements/base.txt, wagtail
 wrapt==1.12.1             # via astroid
 zipp==1.2.0               # via -r requirements/base.txt, importlib-metadata, importlib-resources
