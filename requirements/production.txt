@@ -5,8 +5,8 @@
 #    make upgrade
 #
 beautifulsoup4==4.6.0     # via -r requirements/base.txt, wagtail
-boto3==1.12.17            # via -r requirements/production.in
-botocore==1.15.17         # via boto3, s3transfer
+boto3==1.12.19            # via -r requirements/production.in
+botocore==1.15.19         # via boto3, s3transfer
 certifi==2019.11.28       # via -r requirements/base.txt, requests
 chardet==3.0.4            # via -r requirements/base.txt, requests
 coreapi==2.3.3            # via -r requirements/base.txt, django-rest-swagger, openapi-codec
@@ -20,17 +20,17 @@ django-storages==1.9.1    # via -r requirements/base.txt
 django-taggit==0.23.0     # via -r requirements/base.txt, wagtail
 django-treebeard==4.3.1   # via -r requirements/base.txt, wagtail
 django-waffle==0.20.0     # via -r requirements/base.txt, edx-django-utils, edx-drf-extensions
-django==1.11.29           # via -r requirements/base.txt, django-cors-headers, django-storages, django-taggit, django-treebeard, drf-jwt, edx-auth-backends, edx-django-release-util, edx-django-utils, edx-drf-extensions, rest-condition, wagtail
-djangorestframework==3.9.4  # via -r requirements/base.txt, django-rest-swagger, drf-jwt, edx-drf-extensions, rest-condition, wagtail
+django==1.11.29           # via -r requirements/base.txt, django-cors-headers, django-storages, django-taggit, django-treebeard, djangorestframework, drf-jwt, edx-auth-backends, edx-django-release-util, edx-django-utils, edx-drf-extensions, rest-condition, wagtail
+djangorestframework==3.11.0  # via -r requirements/base.txt, django-rest-swagger, drf-jwt, edx-drf-extensions, rest-condition, wagtail
 docutils==0.15.2          # via botocore
 draftjs-exporter==2.1.7   # via -r requirements/base.txt, wagtail
-drf-jwt==1.15.0           # via -r requirements/base.txt, edx-drf-extensions
+drf-jwt==1.15.1           # via -r requirements/base.txt, edx-drf-extensions
 edx-auth-backends==3.0.2  # via -r requirements/base.txt
 edx-django-release-util==0.3.6  # via -r requirements/base.txt
 edx-django-utils==3.0     # via -r requirements/base.txt, edx-drf-extensions, edx-rest-api-client
-edx-drf-extensions==4.0.1  # via -r requirements/base.txt
+edx-drf-extensions==4.0.2  # via -r requirements/base.txt
 edx-opaque-keys==2.0.1    # via -r requirements/base.txt, edx-drf-extensions
-edx-rest-api-client==4.0.1  # via -r requirements/base.txt
+edx-rest-api-client==5.0.1  # via -r requirements/base.txt
 future==0.18.2            # via -r requirements/base.txt, pyjwkest
 gevent==1.4.0             # via -r requirements/production.in
 greenlet==0.4.15          # via gevent
