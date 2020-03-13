@@ -8,6 +8,9 @@ matrix:
       env: TOXENV=django21
       script: make validate
     - python: 3.5
+      env: TOXENV=django22
+      script: make validate
+    - python: 3.5
       env: TESTNAME=quality
       script:
         - make quality
