@@ -73,3 +73,5 @@ wagtailsearch.QueryDailyHits:
   ".. no_pii:": "This model has no PII"
 wagtailusers.UserProfile:
     ".. no_pii:": "This model has no PII"
+blacklist.BlacklistedToken:
+    ".. no_pii:": "This model has no PII"

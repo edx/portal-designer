@@ -2,13 +2,13 @@ language: python
 matrix:
   include:
     - python: 3.5
-      env: TOXENV=django111
-      script: make validate
-    - python: 3.5
       env: TOXENV=django20
       script: make validate
     - python: 3.5
       env: TOXENV=django21
+      script: make validate
+    - python: 3.5
+      env: TOXENV=django22
       script: make validate
     - python: 3.5
       env: TESTNAME=quality

@@ -2,7 +2,7 @@
 
 -r github.in              # Forks and other dependencies not yet on PyPI
 
-Django>=1.8,<2.0          # Web application framework
+Django>=2.0,<3.0          # Web application framework
 django-cors-headers
 django-extensions
 django-rest-swagger
@@ -13,11 +13,11 @@ edx-auth-backends
 edx-django-release-util
 edx-django-utils
 edx-drf-extensions
-edx_rest_api_client
+edx_rest_api_client==4.0.1      # versions>4.0.1 have backward incompatible changes in timeout handling
 mysqlclient
 pytz
 python-dateutil==2.8.0    # botocore has a <2.8.1 constraint. This is not a direct dependency and can be deleted (vs unpinned) when no longer needed
-wagtail==2.3     # wagtail>2.3 dropped support for django111
+wagtail<2.8      # wagtail>=2.8 dropped support for Django 2.0
 zipp==1.2.0      # greater versions dropped Python 3.5 support
 mock<4.0.0      # mock>=4.0.0 dropped support for python3.5
 inflect<4.0.0   # inflect>=4.0.0 dropped support for python3.5
