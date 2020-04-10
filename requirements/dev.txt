@@ -20,7 +20,7 @@ coreapi==2.3.3            # via -r requirements/quality.txt, django-rest-swagger
 coreschema==0.0.4         # via -r requirements/quality.txt, coreapi
 coverage==5.0.4           # via -r requirements/quality.txt, pytest-cov
 defusedxml==0.6.0         # via -r requirements/quality.txt, python3-openid, social-auth-core
-diff-cover==2.6.0         # via -r requirements/dev.in
+diff-cover==2.6.1         # via -r requirements/dev.in
 distlib==0.3.0            # via -r requirements/quality.txt, caniusepython3, virtualenv
 django-cors-headers==3.2.1  # via -r requirements/quality.txt
 django-debug-toolbar==2.2  # via -r requirements/dev.in
@@ -116,7 +116,7 @@ tox==3.14.6               # via -r requirements/quality.txt
 unidecode==1.1.1          # via -r requirements/quality.txt, wagtail
 uritemplate==3.0.1        # via -r requirements/quality.txt, coreapi
 urllib3==1.25.8           # via -r requirements/quality.txt, requests
-virtualenv==20.0.16       # via -r requirements/quality.txt, tox
+virtualenv==20.0.17       # via -r requirements/quality.txt, tox
 wagtail==2.8              # via -r requirements/quality.txt
 wcwidth==0.1.9            # via -r requirements/quality.txt, pytest
 webencodings==0.5.1       # via -r requirements/quality.txt, html5lib

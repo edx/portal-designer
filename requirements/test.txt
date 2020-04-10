@@ -100,7 +100,7 @@ tox==3.14.6               # via -r requirements/test.in
 unidecode==1.1.1          # via -r requirements/base.txt, wagtail
 uritemplate==3.0.1        # via -r requirements/base.txt, coreapi
 urllib3==1.25.8           # via -r requirements/base.txt, requests
-virtualenv==20.0.16       # via tox
+virtualenv==20.0.17       # via tox
 wagtail==2.8              # via -r requirements/base.txt
 wcwidth==0.1.9            # via pytest
 webencodings==0.5.1       # via -r requirements/base.txt, html5lib
