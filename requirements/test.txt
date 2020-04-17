@@ -15,7 +15,7 @@ click==7.1.1              # via click-log, code-annotations, edx-lint
 code-annotations==0.3.3   # via -r requirements/test.in
 coreapi==2.3.3            # via -r requirements/base.txt, django-rest-swagger, openapi-codec
 coreschema==0.0.4         # via -r requirements/base.txt, coreapi
-coverage==5.0.4           # via -r requirements/test.in, pytest-cov
+coverage==5.1             # via -r requirements/test.in, pytest-cov
 defusedxml==0.6.0         # via -r requirements/base.txt, python3-openid, social-auth-core
 distlib==0.3.0            # via virtualenv
 django-cors-headers==3.2.1  # via -r requirements/base.txt
@@ -32,13 +32,13 @@ draftjs-exporter==2.1.7   # via -r requirements/base.txt, wagtail
 drf-jwt==1.14.0           # via -r requirements/base.txt, edx-drf-extensions
 edx-auth-backends==3.0.2  # via -r requirements/base.txt
 edx-django-release-util==0.4.2  # via -r requirements/base.txt
-edx-django-utils==3.1     # via -r requirements/base.txt, edx-drf-extensions, edx-rest-api-client
+edx-django-utils==3.2.0   # via -r requirements/base.txt, edx-drf-extensions, edx-rest-api-client
 edx-drf-extensions==5.0.2  # via -r requirements/base.txt
 edx-lint==1.3.0           # via -r requirements/test.in
 edx-opaque-keys==2.0.2    # via -r requirements/base.txt, edx-drf-extensions
 edx_rest_api_client==4.0.1  # via -r requirements/base.txt
 factory-boy==2.12.0       # via -r requirements/test.in
-faker==4.0.2              # via -r requirements/test.in, factory-boy
+faker==4.0.3              # via -r requirements/test.in, factory-boy
 filelock==3.0.12          # via tox, virtualenv
 future==0.18.2            # via -r requirements/base.txt, pyjwkest
 html5lib==1.0.1           # via -r requirements/base.txt, wagtail
@@ -48,7 +48,7 @@ importlib-resources==1.4.0  # via virtualenv
 inflect==3.0.2            # via -r requirements/base.txt
 isort==4.3.21             # via pylint
 itypes==1.1.0             # via -r requirements/base.txt, coreapi
-jinja2==2.11.1            # via -r requirements/base.txt, code-annotations, coreschema
+jinja2==2.11.2            # via -r requirements/base.txt, code-annotations, coreschema
 l18n==2018.5              # via -r requirements/base.txt, wagtail
 lazy-object-proxy==1.4.3  # via astroid
 markupsafe==1.1.1         # via -r requirements/base.txt, jinja2
@@ -56,7 +56,7 @@ mccabe==0.6.1             # via pylint
 mock==3.0.5               # via -r requirements/base.txt, -r requirements/test.in
 more-itertools==8.2.0     # via pytest
 mysqlclient==1.4.6        # via -r requirements/base.txt
-newrelic==5.10.0.138      # via -r requirements/base.txt, edx-django-utils
+newrelic==5.12.0.140      # via -r requirements/base.txt, edx-django-utils
 oauthlib==3.1.0           # via -r requirements/base.txt, requests-oauthlib, social-auth-core
 openapi-codec==1.3.2      # via -r requirements/base.txt, django-rest-swagger
 packaging==20.3           # via pytest, tox
@@ -99,9 +99,9 @@ toml==0.10.0              # via tox
 tox==3.14.6               # via -r requirements/test.in
 unidecode==1.1.1          # via -r requirements/base.txt, wagtail
 uritemplate==3.0.1        # via -r requirements/base.txt, coreapi
-urllib3==1.25.8           # via -r requirements/base.txt, requests
-virtualenv==20.0.17       # via tox
-wagtail==2.8              # via -r requirements/base.txt
+urllib3==1.25.9           # via -r requirements/base.txt, requests
+virtualenv==20.0.18       # via tox
+wagtail==2.8.1            # via -r requirements/base.txt
 wcwidth==0.1.9            # via pytest
 webencodings==0.5.1       # via -r requirements/base.txt, html5lib
 willow==1.3               # via -r requirements/base.txt, wagtail
