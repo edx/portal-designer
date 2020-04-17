@@ -12,8 +12,20 @@ matrix:
     - python: 3.5
       env: TESTNAME=translations
       script: make validate_translations
+    - python: '3.8'
+      env: TOXENV=django22
+      script: make validate
+    - python: '3.8'
+      env: TESTNAME=quality
+      script:
+        - make quality
+        - make pii_check
+    - python: '3.8'
+      env: TESTNAME=translations
+      script: make validate_translations
+  allow_failures:
+    - python: 3.8
 sudo: false
-
 cache: pip
 install:
     - pip install -U pip wheel codecov
