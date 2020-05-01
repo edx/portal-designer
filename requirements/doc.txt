@@ -10,11 +10,11 @@ astroid==1.5.3            # via -r requirements/test.txt, pylint, pylint-celery
 attrs==19.3.0             # via -r requirements/test.txt, pytest
 babel==2.8.0              # via sphinx
 beautifulsoup4==4.6.0     # via -r requirements/test.txt, wagtail
-bleach==3.1.4             # via readme-renderer
+bleach==3.1.5             # via readme-renderer
 certifi==2020.4.5.1       # via -r requirements/test.txt, requests
 chardet==3.0.4            # via -r requirements/test.txt, doc8, requests
 click-log==0.3.2          # via -r requirements/test.txt, edx-lint
-click==7.1.1              # via -r requirements/test.txt, click-log, code-annotations, edx-lint
+click==7.1.2              # via -r requirements/test.txt, click-log, code-annotations, edx-lint
 code-annotations==0.3.3   # via -r requirements/test.txt
 coreapi==2.3.3            # via -r requirements/test.txt, django-rest-swagger, openapi-codec
 coreschema==0.0.4         # via -r requirements/test.txt, coreapi
@@ -37,11 +37,11 @@ docutils==0.16            # via doc8, readme-renderer, restructuredtext-lint, sp
 draftjs-exporter==2.1.7   # via -r requirements/test.txt, wagtail
 drf-jwt==1.14.0           # via -r requirements/test.txt, edx-drf-extensions
 edx-auth-backends==3.0.2  # via -r requirements/test.txt
-edx-django-release-util==0.4.2  # via -r requirements/test.txt
+edx-django-release-util==0.4.4  # via -r requirements/test.txt
 edx-django-utils==3.2.1   # via -r requirements/test.txt, edx-drf-extensions, edx-rest-api-client
 edx-drf-extensions==5.0.2  # via -r requirements/test.txt
 edx-lint==1.3.0           # via -r requirements/test.txt
-edx-opaque-keys==2.0.2    # via -r requirements/test.txt, edx-drf-extensions
+edx-opaque-keys==2.1.0    # via -r requirements/test.txt, edx-drf-extensions
 edx-sphinx-theme==1.5.0   # via -r requirements/doc.in
 edx_rest_api_client==4.0.1  # via -r requirements/test.txt
 factory-boy==2.12.0       # via -r requirements/test.txt
@@ -52,7 +52,7 @@ html5lib==1.0.1           # via -r requirements/test.txt, wagtail
 idna==2.9                 # via -r requirements/test.txt, requests
 imagesize==1.2.0          # via sphinx
 importlib-metadata==1.6.0  # via -r requirements/test.txt, importlib-resources, inflect, pluggy, pytest, tox, virtualenv
-importlib-resources==1.4.0  # via -r requirements/test.txt, virtualenv
+importlib-resources==1.5.0  # via -r requirements/test.txt, virtualenv
 inflect==3.0.2            # via -r requirements/test.txt
 isort==4.3.21             # via -r requirements/test.txt, pylint
 itypes==1.2.0             # via -r requirements/test.txt, coreapi
@@ -67,7 +67,7 @@ mysqlclient==1.4.6        # via -r requirements/test.txt
 newrelic==5.12.0.140      # via -r requirements/test.txt, edx-django-utils
 oauthlib==3.1.0           # via -r requirements/test.txt, requests-oauthlib, social-auth-core
 openapi-codec==1.3.2      # via -r requirements/test.txt, django-rest-swagger
-packaging==20.3           # via -r requirements/test.txt, pytest, sphinx, tox
+packaging==20.3           # via -r requirements/test.txt, bleach, pytest, sphinx, tox
 pathlib2==2.3.5           # via -r requirements/test.txt, pytest
 pbr==5.4.5                # via -r requirements/test.txt, stevedore
 pillow==6.2.2             # via -r requirements/test.txt, wagtail
@@ -90,21 +90,21 @@ pytest==5.4.1             # via -r requirements/test.txt, pytest-cov, pytest-dja
 python-dateutil==2.8.0    # via -r requirements/test.txt, edx-drf-extensions, faker
 python-slugify==4.0.0     # via -r requirements/test.txt, code-annotations
 python3-openid==3.1.0     # via -r requirements/test.txt, social-auth-core
-pytz==2019.3              # via -r requirements/test.txt, babel, django, django-modelcluster, l18n
+pytz==2020.1              # via -r requirements/test.txt, babel, django, django-modelcluster, l18n
 pyyaml==5.3.1             # via -r requirements/test.txt, code-annotations, edx-django-release-util
 readme-renderer==26.0     # via -r requirements/doc.in
 requests-oauthlib==1.3.0  # via -r requirements/test.txt, social-auth-core
 requests==2.23.0          # via -r requirements/test.txt, coreapi, edx-drf-extensions, edx-rest-api-client, pyjwkest, requests-oauthlib, slumber, social-auth-core, sphinx, wagtail
 rest-condition==1.0.3     # via -r requirements/test.txt, edx-drf-extensions
 restructuredtext-lint==1.3.0  # via doc8
-semantic-version==2.8.4   # via -r requirements/test.txt, edx-drf-extensions
+semantic-version==2.8.5   # via -r requirements/test.txt, edx-drf-extensions
 simplejson==3.17.0        # via -r requirements/test.txt, django-rest-swagger
 six==1.14.0               # via -r requirements/test.txt, astroid, bleach, django-dynamic-fixture, django-extensions, django-waffle, doc8, edx-auth-backends, edx-django-release-util, edx-drf-extensions, edx-lint, edx-opaque-keys, edx-sphinx-theme, html5lib, l18n, mock, packaging, pathlib2, pyjwkest, pylint, python-dateutil, readme-renderer, social-auth-app-django, social-auth-core, stevedore, tox, virtualenv
 slumber==0.7.1            # via -r requirements/test.txt, edx-rest-api-client
 snowballstemmer==2.0.0    # via sphinx
 git+https://github.com/python-social-auth/social-app-django.git@c00d23c2b45c3317bd35b15ad1b959338689cef8#egg=social-auth-app-django  # via -r requirements/test.txt, edx-auth-backends
 social-auth-core==3.2.0   # via -r requirements/test.txt, edx-auth-backends, social-auth-app-django
-sphinx==3.0.2             # via -r requirements/doc.in, edx-sphinx-theme
+sphinx==3.0.3             # via -r requirements/doc.in, edx-sphinx-theme
 sphinxcontrib-applehelp==1.0.2  # via sphinx
 sphinxcontrib-devhelp==1.0.2  # via sphinx
 sphinxcontrib-htmlhelp==1.0.3  # via sphinx
