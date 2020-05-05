@@ -17,7 +17,7 @@ from .models import User
 # but should always exist any time afterwards.
 @receiver(post_save, sender=User)
 def add_observer_group_to_staff(instance, **kwargs):
-    # if the user already exists, just return.
+    """ return the user already exists, otherwise just return. """
     if kwargs['update_fields']:
         return
     if instance.is_staff:

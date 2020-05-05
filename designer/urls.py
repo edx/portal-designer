@@ -48,5 +48,5 @@ urlpatterns = oauth2_urlpatterns + [
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
 if settings.DEBUG and os.environ.get('ENABLE_DJANGO_TOOLBAR', False):  # pragma: no cover
-    import debug_toolbar
+    import debug_toolbar  # pylint: disable=import-error
     urlpatterns.append(url(r'^__debug__/', include(debug_toolbar.urls)))

@@ -75,3 +75,5 @@ wagtailusers.UserProfile:
     ".. no_pii:": "This model has no PII"
 blacklist.BlacklistedToken:
     ".. no_pii:": "This model has no PII"
+wagtailimages.UploadedImage:
+    ".. no_pii:": "This model has no PII"

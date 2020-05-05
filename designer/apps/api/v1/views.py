@@ -52,7 +52,7 @@ class DesignerPagesAPIEndpoint(APIView):
         queryset = queryset.public().live().specific()
         return queryset
 
-    def get(self, request):  # pylint: disable=unused-argument
+    def get(self, request):
         """Returns a list of Page-derived objects, filtered by hostname"""
         hostname = self.request.query_params.get('hostname')
         queryset = self.get_queryset()

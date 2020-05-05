@@ -15,6 +15,7 @@ from wagtail.core.blocks import CharBlock, StructBlock, URLBlock
 from wagtail.core.fields import StreamField
 from wagtail.core.models import Page
 from wagtail.documents.blocks import DocumentChooserBlock
+from wagtail.images.models import Image
 
 from designer.apps.branding.models import Branding
 from designer.apps.branding.utils import validate_hexadecimal_color
@@ -191,7 +192,7 @@ class ProgramPageBranding(Branding):
     page = ParentalKey(ProgramPage, on_delete=models.CASCADE, related_name='branding', unique=True)
 
     cover_image = models.ForeignKey(
-        'wagtailimages.Image',
+        Image,
         null=True,
         blank=False,
         on_delete=models.SET_NULL,
@@ -199,7 +200,7 @@ class ProgramPageBranding(Branding):
         verbose_name='Cover Image'
     )
     texture_image = models.ForeignKey(
-        'wagtailimages.Image',
+        Image,
         null=True,
         blank=False,
         on_delete=models.SET_NULL,

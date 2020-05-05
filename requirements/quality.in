@@ -3,7 +3,7 @@
 -r test.txt               # Core and testing dependencies for this package
 
 caniusepython3            # Additional Python 3 compatibility pylint checks
-edx-lint==1.3.0           # There is a compatibility issues with newer versions of pylint-django and wagtail that will be fixed in https://github.com/wagtail/wagtail/pull/5538
+edx-lint==1.4.1
 isort                     # to standardize order of imports
 pycodestyle               # PEP 8 compliance validation
 pydocstyle                # PEP 257 compliance validation

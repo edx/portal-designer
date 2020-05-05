@@ -1,4 +1,3 @@
-# pylint: disable=E1101
 """Utilities to enabling testing of Branding related code"""
 import factory
 from faker import Faker

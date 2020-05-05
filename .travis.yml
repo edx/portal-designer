@@ -23,8 +23,6 @@ matrix:
     - python: '3.8'
       env: TESTNAME=translations
       script: make validate_translations
-  allow_failures:
-    - python: 3.8
 sudo: false
 cache: pip
 install:
