@@ -5,10 +5,11 @@
 code-annotations
 coverage
 django-dynamic-fixture    # library to create dynamic model instances for testing purposes
-edx-lint==1.4.1
+edx-lint
 Faker
 factory_boy
-mock==3.0.5
+# mock version 4.0.0 drops support for python 3.5
+mock<4.0.0
 pytest
 pytest-cov
 pytest-django
