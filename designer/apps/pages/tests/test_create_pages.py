@@ -1,4 +1,3 @@
-# pylint: disable=E1101
 """ Test Creation of Pages """
 from random import getrandbits, randint
 
@@ -20,7 +19,7 @@ fake.add_provider(lorem)
 fake.add_provider(color)
 
 
-class PageCreationMixin(object):
+class PageCreationMixin:
     """
     Mixin for testing page creation
     """

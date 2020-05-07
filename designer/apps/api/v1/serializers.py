@@ -16,7 +16,8 @@ class PageSerializer(serializers.ModelSerializer):
         )
 
 
-class BrandedPageSerializerMixin(object):
+class BrandedPageSerializerMixin:
+    """Serializer fot the Branded page."""
 
     def get_branding(self, obj):
         """
@@ -177,7 +178,7 @@ class ProgramPageSerializer(BrandedPageSerializerMixin, serializers.ModelSeriali
 
 
 class EnterprisePageSerializer(BrandedPageSerializerMixin, serializers.ModelSerializer):
-
+    """  Serializer for Enterprisepage."""
     branding = serializers.SerializerMethodField()
 
     class Meta:

@@ -1,4 +1,3 @@
-# pylint: disable=E1101
 """Utilities to enabling testing of Site related code"""
 import random
 import factory

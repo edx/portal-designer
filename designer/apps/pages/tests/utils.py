@@ -1,4 +1,3 @@
-# pylint: disable=E1101
 """ Page Factories """
 import json
 from random import getrandbits, randint
