@@ -15,6 +15,8 @@ from .models import User
 # `update_fields` will only exist when the user is already created, and does not exist when
 # the data from edx is populated. Essentially, its false for the first 2 steps in the flow,
 # but should always exist any time afterwards.
+
+
 @receiver(post_save, sender=User)
 def add_observer_group_to_staff(instance, **kwargs):
     """ return the user already exists, otherwise just return. """
