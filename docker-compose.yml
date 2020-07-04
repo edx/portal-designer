@@ -23,14 +23,15 @@ services:
       dockerfile: Dockerfile
     container_name: designer.app
     volumes:
-      - .:/edx/app/designer/designer
-    command: bash -c 'while true; do python /edx/app/designer/designer/manage.py runserver 0.0.0.0:18808; sleep 2; done'
+      - .:/edx/app/designer
+    command: bash -c 'while true; do python /edx/app/designer/manage.py runserver 0.0.0.0:18808; sleep 2; done'
     ports:
       - "18808:18808"
     depends_on:
       - mysql
     networks:
       - devstack_default
+    user: root
     # Allows attachment to this container using 'docker attach <containerID>'.
     stdin_open: true
     tty: true
