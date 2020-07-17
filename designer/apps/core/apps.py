@@ -7,4 +7,4 @@ class CoreConfig(AppConfig):
     name = 'designer.apps.core'
 
     def ready(self):
-        from . import signals  # pylint: disable=unused-import
+        from . import signals  # pylint: disable=unused-import, import-outside-toplevel
