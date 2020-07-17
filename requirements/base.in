@@ -1,8 +1,9 @@
 # Core requirements for using this application
 
+-c constraints.txt
 -r github.in              # Forks and other dependencies not yet on PyPI
 
-Django>=2.0,<3.0          # Web application framework
+Django                    # Web application framework
 django-cors-headers
 django-extensions
 django-rest-swagger
@@ -13,12 +14,12 @@ edx-auth-backends
 edx-django-release-util
 edx-django-utils
 edx-drf-extensions
-edx_rest_api_client==4.0.1      # versions>4.0.1 have backward incompatible changes in timeout handling
+edx_rest_api_client
 mysqlclient
 pytz
-python-dateutil==2.8.0    # botocore has a <2.8.1 constraint. This is not a direct dependency and can be deleted (vs unpinned) when no longer needed
+python-dateutil
 wagtail
-zipp==1.2.0      # greater versions dropped Python 3.5 support
-mock<4.0.0      # mock>=4.0.0 dropped support for python3.5
-inflect<4.0.0   # inflect>=4.0.0 dropped support for python3.5
-social-auth-core==3.2.0    # version 3.3.0 causes problems in managing fields in admin view. Can be removed once {ARCHBOM-1078} is resolved.
+zipp
+mock
+inflect
+social-auth-core
