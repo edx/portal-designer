@@ -13,11 +13,11 @@ cffi==1.14.0              # via -r requirements/base.txt, cryptography
 chardet==3.0.4            # via -r requirements/base.txt, requests
 click-log==0.3.2          # via edx-lint
 click==7.1.2              # via click-log, code-annotations, edx-lint
-code-annotations==0.3.4   # via -r requirements/test.in
+code-annotations==0.4.0   # via -r requirements/test.in
 coreapi==2.3.3            # via -r requirements/base.txt, django-rest-swagger, openapi-codec
 coreschema==0.0.4         # via -r requirements/base.txt, coreapi
 coverage==5.2             # via -r requirements/test.in, pytest-cov
-cryptography==2.9.2       # via -r requirements/base.txt, pyjwt
+cryptography==3.0         # via -r requirements/base.txt, pyjwt
 defusedxml==0.6.0         # via -r requirements/base.txt, python3-openid, social-auth-core
 distlib==0.3.1            # via virtualenv
 django-cors-headers==3.4.0  # via -r requirements/base.txt
@@ -34,8 +34,8 @@ draftjs-exporter==2.1.7   # via -r requirements/base.txt, wagtail
 drf-jwt==1.16.2           # via -r requirements/base.txt, edx-drf-extensions
 edx-auth-backends==3.1.0  # via -r requirements/base.txt
 edx-django-release-util==0.4.4  # via -r requirements/base.txt
-edx-django-utils==3.3.0   # via -r requirements/base.txt, edx-drf-extensions, edx-rest-api-client
-edx-drf-extensions==6.1.0  # via -r requirements/base.txt
+edx-django-utils==3.5.0   # via -r requirements/base.txt, edx-drf-extensions, edx-rest-api-client
+edx-drf-extensions==6.1.1  # via -r requirements/base.txt
 edx-lint==1.5.0           # via -r requirements/test.in
 edx-opaque-keys==2.1.1    # via -r requirements/base.txt, edx-drf-extensions
 edx_rest_api_client==4.0.1  # via -c requirements/constraints.txt, -r requirements/base.txt
@@ -100,13 +100,13 @@ sqlparse==0.3.1           # via -r requirements/base.txt, django
 stevedore==1.32.0         # via -r requirements/base.txt, code-annotations, edx-opaque-keys
 text-unidecode==1.3       # via faker, python-slugify
 toml==0.10.1              # via tox
-tox==3.17.1               # via -r requirements/test.in
+tox==3.18.0               # via -r requirements/test.in
 typed-ast==1.4.1          # via astroid
 unidecode==1.1.1          # via -r requirements/base.txt, wagtail
 uritemplate==3.0.1        # via -r requirements/base.txt, coreapi
-urllib3==1.25.9           # via -r requirements/base.txt, requests
+urllib3==1.25.10          # via -r requirements/base.txt, requests
 virtualenv==20.0.27       # via tox
-wagtail==2.9.2            # via -r requirements/base.txt
+wagtail==2.9.3            # via -r requirements/base.txt
 wcwidth==0.2.5            # via pytest
 webencodings==0.5.1       # via -r requirements/base.txt, html5lib
 willow==1.3               # via -r requirements/base.txt, wagtail
