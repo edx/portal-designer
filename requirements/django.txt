@@ -1,1 +1,1 @@
-django==2.2.15            # via -r requirements/base.txt, django-cors-headers, django-storages, django-taggit, django-treebeard, djangorestframework, drf-jwt, edx-auth-backends, edx-django-release-util, edx-django-utils, edx-drf-extensions, rest-condition, wagtail
+django==2.2.15            # via -r requirements/base.txt, django-cors-headers, django-filter, django-storages, django-taggit, django-treebeard, djangorestframework, drf-jwt, edx-auth-backends, edx-django-release-util, edx-django-utils, edx-drf-extensions, rest-condition, wagtail
