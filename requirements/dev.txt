@@ -16,7 +16,7 @@ click==7.1.2              # via -r requirements/pip-tools.txt, -r requirements/q
 code-annotations==0.7.0   # via -r requirements/quality.txt
 coreapi==2.3.3            # via -r requirements/quality.txt, django-rest-swagger, openapi-codec
 coreschema==0.0.4         # via -r requirements/quality.txt, coreapi
-coverage==5.2.1           # via -r requirements/quality.txt, pytest-cov
+coverage==5.3             # via -r requirements/quality.txt, pytest-cov
 cryptography==3.1         # via -r requirements/quality.txt, pyjwt
 defusedxml==0.6.0         # via -r requirements/quality.txt, python3-openid, social-auth-core
 diff-cover==4.0.0         # via -r requirements/dev.in
@@ -24,10 +24,10 @@ distlib==0.3.1            # via -r requirements/quality.txt, virtualenv
 django-cors-headers==3.5.0  # via -r requirements/quality.txt
 django-debug-toolbar==2.2  # via -r requirements/dev.in
 django-dynamic-fixture==3.1.0  # via -r requirements/quality.txt
-django-extensions==3.0.8  # via -r requirements/quality.txt
+django-extensions==3.0.9  # via -r requirements/quality.txt
 django-modelcluster==5.1  # via -r requirements/quality.txt, wagtail
 django-rest-swagger==2.2.0  # via -r requirements/quality.txt
-django-storages==1.10     # via -r requirements/quality.txt
+django-storages==1.10.1   # via -r requirements/quality.txt
 django-taggit==1.3.0      # via -r requirements/quality.txt, wagtail
 django-treebeard==4.3.1   # via -r requirements/quality.txt, wagtail
 django-waffle==2.0.0      # via -r requirements/quality.txt, edx-django-utils, edx-drf-extensions
@@ -44,7 +44,7 @@ edx-lint==1.5.2           # via -r requirements/quality.txt
 edx-opaque-keys==2.1.1    # via -r requirements/quality.txt, edx-drf-extensions
 edx_rest_api_client==4.0.1  # via -c requirements/constraints.txt, -r requirements/quality.txt
 factory-boy==3.0.1        # via -r requirements/quality.txt
-faker==4.1.2              # via -r requirements/quality.txt, factory-boy
+faker==4.1.3              # via -r requirements/quality.txt, factory-boy
 filelock==3.0.12          # via -r requirements/quality.txt, tox, virtualenv
 future==0.18.2            # via -r requirements/quality.txt, pyjwkest
 html5lib==1.1             # via -r requirements/quality.txt, wagtail
@@ -82,7 +82,7 @@ pycodestyle==2.6.0        # via -r requirements/quality.txt
 pycparser==2.20           # via -r requirements/quality.txt, cffi
 pycryptodomex==3.9.8      # via -r requirements/quality.txt, pyjwkest
 pydocstyle==5.1.1         # via -r requirements/quality.txt
-pygments==2.6.1           # via diff-cover
+pygments==2.7.1           # via diff-cover
 pyjwkest==1.4.2           # via -r requirements/quality.txt, edx-drf-extensions
 pyjwt[crypto]==1.7.1      # via -r requirements/quality.txt, drf-jwt, edx-auth-backends, edx-rest-api-client, social-auth-core
 pylint-celery==0.3        # via -r requirements/quality.txt, edx-lint
@@ -92,8 +92,8 @@ pylint==2.4.4             # via -r requirements/quality.txt, edx-lint, pylint-ce
 pymongo==3.11.0           # via -r requirements/quality.txt, edx-opaque-keys
 pyparsing==2.4.7          # via -r requirements/quality.txt, packaging
 pytest-cov==2.10.1        # via -r requirements/quality.txt
-pytest-django==3.9.0      # via -r requirements/quality.txt
-pytest==6.0.1             # via -r requirements/quality.txt, pytest-cov, pytest-django
+pytest-django==3.10.0     # via -r requirements/quality.txt
+pytest==6.0.2             # via -r requirements/quality.txt, pytest-cov, pytest-django
 python-dateutil==2.8.1    # via -r requirements/quality.txt, edx-drf-extensions, faker
 python-slugify==4.0.1     # via -r requirements/quality.txt, code-annotations
 python3-openid==3.2.0     # via -r requirements/quality.txt, social-auth-core
