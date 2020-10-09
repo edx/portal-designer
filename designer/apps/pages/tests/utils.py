@@ -47,7 +47,7 @@ class ExternalProgramWebsiteFactory(factory.django.DjangoModelFactory):
     display = factory.LazyAttribute(lambda l: fake.boolean())
     header = factory.LazyAttribute(lambda l: ' '.join([word.capitalize() for word in fake.words(nb=3)]))
     description = factory.LazyAttribute(lambda l: "<ul>{}</ul>".format(
-        ["<li>{}</li>".format(s) for s in fake.sentences(nb=4)]
+        [f"<li>{s}</li>" for s in fake.sentences(nb=4)]
     ))
     link_display_text = factory.LazyAttribute(lambda l: fake.sentence())
     link_url = factory.LazyAttribute(lambda l: fake.url())
@@ -129,7 +129,7 @@ def create_program_page(
     index_page = site.root_page
     program_title = program_title if program_title else ' '.join([word.capitalize() for word in fake.words(nb=2)])
     program_page = ProgramPage(
-        title="{} Program Page".format(program_title),
+        title=f"{program_title} Program Page",
         uuid=fake.uuid4(),
     )
     index_page.add_child(instance=program_page)

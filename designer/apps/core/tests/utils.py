@@ -39,7 +39,7 @@ def create_index_page(site_name):
     """ create index page with test data """
     root_page = Page.get_root_nodes()[0]
     index_page = IndexPage(
-        title="{} Index Page".format(site_name),
+        title=f"{site_name} Index Page",
     )
     root_page.add_child(instance=index_page)
     index_page.save_revision().publish()

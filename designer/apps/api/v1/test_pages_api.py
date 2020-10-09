@@ -11,7 +11,7 @@ class TestDesignerPagesAPIEndpoint(TestCase):
     """ Tests for DesignerPagesAPIEndpoint """
 
     def setUp(self):
-        super(TestDesignerPagesAPIEndpoint, self).setUp()
+        super().setUp()
         self.url = reverse('api:v1:pages')
 
         # Create a site and associated branding
@@ -51,7 +51,7 @@ class TestDesignerPagesAPIEndpoint(TestCase):
             except AttributeError:
                 page_branding = None
             expected_page_data = {
-                "type": "pages.{}".format(page_type),
+                "type": f"pages.{page_type}",
                 "title": page.title,
                 "slug": page.slug,
                 "last_published_at": Page.objects.get(id=page.id).last_published_at.isoformat().replace('+00:00', 'Z'),

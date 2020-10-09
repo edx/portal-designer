@@ -27,7 +27,7 @@ class TestCreateProgramCommand(TestCase):
                 'create_program',
                 '--programname="Test Program"',
                 '--hostname="fake.site.com"',
-                "--uuid=\"{}\"".format(uuid)
+                f"--uuid=\"{uuid}\""
             )
 
         self.assertTrue('There is no site for hostname ["fake.site.com"]' in str(context.exception))
@@ -46,16 +46,16 @@ class TestCreateProgramCommand(TestCase):
         # Create programs
         call_command(
             'create_program',
-            "--programname={}".format(program1_name),
-            "--hostname={}".format(hostname),
-            "--uuid={}".format(fake.uuid4()),
+            f"--programname={program1_name}",
+            f"--hostname={hostname}",
+            f"--uuid={fake.uuid4()}",
         )
 
         call_command(
             'create_program',
-            "--programname={}".format(program2_name),
-            "--hostname={}".format(hostname),
-            "--uuid={}".format(fake.uuid4()),
+            f"--programname={program2_name}",
+            f"--hostname={hostname}",
+            f"--uuid={fake.uuid4()}",
         )
 
         # Check that a ProgramPage has been created with the following properties

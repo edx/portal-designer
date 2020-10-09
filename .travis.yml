@@ -2,19 +2,11 @@ language: python
 dist: focal
 matrix:
   include:
-    - python: 3.5
-      env: TOXENV=django22
-      script: make validate
-    - python: 3.5
-      env: TESTNAME=quality
-      script:
-        - make quality
-        - make pii_check
-    - python: 3.5
-      env: TESTNAME=translations
-      script: make validate_translations
     - python: '3.8'
       env: TOXENV=django22
+      script: make validate
+    - python: '3.8'
+      env: TOXENV=django30
       script: make validate
     - python: '3.8'
       env: TESTNAME=quality
