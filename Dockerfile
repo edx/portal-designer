@@ -1,4 +1,4 @@
-FROM python:3.5
+FROM python:3.8
 WORKDIR /edx/app/designer/designer
 ADD requirements.txt /edx/app/designer/designer/
 ADD Makefile /edx/app/designer/designer/
