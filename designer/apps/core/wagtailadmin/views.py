@@ -18,7 +18,7 @@ class SiteCreationView(TemplateView):
     def dispatch(self, request, *args, **kwargs):
         if not request.user.has_perm('add_site'):
             raise PermissionDenied
-        return super(SiteCreationView, self).dispatch(request, *args, **kwargs)
+        return super().dispatch(request, *args, **kwargs)
 
     def post(self, request, *args, **kwargs):
         """
@@ -38,8 +38,8 @@ class SiteCreationView(TemplateView):
         try:
             management.call_command(
                 'create_site',
-                '--sitename={}'.format(sitename),
-                '--hostname={}'.format(hostname),
+                f'--sitename={sitename}',
+                f'--hostname={hostname}',
                 stdout=stdout, stderr=stderr
             )
         except Exception as ex:  # pylint: disable=broad-except

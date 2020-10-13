@@ -77,3 +77,19 @@ blacklist.BlacklistedToken:
     ".. no_pii:": "This model has no PII"
 wagtailimages.UploadedImage:
     ".. no_pii:": "This model has no PII"
+wagtailcore.GroupApprovalTask:
+    ".. no_pii:": "This model has no PII"
+wagtailcore.PageLogEntry:
+    ".. no_pii:": "This model has no PII"
+wagtailcore.Task:
+    ".. no_pii:": "This model has no PII"
+wagtailcore.TaskState:
+  ".. no_pii:": "This model has no PII"
+wagtailcore.Workflow:
+  ".. no_pii:": "This model has no PII"
+wagtailcore.WorkflowPage:
+  ".. no_pii:": "This model has no PII"
+wagtailcore.WorkflowState:
+  ".. no_pii:": "This model has no PII"
+wagtailcore.WorkflowTask:
+  ".. no_pii:": "This model has no PII"

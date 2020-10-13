@@ -39,7 +39,7 @@ class Command(BaseCommand):
         """create_index_page"""
         root_page = Page.get_root_nodes()[0]
         index_page = IndexPage(
-            title="{} Index Page".format(sitename),
+            title=f"{sitename} Index Page",
         )
         root_page.add_child(instance=index_page)
         index_page.save_revision().publish()
@@ -86,7 +86,7 @@ class Command(BaseCommand):
 
     def create_groups_and_permissions(self, name, index_page, collection):
         group = Group.objects.create(
-            name='{}_Moderators'.format(name)
+            name=f'{name}_Moderators'
         )
 
         for codename in MODERATOR_PERMISSIONS['page_permissions']:

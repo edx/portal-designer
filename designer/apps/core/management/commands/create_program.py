@@ -46,7 +46,7 @@ class Command(BaseCommand):
         """
 
         program_page = ProgramPage(
-            title="{} Program Page".format(program_name),
+            title=f"{program_name} Program Page",
             uuid=program_uuid,
         )
         index_page = site.root_page
@@ -66,12 +66,12 @@ class Command(BaseCommand):
         try:
             site = Site.objects.get(hostname=site_hostname)
         except Site.DoesNotExist:
-            raise CommandError("There is no site for hostname [{}]".format(site_hostname))
+            raise CommandError(f"There is no site for hostname [{site_hostname}]")
 
         try:
             program_uuid = uuid.UUID(program_uuid)
         except ValueError:
-            raise CommandError("{} is not a valid UUID".format(program_uuid))
+            raise CommandError(f"{program_uuid} is not a valid UUID")
 
         self.create_program_page(site, program_name, program_uuid)
         self.stdout.write('Successfully created program page for "%s"' % program_name)

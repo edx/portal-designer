@@ -12,11 +12,3 @@ Django>=2.0,<3.0
 
 edx_rest_api_client==4.0.1      # versions>4.0.1 have backward incompatible changes in timeout handling
 social-auth-core==3.2.0         # version 3.3.0 causes problems in managing fields in admin view. Can be removed once {ARCHBOM-1078} is resolved.
-
-# The following drop python 3.5 support
-inflect<4.0.0
-mock<4.0.0
-path<13.2.0
-stevedore<2.0.0
-wagtail<2.10
-zipp<2.0.0

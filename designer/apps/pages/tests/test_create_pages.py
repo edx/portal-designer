@@ -25,7 +25,7 @@ class PageCreationMixin:
     """
 
     def setUp(self):
-        super(PageCreationMixin, self).setUp()
+        super().setUp()
 
         self.staff_password = fake.password()
         self.staff = UserFactory(is_staff=True, is_superuser=True, password=self.staff_password)
@@ -70,7 +70,7 @@ class PageCreationMixin:
             'program_documents-TOTAL_FORMS': '1',
             'program_documents-INITIAL_FORMS': '0',
             'program_documents-0-display': True,
-            'program_documents-0-header': "{} Documents".format(fake.word().capitalize()),
+            'program_documents-0-header': f"{fake.word().capitalize()} Documents",
             'program_documents-0-documents-count': str(doc_count),
         }
 
@@ -81,20 +81,20 @@ class PageCreationMixin:
             if bool(getrandbits(1)):
                 # generate a link type document
                 ret.update({
-                    "program_documents-0-documents-{}-type".format(i): 'link',
-                    "program_documents-0-documents-{}-value-url".format(i): fake.url(),
-                    "program_documents-0-documents-{}-value-display_text".format(i): "{} Link".format(display_text),
-                    "program_documents-0-documents-{}-order".format(i): str(i),
-                    "program_documents-0-documents-{}-deleted".format(i): '',
+                    f"program_documents-0-documents-{i}-type": 'link',
+                    f"program_documents-0-documents-{i}-value-url": fake.url(),
+                    f"program_documents-0-documents-{i}-value-display_text": f"{display_text} Link",
+                    f"program_documents-0-documents-{i}-order": str(i),
+                    f"program_documents-0-documents-{i}-deleted": '',
                 })
             else:
                 # generate a file type document
                 ret.update({
-                    "program_documents-0-documents-{}-type".format(i): 'file',
-                    "program_documents-0-documents-{}-value-document".format(i): DocumentFactory().id,
-                    "program_documents-0-documents-{}-value-display_text".format(i): "{} File".format(display_text),
-                    "program_documents-0-documents-{}-order".format(i): str(i),
-                    "program_documents-0-documents-{}-deleted".format(i): '',
+                    f"program_documents-0-documents-{i}-type": 'file',
+                    f"program_documents-0-documents-{i}-value-document": DocumentFactory().id,
+                    f"program_documents-0-documents-{i}-value-display_text": f"{display_text} File",
+                    f"program_documents-0-documents-{i}-order": str(i),
+                    f"program_documents-0-documents-{i}-deleted": '',
                 })
 
         return ret
@@ -112,9 +112,9 @@ class PageCreationMixin:
                 'external_program_website-0-display': True,
                 'external_program_website-0-header': ' '.join([word.capitalize() for word in fake.words(nb=3)]),
                 'external_program_website-0-description': "<ul>{}</ul>".format(
-                    ["<li>{}</li>".format(s) for s in fake.sentences(nb=4)]
+                    [f"<li>{s}</li>" for s in fake.sentences(nb=4)]
                 ),
-                'external_program_website-0-link_display_text': "Return to {} homepage".format(page_name),
+                'external_program_website-0-link_display_text': f"Return to {page_name} homepage",
                 'external_program_website-0-link_url': fake.url(),
             })
         else:
@@ -169,7 +169,7 @@ class PageCreationMixin:
                 self.fail('Creating a page failed for unknown reason')
 
             errors = '\n'.join(['  {}:\n    {}'.format(key, '\n'.join(values)) for key, values in form.errors.items()])
-            self.fail("Creating a page failed for the following reasons:\n{}".format(errors))
+            self.fail(f"Creating a page failed for the following reasons:\n{errors}")
 
         try:
             child_model.objects.get(slug=data['slug'])

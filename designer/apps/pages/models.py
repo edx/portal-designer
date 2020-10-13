@@ -51,7 +51,7 @@ class ProgramPage(Page):
 
     @classmethod
     def can_exist_under(cls, parent):
-        can_exist_under_parent = super(ProgramPage, cls).can_exist_under(parent)
+        can_exist_under_parent = super().can_exist_under(parent)
         parent_child_pages = parent.get_descendants()
         is_valid_child = is_valid_child_page(cls, parent_child_pages)
         return can_exist_under_parent and is_valid_child
@@ -237,7 +237,7 @@ class EnterprisePage(Page):
 
     @classmethod
     def can_exist_under(cls, parent):
-        can_exist_under_parent = super(EnterprisePage, cls).can_exist_under(parent)
+        can_exist_under_parent = super().can_exist_under(parent)
         parent_child_pages = parent.get_descendants()
         if parent_child_pages:
             return False
