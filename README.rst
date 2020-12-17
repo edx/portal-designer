@@ -1,7 +1,7 @@
 designer  |Travis|_ |Codecov|_
 ===================================================
-.. |Travis| image:: https://travis-ci.org/edx/portal-designer.svg?branch=master
-.. _Travis: https://travis-ci.org/edx/portal-designer
+.. |Travis| image:: https://travis-ci.com/edx/portal-designer.svg?branch=master
+.. _Travis: https://travis-ci.com/edx/portal-designer
 
 .. |Codecov| image:: http://codecov.io/github/edx/portal-designer/coverage.svg?branch=master
 .. _Codecov: http://codecov.io/github/edx/portal-designer?branch=master
