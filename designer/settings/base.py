@@ -66,7 +66,6 @@ INSTALLED_APPS += WAGTAIL_APPS
 
 MIDDLEWARE = (
     'waffle.middleware.WaffleMiddleware',
-    'wagtail.core.middleware.SiteMiddleware',
     'wagtail.contrib.redirects.middleware.RedirectMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.locale.LocaleMiddleware',

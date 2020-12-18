@@ -93,3 +93,5 @@ wagtailcore.WorkflowState:
   ".. no_pii:": "This model has no PII"
 wagtailcore.WorkflowTask:
   ".. no_pii:": "This model has no PII"
+wagtailcore.Locale:
+  ".. no_pii:": "This model has no PII"
