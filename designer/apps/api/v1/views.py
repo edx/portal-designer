@@ -35,8 +35,8 @@ class DesignerPagesAPIEndpoint(APIView):
         """Allows the user to 1+ Page-derived models to query"""
         try:
             models = page_models_from_string(self.request.GET.get('type', 'wagtailcore.Page'))
-        except (LookupError, ValueError):
-            raise BadRequestError("type doesn't exist")
+        except (LookupError, ValueError) as exception:
+            raise BadRequestError("type doesn't exist") from exception
 
         if not models:
             models = [Page]
@@ -122,16 +122,16 @@ class ProgramDetailView(APIView):
             return Response([])
         try:
             program_uuids = [uuid.UUID(program_uuid) for program_uuid in requested_programs.split(',')]
-        except ValueError:
-            raise serializers.ValidationError('"programs" query param contains malformed UUIDs')
+        except ValueError as exception:
+            raise serializers.ValidationError('"programs" query param contains malformed UUIDs') from exception
 
         all_programs = []
 
         for program_uuid in program_uuids:
             try:
                 program_page = ProgramPage.objects.get(uuid=program_uuid)
-            except ProgramPage.DoesNotExist:
-                raise exceptions.NotFound()
+            except ProgramPage.DoesNotExist as exception:
+                raise exceptions.NotFound() from exception
 
             frontend_url = generate_frontend_url(self.request, program_page)
 
