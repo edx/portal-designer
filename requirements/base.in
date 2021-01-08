@@ -18,6 +18,7 @@ edx_rest_api_client
 mysqlclient
 pytz
 python-dateutil
+social-auth-app-django
 wagtail
 zipp
 mock
