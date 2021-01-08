@@ -11,3 +11,7 @@
 Django>=2.0,<3.0
 
 edx_rest_api_client==4.0.1      # versions>4.0.1 have backward incompatible changes in timeout handling
+
+# Newer version causing test failure with error `ModuleNotFoundError: No module named 'wagtail.core.middleware'`
+# JIRA https://openedx.atlassian.net/browse/BOM-2211 opened.
+wagtail==2.10.2
