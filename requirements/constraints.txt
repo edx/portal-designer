@@ -8,10 +8,13 @@
 # pin when possible.  Writing an issue against the offending project and
 # linking to it here is good.
 
-Django>=2.0,<3.0
+
+# This file contains all common constraints for edx-repos
+-c https://raw.githubusercontent.com/edx/edx-lint/master/edx_lint/files/common_constraints.txt
+
 
 edx_rest_api_client==4.0.1      # versions>4.0.1 have backward incompatible changes in timeout handling
 
-# Newer version causing test failure with error `ModuleNotFoundError: No module named 'wagtail.core.middleware'`
-# JIRA https://openedx.atlassian.net/browse/BOM-2211 opened.
-wagtail==2.10.2
+
+# greater versions failing make upgrade job due to pyjwt conflicts.
+social-auth-core<4.0.3
