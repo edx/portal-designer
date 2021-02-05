@@ -39,6 +39,8 @@ waffle.Sample:
   ".. no_pii:": "This model has no PII"
 waffle.Switch:
   ".. no_pii:": "This model has no PII"
+wagtailadmin.Admin:
+  ".. no_pii:": "This model has no PII"
 wagtailcore.Collection:
   ".. no_pii:": "This model has no PII"
 wagtailcore.CollectionViewRestriction:
@@ -56,6 +58,8 @@ wagtailcore.PageViewRestriction:
 wagtailcore.Site:
   ".. no_pii:": "This model has no PII"
 wagtaildocs.Document:
+  ".. no_pii:": "This model has no PII"
+wagtaildocs.UploadedDocument:
   ".. no_pii:": "This model has no PII"
 wagtailembeds.Embed:
   ".. no_pii:": "This model has no PII"
