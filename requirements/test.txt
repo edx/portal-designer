@@ -39,8 +39,10 @@ click==7.1.2
     #   click-log
     #   code-annotations
     #   edx-lint
-code-annotations==1.0.2
-    # via -r requirements/test.in
+code-annotations==1.1.0
+    # via
+    #   -r requirements/test.in
+    #   edx-lint
 coreapi==2.3.3
     # via
     #   -r requirements/base.txt
@@ -50,7 +52,7 @@ coreschema==0.0.4
     # via
     #   -r requirements/base.txt
     #   coreapi
-coverage==5.3.1
+coverage==5.4
     # via
     #   -r requirements/test.in
     #   pytest-cov
@@ -66,7 +68,7 @@ defusedxml==0.6.0
     #   social-auth-core
 distlib==0.3.1
     # via virtualenv
-django-cors-headers==3.6.0
+django-cors-headers==3.7.0
     # via -r requirements/base.txt
 django-crum==0.7.9
     # via
@@ -117,6 +119,7 @@ django-waffle==2.1.0
     #   edx-django-release-util
     #   edx-django-utils
     #   edx-drf-extensions
+    #   edx-lint
     #   rest-condition
     #   wagtail
 djangorestframework==3.12.2
@@ -135,7 +138,7 @@ drf-jwt==1.17.3
     # via
     #   -r requirements/base.txt
     #   edx-drf-extensions
-edx-auth-backends==3.3.0
+edx-auth-backends==3.3.3
     # via -r requirements/base.txt
 edx-django-release-util==1.0.0
     # via -r requirements/base.txt
@@ -146,9 +149,9 @@ edx-django-utils==3.13.0
     #   edx-rest-api-client
 edx-drf-extensions==6.4.0
     # via -r requirements/base.txt
-edx-lint==1.6
+edx-lint==4.0.1
     # via -r requirements/test.in
-edx-opaque-keys==2.1.1
+edx-opaque-keys==2.2.0
     # via
     #   -r requirements/base.txt
     #   edx-drf-extensions
@@ -162,7 +165,7 @@ et-xmlfile==1.0.1
     #   openpyxl
 factory-boy==3.2.0
     # via -r requirements/test.in
-faker==5.6.5
+faker==6.0.0
     # via
     #   -r requirements/test.in
     #   factory-boy
@@ -196,7 +199,7 @@ jdcal==1.4.1
     # via
     #   -r requirements/base.txt
     #   openpyxl
-jinja2==2.11.2
+jinja2==2.11.3
     # via
     #   -r requirements/base.txt
     #   code-annotations
@@ -236,7 +239,7 @@ openpyxl==3.0.6
     # via
     #   -r requirements/base.txt
     #   tablib
-packaging==20.8
+packaging==20.9
     # via
     #   pytest
     #   tox
@@ -281,7 +284,7 @@ pyjwt[crypto]==1.7.1
     #   social-auth-core
 pylint-celery==0.3
     # via edx-lint
-pylint-django==2.3.0
+pylint-django==2.4.2
     # via edx-lint
 pylint-plugin-utils==0.6
     # via
@@ -293,7 +296,7 @@ pylint==2.6.0
     #   pylint-celery
     #   pylint-django
     #   pylint-plugin-utils
-pymongo==3.11.2
+pymongo==3.11.3
     # via
     #   -r requirements/base.txt
     #   edx-opaque-keys
@@ -303,7 +306,7 @@ pytest-cov==2.11.1
     # via -r requirements/test.in
 pytest-django==4.1.0
     # via -r requirements/test.in
-pytest==6.2.1
+pytest==6.2.2
     # via
     #   -r requirements/test.in
     #   pytest-cov
@@ -319,7 +322,7 @@ python3-openid==3.2.0
     # via
     #   -r requirements/base.txt
     #   social-auth-core
-pytz==2020.5
+pytz==2021.1
     # via
     #   -r requirements/base.txt
     #   django
@@ -367,7 +370,6 @@ six==1.15.0
     #   edx-django-release-util
     #   edx-drf-extensions
     #   edx-lint
-    #   edx-opaque-keys
     #   html5lib
     #   l18n
     #   pyjwkest
@@ -386,6 +388,7 @@ social-auth-app-django==4.0.0
     #   edx-auth-backends
 social-auth-core==4.0.2
     # via
+    #   -c https://raw.githubusercontent.com/edx/edx-lint/master/edx_lint/files/common_constraints.txt
     #   -c requirements/constraints.txt
     #   -r requirements/base.txt
     #   edx-auth-backends
@@ -417,23 +420,19 @@ toml==0.10.2
     #   pylint
     #   pytest
     #   tox
-tox==3.21.2
+tox==3.21.4
     # via -r requirements/test.in
-unidecode==1.1.2
-    # via
-    #   -r requirements/base.txt
-    #   wagtail
 uritemplate==3.0.1
     # via
     #   -r requirements/base.txt
     #   coreapi
-urllib3==1.26.2
+urllib3==1.26.3
     # via
     #   -r requirements/base.txt
     #   requests
-virtualenv==20.4.0
+virtualenv==20.4.2
     # via tox
-wagtail==2.11.3
+wagtail==2.12
     # via -r requirements/base.txt
 webencodings==0.5.1
     # via
