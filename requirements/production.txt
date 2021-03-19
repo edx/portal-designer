@@ -12,9 +12,9 @@ beautifulsoup4==4.8.2
     # via
     #   -r requirements/base.txt
     #   wagtail
-boto3==1.17.27
+boto3==1.17.32
     # via -r requirements/production.in
-botocore==1.20.27
+botocore==1.20.32
     # via
     #   boto3
     #   s3transfer
@@ -111,7 +111,7 @@ draftjs-exporter==2.1.7
     # via
     #   -r requirements/base.txt
     #   wagtail
-drf-jwt==1.17.3
+drf-jwt==1.18.0
     # via
     #   -r requirements/base.txt
     #   edx-drf-extensions
@@ -273,7 +273,7 @@ rest-condition==1.0.3
     # via
     #   -r requirements/base.txt
     #   edx-drf-extensions
-s3transfer==0.3.4
+s3transfer==0.3.6
     # via boto3
 semantic-version==2.8.5
     # via
@@ -309,7 +309,7 @@ social-auth-core==4.0.2
     #   -r requirements/base.txt
     #   edx-auth-backends
     #   social-auth-app-django
-soupsieve==2.2
+soupsieve==2.2.1
     # via
     #   -r requirements/base.txt
     #   beautifulsoup4
