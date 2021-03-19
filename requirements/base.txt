@@ -79,7 +79,7 @@ djangorestframework==3.12.2
     #   wagtail
 draftjs-exporter==2.1.7
     # via wagtail
-drf-jwt==1.17.3
+drf-jwt==1.18.0
     # via edx-drf-extensions
 edx-auth-backends==3.3.3
     # via -r requirements/base.in
@@ -206,7 +206,7 @@ social-auth-core==4.0.2
     #   -r requirements/base.in
     #   edx-auth-backends
     #   social-auth-app-django
-soupsieve==2.2
+soupsieve==2.2.1
     # via beautifulsoup4
 sqlparse==0.4.1
     # via django
