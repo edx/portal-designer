@@ -4,7 +4,7 @@
 #
 #    make upgrade
 #
-anyascii==0.1.7
+anyascii==0.2.0
     # via wagtail
 beautifulsoup4==4.8.2
     # via wagtail
@@ -32,7 +32,7 @@ django-cors-headers==3.7.0
     # via -r requirements/base.in
 django-crum==0.7.9
     # via edx-django-utils
-django-extensions==3.1.2
+django-extensions==3.1.3
     # via -r requirements/base.in
 django-filter==2.4.0
     # via wagtail
@@ -42,7 +42,7 @@ django-rest-swagger==2.2.0
     # via -r requirements/base.in
 django-storages==1.11.1
     # via -r requirements/base.in
-django-taggit==1.3.0
+django-taggit==1.4.0
     # via wagtail
 django-treebeard==4.5.1
     # via wagtail
@@ -51,7 +51,7 @@ django-waffle==2.1.0
     #   -r requirements/base.in
     #   edx-django-utils
     #   edx-drf-extensions
-django==2.2.20
+django==2.2.22
     # via
     #   -c https://raw.githubusercontent.com/edx/edx-lint/master/edx_lint/files/common_constraints.txt
     #   -r requirements/base.in
@@ -86,7 +86,7 @@ edx-auth-backends==3.3.3
     # via -r requirements/base.in
 edx-django-release-util==1.0.0
     # via -r requirements/base.in
-edx-django-utils==3.16.0
+edx-django-utils==4.0.0
     # via
     #   -r requirements/base.in
     #   edx-drf-extensions
@@ -99,7 +99,7 @@ edx_rest_api_client==4.0.1
     # via
     #   -c requirements/constraints.txt
     #   -r requirements/base.in
-et-xmlfile==1.0.1
+et-xmlfile==1.1.0
     # via openpyxl
 future==0.18.2
     # via pyjwkest
@@ -131,7 +131,7 @@ openapi-codec==1.3.2
     # via django-rest-swagger
 openpyxl==3.0.7
     # via tablib
-pbr==5.5.1
+pbr==5.6.0
     # via stevedore
 pillow==8.2.0
     # via wagtail
@@ -149,7 +149,7 @@ pyjwt[crypto]==1.7.1
     #   edx-auth-backends
     #   edx-rest-api-client
     #   social-auth-core
-pymongo==3.11.3
+pymongo==3.11.4
     # via edx-opaque-keys
 python-dateutil==2.8.1
     # via
@@ -183,7 +183,7 @@ semantic-version==2.8.5
     # via edx-drf-extensions
 simplejson==3.17.2
     # via django-rest-swagger
-six==1.15.0
+six==1.16.0
     # via
     #   edx-auth-backends
     #   edx-django-release-util
@@ -202,7 +202,6 @@ social-auth-app-django==4.0.0
     #   edx-auth-backends
 social-auth-core==4.0.2
     # via
-    #   -c https://raw.githubusercontent.com/edx/edx-lint/master/edx_lint/files/common_constraints.txt
     #   -c requirements/constraints.txt
     #   -r requirements/base.in
     #   edx-auth-backends
@@ -221,7 +220,7 @@ uritemplate==3.0.1
     # via coreapi
 urllib3==1.26.4
     # via requests
-wagtail==2.12.3
+wagtail==2.12.4
     # via -r requirements/base.in
 webencodings==0.5.1
     # via html5lib
@@ -229,7 +228,7 @@ willow==1.4
     # via wagtail
 xlrd==2.0.1
     # via tablib
-xlsxwriter==1.3.9
+xlsxwriter==1.4.1
     # via wagtail
 xlwt==1.3.0
     # via tablib
