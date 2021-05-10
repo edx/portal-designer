@@ -4,7 +4,7 @@
 #
 #    make upgrade
 #
-anyascii==0.1.7
+anyascii==0.2.0
     # via
     #   -r requirements/test.txt
     #   wagtail
@@ -12,12 +12,12 @@ appdirs==1.4.4
     # via
     #   -r requirements/test.txt
     #   virtualenv
-astroid==2.5.3
+astroid==2.5.6
     # via
     #   -r requirements/test.txt
     #   pylint
     #   pylint-celery
-attrs==20.3.0
+attrs==21.2.0
     # via
     #   -r requirements/test.txt
     #   pytest
@@ -86,7 +86,7 @@ django-crum==0.7.9
     #   edx-django-utils
 django-dynamic-fixture==3.1.1
     # via -r requirements/test.txt
-django-extensions==3.1.2
+django-extensions==3.1.3
     # via -r requirements/test.txt
 django-filter==2.4.0
     # via
@@ -100,7 +100,7 @@ django-rest-swagger==2.2.0
     # via -r requirements/test.txt
 django-storages==1.11.1
     # via -r requirements/test.txt
-django-taggit==1.3.0
+django-taggit==1.4.0
     # via
     #   -r requirements/test.txt
     #   wagtail
@@ -113,7 +113,7 @@ django-waffle==2.1.0
     #   -r requirements/test.txt
     #   edx-django-utils
     #   edx-drf-extensions
-django==2.2.20
+django==2.2.22
     # via
     #   -r requirements/test.txt
     #   code-annotations
@@ -153,7 +153,7 @@ edx-auth-backends==3.3.3
     # via -r requirements/test.txt
 edx-django-release-util==1.0.0
     # via -r requirements/test.txt
-edx-django-utils==3.16.0
+edx-django-utils==4.0.0
     # via
     #   -r requirements/test.txt
     #   edx-drf-extensions
@@ -170,13 +170,13 @@ edx-opaque-keys==2.2.0
     #   edx-drf-extensions
 edx_rest_api_client==4.0.1
     # via -r requirements/test.txt
-et-xmlfile==1.0.1
+et-xmlfile==1.1.0
     # via
     #   -r requirements/test.txt
     #   openpyxl
 factory-boy==3.2.0
     # via -r requirements/test.txt
-faker==8.1.0
+faker==8.1.2
     # via
     #   -r requirements/test.txt
     #   factory-boy
@@ -259,7 +259,7 @@ packaging==20.9
     #   -r requirements/test.txt
     #   pytest
     #   tox
-pbr==5.5.1
+pbr==5.6.0
     # via
     #   -r requirements/test.txt
     #   stevedore
@@ -308,7 +308,7 @@ pylint-celery==0.3
     # via
     #   -r requirements/test.txt
     #   edx-lint
-pylint-django==2.4.3
+pylint-django==2.4.4
     # via
     #   -r requirements/test.txt
     #   edx-lint
@@ -317,14 +317,14 @@ pylint-plugin-utils==0.6
     #   -r requirements/test.txt
     #   pylint-celery
     #   pylint-django
-pylint==2.7.4
+pylint==2.8.2
     # via
     #   -r requirements/test.txt
     #   edx-lint
     #   pylint-celery
     #   pylint-django
     #   pylint-plugin-utils
-pymongo==3.11.3
+pymongo==3.11.4
     # via
     #   -r requirements/test.txt
     #   edx-opaque-keys
@@ -336,7 +336,7 @@ pytest-cov==2.11.1
     # via -r requirements/test.txt
 pytest-django==4.2.0
     # via -r requirements/test.txt
-pytest==6.2.3
+pytest==6.2.4
     # via
     #   -r requirements/test.txt
     #   pytest-cov
@@ -346,7 +346,7 @@ python-dateutil==2.8.1
     #   -r requirements/test.txt
     #   edx-drf-extensions
     #   faker
-python-slugify==4.0.1
+python-slugify==5.0.2
     # via
     #   -r requirements/test.txt
     #   code-annotations
@@ -392,7 +392,7 @@ simplejson==3.17.2
     # via
     #   -r requirements/test.txt
     #   django-rest-swagger
-six==1.15.0
+six==1.16.0
     # via
     #   -r requirements/test.txt
     #   django-dynamic-fixture
@@ -452,7 +452,7 @@ toml==0.10.2
     #   pylint
     #   pytest
     #   tox
-tox==3.23.0
+tox==3.23.1
     # via -r requirements/test.txt
 uritemplate==3.0.1
     # via
@@ -462,11 +462,11 @@ urllib3==1.26.4
     # via
     #   -r requirements/test.txt
     #   requests
-virtualenv==20.4.3
+virtualenv==20.4.6
     # via
     #   -r requirements/test.txt
     #   tox
-wagtail==2.12.3
+wagtail==2.12.4
     # via -r requirements/test.txt
 webencodings==0.5.1
     # via
@@ -484,7 +484,7 @@ xlrd==2.0.1
     # via
     #   -r requirements/test.txt
     #   tablib
-xlsxwriter==1.3.9
+xlsxwriter==1.4.1
     # via
     #   -r requirements/test.txt
     #   wagtail
