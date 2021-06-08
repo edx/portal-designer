@@ -7,7 +7,7 @@ from rest_framework import exceptions, serializers
 from rest_framework.response import Response
 from rest_framework.views import APIView
 from rest_framework.permissions import AllowAny
-from wagtail.api.v2.utils import BadRequestError, filter_page_type, page_models_from_string
+from wagtail.api.v2.utils import BadRequestError, page_models_from_string
 from wagtail.core.models import Page, Site
 
 from designer.apps.pages.models import ProgramPage
@@ -47,7 +47,7 @@ class DesignerPagesAPIEndpoint(APIView):
             queryset = Page.objects.select_related('site').all()
 
             # Filter pages by specified models
-            queryset = filter_page_type(queryset, models)
+            queryset = self._filter_page_type(queryset, models)
 
         queryset = queryset.public().live().specific()
         return queryset
@@ -62,6 +62,18 @@ class DesignerPagesAPIEndpoint(APIView):
         pages = self._get_serialized_pages(queryset)
 
         return Response(pages)
+
+    @staticmethod
+    def _filter_page_type(queryset, page_models):
+        """
+        Filter pages by specified models
+        """
+        qs = queryset.none()
+
+        for model in page_models:
+            qs |= queryset.type(model)
+
+        return qs
 
     @staticmethod
     def _get_serialized_pages(queryset):

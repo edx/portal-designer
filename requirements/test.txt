@@ -16,11 +16,11 @@ astroid==2.5.6
     #   pylint-celery
 attrs==21.2.0
     # via pytest
-beautifulsoup4==4.8.2
+beautifulsoup4==4.9.3
     # via
     #   -r requirements/base.txt
     #   wagtail
-certifi==2020.12.5
+certifi==2021.5.30
     # via
     #   -r requirements/base.txt
     #   requests
@@ -34,12 +34,12 @@ chardet==4.0.0
     #   requests
 click-log==0.3.2
     # via edx-lint
-click==7.1.2
+click==8.0.1
     # via
     #   click-log
     #   code-annotations
     #   edx-lint
-code-annotations==1.1.1
+code-annotations==1.1.2
     # via
     #   -r requirements/test.in
     #   edx-lint
@@ -66,7 +66,7 @@ defusedxml==0.7.1
     #   -r requirements/base.txt
     #   python3-openid
     #   social-auth-core
-distlib==0.3.1
+distlib==0.3.2
     # via virtualenv
 django-cors-headers==3.7.0
     # via -r requirements/base.txt
@@ -98,7 +98,7 @@ django-treebeard==4.5.1
     # via
     #   -r requirements/base.txt
     #   wagtail
-django-waffle==2.1.0
+django-waffle==2.2.0
     # via
     #   -r requirements/base.txt
     #   edx-django-utils
@@ -106,7 +106,6 @@ django-waffle==2.1.0
     # via
     #   -c https://raw.githubusercontent.com/edx/edx-lint/master/edx_lint/files/common_constraints.txt
     #   -r requirements/base.txt
-    #   code-annotations
     #   django-cors-headers
     #   django-crum
     #   django-extensions
@@ -137,13 +136,14 @@ draftjs-exporter==2.1.7
     #   wagtail
 drf-jwt==1.19.0
     # via
+    #   -c https://raw.githubusercontent.com/edx/edx-lint/master/edx_lint/files/common_constraints.txt
     #   -r requirements/base.txt
     #   edx-drf-extensions
 edx-auth-backends==3.3.3
     # via -r requirements/base.txt
 edx-django-release-util==1.0.0
     # via -r requirements/base.txt
-edx-django-utils==4.0.0
+edx-django-utils==4.1.0
     # via
     #   -r requirements/base.txt
     #   edx-drf-extensions
@@ -152,7 +152,7 @@ edx-drf-extensions==6.5.0
     # via -r requirements/base.txt
 edx-lint==5.0.0
     # via -r requirements/test.in
-edx-opaque-keys==2.2.0
+edx-opaque-keys==2.2.1
     # via
     #   -r requirements/base.txt
     #   edx-drf-extensions
@@ -166,7 +166,7 @@ et-xmlfile==1.1.0
     #   openpyxl
 factory-boy==3.2.0
     # via -r requirements/test.in
-faker==8.1.2
+faker==8.5.1
     # via
     #   -r requirements/test.in
     #   factory-boy
@@ -196,7 +196,7 @@ itypes==1.2.0
     # via
     #   -r requirements/base.txt
     #   coreapi
-jinja2==2.11.3
+jinja2==3.0.1
     # via
     #   -r requirements/base.txt
     #   code-annotations
@@ -207,7 +207,7 @@ l18n==2020.6.1
     #   wagtail
 lazy-object-proxy==1.6.0
     # via astroid
-markupsafe==1.1.1
+markupsafe==2.0.1
     # via
     #   -r requirements/base.txt
     #   jinja2
@@ -219,11 +219,11 @@ mock==4.0.3
     #   -r requirements/test.in
 mysqlclient==2.0.3
     # via -r requirements/base.txt
-newrelic==6.2.0.156
+newrelic==6.4.0.157
     # via
     #   -r requirements/base.txt
     #   edx-django-utils
-oauthlib==3.1.0
+oauthlib==3.1.1
     # via
     #   -r requirements/base.txt
     #   requests-oauthlib
@@ -274,6 +274,7 @@ pyjwkest==1.4.2
     #   edx-drf-extensions
 pyjwt[crypto]==1.7.1
     # via
+    #   -c https://raw.githubusercontent.com/edx/edx-lint/master/edx_lint/files/common_constraints.txt
     #   -r requirements/base.txt
     #   drf-jwt
     #   edx-auth-backends
@@ -287,7 +288,7 @@ pylint-plugin-utils==0.6
     # via
     #   pylint-celery
     #   pylint-django
-pylint==2.8.2
+pylint==2.8.3
     # via
     #   edx-lint
     #   pylint-celery
@@ -299,9 +300,9 @@ pymongo==3.11.4
     #   edx-opaque-keys
 pyparsing==2.4.7
     # via packaging
-pytest-cov==2.11.1
+pytest-cov==2.12.1
     # via -r requirements/test.in
-pytest-django==4.2.0
+pytest-django==4.3.0
     # via -r requirements/test.in
 pytest==6.2.4
     # via
@@ -405,6 +406,10 @@ tablib[xls,xlsx]==3.0.0
     # via
     #   -r requirements/base.txt
     #   wagtail
+telepath==0.2
+    # via
+    #   -r requirements/base.txt
+    #   wagtail
 text-unidecode==1.3
     # via
     #   faker
@@ -413,6 +418,7 @@ toml==0.10.2
     # via
     #   pylint
     #   pytest
+    #   pytest-cov
     #   tox
 tox==3.23.1
     # via -r requirements/test.in
@@ -420,13 +426,13 @@ uritemplate==3.0.1
     # via
     #   -r requirements/base.txt
     #   coreapi
-urllib3==1.26.4
+urllib3==1.26.5
     # via
     #   -r requirements/base.txt
     #   requests
-virtualenv==20.4.6
+virtualenv==20.4.7
     # via tox
-wagtail==2.12.4
+wagtail==2.13.1
     # via -r requirements/base.txt
 webencodings==0.5.1
     # via
@@ -442,7 +448,7 @@ xlrd==2.0.1
     # via
     #   -r requirements/base.txt
     #   tablib
-xlsxwriter==1.4.1
+xlsxwriter==1.4.3
     # via
     #   -r requirements/base.txt
     #   wagtail
