@@ -45,6 +45,10 @@ wagtailcore.Collection:
   ".. no_pii:": "This model has no PII"
 wagtailcore.CollectionViewRestriction:
   ".. no_pii:": "This model has no PII"
+wagtailcore.Comment:
+  ".. no_pii:": "This model has no PII"
+wagtailcore.CommentReply:
+  ".. no_pii:": "This model has no PII"
 wagtailcore.GroupCollectionPermission:
   ".. no_pii:": "This model has no PII"
 wagtailcore.GroupPagePermission:
@@ -52,6 +56,8 @@ wagtailcore.GroupPagePermission:
 wagtailcore.Page:
   ".. no_pii:": "This model has no PII"
 wagtailcore.PageRevision:
+  ".. no_pii:": "This model has no PII"
+wagtailcore.PageSubscription:
   ".. no_pii:": "This model has no PII"
 wagtailcore.PageViewRestriction:
   ".. no_pii:": "This model has no PII"
