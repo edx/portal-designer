@@ -175,7 +175,7 @@ et-xmlfile==1.1.0
     #   openpyxl
 factory-boy==3.2.0
     # via -r requirements/test.txt
-faker==8.5.1
+faker==8.8.1
     # via
     #   -r requirements/test.txt
     #   factory-boy
@@ -236,7 +236,7 @@ mock==4.0.3
     # via -r requirements/test.txt
 mysqlclient==2.0.3
     # via -r requirements/test.txt
-newrelic==6.4.0.157
+newrelic==6.4.1.158
     # via
     #   -r requirements/test.txt
     #   edx-django-utils
@@ -333,7 +333,7 @@ pyparsing==2.4.7
     #   packaging
 pytest-cov==2.12.1
     # via -r requirements/test.txt
-pytest-django==4.3.0
+pytest-django==4.4.0
     # via -r requirements/test.txt
 pytest==6.2.4
     # via
@@ -470,7 +470,7 @@ virtualenv==20.4.7
     # via
     #   -r requirements/test.txt
     #   tox
-wagtail==2.13.1
+wagtail==2.13.2
     # via -r requirements/test.txt
 webencodings==0.5.1
     # via

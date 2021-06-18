@@ -12,9 +12,9 @@ beautifulsoup4==4.9.3
     # via
     #   -r requirements/base.txt
     #   wagtail
-boto3==1.17.87
+boto3==1.17.97
     # via -r requirements/production.in
-botocore==1.20.87
+botocore==1.20.97
     # via
     #   boto3
     #   s3transfer
@@ -181,7 +181,7 @@ mock==4.0.3
     # via -r requirements/base.txt
 mysqlclient==2.0.3
     # via -r requirements/base.txt
-newrelic==6.4.0.157
+newrelic==6.4.1.158
     # via
     #   -r requirements/base.txt
     #   edx-django-utils
@@ -340,7 +340,7 @@ urllib3==1.26.5
     #   -r requirements/base.txt
     #   botocore
     #   requests
-wagtail==2.13.1
+wagtail==2.13.2
     # via -r requirements/base.txt
 webencodings==0.5.1
     # via
