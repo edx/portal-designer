@@ -1,0 +1,33 @@
+name: CI
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: ["3.8"]
+        toxenv: [django22, django30, django31, django32, quality, pii_check]
+    steps:
+    - uses: actions/checkout@v2
+    - uses: actions/setup-python@v2
+      with:
+        python-version: ${{ matrix.python-version }}
+        architecture: x64
+    - name: Install pip
+      run: pip install -r requirements/pip.txt
+    - name: Install requirements
+      run: pip install -r requirements/test.txt
+    - name: Run tests
+      env:
+        TOXENV: ${{ matrix.toxenv }}
+      run: tox
+    - name: Codecov
+      if: matrix.python-version == '3.8' && matrix.toxenv == 'django22'
+      run: codecov
