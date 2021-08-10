@@ -127,7 +127,7 @@ class ProgramDetailView(APIView):
     """
     permission_classes = (AllowAny, )
 
-    def get(self, *args, **kwargs):  # pylint: disable=unused-argument
+    def get(self, *args, **kwargs):
         """Returns program details with 'programs' query param"""
         requested_programs = self.request.query_params.get('programs')
         if not requested_programs:
