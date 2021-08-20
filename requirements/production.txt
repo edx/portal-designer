@@ -12,9 +12,9 @@ beautifulsoup4==4.9.3
     # via
     #   -r requirements/base.txt
     #   wagtail
-boto3==1.18.8
+boto3==1.18.25
     # via -r requirements/production.in
-botocore==1.21.8
+botocore==1.21.25
     # via
     #   boto3
     #   s3transfer
@@ -26,7 +26,7 @@ cffi==1.14.6
     # via
     #   -r requirements/base.txt
     #   cryptography
-charset-normalizer==2.0.3
+charset-normalizer==2.0.4
     # via
     #   -r requirements/base.txt
     #   requests
@@ -67,7 +67,7 @@ django==2.2.24
     #   edx-drf-extensions
     #   rest-condition
     #   wagtail
-django-cors-headers==3.7.0
+django-cors-headers==3.8.0
     # via -r requirements/base.txt
 django-crum==0.7.9
     # via
@@ -118,7 +118,7 @@ drf-jwt==1.19.0
     #   edx-drf-extensions
 edx-auth-backends==3.4.0
     # via -r requirements/base.txt
-edx-django-release-util==1.0.0
+edx-django-release-util==1.1.0
     # via -r requirements/base.txt
 edx-django-utils==4.2.0
     # via
@@ -141,9 +141,9 @@ future==0.18.2
     # via
     #   -r requirements/base.txt
     #   pyjwkest
-gevent==21.1.2
+gevent==21.8.0
     # via -r requirements/production.in
-greenlet==1.1.0
+greenlet==1.1.1
     # via gevent
 gunicorn==20.1.0
     # via -r requirements/production.in
@@ -181,7 +181,7 @@ mock==4.0.3
     # via -r requirements/base.txt
 mysqlclient==2.0.3
     # via -r requirements/base.txt
-newrelic==6.4.4.161
+newrelic==6.8.0.163
     # via
     #   -r requirements/base.txt
     #   edx-django-utils
@@ -280,7 +280,7 @@ semantic-version==2.8.5
     # via
     #   -r requirements/base.txt
     #   edx-drf-extensions
-simplejson==3.17.3
+simplejson==3.17.4
     # via
     #   -r requirements/base.txt
     #   django-rest-swagger
@@ -318,7 +318,7 @@ sqlparse==0.4.1
     # via
     #   -r requirements/base.txt
     #   django
-stevedore==3.3.0
+stevedore==3.4.0
     # via
     #   -r requirements/base.txt
     #   edx-django-utils
@@ -354,7 +354,7 @@ xlrd==2.0.1
     # via
     #   -r requirements/base.txt
     #   tablib
-xlsxwriter==1.4.4
+xlsxwriter==1.4.5
     # via
     #   -r requirements/base.txt
     #   wagtail
