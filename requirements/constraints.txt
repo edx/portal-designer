@@ -18,3 +18,7 @@ edx_rest_api_client==4.0.1      # versions>4.0.1 have backward incompatible chan
 
 # greater versions failing make upgrade job due to pyjwt conflicts.
 social-auth-core<4.0.3
+
+
+# greater versions incompatible with Django 2.x
+wagtail==2.13.4
