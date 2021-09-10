@@ -6,52 +6,52 @@
 #
 anyascii==0.2.0
     # via
-    #   -r requirements/base.txt
+    #   -r base.txt
     #   wagtail
 beautifulsoup4==4.9.3
     # via
-    #   -r requirements/base.txt
+    #   -r base.txt
     #   wagtail
 boto3==1.18.29
-    # via -r requirements/production.in
+    # via -r production.in
 botocore==1.21.29
     # via
     #   boto3
     #   s3transfer
 certifi==2021.5.30
     # via
-    #   -r requirements/base.txt
+    #   -r base.txt
     #   requests
 cffi==1.14.6
     # via
-    #   -r requirements/base.txt
+    #   -r base.txt
     #   cryptography
 charset-normalizer==2.0.4
     # via
-    #   -r requirements/base.txt
+    #   -r base.txt
     #   requests
 coreapi==2.3.3
     # via
-    #   -r requirements/base.txt
+    #   -r base.txt
     #   django-rest-swagger
     #   openapi-codec
 coreschema==0.0.4
     # via
-    #   -r requirements/base.txt
+    #   -r base.txt
     #   coreapi
 cryptography==3.4.8
     # via
-    #   -r requirements/base.txt
+    #   -r base.txt
     #   pyjwt
     #   social-auth-core
 defusedxml==0.7.1
     # via
-    #   -r requirements/base.txt
+    #   -r base.txt
     #   python3-openid
     #   social-auth-core
 django==2.2.24
     # via
-    #   -r requirements/base.txt
+    #   -r base.txt
     #   django-cors-headers
     #   django-crum
     #   django-extensions
@@ -68,41 +68,41 @@ django==2.2.24
     #   rest-condition
     #   wagtail
 django-cors-headers==3.8.0
-    # via -r requirements/base.txt
+    # via -r base.txt
 django-crum==0.7.9
     # via
-    #   -r requirements/base.txt
+    #   -r base.txt
     #   edx-django-utils
 django-extensions==3.1.3
-    # via -r requirements/base.txt
+    # via -r base.txt
 django-filter==2.4.0
     # via
-    #   -r requirements/base.txt
+    #   -r base.txt
     #   wagtail
 django-modelcluster==5.1
     # via
-    #   -r requirements/base.txt
+    #   -r base.txt
     #   wagtail
 django-rest-swagger==2.2.0
-    # via -r requirements/base.txt
+    # via -r base.txt
 django-storages==1.11.1
-    # via -r requirements/base.txt
+    # via -r base.txt
 django-taggit==1.5.1
     # via
-    #   -r requirements/base.txt
+    #   -r base.txt
     #   wagtail
 django-treebeard==4.5.1
     # via
-    #   -r requirements/base.txt
+    #   -r base.txt
     #   wagtail
 django-waffle==2.2.1
     # via
-    #   -r requirements/base.txt
+    #   -r base.txt
     #   edx-django-utils
     #   edx-drf-extensions
 djangorestframework==3.12.4
     # via
-    #   -r requirements/base.txt
+    #   -r base.txt
     #   django-rest-swagger
     #   drf-jwt
     #   edx-drf-extensions
@@ -110,60 +110,60 @@ djangorestframework==3.12.4
     #   wagtail
 draftjs-exporter==2.1.7
     # via
-    #   -r requirements/base.txt
+    #   -r base.txt
     #   wagtail
 drf-jwt==1.19.0
     # via
-    #   -r requirements/base.txt
+    #   -r base.txt
     #   edx-drf-extensions
 edx-auth-backends==4.0.0
-    # via -r requirements/base.txt
+    # via -r base.txt
 edx-django-release-util==1.1.0
-    # via -r requirements/base.txt
+    # via -r base.txt
 edx-django-utils==4.3.0
     # via
-    #   -r requirements/base.txt
+    #   -r base.txt
     #   edx-drf-extensions
     #   edx-rest-api-client
 edx-drf-extensions==7.0.1
-    # via -r requirements/base.txt
+    # via -r base.txt
 edx-opaque-keys==2.2.2
     # via
-    #   -r requirements/base.txt
+    #   -r base.txt
     #   edx-drf-extensions
 edx_rest_api_client==4.0.1
-    # via -r requirements/base.txt
+    # via -r base.txt
 et-xmlfile==1.1.0
     # via
-    #   -r requirements/base.txt
+    #   -r base.txt
     #   openpyxl
 future==0.18.2
     # via
-    #   -r requirements/base.txt
+    #   -r base.txt
     #   pyjwkest
 gevent==21.8.0
-    # via -r requirements/production.in
+    # via -r production.in
 greenlet==1.1.1
     # via gevent
 gunicorn==20.1.0
-    # via -r requirements/production.in
+    # via -r production.in
 html5lib==1.1
     # via
-    #   -r requirements/base.txt
+    #   -r base.txt
     #   wagtail
 idna==3.2
     # via
-    #   -r requirements/base.txt
+    #   -r base.txt
     #   requests
 inflect==5.3.0
-    # via -r requirements/base.txt
+    # via -r base.txt
 itypes==1.2.0
     # via
-    #   -r requirements/base.txt
+    #   -r base.txt
     #   coreapi
 jinja2==3.0.1
     # via
-    #   -r requirements/base.txt
+    #   -r base.txt
     #   coreschema
 jmespath==0.10.0
     # via
@@ -171,60 +171,60 @@ jmespath==0.10.0
     #   botocore
 l18n==2020.6.1
     # via
-    #   -r requirements/base.txt
+    #   -r base.txt
     #   wagtail
 markupsafe==2.0.1
     # via
-    #   -r requirements/base.txt
+    #   -r base.txt
     #   jinja2
 mock==4.0.3
-    # via -r requirements/base.txt
+    # via -r base.txt
 mysqlclient==2.0.3
-    # via -r requirements/base.txt
+    # via -r base.txt
 newrelic==6.8.1.164
     # via
-    #   -r requirements/base.txt
+    #   -r base.txt
     #   edx-django-utils
 oauthlib==3.1.1
     # via
-    #   -r requirements/base.txt
+    #   -r base.txt
     #   requests-oauthlib
     #   social-auth-core
 openapi-codec==1.3.2
     # via
-    #   -r requirements/base.txt
+    #   -r base.txt
     #   django-rest-swagger
 openpyxl==3.0.7
     # via
-    #   -r requirements/base.txt
+    #   -r base.txt
     #   tablib
 pbr==5.6.0
     # via
-    #   -r requirements/base.txt
+    #   -r base.txt
     #   stevedore
 pillow==8.3.1
     # via
-    #   -r requirements/base.txt
+    #   -r base.txt
     #   wagtail
 psutil==5.8.0
     # via
-    #   -r requirements/base.txt
+    #   -r base.txt
     #   edx-django-utils
 pycparser==2.20
     # via
-    #   -r requirements/base.txt
+    #   -r base.txt
     #   cffi
 pycryptodomex==3.10.1
     # via
-    #   -r requirements/base.txt
+    #   -r base.txt
     #   pyjwkest
 pyjwkest==1.4.2
     # via
-    #   -r requirements/base.txt
+    #   -r base.txt
     #   edx-drf-extensions
 pyjwt[crypto]==2.1.0
     # via
-    #   -r requirements/base.txt
+    #   -r base.txt
     #   drf-jwt
     #   edx-auth-backends
     #   edx-drf-extensions
@@ -232,33 +232,33 @@ pyjwt[crypto]==2.1.0
     #   social-auth-core
 pymongo==3.12.0
     # via
-    #   -r requirements/base.txt
+    #   -r base.txt
     #   edx-opaque-keys
 python-dateutil==2.8.2
     # via
-    #   -r requirements/base.txt
+    #   -r base.txt
     #   botocore
     #   edx-drf-extensions
 python-memcached==1.59
-    # via -r requirements/production.in
+    # via -r production.in
 python3-openid==3.2.0
     # via
-    #   -r requirements/base.txt
+    #   -r base.txt
     #   social-auth-core
 pytz==2021.1
     # via
-    #   -r requirements/base.txt
+    #   -r base.txt
     #   django
     #   django-modelcluster
     #   l18n
 pyyaml==5.4.1
     # via
-    #   -r requirements/base.txt
-    #   -r requirements/production.in
+    #   -r base.txt
+    #   -r production.in
     #   edx-django-release-util
 requests==2.26.0
     # via
-    #   -r requirements/base.txt
+    #   -r base.txt
     #   coreapi
     #   edx-drf-extensions
     #   edx-rest-api-client
@@ -269,25 +269,25 @@ requests==2.26.0
     #   wagtail
 requests-oauthlib==1.3.0
     # via
-    #   -r requirements/base.txt
+    #   -r base.txt
     #   social-auth-core
 rest-condition==1.0.3
     # via
-    #   -r requirements/base.txt
+    #   -r base.txt
     #   edx-drf-extensions
 s3transfer==0.5.0
     # via boto3
 semantic-version==2.8.5
     # via
-    #   -r requirements/base.txt
+    #   -r base.txt
     #   edx-drf-extensions
 simplejson==3.17.5
     # via
-    #   -r requirements/base.txt
+    #   -r base.txt
     #   django-rest-swagger
 six==1.16.0
     # via
-    #   -r requirements/base.txt
+    #   -r base.txt
     #   edx-auth-backends
     #   edx-django-release-util
     #   edx-drf-extensions
@@ -299,71 +299,71 @@ six==1.16.0
     #   social-auth-app-django
 slumber==0.7.1
     # via
-    #   -r requirements/base.txt
+    #   -r base.txt
     #   edx-rest-api-client
 social-auth-app-django==4.0.0
     # via
-    #   -r requirements/base.txt
+    #   -r base.txt
     #   edx-auth-backends
 social-auth-core==4.1.0
     # via
-    #   -r requirements/base.txt
+    #   -r base.txt
     #   edx-auth-backends
     #   social-auth-app-django
 soupsieve==2.2.1
     # via
-    #   -r requirements/base.txt
+    #   -r base.txt
     #   beautifulsoup4
-sqlparse==0.4.1
+sqlparse==0.4.2
     # via
-    #   -r requirements/base.txt
+    #   -r base.txt
     #   django
 stevedore==3.4.0
     # via
-    #   -r requirements/base.txt
+    #   -r base.txt
     #   edx-django-utils
     #   edx-opaque-keys
 tablib[xls,xlsx]==3.0.0
     # via
-    #   -r requirements/base.txt
+    #   -r base.txt
     #   wagtail
 telepath==0.2
     # via
-    #   -r requirements/base.txt
+    #   -r base.txt
     #   wagtail
 uritemplate==3.0.1
     # via
-    #   -r requirements/base.txt
+    #   -r base.txt
     #   coreapi
 urllib3==1.26.6
     # via
-    #   -r requirements/base.txt
+    #   -r base.txt
     #   botocore
     #   requests
 wagtail==2.13.4
-    # via -r requirements/base.txt
+    # via -r base.txt
 webencodings==0.5.1
     # via
-    #   -r requirements/base.txt
+    #   -r base.txt
     #   html5lib
 willow==1.4
     # via
-    #   -r requirements/base.txt
+    #   -r base.txt
     #   wagtail
 xlrd==2.0.1
     # via
-    #   -r requirements/base.txt
+    #   -r base.txt
     #   tablib
 xlsxwriter==1.4.5
     # via
-    #   -r requirements/base.txt
+    #   -r base.txt
     #   wagtail
 xlwt==1.3.0
     # via
-    #   -r requirements/base.txt
+    #   -r base.txt
     #   tablib
 zipp==3.5.0
-    # via -r requirements/base.txt
+    # via -r base.txt
 zope.event==4.5.0
     # via gevent
 zope.interface==5.4.0
