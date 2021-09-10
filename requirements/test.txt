@@ -4,11 +4,15 @@
 #
 #    make upgrade
 #
-anyascii==0.2.0
+anyascii==0.3.0
     # via
     #   -r requirements/base.txt
     #   wagtail
-astroid==2.7.2
+asgiref==3.4.1
+    # via
+    #   -r requirements/base.txt
+    #   django
+astroid==2.7.3
     # via
     #   pylint
     #   pylint-celery
@@ -72,7 +76,6 @@ defusedxml==0.7.1
 distlib==0.3.2
     # via virtualenv
     # via
-    #   -c requirements/common_constraints.txt
     #   -r requirements/base.txt
     #   django-cors-headers
     #   django-crum
@@ -87,7 +90,6 @@ distlib==0.3.2
     #   edx-django-release-util
     #   edx-django-utils
     #   edx-drf-extensions
-    #   edx-lint
     #   rest-condition
     #   wagtail
 django-cors-headers==3.8.0
@@ -146,14 +148,14 @@ edx-auth-backends==4.0.0
     # via -r requirements/base.txt
 edx-django-release-util==1.1.0
     # via -r requirements/base.txt
-edx-django-utils==4.3.0
+edx-django-utils==4.4.0
     # via
     #   -r requirements/base.txt
     #   edx-drf-extensions
     #   edx-rest-api-client
 edx-drf-extensions==7.0.1
     # via -r requirements/base.txt
-edx-lint==5.0.0
+edx-lint==5.1.0
     # via -r requirements/test.in
 edx-opaque-keys==2.2.2
     # via
@@ -247,15 +249,15 @@ pbr==5.6.0
     # via
     #   -r requirements/base.txt
     #   stevedore
-pillow==8.3.1
+pillow==8.3.2
     # via
     #   -r requirements/base.txt
     #   wagtail
-platformdirs==2.2.0
+platformdirs==2.3.0
     # via
     #   pylint
     #   virtualenv
-pluggy==0.13.1
+pluggy==1.0.0
     # via
     #   pytest
     #   tox
@@ -307,7 +309,7 @@ pymongo==3.12.0
     #   edx-opaque-keys
 pyparsing==2.4.7
     # via packaging
-pytest==6.2.4
+pytest==6.2.5
     # via
     #   -r requirements/test.in
     #   pytest-cov
@@ -399,7 +401,7 @@ soupsieve==2.2.1
     # via
     #   -r requirements/base.txt
     #   beautifulsoup4
-sqlparse==0.4.1
+sqlparse==0.4.2
     # via
     #   -r requirements/base.txt
     #   django

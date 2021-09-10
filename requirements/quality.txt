@@ -4,11 +4,15 @@
 #
 #    make upgrade
 #
-anyascii==0.2.0
+anyascii==0.3.0
     # via
     #   -r requirements/test.txt
     #   wagtail
-astroid==2.7.2
+asgiref==3.4.1
+    # via
+    #   -r requirements/test.txt
+    #   django
+astroid==2.7.3
     # via
     #   -r requirements/test.txt
     #   pylint
@@ -81,7 +85,7 @@ distlib==0.3.2
     # via
     #   -r requirements/test.txt
     #   virtualenv
-django==2.2.24
+django==3.2.7
     # via
     #   -r requirements/test.txt
     #   django-cors-headers
@@ -97,7 +101,6 @@ django==2.2.24
     #   edx-django-release-util
     #   edx-django-utils
     #   edx-drf-extensions
-    #   edx-lint
     #   rest-condition
     #   wagtail
 django-cors-headers==3.8.0
@@ -155,14 +158,14 @@ edx-auth-backends==4.0.0
     # via -r requirements/test.txt
 edx-django-release-util==1.1.0
     # via -r requirements/test.txt
-edx-django-utils==4.3.0
+edx-django-utils==4.4.0
     # via
     #   -r requirements/test.txt
     #   edx-drf-extensions
     #   edx-rest-api-client
 edx-drf-extensions==7.0.1
     # via -r requirements/test.txt
-edx-lint==5.0.0
+edx-lint==5.1.0
     # via
     #   -r requirements/quality.in
     #   -r requirements/test.txt
@@ -265,16 +268,16 @@ pbr==5.6.0
     # via
     #   -r requirements/test.txt
     #   stevedore
-pillow==8.3.1
+pillow==8.3.2
     # via
     #   -r requirements/test.txt
     #   wagtail
-platformdirs==2.2.0
+platformdirs==2.3.0
     # via
     #   -r requirements/test.txt
     #   pylint
     #   virtualenv
-pluggy==0.13.1
+pluggy==1.0.0
     # via
     #   -r requirements/test.txt
     #   pytest
@@ -340,7 +343,7 @@ pyparsing==2.4.7
     # via
     #   -r requirements/test.txt
     #   packaging
-pytest==6.2.4
+pytest==6.2.5
     # via
     #   -r requirements/test.txt
     #   pytest-cov
@@ -435,7 +438,7 @@ soupsieve==2.2.1
     # via
     #   -r requirements/test.txt
     #   beautifulsoup4
-sqlparse==0.4.1
+sqlparse==0.4.2
     # via
     #   -r requirements/test.txt
     #   django

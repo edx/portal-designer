@@ -12,9 +12,17 @@
 # This file contains all common constraints for edx-repos
 -c common_constraints.txt
 
+# We need to stay on LTS version
+Django<3.3
+
 
 edx_rest_api_client==4.0.1      # versions>4.0.1 have backward incompatible changes in timeout handling
 
 
 # greater versions incompatible with Django 2.x
 wagtail==2.13.4
+
+# diff-cover latest requires (pluggy>=0.13.1,<0.14.0)
+# which conflicts with pytest(pluggy>=0.12,<2.0.0) and tox(pluggy>0.12) both of these fetch pluggy==1.0.0
+# but diff-cover latest has a pin (pluggy<1.0.0a1)
+diff-cover<6.2.2

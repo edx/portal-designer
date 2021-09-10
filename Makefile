@@ -99,6 +99,8 @@ upgrade: $(COMMON_CONSTRAINTS_TXT)	## update the requirements/*.txt files with t
 	mv requirements/common_constraints.tmp requirements/common_constraints.txt
 	sed 's/edx-drf-extensions<7.0.0//g' requirements/common_constraints.txt > requirements/common_constraints.tmp
 	mv requirements/common_constraints.tmp requirements/common_constraints.txt
+	sed 's/Django<2.3//g' requirements/common_constraints.txt > requirements/common_constraints.tmp
+	mv requirements/common_constraints.tmp requirements/common_constraints.txt
 	pip install -qr requirements/pip-tools.txt
 	# Make sure to compile files after any other files they include!
 	pip-compile --upgrade --allow-unsafe --rebuild -o requirements/pip.txt requirements/pip.in

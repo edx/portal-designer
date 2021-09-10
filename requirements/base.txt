@@ -4,8 +4,10 @@
 #
 #    make upgrade
 #
-anyascii==0.2.0
+anyascii==0.3.0
     # via wagtail
+asgiref==3.4.1
+    # via django
 beautifulsoup4==4.9.3
     # via wagtail
 certifi==2021.5.30
@@ -28,9 +30,8 @@ defusedxml==0.7.1
     # via
     #   python3-openid
     #   social-auth-core
-django==2.2.24
+django==3.2.7
     # via
-    #   -c requirements/common_constraints.txt
     #   -r requirements/base.in
     #   django-cors-headers
     #   django-crum
@@ -88,7 +89,7 @@ edx-auth-backends==4.0.0
     # via -r requirements/base.in
 edx-django-release-util==1.1.0
     # via -r requirements/base.in
-edx-django-utils==4.3.0
+edx-django-utils==4.4.0
     # via
     #   -r requirements/base.in
     #   edx-drf-extensions
@@ -135,7 +136,7 @@ openpyxl==3.0.7
     # via tablib
 pbr==5.6.0
     # via stevedore
-pillow==8.3.1
+pillow==8.3.2
     # via wagtail
 psutil==5.8.0
     # via edx-django-utils
@@ -210,7 +211,7 @@ social-auth-core==4.1.0
     #   social-auth-app-django
 soupsieve==2.2.1
     # via beautifulsoup4
-sqlparse==0.4.1
+sqlparse==0.4.2
     # via django
 stevedore==3.4.0
     # via

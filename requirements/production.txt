@@ -4,17 +4,21 @@
 #
 #    make upgrade
 #
-anyascii==0.2.0
+anyascii==0.3.0
     # via
     #   -r requirements/base.txt
     #   wagtail
+asgiref==3.4.1
+    # via
+    #   -r requirements/base.txt
+    #   django
 beautifulsoup4==4.9.3
     # via
     #   -r requirements/base.txt
     #   wagtail
-boto3==1.18.29
+boto3==1.18.39
     # via -r requirements/production.in
-botocore==1.21.29
+botocore==1.21.39
     # via
     #   boto3
     #   s3transfer
@@ -49,7 +53,7 @@ defusedxml==0.7.1
     #   -r requirements/base.txt
     #   python3-openid
     #   social-auth-core
-django==2.2.24
+django==3.2.7
     # via
     #   -r requirements/base.txt
     #   django-cors-headers
@@ -120,7 +124,7 @@ edx-auth-backends==4.0.0
     # via -r requirements/base.txt
 edx-django-release-util==1.1.0
     # via -r requirements/base.txt
-edx-django-utils==4.3.0
+edx-django-utils==4.4.0
     # via
     #   -r requirements/base.txt
     #   edx-drf-extensions
@@ -202,7 +206,7 @@ pbr==5.6.0
     # via
     #   -r requirements/base.txt
     #   stevedore
-pillow==8.3.1
+pillow==8.3.2
     # via
     #   -r requirements/base.txt
     #   wagtail
@@ -314,7 +318,7 @@ soupsieve==2.2.1
     # via
     #   -r requirements/base.txt
     #   beautifulsoup4
-sqlparse==0.4.1
+sqlparse==0.4.2
     # via
     #   -r requirements/base.txt
     #   django
