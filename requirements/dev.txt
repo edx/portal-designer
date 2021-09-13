@@ -4,11 +4,15 @@
 #
 #    make upgrade
 #
-anyascii==0.2.0
+anyascii==0.3.0
     # via
     #   -r requirements/quality.txt
     #   wagtail
-astroid==2.7.2
+asgiref==3.4.1
+    # via
+    #   -r requirements/quality.txt
+    #   django
+astroid==2.7.3
     # via
     #   -r requirements/quality.txt
     #   pylint
@@ -81,15 +85,16 @@ defusedxml==0.7.1
     #   -r requirements/quality.txt
     #   python3-openid
     #   social-auth-core
-diff-cover==6.3.4
-    # via -r requirements/dev.in
+diff-cover==6.2.1
+    # via
+    #   -c requirements/constraints.txt
+    #   -r requirements/dev.in
 distlib==0.3.2
     # via
     #   -r requirements/quality.txt
     #   virtualenv
-django==2.2.24
+django==3.2.7
     # via
-    #   -c requirements/common_constraints.txt
     #   -r requirements/quality.txt
     #   django-cors-headers
     #   django-crum
@@ -106,7 +111,6 @@ django==2.2.24
     #   edx-django-utils
     #   edx-drf-extensions
     #   edx-i18n-tools
-    #   edx-lint
     #   rest-condition
     #   wagtail
 django-cors-headers==3.8.0
@@ -167,7 +171,7 @@ edx-auth-backends==4.0.0
     # via -r requirements/quality.txt
 edx-django-release-util==1.1.0
     # via -r requirements/quality.txt
-edx-django-utils==4.3.0
+edx-django-utils==4.4.0
     # via
     #   -r requirements/quality.txt
     #   edx-drf-extensions
@@ -176,7 +180,7 @@ edx-drf-extensions==7.0.1
     # via -r requirements/quality.txt
 edx-i18n-tools==0.7.0
     # via -r requirements/dev.in
-edx-lint==5.0.0
+edx-lint==5.1.0
     # via -r requirements/quality.txt
 edx-opaque-keys==2.2.2
     # via
@@ -290,18 +294,18 @@ pep517==0.11.0
     # via
     #   -r requirements/pip-tools.txt
     #   pip-tools
-pillow==8.3.1
+pillow==8.3.2
     # via
     #   -r requirements/quality.txt
     #   wagtail
 pip-tools==6.2.0
     # via -r requirements/pip-tools.txt
-platformdirs==2.2.0
+platformdirs==2.3.0
     # via
     #   -r requirements/quality.txt
     #   pylint
     #   virtualenv
-pluggy==0.13.1
+pluggy==1.0.0
     # via
     #   -r requirements/quality.txt
     #   diff-cover
@@ -372,7 +376,7 @@ pyparsing==2.4.7
     # via
     #   -r requirements/quality.txt
     #   packaging
-pytest==6.2.4
+pytest==6.2.5
     # via
     #   -r requirements/quality.txt
     #   pytest-cov
@@ -472,7 +476,7 @@ soupsieve==2.2.1
     # via
     #   -r requirements/quality.txt
     #   beautifulsoup4
-sqlparse==0.4.1
+sqlparse==0.4.2
     # via
     #   -r requirements/quality.txt
     #   django
