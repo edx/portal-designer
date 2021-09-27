@@ -65,6 +65,7 @@ INSTALLED_APPS += PROJECT_APPS
 INSTALLED_APPS += WAGTAIL_APPS
 
 MIDDLEWARE = (
+    'edx_django_utils.monitoring.DeploymentMonitoringMiddleware',
     'waffle.middleware.WaffleMiddleware',
     'wagtail.contrib.redirects.middleware.RedirectMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
