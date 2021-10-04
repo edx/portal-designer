@@ -121,7 +121,7 @@ django-crum==0.7.9
     #   edx-django-utils
 django-debug-toolbar==3.2.2
     # via -r requirements/dev.in
-django-dynamic-fixture==3.1.1
+django-dynamic-fixture==3.1.2
     # via -r requirements/quality.txt
 django-extensions==3.1.3
     # via -r requirements/quality.txt
