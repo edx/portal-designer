@@ -14,7 +14,7 @@ asgiref==3.4.1
     # via
     #   -r requirements/test.txt
     #   django
-astroid==2.7.3
+astroid==2.8.2
     # via
     #   -r requirements/test.txt
     #   pylint
@@ -43,7 +43,7 @@ cffi==1.14.6
     # via
     #   -r requirements/test.txt
     #   cryptography
-charset-normalizer==2.0.4
+charset-normalizer==2.0.6
     # via
     #   -r requirements/test.txt
     #   requests
@@ -72,12 +72,12 @@ coreschema==0.0.4
     # via
     #   -r requirements/test.txt
     #   coreapi
-coverage==5.5
+coverage[toml]==6.0.1
     # via
     #   -r requirements/test.txt
     #   codecov
     #   pytest-cov
-cryptography==3.4.8
+cryptography==35.0.0
     # via
     #   -r requirements/test.txt
     #   pyjwt
@@ -87,11 +87,11 @@ defusedxml==0.7.1
     #   -r requirements/test.txt
     #   python3-openid
     #   social-auth-core
-distlib==0.3.2
+distlib==0.3.3
     # via
     #   -r requirements/test.txt
     #   virtualenv
-django==3.2.7
+django==3.2.8
     # via
     #   -r requirements/test.txt
     #   django-cors-headers
@@ -107,15 +107,14 @@ django==3.2.7
     #   edx-django-release-util
     #   edx-django-utils
     #   edx-drf-extensions
-    #   rest-condition
     #   wagtail
-django-cors-headers==3.8.0
+django-cors-headers==3.10.0
     # via -r requirements/test.txt
 django-crum==0.7.9
     # via
     #   -r requirements/test.txt
     #   edx-django-utils
-django-dynamic-fixture==3.1.1
+django-dynamic-fixture==3.1.2
     # via -r requirements/test.txt
 django-extensions==3.1.3
     # via -r requirements/test.txt
@@ -129,7 +128,7 @@ django-modelcluster==5.1
     #   wagtail
 django-rest-swagger==2.2.0
     # via -r requirements/test.txt
-django-storages==1.11.1
+django-storages==1.12
     # via -r requirements/test.txt
 django-taggit==1.5.1
     # via
@@ -150,9 +149,8 @@ djangorestframework==3.12.4
     #   django-rest-swagger
     #   drf-jwt
     #   edx-drf-extensions
-    #   rest-condition
     #   wagtail
-doc8==0.9.0
+doc8==0.9.1
     # via -r requirements/doc.in
 docutils==0.17.1
     # via
@@ -177,9 +175,9 @@ edx-django-utils==4.4.0
     #   -r requirements/test.txt
     #   edx-drf-extensions
     #   edx-rest-api-client
-edx-drf-extensions==7.0.1
+edx-drf-extensions==8.0.0
     # via -r requirements/test.txt
-edx-lint==5.1.0
+edx-lint==5.2.0
     # via -r requirements/test.txt
 edx-opaque-keys==2.2.2
     # via
@@ -195,11 +193,11 @@ et-xmlfile==1.1.0
     #   openpyxl
 factory-boy==3.2.0
     # via -r requirements/test.txt
-faker==8.12.1
+faker==9.2.0
     # via
     #   -r requirements/test.txt
     #   factory-boy
-filelock==3.0.12
+filelock==3.3.0
     # via
     #   -r requirements/test.txt
     #   tox
@@ -232,7 +230,7 @@ itypes==1.2.0
     # via
     #   -r requirements/test.txt
     #   coreapi
-jinja2==3.0.1
+jinja2==3.0.2
     # via
     #   -r requirements/test.txt
     #   code-annotations
@@ -258,7 +256,7 @@ mock==4.0.3
     # via -r requirements/test.txt
 mysqlclient==2.0.3
     # via -r requirements/test.txt
-newrelic==6.8.1.164
+newrelic==7.0.0.166
     # via
     #   -r requirements/test.txt
     #   edx-django-utils
@@ -271,7 +269,7 @@ openapi-codec==1.3.2
     # via
     #   -r requirements/test.txt
     #   django-rest-swagger
-openpyxl==3.0.7
+openpyxl==3.0.9
     # via
     #   -r requirements/test.txt
     #   tablib
@@ -290,7 +288,7 @@ pillow==8.3.2
     # via
     #   -r requirements/test.txt
     #   wagtail
-platformdirs==2.3.0
+platformdirs==2.4.0
     # via
     #   -r requirements/test.txt
     #   pylint
@@ -313,7 +311,7 @@ pycparser==2.20
     # via
     #   -r requirements/test.txt
     #   cffi
-pycryptodomex==3.10.1
+pycryptodomex==3.11.0
     # via
     #   -r requirements/test.txt
     #   pyjwkest
@@ -326,7 +324,7 @@ pyjwkest==1.4.2
     # via
     #   -r requirements/test.txt
     #   edx-drf-extensions
-pyjwt[crypto]==2.1.0
+pyjwt[crypto]==2.2.0
     # via
     #   -r requirements/test.txt
     #   drf-jwt
@@ -334,7 +332,7 @@ pyjwt[crypto]==2.1.0
     #   edx-drf-extensions
     #   edx-rest-api-client
     #   social-auth-core
-pylint==2.10.2
+pylint==2.11.1
     # via
     #   -r requirements/test.txt
     #   edx-lint
@@ -367,7 +365,7 @@ pytest==6.2.5
     #   -r requirements/test.txt
     #   pytest-cov
     #   pytest-django
-pytest-cov==2.12.1
+pytest-cov==3.0.0
     # via -r requirements/test.txt
 pytest-django==4.4.0
     # via -r requirements/test.txt
@@ -384,7 +382,7 @@ python3-openid==3.2.0
     # via
     #   -r requirements/test.txt
     #   social-auth-core
-pytz==2021.1
+pytz==2021.3
     # via
     #   -r requirements/test.txt
     #   babel
@@ -396,7 +394,7 @@ pyyaml==5.4.1
     #   -r requirements/test.txt
     #   code-annotations
     #   edx-django-release-util
-readme-renderer==29.0
+readme-renderer==30.0
     # via -r requirements/doc.in
 requests==2.26.0
     # via
@@ -415,10 +413,6 @@ requests-oauthlib==1.3.0
     # via
     #   -r requirements/test.txt
     #   social-auth-core
-rest-condition==1.0.3
-    # via
-    #   -r requirements/test.txt
-    #   edx-drf-extensions
 restructuredtext-lint==1.3.2
     # via doc8
 semantic-version==2.8.5
@@ -443,8 +437,6 @@ six==1.16.0
     #   l18n
     #   pyjwkest
     #   python-dateutil
-    #   readme-renderer
-    #   social-auth-app-django
     #   tox
     #   virtualenv
 slumber==0.7.1
@@ -453,7 +445,7 @@ slumber==0.7.1
     #   edx-rest-api-client
 snowballstemmer==2.1.0
     # via sphinx
-social-auth-app-django==4.0.0
+social-auth-app-django==5.0.0
     # via
     #   -r requirements/test.txt
     #   edx-auth-backends
@@ -466,7 +458,7 @@ soupsieve==2.2.1
     # via
     #   -r requirements/test.txt
     #   beautifulsoup4
-sphinx==4.1.2
+sphinx==4.2.0
     # via
     #   -r requirements/doc.in
     #   edx-sphinx-theme
@@ -511,19 +503,27 @@ toml==0.10.2
     #   -r requirements/test.txt
     #   pylint
     #   pytest
-    #   pytest-cov
     #   tox
-tox==3.24.3
+tomli==1.2.1
+    # via
+    #   -r requirements/test.txt
+    #   coverage
+tox==3.24.4
     # via -r requirements/test.txt
+typing-extensions==3.10.0.2
+    # via
+    #   -r requirements/test.txt
+    #   astroid
+    #   pylint
 uritemplate==3.0.1
     # via
     #   -r requirements/test.txt
     #   coreapi
-urllib3==1.26.6
+urllib3==1.26.7
     # via
     #   -r requirements/test.txt
     #   requests
-virtualenv==20.7.2
+virtualenv==20.8.1
     # via
     #   -r requirements/test.txt
     #   tox
@@ -554,7 +554,7 @@ xlwt==1.3.0
     # via
     #   -r requirements/test.txt
     #   tablib
-zipp==3.5.0
+zipp==3.6.0
     # via -r requirements/test.txt
 
 # The following packages are considered to be unsafe in a requirements file:

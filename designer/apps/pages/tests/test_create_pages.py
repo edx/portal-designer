@@ -111,9 +111,7 @@ class PageCreationMixin:
                 'external_program_website-INITIAL_FORMS': '0',
                 'external_program_website-0-display': True,
                 'external_program_website-0-header': ' '.join([word.capitalize() for word in fake.words(nb=3)]),
-                'external_program_website-0-description': "<ul>{}</ul>".format(
-                    [f"<li>{s}</li>" for s in fake.sentences(nb=4)]
-                ),
+                'external_program_website-0-description': f'<ul>{[f"<li>{s}</li>" for s in fake.sentences(nb=4)]}</ul>',
                 'external_program_website-0-link_display_text': f"Return to {page_name} homepage",
                 'external_program_website-0-link_url': fake.url(),
             })
@@ -168,7 +166,9 @@ class PageCreationMixin:
             if not form.errors:
                 self.fail('Creating a page failed for unknown reason')
 
-            errors = '\n'.join(['  {}:\n    {}'.format(key, '\n'.join(values)) for key, values in form.errors.items()])
+            errors = '\n'.join(['  {}:\n    {}'.format(  # pylint: disable=consider-using-f-string
+                key, '\n'.join(values)
+            ) for key, values in form.errors.items()])
             self.fail(f"Creating a page failed for the following reasons:\n{errors}")
 
         try:

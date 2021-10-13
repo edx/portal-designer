@@ -56,10 +56,7 @@ class UserFactory(factory.django.DjangoModelFactory):
         firstname = factory.LazyAttribute(lambda __: fake.first_name())
         lastname = factory.LazyAttribute(lambda __: fake.last_name())
 
-    full_name = factory.LazyAttribute(lambda o: "{firstname} {lastname}".format(
-        firstname=o.firstname,
-        lastname=o.lastname,
-    ))
+    full_name = factory.LazyAttribute(lambda o: f'{o.firstname} {o.lastname}')
     first_name = factory.LazyAttribute(lambda o: o.firstname)
     last_name = factory.LazyAttribute(lambda o: o.lastname)
     username = factory.LazyAttribute(lambda o: (o.firstname + o.lastname).lower().replace(' ', ''))
@@ -79,10 +76,7 @@ class SiteFactory(factory.django.DjangoModelFactory):
 
     site_name = factory.LazyAttribute(lambda o: o.company_name)
     hostname = factory.LazyAttribute(
-        lambda o: "{company_name}.{domain_name}".format(
-            company_name=o.company_name.replace(' ', '-').lower(),
-            domain_name=fake.domain_name()
-        )
+        lambda o: f'{o.company_name.replace(" ", "-").lower()}.{fake.domain_name()}'
     )
     root_page = factory.LazyAttribute(
         lambda o: create_index_page(o.site_name)
@@ -99,10 +93,7 @@ class ImageFactory(factory.django.DjangoModelFactory):
 
     title = factory.LazyAttribute(lambda o: o.image_title)
     file = factory.LazyAttribute(
-        lambda o: "/media/original_images/{filename}.{extension}".format(
-            filename=o.image_title.replace(' ', '-'),
-            extension=fake.file_extension(category='image')
-        )
+        lambda o: f'/media/original_images/{o.image_title.replace(" ", "-")}.{fake.file_extension(category="image")}'
     )
     width = random.randint(100, 10000)
     height = random.randint(100, 10000)
@@ -119,8 +110,5 @@ class DocumentFactory(factory.django.DjangoModelFactory):
 
     title = factory.LazyAttribute(lambda o: o.doc_title)
     file = factory.LazyAttribute(
-        lambda o: "/media/documents/{filename}.{extension}".format(
-            filename=o.doc_title.replace(' ', '-'),
-            extension=fake.file_extension(category='text')
-        )
+        lambda o: f'/media/documents/{o.doc_title.replace(" ", "-")}.{fake.file_extension(category="text")}'
     )

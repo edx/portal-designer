@@ -87,10 +87,7 @@ class DesignerPagesAPIEndpoint(APIView):
         """
         pages = []
         for page in queryset:
-            page_type = "{app_label}.{model_name}".format(
-                app_label=page._meta.app_label,
-                model_name=page._meta.model.__name__,
-            )
+            page_type = f'{page._meta.app_label}.{page._meta.model.__name__}'
 
             if page_type in PAGE_TYPE_SERIALIZERS:
                 serialized_data = PAGE_TYPE_SERIALIZERS[page_type](page).data
@@ -158,9 +155,7 @@ class ProgramDetailView(APIView):
 
 def generate_frontend_url(request, program_page):
     """Used to create the frontend URL based on the program page data"""
-    url = '{scheme}://{hostname}/{slug}'.format(
-        scheme='https' if request.is_secure() else 'https',
-        hostname=program_page.get_site().hostname,
-        slug=program_page.slug
-    )
-    return url
+    scheme = 'https' if request.is_secure() else 'http'
+    hostname = program_page.get_site().hostname
+    slug = program_page.slug
+    return f'{scheme}://{hostname}/{slug}'
