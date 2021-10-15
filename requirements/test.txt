@@ -24,19 +24,19 @@ beautifulsoup4==4.9.3
     # via
     #   -r requirements/base.txt
     #   wagtail
-certifi==2021.5.30
+certifi==2021.10.8
     # via
     #   -r requirements/base.txt
     #   requests
-cffi==1.14.6
+cffi==1.15.0
     # via
     #   -r requirements/base.txt
     #   cryptography
-charset-normalizer==2.0.6
+charset-normalizer==2.0.7
     # via
     #   -r requirements/base.txt
     #   requests
-click==8.0.1
+click==8.0.3
     # via
     #   click-log
     #   code-annotations
@@ -58,7 +58,7 @@ coreschema==0.0.4
     # via
     #   -r requirements/base.txt
     #   coreapi
-coverage[toml]==6.0.1
+coverage[toml]==6.0.2
     # via
     #   -r requirements/test.in
     #   codecov
@@ -106,13 +106,13 @@ django-filter==2.4.0
     # via
     #   -r requirements/base.txt
     #   wagtail
-django-modelcluster==5.1
+django-modelcluster==5.2
     # via
     #   -r requirements/base.txt
     #   wagtail
 django-rest-swagger==2.2.0
     # via -r requirements/base.txt
-django-storages==1.12
+django-storages==1.12.1
     # via -r requirements/base.txt
 django-taggit==1.5.1
     # via
@@ -138,9 +138,8 @@ draftjs-exporter==2.1.7
     # via
     #   -r requirements/base.txt
     #   wagtail
-drf-jwt==1.19.0
+drf-jwt==1.19.1
     # via
-    #   -c requirements/common_constraints.txt
     #   -r requirements/base.txt
     #   edx-drf-extensions
 edx-auth-backends==4.0.0
@@ -170,11 +169,11 @@ et-xmlfile==1.1.0
     #   openpyxl
 factory-boy==3.2.0
     # via -r requirements/test.in
-faker==9.2.0
+faker==9.3.1
     # via
     #   -r requirements/test.in
     #   factory-boy
-filelock==3.3.0
+filelock==3.3.1
     # via
     #   tox
     #   virtualenv
@@ -186,7 +185,7 @@ html5lib==1.1
     # via
     #   -r requirements/base.txt
     #   wagtail
-idna==3.2
+idna==3.3
     # via
     #   -r requirements/base.txt
     #   requests
@@ -223,7 +222,7 @@ mock==4.0.3
     #   -r requirements/test.in
 mysqlclient==2.0.3
     # via -r requirements/base.txt
-newrelic==7.0.0.166
+newrelic==7.2.1.168
     # via
     #   -r requirements/base.txt
     #   edx-django-utils
@@ -248,7 +247,7 @@ pbr==5.6.0
     # via
     #   -r requirements/base.txt
     #   stevedore
-pillow==8.3.2
+pillow==8.4.0
     # via
     #   -r requirements/base.txt
     #   wagtail
@@ -334,7 +333,7 @@ pytz==2021.3
     #   django
     #   django-modelcluster
     #   l18n
-pyyaml==5.4.1
+pyyaml==6.0
     # via
     #   -r requirements/base.txt
     #   code-annotations
@@ -429,7 +428,7 @@ typing-extensions==3.10.0.2
     # via
     #   astroid
     #   pylint
-uritemplate==3.0.1
+uritemplate==4.1.1
     # via
     #   -r requirements/base.txt
     #   coreapi
