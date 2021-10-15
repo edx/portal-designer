@@ -16,21 +16,21 @@ beautifulsoup4==4.9.3
     # via
     #   -r requirements/base.txt
     #   wagtail
-boto3==1.18.57
+boto3==1.18.62
     # via -r requirements/production.in
-botocore==1.21.57
+botocore==1.21.62
     # via
     #   boto3
     #   s3transfer
-certifi==2021.5.30
+certifi==2021.10.8
     # via
     #   -r requirements/base.txt
     #   requests
-cffi==1.14.6
+cffi==1.15.0
     # via
     #   -r requirements/base.txt
     #   cryptography
-charset-normalizer==2.0.6
+charset-normalizer==2.0.7
     # via
     #   -r requirements/base.txt
     #   requests
@@ -82,13 +82,13 @@ django-filter==2.4.0
     # via
     #   -r requirements/base.txt
     #   wagtail
-django-modelcluster==5.1
+django-modelcluster==5.2
     # via
     #   -r requirements/base.txt
     #   wagtail
 django-rest-swagger==2.2.0
     # via -r requirements/base.txt
-django-storages==1.12
+django-storages==1.12.1
     # via -r requirements/base.txt
 django-taggit==1.5.1
     # via
@@ -114,7 +114,7 @@ draftjs-exporter==2.1.7
     # via
     #   -r requirements/base.txt
     #   wagtail
-drf-jwt==1.19.0
+drf-jwt==1.19.1
     # via
     #   -r requirements/base.txt
     #   edx-drf-extensions
@@ -153,7 +153,7 @@ html5lib==1.1
     # via
     #   -r requirements/base.txt
     #   wagtail
-idna==3.2
+idna==3.3
     # via
     #   -r requirements/base.txt
     #   requests
@@ -183,7 +183,7 @@ mock==4.0.3
     # via -r requirements/base.txt
 mysqlclient==2.0.3
     # via -r requirements/base.txt
-newrelic==7.0.0.166
+newrelic==7.2.1.168
     # via
     #   -r requirements/base.txt
     #   edx-django-utils
@@ -253,7 +253,7 @@ pytz==2021.3
     #   django
     #   django-modelcluster
     #   l18n
-pyyaml==5.4.1
+pyyaml==6.0
     # via
     #   -r requirements/base.txt
     #   -r requirements/production.in
@@ -328,7 +328,7 @@ telepath==0.2
     # via
     #   -r requirements/base.txt
     #   wagtail
-uritemplate==3.0.1
+uritemplate==4.1.1
     # via
     #   -r requirements/base.txt
     #   coreapi
