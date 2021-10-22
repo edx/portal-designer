@@ -6,10 +6,11 @@
 Django                    # Web application framework
 django-cors-headers
 django-extensions
-django-rest-swagger
 django-storages
 django-waffle
 djangorestframework
+drf-yasg
+edx-api-doc-tools
 edx-auth-backends
 edx-django-release-util
 edx-django-utils

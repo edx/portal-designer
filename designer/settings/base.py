@@ -29,9 +29,10 @@ INSTALLED_APPS = (
 )
 
 THIRD_PARTY_APPS = (
+    'drf_yasg',
+    'edx_api_doc_tools',
     'release_util',
     'rest_framework',
-    'rest_framework_swagger',
     'social_django',
     'waffle',
     'modelcluster',
