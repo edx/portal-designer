@@ -161,7 +161,7 @@ pyjwt[crypto]==2.3.0
     #   social-auth-core
 pymongo==3.12.1
     # via edx-opaque-keys
-pyparsing==2.4.7
+pyparsing==3.0.3
     # via packaging
 python-dateutil==2.8.2
     # via
@@ -223,7 +223,7 @@ stevedore==3.5.0
     # via
     #   edx-django-utils
     #   edx-opaque-keys
-tablib[xls,xlsx]==3.0.0
+tablib[xls,xlsx]==3.1.0
     # via wagtail
 telepath==0.2
     # via wagtail

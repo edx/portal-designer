@@ -12,7 +12,7 @@ asgiref==3.4.1
     # via
     #   -r requirements/quality.txt
     #   django
-astroid==2.8.3
+astroid==2.8.4
     # via
     #   -r requirements/quality.txt
     #   pylint
@@ -185,7 +185,7 @@ edx-drf-extensions==8.0.0
     # via -r requirements/quality.txt
 edx-i18n-tools==0.8.1
     # via -r requirements/dev.in
-edx-lint==5.2.0
+edx-lint==5.2.1
     # via -r requirements/quality.txt
 edx-opaque-keys==2.2.2
     # via
@@ -199,9 +199,9 @@ et-xmlfile==1.1.0
     # via
     #   -r requirements/quality.txt
     #   openpyxl
-factory-boy==3.2.0
+factory-boy==3.2.1
     # via -r requirements/quality.txt
-faker==9.5.1
+faker==9.7.1
     # via
     #   -r requirements/quality.txt
     #   factory-boy
@@ -378,7 +378,7 @@ pymongo==3.12.1
     # via
     #   -r requirements/quality.txt
     #   edx-opaque-keys
-pyparsing==2.4.7
+pyparsing==3.0.3
     # via
     #   -r requirements/quality.txt
     #   packaging
@@ -490,7 +490,7 @@ stevedore==3.5.0
     #   code-annotations
     #   edx-django-utils
     #   edx-opaque-keys
-tablib[xls,xlsx]==3.0.0
+tablib[xls,xlsx]==3.1.0
     # via
     #   -r requirements/quality.txt
     #   wagtail
@@ -509,7 +509,7 @@ toml==0.10.2
     #   pylint
     #   pytest
     #   tox
-tomli==1.2.1
+tomli==1.2.2
     # via
     #   -r requirements/pip-tools.txt
     #   -r requirements/quality.txt
@@ -521,7 +521,6 @@ typing-extensions==3.10.0.2
     # via
     #   -r requirements/quality.txt
     #   astroid
-    #   faker
     #   pylint
 uritemplate==4.1.1
     # via
@@ -532,7 +531,7 @@ urllib3==1.26.7
     # via
     #   -r requirements/quality.txt
     #   requests
-virtualenv==20.8.1
+virtualenv==20.9.0
     # via
     #   -r requirements/quality.txt
     #   tox
