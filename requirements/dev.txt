@@ -12,7 +12,7 @@ asgiref==3.4.1
     # via
     #   -r requirements/quality.txt
     #   django
-astroid==2.8.3
+astroid==2.9.0
     # via
     #   -r requirements/quality.txt
     #   pylint
@@ -21,7 +21,7 @@ attrs==21.2.0
     # via
     #   -r requirements/quality.txt
     #   pytest
-backports.entry-points-selectable==1.1.0
+backports.entry-points-selectable==1.1.1
     # via
     #   -r requirements/quality.txt
     #   virtualenv
@@ -39,7 +39,7 @@ cffi==1.15.0
     #   cryptography
 chardet==4.0.0
     # via diff-cover
-charset-normalizer==2.0.7
+charset-normalizer==2.0.8
     # via
     #   -r requirements/quality.txt
     #   requests
@@ -70,12 +70,12 @@ coreschema==0.0.4
     #   -r requirements/quality.txt
     #   coreapi
     #   drf-yasg
-coverage[toml]==6.0.2
+coverage[toml]==6.2
     # via
     #   -r requirements/quality.txt
     #   codecov
     #   pytest-cov
-cryptography==35.0.0
+cryptography==36.0.0
     # via
     #   -r requirements/quality.txt
     #   pyjwt
@@ -93,8 +93,9 @@ distlib==0.3.3
     # via
     #   -r requirements/quality.txt
     #   virtualenv
-django==3.2.8
+django==3.2.9
     # via
+    #   -c requirements/common_constraints.txt
     #   -c requirements/constraints.txt
     #   -r requirements/quality.txt
     #   django-cors-headers
@@ -125,7 +126,7 @@ django-debug-toolbar==3.2.2
     # via -r requirements/dev.in
 django-dynamic-fixture==3.1.2
     # via -r requirements/quality.txt
-django-extensions==3.1.3
+django-extensions==3.1.5
     # via -r requirements/quality.txt
 django-filter==2.4.0
     # via
@@ -135,7 +136,7 @@ django-modelcluster==5.2
     # via
     #   -r requirements/quality.txt
     #   wagtail
-django-storages==1.12.2
+django-storages==1.12.3
     # via -r requirements/quality.txt
 django-taggit==1.5.1
     # via
@@ -172,7 +173,7 @@ drf-yasg==1.20.0
     #   edx-api-doc-tools
 edx-api-doc-tools==1.5.0
     # via -r requirements/quality.txt
-edx-auth-backends==4.0.0
+edx-auth-backends==4.0.1
     # via -r requirements/quality.txt
 edx-django-release-util==1.1.0
     # via -r requirements/quality.txt
@@ -181,11 +182,11 @@ edx-django-utils==4.4.0
     #   -r requirements/quality.txt
     #   edx-drf-extensions
     #   edx-rest-api-client
-edx-drf-extensions==8.0.0
+edx-drf-extensions==8.0.1
     # via -r requirements/quality.txt
 edx-i18n-tools==0.8.1
     # via -r requirements/dev.in
-edx-lint==5.2.0
+edx-lint==5.2.1
     # via -r requirements/quality.txt
 edx-opaque-keys==2.2.2
     # via
@@ -199,13 +200,13 @@ et-xmlfile==1.1.0
     # via
     #   -r requirements/quality.txt
     #   openpyxl
-factory-boy==3.2.0
+factory-boy==3.2.1
     # via -r requirements/quality.txt
-faker==9.5.1
+faker==9.9.0
     # via
     #   -r requirements/quality.txt
     #   factory-boy
-filelock==3.3.1
+filelock==3.4.0
     # via
     #   -r requirements/quality.txt
     #   tox
@@ -234,7 +235,7 @@ iniconfig==1.1.1
     # via
     #   -r requirements/quality.txt
     #   pytest
-isort==5.9.3
+isort==5.10.1
     # via
     #   -r requirements/quality.txt
     #   pylint
@@ -242,7 +243,7 @@ itypes==1.2.0
     # via
     #   -r requirements/quality.txt
     #   coreapi
-jinja2==3.0.2
+jinja2==3.0.3
     # via
     #   -r requirements/quality.txt
     #   code-annotations
@@ -251,7 +252,7 @@ jinja2==3.0.2
     #   jinja2-pluralize
 jinja2-pluralize==0.3.0
     # via diff-cover
-l18n==2020.6.1
+l18n==2021.3
     # via
     #   -r requirements/quality.txt
     #   wagtail
@@ -269,9 +270,9 @@ mccabe==0.6.1
     #   pylint
 mock==4.0.3
     # via -r requirements/quality.txt
-mysqlclient==2.0.3
+mysqlclient==2.1.0
     # via -r requirements/quality.txt
-newrelic==7.2.2.169
+newrelic==7.2.4.171
     # via
     #   -r requirements/quality.txt
     #   edx-django-utils
@@ -284,7 +285,7 @@ openpyxl==3.0.9
     # via
     #   -r requirements/quality.txt
     #   tablib
-packaging==21.0
+packaging==21.3
     # via
     #   -r requirements/quality.txt
     #   drf-yasg
@@ -292,7 +293,7 @@ packaging==21.0
     #   tox
 path==16.2.0
     # via edx-i18n-tools
-pbr==5.6.0
+pbr==5.8.0
     # via
     #   -r requirements/quality.txt
     #   stevedore
@@ -323,14 +324,14 @@ psutil==5.8.0
     # via
     #   -r requirements/quality.txt
     #   edx-django-utils
-py==1.10.0
+py==1.11.0
     # via
     #   -r requirements/quality.txt
     #   pytest
     #   tox
 pycodestyle==2.8.0
     # via -r requirements/quality.txt
-pycparser==2.20
+pycparser==2.21
     # via
     #   -r requirements/quality.txt
     #   cffi
@@ -354,7 +355,7 @@ pyjwt[crypto]==2.3.0
     #   edx-drf-extensions
     #   edx-rest-api-client
     #   social-auth-core
-pylint==2.11.1
+pylint==2.12.1
     # via
     #   -r requirements/quality.txt
     #   edx-lint
@@ -374,11 +375,11 @@ pylint-plugin-utils==0.6
     #   -r requirements/quality.txt
     #   pylint-celery
     #   pylint-django
-pymongo==3.12.1
+pymongo==4.0
     # via
     #   -r requirements/quality.txt
     #   edx-opaque-keys
-pyparsing==2.4.7
+pyparsing==3.0.6
     # via
     #   -r requirements/quality.txt
     #   packaging
@@ -389,7 +390,7 @@ pytest==6.2.5
     #   pytest-django
 pytest-cov==3.0.0
     # via -r requirements/quality.txt
-pytest-django==4.4.0
+pytest-django==4.5.1
     # via -r requirements/quality.txt
 python-dateutil==2.8.2
     # via
@@ -432,7 +433,7 @@ requests-oauthlib==1.3.0
     # via
     #   -r requirements/quality.txt
     #   social-auth-core
-ruamel.yaml==0.17.16
+ruamel.yaml==0.17.17
     # via
     #   -r requirements/quality.txt
     #   drf-yasg
@@ -462,7 +463,7 @@ slumber==0.7.1
     # via
     #   -r requirements/quality.txt
     #   edx-rest-api-client
-snowballstemmer==2.1.0
+snowballstemmer==2.2.0
     # via
     #   -r requirements/quality.txt
     #   pydocstyle
@@ -475,7 +476,7 @@ social-auth-core==4.1.0
     #   -r requirements/quality.txt
     #   edx-auth-backends
     #   social-auth-app-django
-soupsieve==2.2.1
+soupsieve==2.3.1
     # via
     #   -r requirements/quality.txt
     #   beautifulsoup4
@@ -490,7 +491,7 @@ stevedore==3.5.0
     #   code-annotations
     #   edx-django-utils
     #   edx-opaque-keys
-tablib[xls,xlsx]==3.0.0
+tablib[xls,xlsx]==3.1.0
     # via
     #   -r requirements/quality.txt
     #   wagtail
@@ -509,7 +510,7 @@ toml==0.10.2
     #   pylint
     #   pytest
     #   tox
-tomli==1.2.1
+tomli==1.2.2
     # via
     #   -r requirements/pip-tools.txt
     #   -r requirements/quality.txt
@@ -517,11 +518,10 @@ tomli==1.2.1
     #   pep517
 tox==3.24.4
     # via -r requirements/quality.txt
-typing-extensions==3.10.0.2
+typing-extensions==4.0.1
     # via
     #   -r requirements/quality.txt
     #   astroid
-    #   faker
     #   pylint
 uritemplate==4.1.1
     # via
@@ -532,7 +532,7 @@ urllib3==1.26.7
     # via
     #   -r requirements/quality.txt
     #   requests
-virtualenv==20.8.1
+virtualenv==20.10.0
     # via
     #   -r requirements/quality.txt
     #   tox
@@ -552,7 +552,7 @@ willow==1.4
     # via
     #   -r requirements/quality.txt
     #   wagtail
-wrapt==1.13.2
+wrapt==1.13.3
     # via
     #   -r requirements/quality.txt
     #   astroid
