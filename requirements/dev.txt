@@ -39,7 +39,7 @@ cffi==1.15.0
     #   cryptography
 chardet==4.0.0
     # via diff-cover
-charset-normalizer==2.0.8
+charset-normalizer==2.0.9
     # via
     #   -r requirements/quality.txt
     #   requests
@@ -75,7 +75,7 @@ coverage[toml]==6.2
     #   -r requirements/quality.txt
     #   codecov
     #   pytest-cov
-cryptography==36.0.0
+cryptography==36.0.1
     # via
     #   -r requirements/quality.txt
     #   pyjwt
@@ -89,11 +89,11 @@ diff-cover==6.2.1
     # via
     #   -c requirements/constraints.txt
     #   -r requirements/dev.in
-distlib==0.3.3
+distlib==0.3.4
     # via
     #   -r requirements/quality.txt
     #   virtualenv
-django==3.2.9
+django==3.2.10
     # via
     #   -c requirements/common_constraints.txt
     #   -c requirements/constraints.txt
@@ -116,13 +116,13 @@ django==3.2.9
     #   edx-drf-extensions
     #   edx-i18n-tools
     #   wagtail
-django-cors-headers==3.10.0
+django-cors-headers==3.10.1
     # via -r requirements/quality.txt
 django-crum==0.7.9
     # via
     #   -r requirements/quality.txt
     #   edx-django-utils
-django-debug-toolbar==3.2.2
+django-debug-toolbar==3.2.4
     # via -r requirements/dev.in
 django-dynamic-fixture==3.1.2
     # via -r requirements/quality.txt
@@ -151,7 +151,7 @@ django-waffle==2.2.1
     #   -r requirements/quality.txt
     #   edx-django-utils
     #   edx-drf-extensions
-djangorestframework==3.12.4
+djangorestframework==3.13.1
     # via
     #   -r requirements/quality.txt
     #   drf-jwt
@@ -202,7 +202,7 @@ et-xmlfile==1.1.0
     #   openpyxl
 factory-boy==3.2.1
     # via -r requirements/quality.txt
-faker==9.9.0
+faker==10.0.0
     # via
     #   -r requirements/quality.txt
     #   factory-boy
@@ -256,7 +256,7 @@ l18n==2021.3
     # via
     #   -r requirements/quality.txt
     #   wagtail
-lazy-object-proxy==1.6.0
+lazy-object-proxy==1.7.1
     # via
     #   -r requirements/quality.txt
     #   astroid
@@ -335,7 +335,7 @@ pycparser==2.21
     # via
     #   -r requirements/quality.txt
     #   cffi
-pycryptodomex==3.11.0
+pycryptodomex==3.12.0
     # via
     #   -r requirements/quality.txt
     #   pyjwkest
@@ -355,7 +355,7 @@ pyjwt[crypto]==2.3.0
     #   edx-drf-extensions
     #   edx-rest-api-client
     #   social-auth-core
-pylint==2.12.1
+pylint==2.12.2
     # via
     #   -r requirements/quality.txt
     #   edx-lint
@@ -375,7 +375,7 @@ pylint-plugin-utils==0.6
     #   -r requirements/quality.txt
     #   pylint-celery
     #   pylint-django
-pymongo==4.0
+pymongo==4.0.1
     # via
     #   -r requirements/quality.txt
     #   edx-opaque-keys
@@ -390,7 +390,7 @@ pytest==6.2.5
     #   pytest-django
 pytest-cov==3.0.0
     # via -r requirements/quality.txt
-pytest-django==4.5.1
+pytest-django==4.5.2
     # via -r requirements/quality.txt
 python-dateutil==2.8.2
     # via
@@ -410,6 +410,7 @@ pytz==2021.3
     #   -r requirements/quality.txt
     #   django
     #   django-modelcluster
+    #   djangorestframework
     #   l18n
 pyyaml==6.0
     # via
@@ -510,7 +511,7 @@ toml==0.10.2
     #   pylint
     #   pytest
     #   tox
-tomli==1.2.2
+tomli==2.0.0
     # via
     #   -r requirements/pip-tools.txt
     #   -r requirements/quality.txt
