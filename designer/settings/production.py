@@ -20,7 +20,7 @@ MEDIA_STORAGE_BACKEND = {}
 
 CONFIG_FILE = get_env_setting('DESIGNER_CFG')
 with open(CONFIG_FILE, encoding='utf-8') as f:
-    config_from_yaml = yaml.load(f)
+    config_from_yaml = yaml.load(f, Loader=yaml.FullLoader)
 
     # Remove the items that should be used to update dicts, and apply them separately rather
     # than pumping them into the local vars.
