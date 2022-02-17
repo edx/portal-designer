@@ -8,7 +8,7 @@ anyascii==0.3.0
     # via
     #   -r requirements/test.txt
     #   wagtail
-asgiref==3.4.1
+asgiref==3.5.0
     # via
     #   -r requirements/test.txt
     #   django
@@ -33,7 +33,7 @@ cffi==1.15.0
     # via
     #   -r requirements/test.txt
     #   cryptography
-charset-normalizer==2.0.10
+charset-normalizer==2.0.12
     # via
     #   -r requirements/test.txt
     #   requests
@@ -47,7 +47,7 @@ click-log==0.3.2
     # via
     #   -r requirements/test.txt
     #   edx-lint
-code-annotations==1.2.0
+code-annotations==1.3.0
     # via
     #   -r requirements/test.txt
     #   edx-lint
@@ -62,7 +62,7 @@ coreschema==0.0.4
     #   -r requirements/test.txt
     #   coreapi
     #   drf-yasg
-coverage[toml]==6.2
+coverage[toml]==6.3.1
     # via
     #   -r requirements/test.txt
     #   codecov
@@ -81,7 +81,7 @@ distlib==0.3.4
     # via
     #   -r requirements/test.txt
     #   virtualenv
-django==3.2.11
+django==3.2.12
     # via
     #   -r requirements/test.txt
     #   django-cors-headers
@@ -153,13 +153,13 @@ drf-yasg==1.20.0
     # via
     #   -r requirements/test.txt
     #   edx-api-doc-tools
-edx-api-doc-tools==1.5.0
+edx-api-doc-tools==1.6.0
     # via -r requirements/test.txt
-edx-auth-backends==4.0.1
+edx-auth-backends==4.1.0
     # via -r requirements/test.txt
 edx-django-release-util==1.1.1
     # via -r requirements/test.txt
-edx-django-utils==4.4.1
+edx-django-utils==4.5.0
     # via
     #   -r requirements/test.txt
     #   edx-drf-extensions
@@ -170,11 +170,11 @@ edx-lint==5.2.1
     # via
     #   -r requirements/quality.in
     #   -r requirements/test.txt
-edx-opaque-keys==2.2.2
+edx-opaque-keys==2.3.0
     # via
     #   -r requirements/test.txt
     #   edx-drf-extensions
-edx_rest_api_client==4.0.1
+edx-rest-api-client==4.0.1
     # via -r requirements/test.txt
 et-xmlfile==1.1.0
     # via
@@ -182,11 +182,11 @@ et-xmlfile==1.1.0
     #   openpyxl
 factory-boy==3.2.1
     # via -r requirements/test.txt
-faker==11.3.0
+faker==13.0.0
     # via
     #   -r requirements/test.txt
     #   factory-boy
-filelock==3.4.2
+filelock==3.5.1
     # via
     #   -r requirements/test.txt
     #   tox
@@ -203,7 +203,7 @@ idna==3.3
     # via
     #   -r requirements/test.txt
     #   requests
-inflect==5.3.0
+inflect==5.4.0
     # via -r requirements/test.txt
 inflection==0.5.1
     # via
@@ -247,11 +247,11 @@ mock==4.0.3
     # via -r requirements/test.txt
 mysqlclient==2.1.0
     # via -r requirements/test.txt
-newrelic==7.2.4.171
+newrelic==7.4.0.172
     # via
     #   -r requirements/test.txt
     #   edx-django-utils
-oauthlib==3.1.1
+oauthlib==3.2.0
     # via
     #   -r requirements/test.txt
     #   requests-oauthlib
@@ -266,7 +266,7 @@ packaging==21.3
     #   drf-yasg
     #   pytest
     #   tox
-pbr==5.8.0
+pbr==5.8.1
     # via
     #   -r requirements/test.txt
     #   stevedore
@@ -274,7 +274,7 @@ pillow==8.4.0
     # via
     #   -r requirements/test.txt
     #   wagtail
-platformdirs==2.4.1
+platformdirs==2.5.0
     # via
     #   -r requirements/test.txt
     #   pylint
@@ -299,7 +299,7 @@ pycparser==2.21
     # via
     #   -r requirements/test.txt
     #   cffi
-pycryptodomex==3.12.0
+pycryptodomex==3.14.1
     # via
     #   -r requirements/test.txt
     #   pyjwkest
@@ -328,7 +328,7 @@ pylint-celery==0.3
     # via
     #   -r requirements/test.txt
     #   edx-lint
-pylint-django==2.5.0
+pylint-django==2.5.1
     # via
     #   -r requirements/test.txt
     #   edx-lint
@@ -337,15 +337,15 @@ pylint-plugin-utils==0.7
     #   -r requirements/test.txt
     #   pylint-celery
     #   pylint-django
-pymongo==4.0.1
+pymongo==3.12.3
     # via
     #   -r requirements/test.txt
     #   edx-opaque-keys
-pyparsing==3.0.6
+pyparsing==3.0.7
     # via
     #   -r requirements/test.txt
     #   packaging
-pytest==6.2.5
+pytest==7.0.1
     # via
     #   -r requirements/test.txt
     #   pytest-cov
@@ -359,7 +359,7 @@ python-dateutil==2.8.2
     #   -r requirements/test.txt
     #   edx-drf-extensions
     #   faker
-python-slugify==5.0.2
+python-slugify==6.0.1
     # via
     #   -r requirements/test.txt
     #   code-annotations
@@ -391,19 +391,19 @@ requests==2.27.1
     #   slumber
     #   social-auth-core
     #   wagtail
-requests-oauthlib==1.3.0
+requests-oauthlib==1.3.1
     # via
     #   -r requirements/test.txt
     #   social-auth-core
-ruamel.yaml==0.17.20
+ruamel-yaml==0.17.21
     # via
     #   -r requirements/test.txt
     #   drf-yasg
-ruamel.yaml.clib==0.2.6
+ruamel-yaml-clib==0.2.6
     # via
     #   -r requirements/test.txt
-    #   ruamel.yaml
-semantic-version==2.8.5
+    #   ruamel-yaml
+semantic-version==2.9.0
     # via
     #   -r requirements/test.txt
     #   edx-drf-extensions
@@ -450,7 +450,7 @@ stevedore==3.5.0
     #   code-annotations
     #   edx-django-utils
     #   edx-opaque-keys
-tablib[xls,xlsx]==3.1.0
+tablib[xls,xlsx]==3.2.0
     # via
     #   -r requirements/test.txt
     #   wagtail
@@ -461,21 +461,20 @@ telepath==0.2
 text-unidecode==1.3
     # via
     #   -r requirements/test.txt
-    #   faker
     #   python-slugify
 toml==0.10.2
     # via
     #   -r requirements/test.txt
     #   pylint
-    #   pytest
     #   tox
-tomli==2.0.0
+tomli==2.0.1
     # via
     #   -r requirements/test.txt
     #   coverage
+    #   pytest
 tox==3.24.5
     # via -r requirements/test.txt
-typing-extensions==4.0.1
+typing-extensions==4.1.1
     # via
     #   -r requirements/test.txt
     #   astroid
@@ -489,7 +488,7 @@ urllib3==1.26.8
     # via
     #   -r requirements/test.txt
     #   requests
-virtualenv==20.13.0
+virtualenv==20.13.1
     # via
     #   -r requirements/test.txt
     #   tox
