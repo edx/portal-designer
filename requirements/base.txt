@@ -92,7 +92,7 @@ edx-api-doc-tools==1.6.0
     # via -r requirements/base.in
 edx-auth-backends==4.1.0
     # via -r requirements/base.in
-edx-django-release-util==1.1.1
+edx-django-release-util==1.2.0
     # via -r requirements/base.in
 edx-django-utils==4.5.0
     # via
@@ -125,13 +125,13 @@ jinja2==3.0.3
     # via coreschema
 l18n==2021.3
     # via wagtail
-markupsafe==2.0.1
+markupsafe==2.1.0
     # via jinja2
 mock==4.0.3
     # via -r requirements/base.in
 mysqlclient==2.1.0
     # via -r requirements/base.in
-newrelic==7.4.0.172
+newrelic==7.6.0.173
     # via edx-django-utils
 oauthlib==3.2.0
     # via
@@ -241,7 +241,7 @@ wagtail==2.13.4
     #   -r requirements/base.in
 webencodings==0.5.1
     # via html5lib
-willow==1.4
+willow==1.4.1
     # via wagtail
 xlrd==2.0.1
     # via tablib
