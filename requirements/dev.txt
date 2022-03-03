@@ -39,7 +39,7 @@ charset-normalizer==2.0.12
     # via
     #   -r requirements/quality.txt
     #   requests
-click==8.0.3
+click==8.0.4
     # via
     #   -r requirements/pip-tools.txt
     #   -r requirements/quality.txt
@@ -66,7 +66,7 @@ coreschema==0.0.4
     #   -r requirements/quality.txt
     #   coreapi
     #   drf-yasg
-coverage[toml]==6.3.1
+coverage[toml]==6.3.2
     # via
     #   -r requirements/quality.txt
     #   codecov
@@ -171,7 +171,7 @@ edx-api-doc-tools==1.6.0
     # via -r requirements/quality.txt
 edx-auth-backends==4.1.0
     # via -r requirements/quality.txt
-edx-django-release-util==1.1.1
+edx-django-release-util==1.2.0
     # via -r requirements/quality.txt
 edx-django-utils==4.5.0
     # via
@@ -198,11 +198,11 @@ et-xmlfile==1.1.0
     #   openpyxl
 factory-boy==3.2.1
     # via -r requirements/quality.txt
-faker==13.0.0
+faker==13.3.0
     # via
     #   -r requirements/quality.txt
     #   factory-boy
-filelock==3.5.1
+filelock==3.6.0
     # via
     #   -r requirements/quality.txt
     #   tox
@@ -256,7 +256,7 @@ lazy-object-proxy==1.7.1
     # via
     #   -r requirements/quality.txt
     #   astroid
-markupsafe==2.0.1
+markupsafe==2.1.0
     # via
     #   -r requirements/quality.txt
     #   jinja2
@@ -268,7 +268,7 @@ mock==4.0.3
     # via -r requirements/quality.txt
 mysqlclient==2.1.0
     # via -r requirements/quality.txt
-newrelic==7.4.0.172
+newrelic==7.6.0.173
     # via
     #   -r requirements/quality.txt
     #   edx-django-utils
@@ -287,7 +287,7 @@ packaging==21.3
     #   drf-yasg
     #   pytest
     #   tox
-path==16.3.0
+path==16.4.0
     # via edx-i18n-tools
 pbr==5.8.1
     # via
@@ -303,7 +303,7 @@ pillow==8.4.0
     #   wagtail
 pip-tools==6.5.1
     # via -r requirements/pip-tools.txt
-platformdirs==2.5.0
+platformdirs==2.5.1
     # via
     #   -r requirements/quality.txt
     #   pylint
@@ -362,7 +362,7 @@ pylint-celery==0.3
     # via
     #   -r requirements/quality.txt
     #   edx-lint
-pylint-django==2.5.1
+pylint-django==2.5.2
     # via
     #   -r requirements/quality.txt
     #   edx-lint
@@ -393,7 +393,7 @@ python-dateutil==2.8.2
     #   -r requirements/quality.txt
     #   edx-drf-extensions
     #   faker
-python-slugify==6.0.1
+python-slugify==6.1.1
     # via
     #   -r requirements/quality.txt
     #   code-annotations
@@ -528,7 +528,7 @@ urllib3==1.26.8
     # via
     #   -r requirements/quality.txt
     #   requests
-virtualenv==20.13.1
+virtualenv==20.13.2
     # via
     #   -r requirements/quality.txt
     #   tox
@@ -544,7 +544,7 @@ wheel==0.37.1
     # via
     #   -r requirements/pip-tools.txt
     #   pip-tools
-willow==1.4
+willow==1.4.1
     # via
     #   -r requirements/quality.txt
     #   wagtail

@@ -16,9 +16,9 @@ beautifulsoup4==4.9.3
     # via
     #   -r requirements/base.txt
     #   wagtail
-boto3==1.21.1
+boto3==1.21.11
     # via -r requirements/production.in
-botocore==1.24.1
+botocore==1.24.11
     # via
     #   boto3
     #   s3transfer
@@ -127,7 +127,7 @@ edx-api-doc-tools==1.6.0
     # via -r requirements/base.txt
 edx-auth-backends==4.1.0
     # via -r requirements/base.txt
-edx-django-release-util==1.1.1
+edx-django-release-util==1.2.0
     # via -r requirements/base.txt
 edx-django-utils==4.5.0
     # via
@@ -186,7 +186,7 @@ l18n==2021.3
     # via
     #   -r requirements/base.txt
     #   wagtail
-markupsafe==2.0.1
+markupsafe==2.1.0
     # via
     #   -r requirements/base.txt
     #   jinja2
@@ -194,7 +194,7 @@ mock==4.0.3
     # via -r requirements/base.txt
 mysqlclient==2.1.0
     # via -r requirements/base.txt
-newrelic==7.4.0.172
+newrelic==7.6.0.173
     # via
     #   -r requirements/base.txt
     #   edx-django-utils
@@ -297,7 +297,7 @@ ruamel-yaml-clib==0.2.6
     # via
     #   -r requirements/base.txt
     #   ruamel-yaml
-s3transfer==0.5.1
+s3transfer==0.5.2
     # via boto3
 semantic-version==2.9.0
     # via
@@ -364,7 +364,7 @@ webencodings==0.5.1
     # via
     #   -r requirements/base.txt
     #   html5lib
-willow==1.4
+willow==1.4.1
     # via
     #   -r requirements/base.txt
     #   wagtail

@@ -34,7 +34,7 @@ charset-normalizer==2.0.12
     # via
     #   -r requirements/base.txt
     #   requests
-click==8.0.3
+click==8.0.4
     # via
     #   click-log
     #   code-annotations
@@ -56,7 +56,7 @@ coreschema==0.0.4
     #   -r requirements/base.txt
     #   coreapi
     #   drf-yasg
-coverage[toml]==6.3.1
+coverage[toml]==6.3.2
     # via
     #   -r requirements/test.in
     #   codecov
@@ -150,7 +150,7 @@ edx-api-doc-tools==1.6.0
     # via -r requirements/base.txt
 edx-auth-backends==4.1.0
     # via -r requirements/base.txt
-edx-django-release-util==1.1.1
+edx-django-release-util==1.2.0
     # via -r requirements/base.txt
 edx-django-utils==4.5.0
     # via
@@ -175,11 +175,11 @@ et-xmlfile==1.1.0
     #   openpyxl
 factory-boy==3.2.1
     # via -r requirements/test.in
-faker==13.0.0
+faker==13.3.0
     # via
     #   -r requirements/test.in
     #   factory-boy
-filelock==3.5.1
+filelock==3.6.0
     # via
     #   tox
     #   virtualenv
@@ -220,7 +220,7 @@ l18n==2021.3
     #   wagtail
 lazy-object-proxy==1.7.1
     # via astroid
-markupsafe==2.0.1
+markupsafe==2.1.0
     # via
     #   -r requirements/base.txt
     #   jinja2
@@ -232,7 +232,7 @@ mock==4.0.3
     #   -r requirements/test.in
 mysqlclient==2.1.0
     # via -r requirements/base.txt
-newrelic==7.4.0.172
+newrelic==7.6.0.173
     # via
     #   -r requirements/base.txt
     #   edx-django-utils
@@ -259,7 +259,7 @@ pillow==8.4.0
     # via
     #   -r requirements/base.txt
     #   wagtail
-platformdirs==2.5.0
+platformdirs==2.5.1
     # via
     #   pylint
     #   virtualenv
@@ -303,7 +303,7 @@ pylint==2.12.2
     #   pylint-plugin-utils
 pylint-celery==0.3
     # via edx-lint
-pylint-django==2.5.1
+pylint-django==2.5.2
     # via edx-lint
 pylint-plugin-utils==0.7
     # via
@@ -331,7 +331,7 @@ python-dateutil==2.8.2
     #   -r requirements/base.txt
     #   edx-drf-extensions
     #   faker
-python-slugify==6.0.1
+python-slugify==6.1.1
     # via code-annotations
 python3-openid==3.2.0
     # via
@@ -451,7 +451,7 @@ urllib3==1.26.8
     # via
     #   -r requirements/base.txt
     #   requests
-virtualenv==20.13.1
+virtualenv==20.13.2
     # via tox
 wagtail==2.13.4
     # via
@@ -461,7 +461,7 @@ webencodings==0.5.1
     # via
     #   -r requirements/base.txt
     #   html5lib
-willow==1.4
+willow==1.4.1
     # via
     #   -r requirements/base.txt
     #   wagtail
