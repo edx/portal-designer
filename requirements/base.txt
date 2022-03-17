@@ -22,7 +22,7 @@ coreschema==0.0.4
     # via
     #   coreapi
     #   drf-yasg
-cryptography==36.0.1
+cryptography==36.0.2
     # via
     #   pyjwt
     #   social-auth-core
@@ -59,7 +59,7 @@ django-extensions==3.1.5
     # via -r requirements/base.in
 django-filter==2.4.0
     # via wagtail
-django-modelcluster==5.2
+django-modelcluster==5.3
     # via wagtail
 django-storages==1.12.3
     # via -r requirements/base.in
@@ -125,7 +125,7 @@ jinja2==3.0.3
     # via coreschema
 l18n==2021.3
     # via wagtail
-markupsafe==2.1.0
+markupsafe==2.1.1
     # via jinja2
 mock==4.0.3
     # via -r requirements/base.in
@@ -233,7 +233,7 @@ uritemplate==4.1.1
     # via
     #   coreapi
     #   drf-yasg
-urllib3==1.26.8
+urllib3==1.26.9
     # via requests
 wagtail==2.13.4
     # via

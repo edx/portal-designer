@@ -16,9 +16,9 @@ beautifulsoup4==4.9.3
     # via
     #   -r requirements/base.txt
     #   wagtail
-boto3==1.21.11
+boto3==1.21.21
     # via -r requirements/production.in
-botocore==1.24.11
+botocore==1.24.21
     # via
     #   boto3
     #   s3transfer
@@ -43,7 +43,7 @@ coreschema==0.0.4
     #   -r requirements/base.txt
     #   coreapi
     #   drf-yasg
-cryptography==36.0.1
+cryptography==36.0.2
     # via
     #   -r requirements/base.txt
     #   pyjwt
@@ -84,7 +84,7 @@ django-filter==2.4.0
     # via
     #   -r requirements/base.txt
     #   wagtail
-django-modelcluster==5.2
+django-modelcluster==5.3
     # via
     #   -r requirements/base.txt
     #   wagtail
@@ -178,7 +178,7 @@ jinja2==3.0.3
     # via
     #   -r requirements/base.txt
     #   coreschema
-jmespath==0.10.0
+jmespath==1.0.0
     # via
     #   boto3
     #   botocore
@@ -186,7 +186,7 @@ l18n==2021.3
     # via
     #   -r requirements/base.txt
     #   wagtail
-markupsafe==2.1.0
+markupsafe==2.1.1
     # via
     #   -r requirements/base.txt
     #   jinja2
@@ -353,7 +353,7 @@ uritemplate==4.1.1
     #   -r requirements/base.txt
     #   coreapi
     #   drf-yasg
-urllib3==1.26.8
+urllib3==1.26.9
     # via
     #   -r requirements/base.txt
     #   botocore
