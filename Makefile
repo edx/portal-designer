@@ -4,7 +4,7 @@ TOX = ''
 
 .PHONY: clean compile_translations dummy_translations extract_translations fake_translations help html_coverage \
 	migrate pull_translations push_translations quality pii_check requirements test update_translations validate \
-	dev_requirements test_requirements quality_requirements doc_requirements prod_requirements
+	dev_requirements test_requirements quality_requirements doc_requirements prod_requirements check_keywords
 
 help:
 	@echo "Please use \`make <target>' where <target> is one of"
@@ -172,3 +172,6 @@ dev.stop: # Stops containers so they can be restarted
 
 attach:
 	docker attach designer.app
+
+check_keywords: ## Scan the Django models in all installed apps in this project for restricted field names
+	python manage.py check_reserved_keywords --override_file db_keyword_overrides.yml
