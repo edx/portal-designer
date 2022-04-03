@@ -12,7 +12,7 @@ asgiref==3.5.0
     # via
     #   -r requirements/base.txt
     #   django
-astroid==2.9.3
+astroid==2.11.2
     # via
     #   pylint
     #   pylint-celery
@@ -34,12 +34,12 @@ charset-normalizer==2.0.12
     # via
     #   -r requirements/base.txt
     #   requests
-click==8.0.4
+click==8.1.2
     # via
     #   click-log
     #   code-annotations
     #   edx-lint
-click-log==0.3.2
+click-log==0.4.0
     # via edx-lint
 code-annotations==1.3.0
     # via
@@ -61,7 +61,7 @@ coverage[toml]==6.3.2
     #   -r requirements/test.in
     #   codecov
     #   pytest-cov
-cryptography==36.0.1
+cryptography==36.0.2
     # via
     #   -r requirements/base.txt
     #   pyjwt
@@ -71,6 +71,8 @@ defusedxml==0.7.1
     #   -r requirements/base.txt
     #   python3-openid
     #   social-auth-core
+dill==0.3.4
+    # via pylint
 distlib==0.3.4
     # via virtualenv
     # via
@@ -107,7 +109,7 @@ django-filter==2.4.0
     # via
     #   -r requirements/base.txt
     #   wagtail
-django-modelcluster==5.2
+django-modelcluster==5.3
     # via
     #   -r requirements/base.txt
     #   wagtail
@@ -121,7 +123,7 @@ django-treebeard==4.5.1
     # via
     #   -r requirements/base.txt
     #   wagtail
-django-waffle==2.3.0
+django-waffle==2.4.1
     # via
     #   -r requirements/base.txt
     #   edx-django-utils
@@ -152,14 +154,14 @@ edx-auth-backends==4.1.0
     # via -r requirements/base.txt
 edx-django-release-util==1.2.0
     # via -r requirements/base.txt
-edx-django-utils==4.5.0
+edx-django-utils==4.6.0
     # via
     #   -r requirements/base.txt
     #   edx-drf-extensions
     #   edx-rest-api-client
 edx-drf-extensions==8.0.1
     # via -r requirements/base.txt
-edx-lint==5.2.1
+edx-lint==5.2.2
     # via -r requirements/test.in
 edx-opaque-keys==2.3.0
     # via
@@ -175,7 +177,7 @@ et-xmlfile==1.1.0
     #   openpyxl
 factory-boy==3.2.1
     # via -r requirements/test.in
-faker==13.3.0
+faker==13.3.4
     # via
     #   -r requirements/test.in
     #   factory-boy
@@ -209,7 +211,7 @@ itypes==1.2.0
     # via
     #   -r requirements/base.txt
     #   coreapi
-jinja2==3.0.3
+jinja2==3.1.1
     # via
     #   -r requirements/base.txt
     #   code-annotations
@@ -220,11 +222,11 @@ l18n==2021.3
     #   wagtail
 lazy-object-proxy==1.7.1
     # via astroid
-markupsafe==2.1.0
+markupsafe==2.1.1
     # via
     #   -r requirements/base.txt
     #   jinja2
-mccabe==0.6.1
+mccabe==0.7.0
     # via pylint
 mock==4.0.3
     # via
@@ -232,7 +234,7 @@ mock==4.0.3
     #   -r requirements/test.in
 mysqlclient==2.1.0
     # via -r requirements/base.txt
-newrelic==7.6.0.173
+newrelic==7.8.0.174
     # via
     #   -r requirements/base.txt
     #   edx-django-utils
@@ -295,7 +297,7 @@ pyjwt[crypto]==2.3.0
     #   edx-drf-extensions
     #   edx-rest-api-client
     #   social-auth-core
-pylint==2.12.2
+pylint==2.13.4
     # via
     #   edx-lint
     #   pylint-celery
@@ -303,7 +305,7 @@ pylint==2.12.2
     #   pylint-plugin-utils
 pylint-celery==0.3
     # via edx-lint
-pylint-django==2.5.2
+pylint-django==2.5.3
     # via edx-lint
 pylint-plugin-utils==0.7
     # via
@@ -317,7 +319,7 @@ pyparsing==3.0.7
     # via
     #   -r requirements/base.txt
     #   packaging
-pytest==7.0.1
+pytest==7.1.1
     # via
     #   -r requirements/test.in
     #   pytest-cov
@@ -337,7 +339,7 @@ python3-openid==3.2.0
     # via
     #   -r requirements/base.txt
     #   social-auth-core
-pytz==2021.3
+pytz==2022.1
     # via
     #   -r requirements/base.txt
     #   django
@@ -429,12 +431,11 @@ telepath==0.2
 text-unidecode==1.3
     # via python-slugify
 toml==0.10.2
-    # via
-    #   pylint
-    #   tox
+    # via tox
 tomli==2.0.1
     # via
     #   coverage
+    #   pylint
     #   pytest
 tox==3.24.5
     # via -r requirements/test.in
@@ -447,11 +448,11 @@ uritemplate==4.1.1
     #   -r requirements/base.txt
     #   coreapi
     #   drf-yasg
-urllib3==1.26.8
+urllib3==1.26.9
     # via
     #   -r requirements/base.txt
     #   requests
-virtualenv==20.13.2
+virtualenv==20.14.0
     # via tox
 wagtail==2.13.4
     # via
@@ -465,7 +466,7 @@ willow==1.4.1
     # via
     #   -r requirements/base.txt
     #   wagtail
-wrapt==1.13.3
+wrapt==1.14.0
     # via astroid
 xlrd==2.0.1
     # via
@@ -479,7 +480,7 @@ xlwt==1.3.0
     # via
     #   -r requirements/base.txt
     #   tablib
-zipp==3.7.0
+zipp==3.8.0
     # via -r requirements/base.txt
 
 # The following packages are considered to be unsafe in a requirements file:
