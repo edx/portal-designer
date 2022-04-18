@@ -4,7 +4,7 @@
 #
 #    make upgrade
 #
-anyascii==0.3.0
+anyascii==0.3.1
     # via wagtail
 asgiref==3.5.0
     # via django
@@ -30,7 +30,7 @@ defusedxml==0.7.1
     # via
     #   python3-openid
     #   social-auth-core
-django==3.2.12
+django==3.2.13
     # via
     #   -c requirements/common_constraints.txt
     #   -c requirements/constraints.txt
@@ -115,7 +115,7 @@ html5lib==1.1
     # via wagtail
 idna==3.3
     # via requests
-inflect==5.4.0
+inflect==5.5.2
     # via -r requirements/base.in
 inflection==0.5.1
     # via drf-yasg
@@ -131,7 +131,7 @@ mock==4.0.3
     # via -r requirements/base.in
 mysqlclient==2.1.0
     # via -r requirements/base.in
-newrelic==7.8.0.174
+newrelic==7.10.0.175
     # via edx-django-utils
 oauthlib==3.2.0
     # via
@@ -162,7 +162,7 @@ pyjwt[crypto]==2.3.0
     #   social-auth-core
 pymongo==3.12.3
     # via edx-opaque-keys
-pyparsing==3.0.7
+pyparsing==3.0.8
     # via packaging
 python-dateutil==2.8.2
     # via
@@ -217,7 +217,7 @@ social-auth-core==4.2.0
     #   -r requirements/base.in
     #   edx-auth-backends
     #   social-auth-app-django
-soupsieve==2.3.1
+soupsieve==2.3.2.post1
     # via beautifulsoup4
 sqlparse==0.4.2
     # via django
@@ -225,7 +225,7 @@ stevedore==3.5.0
     # via
     #   edx-django-utils
     #   edx-opaque-keys
-tablib[xls,xlsx]==3.2.0
+tablib[xls,xlsx]==3.2.1
     # via wagtail
 telepath==0.2
     # via wagtail
