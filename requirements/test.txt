@@ -105,7 +105,7 @@ django-dynamic-fixture==3.1.2
     # via -r requirements/test.in
 django-extensions==3.1.5
     # via -r requirements/base.txt
-django-filter==2.4.0
+django-filter==21.1
     # via
     #   -r requirements/base.txt
     #   wagtail
@@ -115,7 +115,7 @@ django-modelcluster==5.3
     #   wagtail
 django-storages==1.12.3
     # via -r requirements/base.txt
-django-taggit==1.5.1
+django-taggit==2.1.0
     # via
     #   -r requirements/base.txt
     #   wagtail
@@ -257,7 +257,7 @@ pbr==5.8.1
     # via
     #   -r requirements/base.txt
     #   stevedore
-pillow==8.4.0
+pillow==9.1.0
     # via
     #   -r requirements/base.txt
     #   wagtail
@@ -454,10 +454,8 @@ urllib3==1.26.9
     #   requests
 virtualenv==20.14.1
     # via tox
-wagtail==2.13.4
-    # via
-    #   -c requirements/constraints.txt
-    #   -r requirements/base.txt
+wagtail==2.16.2
+    # via -r requirements/base.txt
 webencodings==0.5.1
     # via
     #   -r requirements/base.txt
@@ -472,7 +470,7 @@ xlrd==2.0.1
     # via
     #   -r requirements/base.txt
     #   tablib
-xlsxwriter==1.4.5
+xlsxwriter==3.0.3
     # via
     #   -r requirements/base.txt
     #   wagtail

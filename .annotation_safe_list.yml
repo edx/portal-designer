@@ -105,3 +105,9 @@ wagtailcore.WorkflowTask:
   ".. no_pii:": "This model has no PII"
 wagtailcore.Locale:
   ".. no_pii:": "This model has no PII"
+wagtailcore.ModelLogEntry:
+  ".. no_pii:": "This model has no PII"
+wagtailsearch.IndexEntry:
+  ".. no_pii:": "This model has no PII"
+wagtailsearch.SQLiteFTSIndexEntry:
+  ".. no_pii:": "This model has no PII"

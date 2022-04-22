@@ -81,10 +81,8 @@ defusedxml==0.7.1
     #   -r requirements/quality.txt
     #   python3-openid
     #   social-auth-core
-diff-cover==6.2.1
-    # via
-    #   -c requirements/constraints.txt
-    #   -r requirements/dev.in
+diff-cover==6.5.0
+    # via -r requirements/dev.in
 dill==0.3.4
     # via
     #   -r requirements/quality.txt
@@ -128,7 +126,7 @@ django-dynamic-fixture==3.1.2
     # via -r requirements/quality.txt
 django-extensions==3.1.5
     # via -r requirements/quality.txt
-django-filter==2.4.0
+django-filter==21.1
     # via
     #   -r requirements/quality.txt
     #   wagtail
@@ -138,7 +136,7 @@ django-modelcluster==5.3
     #   wagtail
 django-storages==1.12.3
     # via -r requirements/quality.txt
-django-taggit==1.5.1
+django-taggit==2.1.0
     # via
     #   -r requirements/quality.txt
     #   wagtail
@@ -224,9 +222,7 @@ idna==3.3
     #   -r requirements/quality.txt
     #   requests
 inflect==5.5.2
-    # via
-    #   -r requirements/quality.txt
-    #   jinja2-pluralize
+    # via -r requirements/quality.txt
 inflection==0.5.1
     # via
     #   -r requirements/quality.txt
@@ -249,9 +245,6 @@ jinja2==3.1.1
     #   code-annotations
     #   coreschema
     #   diff-cover
-    #   jinja2-pluralize
-jinja2-pluralize==0.3.0
-    # via diff-cover
 l18n==2021.3
     # via
     #   -r requirements/quality.txt
@@ -301,7 +294,7 @@ pep517==0.12.0
     # via
     #   -r requirements/pip-tools.txt
     #   pip-tools
-pillow==8.4.0
+pillow==9.1.0
     # via
     #   -r requirements/quality.txt
     #   wagtail
@@ -536,10 +529,8 @@ virtualenv==20.14.1
     # via
     #   -r requirements/quality.txt
     #   tox
-wagtail==2.13.4
-    # via
-    #   -c requirements/constraints.txt
-    #   -r requirements/quality.txt
+wagtail==2.16.2
+    # via -r requirements/quality.txt
 webencodings==0.5.1
     # via
     #   -r requirements/quality.txt
@@ -560,7 +551,7 @@ xlrd==2.0.1
     # via
     #   -r requirements/quality.txt
     #   tablib
-xlsxwriter==1.4.5
+xlsxwriter==3.0.3
     # via
     #   -r requirements/quality.txt
     #   wagtail
