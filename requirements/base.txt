@@ -6,7 +6,7 @@
 #
 anyascii==0.3.1
     # via wagtail
-asgiref==3.5.0
+asgiref==3.5.1
     # via django
 beautifulsoup4==4.9.3
     # via wagtail
@@ -22,7 +22,7 @@ coreschema==0.0.4
     # via
     #   coreapi
     #   drf-yasg
-cryptography==36.0.2
+cryptography==37.0.1
     # via
     #   pyjwt
     #   social-auth-core
@@ -115,13 +115,13 @@ html5lib==1.1
     # via wagtail
 idna==3.3
     # via requests
-inflect==5.5.2
+inflect==5.6.0
     # via -r requirements/base.in
 inflection==0.5.1
     # via drf-yasg
 itypes==1.2.0
     # via coreapi
-jinja2==3.1.1
+jinja2==3.1.2
     # via coreschema
 l18n==2021.3
     # via wagtail

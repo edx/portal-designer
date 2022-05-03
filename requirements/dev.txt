@@ -8,11 +8,11 @@ anyascii==0.3.1
     # via
     #   -r requirements/quality.txt
     #   wagtail
-asgiref==3.5.0
+asgiref==3.5.1
     # via
     #   -r requirements/quality.txt
     #   django
-astroid==2.11.3
+astroid==2.11.4
     # via
     #   -r requirements/quality.txt
     #   pylint
@@ -39,7 +39,7 @@ charset-normalizer==2.0.12
     # via
     #   -r requirements/quality.txt
     #   requests
-click==8.1.2
+click==8.1.3
     # via
     #   -r requirements/pip-tools.txt
     #   -r requirements/quality.txt
@@ -71,7 +71,7 @@ coverage[toml]==6.3.2
     #   -r requirements/quality.txt
     #   codecov
     #   pytest-cov
-cryptography==36.0.2
+cryptography==37.0.1
     # via
     #   -r requirements/quality.txt
     #   pyjwt
@@ -120,7 +120,7 @@ django-crum==0.7.9
     # via
     #   -r requirements/quality.txt
     #   edx-django-utils
-django-debug-toolbar==3.2.4
+django-debug-toolbar==3.4.0
     # via -r requirements/dev.in
 django-dynamic-fixture==3.1.2
     # via -r requirements/quality.txt
@@ -200,7 +200,7 @@ et-xmlfile==1.1.0
     #   openpyxl
 factory-boy==3.2.1
     # via -r requirements/quality.txt
-faker==13.4.0
+faker==13.7.0
     # via
     #   -r requirements/quality.txt
     #   factory-boy
@@ -221,7 +221,7 @@ idna==3.3
     # via
     #   -r requirements/quality.txt
     #   requests
-inflect==5.5.2
+inflect==5.6.0
     # via -r requirements/quality.txt
 inflection==0.5.1
     # via
@@ -239,7 +239,7 @@ itypes==1.2.0
     # via
     #   -r requirements/quality.txt
     #   coreapi
-jinja2==3.1.1
+jinja2==3.1.2
     # via
     #   -r requirements/quality.txt
     #   code-annotations
@@ -334,7 +334,7 @@ pycryptodomex==3.14.1
     #   pyjwkest
 pydocstyle==6.1.1
     # via -r requirements/quality.txt
-pygments==2.11.2
+pygments==2.12.0
     # via diff-cover
 pyjwkest==1.4.2
     # via
@@ -348,7 +348,7 @@ pyjwt[crypto]==2.3.0
     #   edx-drf-extensions
     #   edx-rest-api-client
     #   social-auth-core
-pylint==2.13.7
+pylint==2.13.8
     # via
     #   -r requirements/quality.txt
     #   edx-lint
@@ -376,7 +376,7 @@ pyparsing==3.0.8
     # via
     #   -r requirements/quality.txt
     #   packaging
-pytest==7.1.1
+pytest==7.1.2
     # via
     #   -r requirements/quality.txt
     #   pytest-cov
@@ -390,7 +390,7 @@ python-dateutil==2.8.2
     #   -r requirements/quality.txt
     #   edx-drf-extensions
     #   faker
-python-slugify==6.1.1
+python-slugify==6.1.2
     # via
     #   -r requirements/quality.txt
     #   code-annotations
@@ -543,7 +543,7 @@ willow==1.4.1
     # via
     #   -r requirements/quality.txt
     #   wagtail
-wrapt==1.14.0
+wrapt==1.14.1
     # via
     #   -r requirements/quality.txt
     #   astroid
