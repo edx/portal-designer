@@ -298,7 +298,7 @@ pillow==9.1.0
     # via
     #   -r requirements/quality.txt
     #   wagtail
-pip-tools==6.6.0
+pip-tools==6.6.2
     # via -r requirements/pip-tools.txt
 platformdirs==2.5.2
     # via
