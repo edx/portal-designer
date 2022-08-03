@@ -86,8 +86,6 @@ distlib==0.3.5
     #   django-crum
     #   django-extensions
     #   django-filter
-    #   django-modelcluster
-    #   django-permissionedforms
     #   django-storages
     #   django-taggit
     #   django-treebeard
@@ -114,11 +112,7 @@ django-filter==21.1
     # via
     #   -r requirements/base.txt
     #   wagtail
-django-modelcluster==6.0
-    # via
-    #   -r requirements/base.txt
-    #   wagtail
-django-permissionedforms==0.1
+django-modelcluster==5.3
     # via
     #   -r requirements/base.txt
     #   wagtail
@@ -475,8 +469,10 @@ urllib3==1.26.11
     #   requests
 virtualenv==20.16.2
     # via tox
-wagtail==3.0.1
-    # via -r requirements/base.txt
+wagtail==2.16.2
+    # via
+    #   -c requirements/constraints.txt
+    #   -r requirements/base.txt
 webencodings==0.5.1
     # via
     #   -r requirements/base.txt
