@@ -16,9 +16,9 @@ beautifulsoup4==4.9.3
     # via
     #   -r requirements/base.txt
     #   wagtail
-boto3==1.24.44
+boto3==1.24.52
     # via -r requirements/production.in
-botocore==1.27.44
+botocore==1.27.52
     # via
     #   boto3
     #   s3transfer
@@ -93,7 +93,7 @@ django-modelcluster==5.3
     # via
     #   -r requirements/base.txt
     #   wagtail
-django-storages==1.12.3
+django-storages==1.13.1
     # via -r requirements/base.txt
 django-taggit==2.1.0
     # via
@@ -199,7 +199,7 @@ mock==4.0.3
     # via -r requirements/base.txt
 mysqlclient==2.1.1
     # via -r requirements/base.txt
-newrelic==7.16.0.178
+newrelic==8.0.0.179
     # via
     #   -r requirements/base.txt
     #   edx-django-utils
@@ -216,7 +216,7 @@ packaging==21.3
     # via
     #   -r requirements/base.txt
     #   drf-yasg
-pbr==5.9.0
+pbr==5.10.0
     # via
     #   -r requirements/base.txt
     #   stevedore
@@ -236,7 +236,7 @@ pycryptodomex==3.15.0
     # via
     #   -r requirements/base.txt
     #   pyjwkest
-pydantic==1.9.1
+pydantic==1.9.2
     # via
     #   -r requirements/base.txt
     #   inflect
@@ -275,7 +275,7 @@ python3-openid==3.2.0
     # via
     #   -r requirements/base.txt
     #   social-auth-core
-pytz==2022.1
+pytz==2022.2.1
     # via
     #   -r requirements/base.txt
     #   django

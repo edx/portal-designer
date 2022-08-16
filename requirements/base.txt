@@ -65,7 +65,7 @@ django-filter==21.1
     # via wagtail
 django-modelcluster==5.3
     # via wagtail
-django-storages==1.12.3
+django-storages==1.13.1
     # via -r requirements/base.in
 django-taggit==2.1.0
     # via wagtail
@@ -135,7 +135,7 @@ mock==4.0.3
     # via -r requirements/base.in
 mysqlclient==2.1.1
     # via -r requirements/base.in
-newrelic==7.16.0.178
+newrelic==8.0.0.179
     # via edx-django-utils
 oauthlib==3.2.0
     # via
@@ -145,7 +145,7 @@ openpyxl==3.0.10
     # via tablib
 packaging==21.3
     # via drf-yasg
-pbr==5.9.0
+pbr==5.10.0
     # via stevedore
 pillow==9.2.0
     # via wagtail
@@ -155,7 +155,7 @@ pycparser==2.21
     # via cffi
 pycryptodomex==3.15.0
     # via pyjwkest
-pydantic==1.9.1
+pydantic==1.9.2
     # via inflect
 pyjwkest==1.4.2
     # via edx-drf-extensions
@@ -178,7 +178,7 @@ python-dateutil==2.8.2
     #   edx-drf-extensions
 python3-openid==3.2.0
     # via social-auth-core
-pytz==2022.1
+pytz==2022.2.1
     # via
     #   -r requirements/base.in
     #   django
