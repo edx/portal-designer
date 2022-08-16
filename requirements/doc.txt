@@ -70,7 +70,7 @@ coreschema==0.0.4
     #   -r requirements/test.txt
     #   coreapi
     #   drf-yasg
-coverage[toml]==6.4.2
+coverage[toml]==6.4.4
     # via
     #   -r requirements/test.txt
     #   codecov
@@ -130,7 +130,7 @@ django-modelcluster==5.3
     # via
     #   -r requirements/test.txt
     #   wagtail
-django-storages==1.12.3
+django-storages==1.13.1
     # via -r requirements/test.txt
 django-taggit==2.1.0
     # via
@@ -202,11 +202,11 @@ et-xmlfile==1.1.0
     #   openpyxl
 factory-boy==3.2.1
     # via -r requirements/test.txt
-faker==13.15.1
+faker==14.0.0
     # via
     #   -r requirements/test.txt
     #   factory-boy
-filelock==3.7.1
+filelock==3.8.0
     # via
     #   -r requirements/test.txt
     #   tox
@@ -271,7 +271,7 @@ mock==4.0.3
     # via -r requirements/test.txt
 mysqlclient==2.1.1
     # via -r requirements/test.txt
-newrelic==7.16.0.178
+newrelic==8.0.0.179
     # via
     #   -r requirements/test.txt
     #   edx-django-utils
@@ -291,7 +291,7 @@ packaging==21.3
     #   pytest
     #   sphinx
     #   tox
-pbr==5.9.0
+pbr==5.10.0
     # via
     #   -r requirements/test.txt
     #   stevedore
@@ -326,11 +326,11 @@ pycryptodomex==3.15.0
     # via
     #   -r requirements/test.txt
     #   pyjwkest
-pydantic==1.9.1
+pydantic==1.9.2
     # via
     #   -r requirements/test.txt
     #   inflect
-pygments==2.12.0
+pygments==2.13.0
     # via
     #   doc8
     #   readme-renderer
@@ -401,7 +401,7 @@ python3-openid==3.2.0
     # via
     #   -r requirements/test.txt
     #   social-auth-core
-pytz==2022.1
+pytz==2022.2.1
     # via
     #   -r requirements/test.txt
     #   babel
@@ -415,7 +415,7 @@ pyyaml==6.0
     #   -r requirements/test.txt
     #   code-annotations
     #   edx-django-release-util
-readme-renderer==35.0
+readme-renderer==36.0
     # via -r requirements/doc.in
 requests==2.28.1
     # via
@@ -532,7 +532,7 @@ tomli==2.0.1
     #   doc8
     #   pylint
     #   pytest
-tomlkit==0.11.1
+tomlkit==0.11.4
     # via
     #   -r requirements/test.txt
     #   pylint
@@ -553,7 +553,7 @@ urllib3==1.26.11
     # via
     #   -r requirements/test.txt
     #   requests
-virtualenv==20.16.2
+virtualenv==20.16.3
     # via
     #   -r requirements/test.txt
     #   tox
