@@ -12,7 +12,7 @@ asgiref==3.5.2
     # via
     #   -r requirements/test.txt
     #   django
-astroid==2.11.7
+astroid==2.12.9
     # via
     #   -r requirements/test.txt
     #   pylint
@@ -25,7 +25,7 @@ beautifulsoup4==4.9.3
     # via
     #   -r requirements/test.txt
     #   wagtail
-certifi==2022.6.15
+certifi==2022.9.14
     # via
     #   -r requirements/test.txt
     #   requests
@@ -34,7 +34,7 @@ cffi==1.15.1
     #   -r requirements/test.txt
     #   cryptography
     #   pynacl
-charset-normalizer==2.1.0
+charset-normalizer==2.1.1
     # via
     #   -r requirements/test.txt
     #   requests
@@ -69,7 +69,7 @@ coverage[toml]==6.4.4
     #   -r requirements/test.txt
     #   codecov
     #   pytest-cov
-cryptography==37.0.4
+cryptography==38.0.1
     # via
     #   -r requirements/test.txt
     #   pyjwt
@@ -83,7 +83,7 @@ dill==0.3.5.1
     # via
     #   -r requirements/test.txt
     #   pylint
-distlib==0.3.5
+distlib==0.3.6
     # via
     #   -r requirements/test.txt
     #   virtualenv
@@ -114,7 +114,7 @@ django-crum==0.7.9
     #   edx-django-utils
 django-dynamic-fixture==3.1.2
     # via -r requirements/test.txt
-django-extensions==3.2.0
+django-extensions==3.2.1
     # via -r requirements/test.txt
 django-filter==21.1
     # via
@@ -134,7 +134,7 @@ django-treebeard==4.5.1
     # via
     #   -r requirements/test.txt
     #   wagtail
-django-waffle==2.6.0
+django-waffle==3.0.0
     # via
     #   -r requirements/test.txt
     #   edx-django-utils
@@ -165,14 +165,14 @@ edx-auth-backends==4.1.0
     # via -r requirements/test.txt
 edx-django-release-util==1.2.0
     # via -r requirements/test.txt
-edx-django-utils==5.0.0
+edx-django-utils==5.0.1
     # via
     #   -r requirements/test.txt
     #   edx-drf-extensions
     #   edx-rest-api-client
-edx-drf-extensions==8.0.1
+edx-drf-extensions==8.3.1
     # via -r requirements/test.txt
-edx-lint==5.2.4
+edx-lint==5.3.0
     # via
     #   -r requirements/quality.in
     #   -r requirements/test.txt
@@ -188,7 +188,7 @@ et-xmlfile==1.1.0
     #   openpyxl
 factory-boy==3.2.1
     # via -r requirements/test.txt
-faker==14.0.0
+faker==14.2.0
     # via
     #   -r requirements/test.txt
     #   factory-boy
@@ -205,7 +205,7 @@ html5lib==1.1
     # via
     #   -r requirements/test.txt
     #   wagtail
-idna==3.3
+idna==3.4
     # via
     #   -r requirements/test.txt
     #   requests
@@ -253,11 +253,11 @@ mock==4.0.3
     # via -r requirements/test.txt
 mysqlclient==2.1.1
     # via -r requirements/test.txt
-newrelic==8.0.0.179
+newrelic==8.1.0.180
     # via
     #   -r requirements/test.txt
     #   edx-django-utils
-oauthlib==3.2.0
+oauthlib==3.2.1
     # via
     #   -r requirements/test.txt
     #   requests-oauthlib
@@ -290,7 +290,7 @@ pluggy==1.0.0
     #   -r requirements/test.txt
     #   pytest
     #   tox
-psutil==5.9.1
+psutil==5.9.2
     # via
     #   -r requirements/test.txt
     #   edx-django-utils
@@ -309,7 +309,7 @@ pycryptodomex==3.15.0
     # via
     #   -r requirements/test.txt
     #   pyjwkest
-pydantic==1.9.2
+pydantic==1.10.2
     # via
     #   -r requirements/test.txt
     #   inflect
@@ -327,7 +327,7 @@ pyjwt[crypto]==2.4.0
     #   edx-drf-extensions
     #   edx-rest-api-client
     #   social-auth-core
-pylint==2.14.5
+pylint==2.15.2
     # via
     #   -r requirements/test.txt
     #   edx-lint
@@ -359,7 +359,7 @@ pyparsing==3.0.9
     # via
     #   -r requirements/test.txt
     #   packaging
-pytest==7.1.2
+pytest==7.1.3
     # via
     #   -r requirements/test.txt
     #   pytest-cov
@@ -468,7 +468,7 @@ tablib[xls,xlsx]==3.2.1
     # via
     #   -r requirements/test.txt
     #   wagtail
-telepath==0.2
+telepath==0.3
     # via
     #   -r requirements/test.txt
     #   wagtail
@@ -476,21 +476,18 @@ text-unidecode==1.3
     # via
     #   -r requirements/test.txt
     #   python-slugify
-toml==0.10.2
-    # via
-    #   -r requirements/test.txt
-    #   tox
 tomli==2.0.1
     # via
     #   -r requirements/test.txt
     #   coverage
     #   pylint
     #   pytest
+    #   tox
 tomlkit==0.11.4
     # via
     #   -r requirements/test.txt
     #   pylint
-tox==3.25.1
+tox==3.26.0
     # via -r requirements/test.txt
 typing-extensions==4.3.0
     # via
@@ -503,15 +500,15 @@ uritemplate==4.1.1
     #   -r requirements/test.txt
     #   coreapi
     #   drf-yasg
-urllib3==1.26.11
+urllib3==1.26.12
     # via
     #   -r requirements/test.txt
     #   requests
-virtualenv==20.16.3
+virtualenv==20.16.5
     # via
     #   -r requirements/test.txt
     #   tox
-wagtail==2.16.2
+wagtail==2.16.3
     # via -r requirements/test.txt
 webencodings==0.5.1
     # via
@@ -539,6 +536,3 @@ xlwt==1.3.0
     #   tablib
 zipp==3.8.1
     # via -r requirements/test.txt
-
-# The following packages are considered to be unsafe in a requirements file:
-# setuptools
