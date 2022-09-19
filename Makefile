@@ -70,7 +70,7 @@ test: clean test_requirements
 
 quality: quality_requirements
 	pycodestyle designer *.py
-	pylint --django-settings-module=designer.settings.test --rcfile=pylintrc designer *.py
+	pylint designer *.py
 
 pii_check:
 	DJANGO_SETTINGS_MODULE=designer.settings.test \
