@@ -166,7 +166,7 @@ class PageCreationMixin:
             if not form.errors:
                 self.fail('Creating a page failed for unknown reason')
 
-            errors = '\n'.join(['  {}:\n    {}'.format(  # pylint: disable=consider-using-f-string
+            errors = '\n'.join(['  {}:\n    {}'.format(
                 key, '\n'.join(values)
             ) for key, values in form.errors.items()])
             self.fail(f"Creating a page failed for the following reasons:\n{errors}")
