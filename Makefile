@@ -149,10 +149,10 @@ dev.provision:
 dev.init: dev.up dev.migrate
 
 dev.makemigrations:
-	docker exec -it designer.app bash -c 'cd /edx/app/designer/designer && python manage.py makemigrations'
+	docker exec -it designer.app bash -c 'cd /edx/app/designer && python manage.py makemigrations'
 
 dev.migrate: # Migrates databases. Application and DB server must be up for this to work.
-	docker exec -it designer.app bash -c 'cd /edx/app/designer/designer && make migrate'
+	docker exec -it designer.app bash -c 'cd /edx/app/designer && make migrate'
 
 dev.up: # Starts all containers
 	docker-compose up -d --build
