@@ -16,13 +16,13 @@ beautifulsoup4==4.9.3
     # via
     #   -r requirements/base.txt
     #   wagtail
-boto3==1.24.74
+boto3==1.24.84
     # via -r requirements/production.in
-botocore==1.27.74
+botocore==1.27.84
     # via
     #   boto3
     #   s3transfer
-certifi==2022.9.14
+certifi==2022.9.24
     # via
     #   -r requirements/base.txt
     #   requests
@@ -108,7 +108,7 @@ django-waffle==3.0.0
     #   -r requirements/base.txt
     #   edx-django-utils
     #   edx-drf-extensions
-djangorestframework==3.13.1
+djangorestframework==3.14.0
     # via
     #   -r requirements/base.txt
     #   drf-jwt
@@ -124,7 +124,7 @@ drf-jwt==1.19.2
     # via
     #   -r requirements/base.txt
     #   edx-drf-extensions
-drf-yasg==1.21.3
+drf-yasg==1.21.4
     # via
     #   -r requirements/base.txt
     #   edx-api-doc-tools
@@ -134,7 +134,7 @@ edx-auth-backends==4.1.0
     # via -r requirements/base.txt
 edx-django-release-util==1.2.0
     # via -r requirements/base.txt
-edx-django-utils==5.0.1
+edx-django-utils==5.1.0
     # via
     #   -r requirements/base.txt
     #   edx-drf-extensions
@@ -199,7 +199,7 @@ mock==4.0.3
     # via -r requirements/base.txt
 mysqlclient==2.1.1
     # via -r requirements/base.txt
-newrelic==8.1.0.180
+newrelic==8.2.0.181
     # via
     #   -r requirements/base.txt
     #   edx-django-utils
@@ -244,7 +244,7 @@ pyjwkest==1.4.2
     # via
     #   -r requirements/base.txt
     #   edx-drf-extensions
-pyjwt[crypto]==2.4.0
+pyjwt[crypto]==2.5.0
     # via
     #   -r requirements/base.txt
     #   drf-jwt
@@ -275,7 +275,7 @@ python3-openid==3.2.0
     # via
     #   -r requirements/base.txt
     #   social-auth-core
-pytz==2022.2.1
+pytz==2022.4
     # via
     #   -r requirements/base.txt
     #   django
@@ -345,7 +345,7 @@ soupsieve==2.3.2.post1
     # via
     #   -r requirements/base.txt
     #   beautifulsoup4
-sqlparse==0.4.2
+sqlparse==0.4.3
     # via
     #   -r requirements/base.txt
     #   django
@@ -362,6 +362,10 @@ telepath==0.3
     # via
     #   -r requirements/base.txt
     #   wagtail
+types-cryptography==3.3.23
+    # via
+    #   -r requirements/base.txt
+    #   pyjwt
 typing-extensions==4.3.0
     # via
     #   -r requirements/base.txt
