@@ -130,7 +130,7 @@ compile_translations:
 
 fake_translations: extract_translations dummy_translations compile_translations
 
-pull_translations:
+pull_translations: ## pull translations from Transifex
 	tx pull -t -af --mode reviewed
 
 push_translations:
