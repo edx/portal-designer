@@ -130,8 +130,8 @@ compile_translations:
 
 fake_translations: extract_translations dummy_translations compile_translations
 
-pull_translations:
-	tx pull -af --mode reviewed
+pull_translations: ## pull translations from Transifex
+	tx pull -t -af --mode reviewed
 
 push_translations:
 	tx push -s
