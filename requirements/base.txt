@@ -26,7 +26,7 @@ coreschema==0.0.4
     # via
     #   coreapi
     #   drf-yasg
-cryptography==38.0.1
+cryptography==38.0.3
     # via
     #   pyjwt
     #   social-auth-core
@@ -119,7 +119,7 @@ html5lib==1.1
     # via wagtail
 idna==3.4
     # via requests
-inflect==6.0.0
+inflect==6.0.2
     # via -r requirements/base.in
 inflection==0.5.1
     # via drf-yasg
@@ -135,9 +135,9 @@ mock==4.0.3
     # via -r requirements/base.in
 mysqlclient==2.1.1
     # via -r requirements/base.in
-newrelic==8.2.1
+newrelic==8.4.0
     # via edx-django-utils
-oauthlib==3.2.1
+oauthlib==3.2.2
     # via
     #   requests-oauthlib
     #   social-auth-core
@@ -145,11 +145,11 @@ openpyxl==3.0.10
     # via tablib
 packaging==21.3
     # via drf-yasg
-pbr==5.10.0
+pbr==5.11.0
     # via stevedore
-pillow==9.2.0
+pillow==9.3.0
     # via wagtail
-psutil==5.9.2
+psutil==5.9.3
     # via edx-django-utils
 pycparser==2.21
     # via cffi
@@ -159,14 +159,14 @@ pydantic==1.10.2
     # via inflect
 pyjwkest==1.4.2
     # via edx-drf-extensions
-pyjwt[crypto]==2.5.0
+pyjwt[crypto]==2.6.0
     # via
     #   drf-jwt
     #   edx-auth-backends
     #   edx-drf-extensions
     #   edx-rest-api-client
     #   social-auth-core
-pymongo==3.12.3
+pymongo==3.13.0
     # via edx-opaque-keys
 pynacl==1.5.0
     # via edx-django-utils
@@ -178,7 +178,7 @@ python-dateutil==2.8.2
     #   edx-drf-extensions
 python3-openid==3.2.0
     # via social-auth-core
-pytz==2022.4
+pytz==2022.6
     # via
     #   -r requirements/base.in
     #   django
@@ -202,7 +202,7 @@ requests-oauthlib==1.3.1
     # via social-auth-core
 ruamel-yaml==0.17.21
     # via drf-yasg
-ruamel-yaml-clib==0.2.6
+ruamel-yaml-clib==0.2.7
     # via ruamel-yaml
 semantic-version==2.10.0
     # via edx-drf-extensions
@@ -230,7 +230,7 @@ soupsieve==2.3.2.post1
     # via beautifulsoup4
 sqlparse==0.4.3
     # via django
-stevedore==4.0.1
+stevedore==4.1.0
     # via
     #   edx-django-utils
     #   edx-opaque-keys
@@ -238,8 +238,6 @@ tablib[xls,xlsx]==3.2.1
     # via wagtail
 telepath==0.3
     # via wagtail
-types-cryptography==3.3.23.1
-    # via pyjwt
 typing-extensions==4.4.0
     # via pydantic
 uritemplate==4.1.1
@@ -262,5 +260,5 @@ xlsxwriter==3.0.3
     # via wagtail
 xlwt==1.3.0
     # via tablib
-zipp==3.9.0
+zipp==3.10.0
     # via -r requirements/base.in
