@@ -149,7 +149,7 @@ pbr==5.11.0
     # via stevedore
 pillow==9.3.0
     # via wagtail
-psutil==5.9.3
+psutil==5.9.4
     # via edx-django-utils
 pycparser==2.21
     # via cffi
@@ -230,7 +230,7 @@ soupsieve==2.3.2.post1
     # via beautifulsoup4
 sqlparse==0.4.3
     # via django
-stevedore==4.1.0
+stevedore==4.1.1
     # via
     #   edx-django-utils
     #   edx-opaque-keys

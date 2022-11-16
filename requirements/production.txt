@@ -16,9 +16,9 @@ beautifulsoup4==4.9.3
     # via
     #   -r requirements/base.txt
     #   wagtail
-boto3==1.26.0
+boto3==1.26.10
     # via -r requirements/production.in
-botocore==1.29.0
+botocore==1.29.10
     # via
     #   boto3
     #   s3transfer
@@ -157,7 +157,7 @@ future==0.18.2
     #   pyjwkest
 gevent==22.10.2
     # via -r requirements/production.in
-greenlet==2.0.0
+greenlet==2.0.1
     # via gevent
 gunicorn==20.1.0
     # via -r requirements/production.in
@@ -224,7 +224,7 @@ pillow==9.3.0
     # via
     #   -r requirements/base.txt
     #   wagtail
-psutil==5.9.3
+psutil==5.9.4
     # via
     #   -r requirements/base.txt
     #   edx-django-utils
@@ -349,7 +349,7 @@ sqlparse==0.4.3
     # via
     #   -r requirements/base.txt
     #   django
-stevedore==4.1.0
+stevedore==4.1.1
     # via
     #   -r requirements/base.txt
     #   edx-django-utils
@@ -402,7 +402,7 @@ zipp==3.10.0
     # via -r requirements/base.txt
 zope-event==4.5.0
     # via gevent
-zope-interface==5.5.0
+zope-interface==5.5.1
     # via gevent
 
 # The following packages are considered to be unsafe in a requirements file:
