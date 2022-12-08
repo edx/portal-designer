@@ -44,11 +44,11 @@ class ExternalProgramWebsiteFactory(factory.django.DjangoModelFactory):
     class Meta:
         model = ExternalProgramWebsite
 
-    display = factory.LazyAttribute(lambda l: fake.boolean())
-    header = factory.LazyAttribute(lambda l: ' '.join([word.capitalize() for word in fake.words(nb=3)]))
-    description = factory.LazyAttribute(lambda l: f'<ul>{[f"<li>{s}</li>" for s in fake.sentences(nb=4)]}</ul>')
-    link_display_text = factory.LazyAttribute(lambda l: fake.sentence())
-    link_url = factory.LazyAttribute(lambda l: fake.url())
+    display = factory.LazyAttribute(lambda a: fake.boolean())
+    header = factory.LazyAttribute(lambda a: ' '.join([word.capitalize() for word in fake.words(nb=3)]))
+    description = factory.LazyAttribute(lambda a: f'<ul>{[f"<li>{s}</li>" for s in fake.sentences(nb=4)]}</ul>')
+    link_display_text = factory.LazyAttribute(lambda a: fake.sentence())
+    link_url = factory.LazyAttribute(lambda a: fake.url())
     page = factory.LazyAttribute(lambda o: create_program_page(site=SiteFactory()))
 
 
@@ -99,10 +99,10 @@ class ProgramDocumentsFactory(factory.django.DjangoModelFactory):
     class Meta:
         model = ProgramDocuments
 
-    display = factory.LazyAttribute(lambda l: fake.boolean())
-    header = factory.LazyAttribute(lambda l: ' '.join([word.capitalize() for word in fake.words(nb=3)]))
-    documents = factory.LazyAttribute(lambda l: _create_program_documents())
-    page = factory.LazyAttribute(lambda l: create_program_page(site=SiteFactory()))
+    display = factory.LazyAttribute(lambda a: fake.boolean())
+    header = factory.LazyAttribute(lambda a: ' '.join([word.capitalize() for word in fake.words(nb=3)]))
+    documents = factory.LazyAttribute(lambda a: _create_program_documents())
+    page = factory.LazyAttribute(lambda a: create_program_page(site=SiteFactory()))
 
 
 def create_program_page(

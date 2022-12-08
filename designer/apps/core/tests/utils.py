@@ -72,7 +72,7 @@ class SiteFactory(factory.django.DjangoModelFactory):
         model = Site
 
     class Params:
-        company_name = factory.LazyAttribute(lambda l: fake.company())
+        company_name = factory.LazyAttribute(lambda a: fake.company())
 
     site_name = factory.LazyAttribute(lambda o: o.company_name)
     hostname = factory.LazyAttribute(
@@ -89,7 +89,7 @@ class ImageFactory(factory.django.DjangoModelFactory):
         model = Image
 
     class Params:
-        image_title = factory.LazyAttribute(lambda l: ' '.join(fake.words(nb=3)))
+        image_title = factory.LazyAttribute(lambda a: ' '.join(fake.words(nb=3)))
 
     title = factory.LazyAttribute(lambda o: o.image_title)
     file = factory.LazyAttribute(
@@ -106,7 +106,7 @@ class DocumentFactory(factory.django.DjangoModelFactory):
         model = Document
 
     class Params:
-        doc_title = factory.LazyAttribute(lambda l: ' '.join([word.capitalize() for word in fake.words(nb=3)]))
+        doc_title = factory.LazyAttribute(lambda a: ' '.join([word.capitalize() for word in fake.words(nb=3)]))
 
     title = factory.LazyAttribute(lambda o: o.doc_title)
     file = factory.LazyAttribute(

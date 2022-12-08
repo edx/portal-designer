@@ -18,5 +18,5 @@ class BrandingFactory(factory.django.DjangoModelFactory):
         model = Branding
 
     organization_logo_image = factory.SubFactory(ImageFactory)
-    organization_logo_alt_text = factory.LazyAttribute(lambda l: fake.bs())
-    banner_border_color = factory.LazyAttribute(lambda l: fake.safe_hex_color())
+    organization_logo_alt_text = factory.LazyAttribute(lambda a: fake.bs())
+    banner_border_color = factory.LazyAttribute(lambda a: fake.safe_hex_color())
