@@ -8,7 +8,7 @@ anyascii==0.3.1
     # via
     #   -r requirements/base.txt
     #   wagtail
-asgiref==3.5.2
+asgiref==3.6.0
     # via
     #   -r requirements/base.txt
     #   django
@@ -16,9 +16,9 @@ beautifulsoup4==4.9.3
     # via
     #   -r requirements/base.txt
     #   wagtail
-boto3==1.26.31
+boto3==1.26.41
     # via -r requirements/production.in
-botocore==1.29.31
+botocore==1.29.41
     # via
     #   boto3
     #   s3transfer
@@ -48,7 +48,7 @@ coreschema==0.0.4
     #   -r requirements/base.txt
     #   coreapi
     #   drf-yasg
-cryptography==38.0.4
+cryptography==39.0.0
     # via
     #   -r requirements/base.txt
     #   pyjwt
@@ -93,13 +93,13 @@ django-modelcluster==5.3
     # via
     #   -r requirements/base.txt
     #   wagtail
-django-storages==1.13.1
+django-storages==1.13.2
     # via -r requirements/base.txt
 django-taggit==2.1.0
     # via
     #   -r requirements/base.txt
     #   wagtail
-django-treebeard==4.5.1
+django-treebeard==4.6.0
     # via
     #   -r requirements/base.txt
     #   wagtail
@@ -139,7 +139,7 @@ edx-django-utils==5.2.0
     #   -r requirements/base.txt
     #   edx-drf-extensions
     #   edx-rest-api-client
-edx-drf-extensions==8.3.1
+edx-drf-extensions==8.4.0
     # via -r requirements/base.txt
 edx-opaque-keys==2.3.0
     # via
@@ -195,7 +195,7 @@ markupsafe==2.1.1
     # via
     #   -r requirements/base.txt
     #   jinja2
-mock==4.0.3
+mock==5.0.0
     # via -r requirements/base.txt
 mysqlclient==2.1.1
     # via -r requirements/base.txt
@@ -220,7 +220,7 @@ pbr==5.11.0
     # via
     #   -r requirements/base.txt
     #   stevedore
-pillow==9.3.0
+pillow==9.4.0
     # via
     #   -r requirements/base.txt
     #   wagtail
@@ -236,7 +236,7 @@ pycryptodomex==3.16.0
     # via
     #   -r requirements/base.txt
     #   pyjwkest
-pydantic==1.10.2
+pydantic==1.10.4
     # via
     #   -r requirements/base.txt
     #   inflect
@@ -271,7 +271,7 @@ python3-openid==3.2.0
     # via
     #   -r requirements/base.txt
     #   social-auth-core
-pytz==2022.6
+pytz==2022.7
     # via
     #   -r requirements/base.txt
     #   django
@@ -386,7 +386,7 @@ xlrd==2.0.1
     # via
     #   -r requirements/base.txt
     #   tablib
-xlsxwriter==3.0.3
+xlsxwriter==3.0.5
     # via
     #   -r requirements/base.txt
     #   wagtail

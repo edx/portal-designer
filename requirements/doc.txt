@@ -10,7 +10,7 @@ anyascii==0.3.1
     # via
     #   -r requirements/test.txt
     #   wagtail
-asgiref==3.5.2
+asgiref==3.6.0
     # via
     #   -r requirements/test.txt
     #   django
@@ -19,7 +19,7 @@ astroid==2.12.13
     #   -r requirements/test.txt
     #   pylint
     #   pylint-celery
-attrs==22.1.0
+attrs==22.2.0
     # via
     #   -r requirements/test.txt
     #   pytest
@@ -70,12 +70,12 @@ coreschema==0.0.4
     #   -r requirements/test.txt
     #   coreapi
     #   drf-yasg
-coverage[toml]==6.5.0
+coverage[toml]==7.0.1
     # via
     #   -r requirements/test.txt
     #   codecov
     #   pytest-cov
-cryptography==38.0.4
+cryptography==39.0.0
     # via
     #   -r requirements/test.txt
     #   pyjwt
@@ -130,13 +130,13 @@ django-modelcluster==5.3
     # via
     #   -r requirements/test.txt
     #   wagtail
-django-storages==1.13.1
+django-storages==1.13.2
     # via -r requirements/test.txt
 django-taggit==2.1.0
     # via
     #   -r requirements/test.txt
     #   wagtail
-django-treebeard==4.5.1
+django-treebeard==4.6.0
     # via
     #   -r requirements/test.txt
     #   wagtail
@@ -153,7 +153,7 @@ djangorestframework==3.14.0
     #   edx-api-doc-tools
     #   edx-drf-extensions
     #   wagtail
-doc8==1.0.0
+doc8==1.1.1
     # via -r requirements/doc.in
 docutils==0.19
     # via
@@ -184,7 +184,7 @@ edx-django-utils==5.2.0
     #   -r requirements/test.txt
     #   edx-drf-extensions
     #   edx-rest-api-client
-edx-drf-extensions==8.3.1
+edx-drf-extensions==8.4.0
     # via -r requirements/test.txt
 edx-lint==5.3.0
     # via -r requirements/test.txt
@@ -200,7 +200,7 @@ et-xmlfile==1.1.0
     # via
     #   -r requirements/test.txt
     #   openpyxl
-exceptiongroup==1.0.4
+exceptiongroup==1.1.0
     # via
     #   -r requirements/test.txt
     #   pytest
@@ -210,7 +210,7 @@ faker==15.3.4
     # via
     #   -r requirements/test.txt
     #   factory-boy
-filelock==3.8.2
+filelock==3.9.0
     # via
     #   -r requirements/test.txt
     #   tox
@@ -229,7 +229,7 @@ idna==3.4
     #   requests
 imagesize==1.4.1
     # via sphinx
-importlib-metadata==5.1.0
+importlib-metadata==6.0.0
     # via sphinx
 inflect==6.0.2
     # via -r requirements/test.txt
@@ -241,7 +241,7 @@ iniconfig==1.1.1
     # via
     #   -r requirements/test.txt
     #   pytest
-isort==5.11.2
+isort==5.11.4
     # via
     #   -r requirements/test.txt
     #   pylint
@@ -271,7 +271,7 @@ mccabe==0.7.0
     # via
     #   -r requirements/test.txt
     #   pylint
-mock==4.0.3
+mock==5.0.0
     # via -r requirements/test.txt
 mysqlclient==2.1.1
     # via -r requirements/test.txt
@@ -299,11 +299,11 @@ pbr==5.11.0
     # via
     #   -r requirements/test.txt
     #   stevedore
-pillow==9.3.0
+pillow==9.4.0
     # via
     #   -r requirements/test.txt
     #   wagtail
-platformdirs==2.6.0
+platformdirs==2.6.2
     # via
     #   -r requirements/test.txt
     #   pylint
@@ -329,11 +329,11 @@ pycryptodomex==3.16.0
     # via
     #   -r requirements/test.txt
     #   pyjwkest
-pydantic==1.10.2
+pydantic==1.10.4
     # via
     #   -r requirements/test.txt
     #   inflect
-pygments==2.13.0
+pygments==2.14.0
     # via
     #   doc8
     #   readme-renderer
@@ -350,7 +350,7 @@ pyjwt[crypto]==2.6.0
     #   edx-drf-extensions
     #   edx-rest-api-client
     #   social-auth-core
-pylint==2.15.8
+pylint==2.15.9
     # via
     #   -r requirements/test.txt
     #   edx-lint
@@ -400,7 +400,7 @@ python3-openid==3.2.0
     # via
     #   -r requirements/test.txt
     #   social-auth-core
-pytz==2022.6
+pytz==2022.7
     # via
     #   -r requirements/test.txt
     #   babel
@@ -481,7 +481,7 @@ soupsieve==2.3.2.post1
     # via
     #   -r requirements/test.txt
     #   beautifulsoup4
-sphinx==5.3.0
+sphinx==6.0.0
     # via
     #   -r requirements/doc.in
     #   edx-sphinx-theme
@@ -532,7 +532,7 @@ tomlkit==0.11.6
     # via
     #   -r requirements/test.txt
     #   pylint
-tox==3.27.1
+tox==3.28.0
     # via -r requirements/test.txt
 typing-extensions==4.4.0
     # via
@@ -572,7 +572,7 @@ xlrd==2.0.1
     # via
     #   -r requirements/test.txt
     #   tablib
-xlsxwriter==3.0.3
+xlsxwriter==3.0.5
     # via
     #   -r requirements/test.txt
     #   wagtail
