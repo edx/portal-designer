@@ -6,7 +6,7 @@
 #
 anyascii==0.3.1
     # via wagtail
-asgiref==3.5.2
+asgiref==3.6.0
     # via django
 beautifulsoup4==4.9.3
     # via wagtail
@@ -26,7 +26,7 @@ coreschema==0.0.4
     # via
     #   coreapi
     #   drf-yasg
-cryptography==38.0.4
+cryptography==39.0.0
     # via
     #   pyjwt
     #   social-auth-core
@@ -65,11 +65,11 @@ django-filter==21.1
     # via wagtail
 django-modelcluster==5.3
     # via wagtail
-django-storages==1.13.1
+django-storages==1.13.2
     # via -r requirements/base.in
 django-taggit==2.1.0
     # via wagtail
-django-treebeard==4.5.1
+django-treebeard==4.6.0
     # via wagtail
 django-waffle==3.0.0
     # via
@@ -103,7 +103,7 @@ edx-django-utils==5.2.0
     #   -r requirements/base.in
     #   edx-drf-extensions
     #   edx-rest-api-client
-edx-drf-extensions==8.3.1
+edx-drf-extensions==8.4.0
     # via -r requirements/base.in
 edx-opaque-keys==2.3.0
     # via edx-drf-extensions
@@ -131,7 +131,7 @@ l18n==2021.3
     # via wagtail
 markupsafe==2.1.1
     # via jinja2
-mock==4.0.3
+mock==5.0.0
     # via -r requirements/base.in
 mysqlclient==2.1.1
     # via -r requirements/base.in
@@ -147,7 +147,7 @@ packaging==22.0
     # via drf-yasg
 pbr==5.11.0
     # via stevedore
-pillow==9.3.0
+pillow==9.4.0
     # via wagtail
 psutil==5.9.4
     # via edx-django-utils
@@ -155,7 +155,7 @@ pycparser==2.21
     # via cffi
 pycryptodomex==3.16.0
     # via pyjwkest
-pydantic==1.10.2
+pydantic==1.10.4
     # via inflect
 pyjwkest==1.4.2
     # via edx-drf-extensions
@@ -176,7 +176,7 @@ python-dateutil==2.8.2
     #   edx-drf-extensions
 python3-openid==3.2.0
     # via social-auth-core
-pytz==2022.6
+pytz==2022.7
     # via
     #   -r requirements/base.in
     #   django
@@ -254,7 +254,7 @@ willow==1.4.1
     # via wagtail
 xlrd==2.0.1
     # via tablib
-xlsxwriter==3.0.3
+xlsxwriter==3.0.5
     # via wagtail
 xlwt==1.3.0
     # via tablib

@@ -8,7 +8,7 @@ anyascii==0.3.1
     # via
     #   -r requirements/base.txt
     #   wagtail
-asgiref==3.5.2
+asgiref==3.6.0
     # via
     #   -r requirements/base.txt
     #   django
@@ -16,7 +16,7 @@ astroid==2.12.13
     # via
     #   pylint
     #   pylint-celery
-attrs==22.1.0
+attrs==22.2.0
     # via pytest
 beautifulsoup4==4.9.3
     # via
@@ -59,12 +59,12 @@ coreschema==0.0.4
     #   -r requirements/base.txt
     #   coreapi
     #   drf-yasg
-coverage[toml]==6.5.0
+coverage[toml]==7.0.1
     # via
     #   -r requirements/test.in
     #   codecov
     #   pytest-cov
-cryptography==38.0.4
+cryptography==39.0.0
     # via
     #   -r requirements/base.txt
     #   pyjwt
@@ -116,13 +116,13 @@ django-modelcluster==5.3
     # via
     #   -r requirements/base.txt
     #   wagtail
-django-storages==1.13.1
+django-storages==1.13.2
     # via -r requirements/base.txt
 django-taggit==2.1.0
     # via
     #   -r requirements/base.txt
     #   wagtail
-django-treebeard==4.5.1
+django-treebeard==4.6.0
     # via
     #   -r requirements/base.txt
     #   wagtail
@@ -162,7 +162,7 @@ edx-django-utils==5.2.0
     #   -r requirements/base.txt
     #   edx-drf-extensions
     #   edx-rest-api-client
-edx-drf-extensions==8.3.1
+edx-drf-extensions==8.4.0
     # via -r requirements/base.txt
 edx-lint==5.3.0
     # via -r requirements/test.in
@@ -178,7 +178,7 @@ et-xmlfile==1.1.0
     # via
     #   -r requirements/base.txt
     #   openpyxl
-exceptiongroup==1.0.4
+exceptiongroup==1.1.0
     # via pytest
 factory-boy==3.2.1
     # via -r requirements/test.in
@@ -186,7 +186,7 @@ faker==15.3.4
     # via
     #   -r requirements/test.in
     #   factory-boy
-filelock==3.8.2
+filelock==3.9.0
     # via
     #   tox
     #   virtualenv
@@ -210,7 +210,7 @@ inflection==0.5.1
     #   drf-yasg
 iniconfig==1.1.1
     # via pytest
-isort==5.11.2
+isort==5.11.4
     # via pylint
 itypes==1.2.0
     # via
@@ -233,7 +233,7 @@ markupsafe==2.1.1
     #   jinja2
 mccabe==0.7.0
     # via pylint
-mock==4.0.3
+mock==5.0.0
     # via
     #   -r requirements/base.txt
     #   -r requirements/test.in
@@ -262,11 +262,11 @@ pbr==5.11.0
     # via
     #   -r requirements/base.txt
     #   stevedore
-pillow==9.3.0
+pillow==9.4.0
     # via
     #   -r requirements/base.txt
     #   wagtail
-platformdirs==2.6.0
+platformdirs==2.6.2
     # via
     #   pylint
     #   virtualenv
@@ -288,7 +288,7 @@ pycryptodomex==3.16.0
     # via
     #   -r requirements/base.txt
     #   pyjwkest
-pydantic==1.10.2
+pydantic==1.10.4
     # via
     #   -r requirements/base.txt
     #   inflect
@@ -304,7 +304,7 @@ pyjwt[crypto]==2.6.0
     #   edx-drf-extensions
     #   edx-rest-api-client
     #   social-auth-core
-pylint==2.15.8
+pylint==2.15.9
     # via
     #   edx-lint
     #   pylint-celery
@@ -346,7 +346,7 @@ python3-openid==3.2.0
     # via
     #   -r requirements/base.txt
     #   social-auth-core
-pytz==2022.6
+pytz==2022.7
     # via
     #   -r requirements/base.txt
     #   django
@@ -445,7 +445,7 @@ tomli==2.0.1
     #   tox
 tomlkit==0.11.6
     # via pylint
-tox==3.27.1
+tox==3.28.0
     # via
     #   -c requirements/common_constraints.txt
     #   -r requirements/test.in
@@ -484,7 +484,7 @@ xlrd==2.0.1
     # via
     #   -r requirements/base.txt
     #   tablib
-xlsxwriter==3.0.3
+xlsxwriter==3.0.5
     # via
     #   -r requirements/base.txt
     #   wagtail
