@@ -12,7 +12,7 @@ asgiref==3.6.0
     # via
     #   -r requirements/base.txt
     #   django
-astroid==2.12.13
+astroid==2.13.2
     # via
     #   pylint
     #   pylint-celery
@@ -31,7 +31,7 @@ cffi==1.15.1
     #   -r requirements/base.txt
     #   cryptography
     #   pynacl
-charset-normalizer==2.1.1
+charset-normalizer==3.0.1
     # via
     #   -r requirements/base.txt
     #   requests
@@ -59,7 +59,7 @@ coreschema==0.0.4
     #   -r requirements/base.txt
     #   coreapi
     #   drf-yasg
-coverage[toml]==7.0.1
+coverage[toml]==7.0.5
     # via
     #   -r requirements/test.in
     #   codecov
@@ -182,7 +182,7 @@ exceptiongroup==1.1.0
     # via pytest
 factory-boy==3.2.1
     # via -r requirements/test.in
-faker==15.3.4
+faker==16.4.0
     # via
     #   -r requirements/test.in
     #   factory-boy
@@ -190,7 +190,7 @@ filelock==3.9.0
     # via
     #   tox
     #   virtualenv
-future==0.18.2
+future==0.18.3
     # via
     #   -r requirements/base.txt
     #   pyjwkest
@@ -208,7 +208,7 @@ inflection==0.5.1
     # via
     #   -r requirements/base.txt
     #   drf-yasg
-iniconfig==1.1.1
+iniconfig==2.0.0
     # via pytest
 isort==5.11.4
     # via pylint
@@ -225,7 +225,7 @@ l18n==2021.3
     # via
     #   -r requirements/base.txt
     #   wagtail
-lazy-object-proxy==1.8.0
+lazy-object-proxy==1.9.0
     # via astroid
 markupsafe==2.1.1
     # via
@@ -233,7 +233,7 @@ markupsafe==2.1.1
     #   jinja2
 mccabe==0.7.0
     # via pylint
-mock==5.0.0
+mock==5.0.1
     # via
     #   -r requirements/base.txt
     #   -r requirements/test.in
@@ -252,13 +252,13 @@ openpyxl==3.0.10
     # via
     #   -r requirements/base.txt
     #   tablib
-packaging==22.0
+packaging==23.0
     # via
     #   -r requirements/base.txt
     #   drf-yasg
     #   pytest
     #   tox
-pbr==5.11.0
+pbr==5.11.1
     # via
     #   -r requirements/base.txt
     #   stevedore
@@ -304,7 +304,7 @@ pyjwt[crypto]==2.6.0
     #   edx-drf-extensions
     #   edx-rest-api-client
     #   social-auth-core
-pylint==2.15.9
+pylint==2.15.10
     # via
     #   edx-lint
     #   pylint-celery
@@ -326,7 +326,7 @@ pynacl==1.5.0
     # via
     #   -r requirements/base.txt
     #   edx-django-utils
-pytest==7.2.0
+pytest==7.2.1
     # via
     #   -r requirements/test.in
     #   pytest-cov
@@ -346,7 +346,7 @@ python3-openid==3.2.0
     # via
     #   -r requirements/base.txt
     #   social-auth-core
-pytz==2022.7
+pytz==2022.7.1
     # via
     #   -r requirements/base.txt
     #   django
@@ -359,7 +359,7 @@ pyyaml==6.0
     #   -r requirements/base.txt
     #   code-annotations
     #   edx-django-release-util
-requests==2.28.1
+requests==2.28.2
     # via
     #   -r requirements/base.txt
     #   codecov
@@ -460,7 +460,7 @@ uritemplate==4.1.1
     #   -r requirements/base.txt
     #   coreapi
     #   drf-yasg
-urllib3==1.26.13
+urllib3==1.26.14
     # via
     #   -r requirements/base.txt
     #   requests
@@ -484,7 +484,7 @@ xlrd==2.0.1
     # via
     #   -r requirements/base.txt
     #   tablib
-xlsxwriter==3.0.5
+xlsxwriter==3.0.7
     # via
     #   -r requirements/base.txt
     #   wagtail

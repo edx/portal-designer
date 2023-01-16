@@ -12,7 +12,7 @@ asgiref==3.6.0
     # via
     #   -r requirements/test.txt
     #   django
-astroid==2.12.13
+astroid==2.13.2
     # via
     #   -r requirements/test.txt
     #   pylint
@@ -34,7 +34,7 @@ cffi==1.15.1
     #   -r requirements/test.txt
     #   cryptography
     #   pynacl
-charset-normalizer==2.1.1
+charset-normalizer==3.0.1
     # via
     #   -r requirements/test.txt
     #   requests
@@ -64,7 +64,7 @@ coreschema==0.0.4
     #   -r requirements/test.txt
     #   coreapi
     #   drf-yasg
-coverage[toml]==7.0.1
+coverage[toml]==7.0.5
     # via
     #   -r requirements/test.txt
     #   codecov
@@ -192,7 +192,7 @@ exceptiongroup==1.1.0
     #   pytest
 factory-boy==3.2.1
     # via -r requirements/test.txt
-faker==15.3.4
+faker==16.4.0
     # via
     #   -r requirements/test.txt
     #   factory-boy
@@ -201,7 +201,7 @@ filelock==3.9.0
     #   -r requirements/test.txt
     #   tox
     #   virtualenv
-future==0.18.2
+future==0.18.3
     # via
     #   -r requirements/test.txt
     #   pyjwkest
@@ -219,7 +219,7 @@ inflection==0.5.1
     # via
     #   -r requirements/test.txt
     #   drf-yasg
-iniconfig==1.1.1
+iniconfig==2.0.0
     # via
     #   -r requirements/test.txt
     #   pytest
@@ -241,7 +241,7 @@ l18n==2021.3
     # via
     #   -r requirements/test.txt
     #   wagtail
-lazy-object-proxy==1.8.0
+lazy-object-proxy==1.9.0
     # via
     #   -r requirements/test.txt
     #   astroid
@@ -253,7 +253,7 @@ mccabe==0.7.0
     # via
     #   -r requirements/test.txt
     #   pylint
-mock==5.0.0
+mock==5.0.1
     # via -r requirements/test.txt
 mysqlclient==2.1.1
     # via -r requirements/test.txt
@@ -270,13 +270,13 @@ openpyxl==3.0.10
     # via
     #   -r requirements/test.txt
     #   tablib
-packaging==22.0
+packaging==23.0
     # via
     #   -r requirements/test.txt
     #   drf-yasg
     #   pytest
     #   tox
-pbr==5.11.0
+pbr==5.11.1
     # via
     #   -r requirements/test.txt
     #   stevedore
@@ -316,7 +316,7 @@ pydantic==1.10.4
     # via
     #   -r requirements/test.txt
     #   inflect
-pydocstyle==6.1.1
+pydocstyle==6.2.3
     # via -r requirements/quality.in
 pyjwkest==1.4.2
     # via
@@ -330,7 +330,7 @@ pyjwt[crypto]==2.6.0
     #   edx-drf-extensions
     #   edx-rest-api-client
     #   social-auth-core
-pylint==2.15.9
+pylint==2.15.10
     # via
     #   -r requirements/test.txt
     #   edx-lint
@@ -358,7 +358,7 @@ pynacl==1.5.0
     # via
     #   -r requirements/test.txt
     #   edx-django-utils
-pytest==7.2.0
+pytest==7.2.1
     # via
     #   -r requirements/test.txt
     #   pytest-cov
@@ -380,7 +380,7 @@ python3-openid==3.2.0
     # via
     #   -r requirements/test.txt
     #   social-auth-core
-pytz==2022.7
+pytz==2022.7.1
     # via
     #   -r requirements/test.txt
     #   django
@@ -393,7 +393,7 @@ pyyaml==6.0
     #   -r requirements/test.txt
     #   code-annotations
     #   edx-django-release-util
-requests==2.28.1
+requests==2.28.2
     # via
     #   -r requirements/test.txt
     #   codecov
@@ -499,7 +499,7 @@ uritemplate==4.1.1
     #   -r requirements/test.txt
     #   coreapi
     #   drf-yasg
-urllib3==1.26.13
+urllib3==1.26.14
     # via
     #   -r requirements/test.txt
     #   requests
@@ -525,7 +525,7 @@ xlrd==2.0.1
     # via
     #   -r requirements/test.txt
     #   tablib
-xlsxwriter==3.0.5
+xlsxwriter==3.0.7
     # via
     #   -r requirements/test.txt
     #   wagtail
