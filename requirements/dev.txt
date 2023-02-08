@@ -6,48 +6,48 @@
 #
 anyascii==0.3.1
     # via
-    #   -r requirements/quality.txt
+    #   -r quality.txt
     #   wagtail
 asgiref==3.6.0
     # via
-    #   -r requirements/quality.txt
+    #   -r quality.txt
     #   django
 astroid==2.14.1
     # via
-    #   -r requirements/quality.txt
+    #   -r quality.txt
     #   pylint
     #   pylint-celery
 attrs==22.2.0
     # via
-    #   -r requirements/quality.txt
+    #   -r quality.txt
     #   pytest
 beautifulsoup4==4.9.3
     # via
-    #   -r requirements/quality.txt
+    #   -r quality.txt
     #   wagtail
 build==0.10.0
     # via
-    #   -r requirements/pip-tools.txt
+    #   -r pip-tools.txt
     #   pip-tools
 certifi==2022.12.7
     # via
-    #   -r requirements/quality.txt
+    #   -r quality.txt
     #   requests
 cffi==1.15.1
     # via
-    #   -r requirements/quality.txt
+    #   -r quality.txt
     #   cryptography
     #   pynacl
 chardet==5.1.0
     # via diff-cover
 charset-normalizer==3.0.1
     # via
-    #   -r requirements/quality.txt
+    #   -r quality.txt
     #   requests
 click==8.1.3
     # via
-    #   -r requirements/pip-tools.txt
-    #   -r requirements/quality.txt
+    #   -r pip-tools.txt
+    #   -r quality.txt
     #   click-log
     #   code-annotations
     #   edx-django-utils
@@ -55,53 +55,53 @@ click==8.1.3
     #   pip-tools
 click-log==0.4.0
     # via
-    #   -r requirements/quality.txt
+    #   -r quality.txt
     #   edx-lint
 code-annotations==1.3.0
     # via
-    #   -r requirements/quality.txt
+    #   -r quality.txt
     #   edx-lint
 codecov==2.1.12
-    # via -r requirements/quality.txt
+    # via -r quality.txt
 coreapi==2.3.3
     # via
-    #   -r requirements/quality.txt
+    #   -r quality.txt
     #   drf-yasg
 coreschema==0.0.4
     # via
-    #   -r requirements/quality.txt
+    #   -r quality.txt
     #   coreapi
     #   drf-yasg
 coverage[toml]==7.1.0
     # via
-    #   -r requirements/quality.txt
+    #   -r quality.txt
     #   codecov
     #   pytest-cov
-cryptography==39.0.0
+cryptography==39.0.1
     # via
-    #   -r requirements/quality.txt
+    #   -r quality.txt
     #   pyjwt
     #   social-auth-core
 defusedxml==0.7.1
     # via
-    #   -r requirements/quality.txt
+    #   -r quality.txt
     #   python3-openid
     #   social-auth-core
 diff-cover==7.4.0
-    # via -r requirements/dev.in
+    # via -r dev.in
 dill==0.3.6
     # via
-    #   -r requirements/quality.txt
+    #   -r quality.txt
     #   pylint
 distlib==0.3.6
     # via
-    #   -r requirements/quality.txt
+    #   -r quality.txt
     #   virtualenv
 django==3.2.17
     # via
-    #   -c requirements/common_constraints.txt
-    #   -c requirements/constraints.txt
-    #   -r requirements/quality.txt
+    #   -c common_constraints.txt
+    #   -c constraints.txt
+    #   -r quality.txt
     #   django-cors-headers
     #   django-crum
     #   django-debug-toolbar
@@ -121,43 +121,43 @@ django==3.2.17
     #   edx-i18n-tools
     #   wagtail
 django-cors-headers==3.13.0
-    # via -r requirements/quality.txt
+    # via -r quality.txt
 django-crum==0.7.9
     # via
-    #   -r requirements/quality.txt
+    #   -r quality.txt
     #   edx-django-utils
 django-debug-toolbar==3.8.1
-    # via -r requirements/dev.in
+    # via -r dev.in
 django-dynamic-fixture==3.1.2
-    # via -r requirements/quality.txt
+    # via -r quality.txt
 django-extensions==3.2.1
-    # via -r requirements/quality.txt
+    # via -r quality.txt
 django-filter==21.1
     # via
-    #   -r requirements/quality.txt
+    #   -r quality.txt
     #   wagtail
 django-modelcluster==5.3
     # via
-    #   -r requirements/quality.txt
+    #   -r quality.txt
     #   wagtail
 django-storages==1.13.2
-    # via -r requirements/quality.txt
+    # via -r quality.txt
 django-taggit==2.1.0
     # via
-    #   -r requirements/quality.txt
+    #   -r quality.txt
     #   wagtail
 django-treebeard==4.6.0
     # via
-    #   -r requirements/quality.txt
+    #   -r quality.txt
     #   wagtail
 django-waffle==3.0.0
     # via
-    #   -r requirements/quality.txt
+    #   -r quality.txt
     #   edx-django-utils
     #   edx-drf-extensions
 djangorestframework==3.14.0
     # via
-    #   -r requirements/quality.txt
+    #   -r quality.txt
     #   drf-jwt
     #   drf-yasg
     #   edx-api-doc-tools
@@ -165,133 +165,129 @@ djangorestframework==3.14.0
     #   wagtail
 draftjs-exporter==2.1.7
     # via
-    #   -r requirements/quality.txt
+    #   -r quality.txt
     #   wagtail
 drf-jwt==1.19.2
     # via
-    #   -r requirements/quality.txt
+    #   -r quality.txt
     #   edx-drf-extensions
 drf-yasg==1.21.4
     # via
-    #   -r requirements/quality.txt
+    #   -r quality.txt
     #   edx-api-doc-tools
 edx-api-doc-tools==1.6.0
-    # via -r requirements/quality.txt
+    # via -r quality.txt
 edx-auth-backends==4.1.0
-    # via -r requirements/quality.txt
+    # via -r quality.txt
 edx-django-release-util==1.2.0
-    # via -r requirements/quality.txt
+    # via -r quality.txt
 edx-django-utils==5.2.0
     # via
-    #   -r requirements/quality.txt
+    #   -r quality.txt
     #   edx-drf-extensions
     #   edx-rest-api-client
 edx-drf-extensions==8.4.1
-    # via -r requirements/quality.txt
+    # via -r quality.txt
 edx-i18n-tools==0.9.2
-    # via -r requirements/dev.in
+    # via -r dev.in
 edx-lint==5.3.0
-    # via -r requirements/quality.txt
+    # via -r quality.txt
 edx-opaque-keys==2.3.0
     # via
-    #   -r requirements/quality.txt
+    #   -r quality.txt
     #   edx-drf-extensions
 edx-rest-api-client==4.0.1
     # via
-    #   -c requirements/constraints.txt
-    #   -r requirements/quality.txt
+    #   -c constraints.txt
+    #   -r quality.txt
 et-xmlfile==1.1.0
     # via
-    #   -r requirements/quality.txt
+    #   -r quality.txt
     #   openpyxl
-exceptiongroup==1.1.0
-    # via
-    #   -r requirements/quality.txt
-    #   pytest
 factory-boy==3.2.1
-    # via -r requirements/quality.txt
+    # via -r quality.txt
 faker==16.6.1
     # via
-    #   -r requirements/quality.txt
+    #   -r quality.txt
     #   factory-boy
 filelock==3.9.0
     # via
-    #   -r requirements/quality.txt
+    #   -r quality.txt
     #   tox
     #   virtualenv
 future==0.18.3
     # via
-    #   -r requirements/quality.txt
+    #   -r quality.txt
     #   pyjwkest
 html5lib==1.1
     # via
-    #   -r requirements/quality.txt
+    #   -r quality.txt
     #   wagtail
 idna==3.4
     # via
-    #   -r requirements/quality.txt
+    #   -r quality.txt
     #   requests
 inflect==6.0.2
-    # via -r requirements/quality.txt
+    # via -r quality.txt
 inflection==0.5.1
     # via
-    #   -r requirements/quality.txt
+    #   -r quality.txt
     #   drf-yasg
 iniconfig==2.0.0
     # via
-    #   -r requirements/quality.txt
+    #   -r quality.txt
     #   pytest
 isort==5.12.0
     # via
-    #   -r requirements/quality.txt
+    #   -r quality.txt
     #   pylint
 itypes==1.2.0
     # via
-    #   -r requirements/quality.txt
+    #   -r quality.txt
     #   coreapi
 jinja2==3.1.2
     # via
-    #   -r requirements/quality.txt
+    #   -r quality.txt
     #   code-annotations
     #   coreschema
     #   diff-cover
 l18n==2021.3
     # via
-    #   -r requirements/quality.txt
+    #   -r quality.txt
     #   wagtail
 lazy-object-proxy==1.9.0
     # via
-    #   -r requirements/quality.txt
+    #   -r quality.txt
     #   astroid
 markupsafe==2.1.2
     # via
-    #   -r requirements/quality.txt
+    #   -r quality.txt
     #   jinja2
 mccabe==0.7.0
     # via
-    #   -r requirements/quality.txt
+    #   -r quality.txt
     #   pylint
 mock==5.0.1
-    # via -r requirements/quality.txt
+    # via -r quality.txt
 mysqlclient==2.1.1
-    # via -r requirements/quality.txt
+    # via -r quality.txt
 newrelic==8.5.0
     # via
-    #   -r requirements/quality.txt
+    #   -r quality.txt
     #   edx-django-utils
 oauthlib==3.2.2
     # via
-    #   -r requirements/quality.txt
+    #   -r quality.txt
     #   requests-oauthlib
     #   social-auth-core
 openpyxl==3.1.0
     # via
-    #   -r requirements/quality.txt
+    #   -r quality.txt
     #   tablib
 packaging==23.0
     # via
-    #   -r requirements/pip-tools.txt
-    #   -r requirements/quality.txt
+    #   -r pip-tools.txt
+    #   -r quality.txt
     #   build
     #   drf-yasg
     #   pytest
@@ -300,22 +296,22 @@ path==16.6.0
     # via edx-i18n-tools
 pbr==5.11.1
     # via
-    #   -r requirements/quality.txt
+    #   -r quality.txt
     #   stevedore
 pillow==9.4.0
     # via
-    #   -r requirements/quality.txt
+    #   -r quality.txt
     #   wagtail
 pip-tools==6.12.2
-    # via -r requirements/pip-tools.txt
+    # via -r pip-tools.txt
 platformdirs==2.6.2
     # via
-    #   -r requirements/quality.txt
+    #   -r quality.txt
     #   pylint
     #   virtualenv
 pluggy==1.0.0
     # via
-    #   -r requirements/quality.txt
+    #   -r quality.txt
     #   diff-cover
     #   pytest
     #   tox
@@ -323,37 +319,37 @@ polib==1.1.1
     # via edx-i18n-tools
 psutil==5.9.4
     # via
-    #   -r requirements/quality.txt
+    #   -r quality.txt
     #   edx-django-utils
 py==1.11.0
     # via
-    #   -r requirements/quality.txt
+    #   -r quality.txt
     #   tox
 pycodestyle==2.10.0
-    # via -r requirements/quality.txt
+    # via -r quality.txt
 pycparser==2.21
     # via
-    #   -r requirements/quality.txt
+    #   -r quality.txt
     #   cffi
 pycryptodomex==3.17
     # via
-    #   -r requirements/quality.txt
+    #   -r quality.txt
     #   pyjwkest
 pydantic==1.10.4
     # via
-    #   -r requirements/quality.txt
+    #   -r quality.txt
     #   inflect
 pydocstyle==6.3.0
-    # via -r requirements/quality.txt
+    # via -r quality.txt
 pygments==2.14.0
     # via diff-cover
 pyjwkest==1.4.2
     # via
-    #   -r requirements/quality.txt
+    #   -r quality.txt
     #   edx-drf-extensions
 pyjwt[crypto]==2.6.0
     # via
-    #   -r requirements/quality.txt
+    #   -r quality.txt
     #   drf-jwt
     #   edx-auth-backends
     #   edx-drf-extensions
@@ -361,61 +357,61 @@ pyjwt[crypto]==2.6.0
     #   social-auth-core
 pylint==2.16.0
     # via
-    #   -r requirements/quality.txt
+    #   -r quality.txt
     #   edx-lint
     #   pylint-celery
     #   pylint-django
     #   pylint-plugin-utils
 pylint-celery==0.3
     # via
-    #   -r requirements/quality.txt
+    #   -r quality.txt
     #   edx-lint
 pylint-django==2.5.3
     # via
-    #   -r requirements/quality.txt
+    #   -r quality.txt
     #   edx-lint
 pylint-plugin-utils==0.7
     # via
-    #   -r requirements/quality.txt
+    #   -r quality.txt
     #   pylint-celery
     #   pylint-django
 pymongo==3.13.0
     # via
-    #   -r requirements/quality.txt
+    #   -r quality.txt
     #   edx-opaque-keys
 pynacl==1.5.0
     # via
-    #   -r requirements/quality.txt
+    #   -r quality.txt
     #   edx-django-utils
 pyproject-hooks==1.0.0
     # via
-    #   -r requirements/pip-tools.txt
+    #   -r pip-tools.txt
     #   build
 pytest==7.2.1
     # via
-    #   -r requirements/quality.txt
+    #   -r quality.txt
     #   pytest-cov
     #   pytest-django
 pytest-cov==4.0.0
-    # via -r requirements/quality.txt
+    # via -r quality.txt
 pytest-django==4.5.2
-    # via -r requirements/quality.txt
+    # via -r quality.txt
 python-dateutil==2.8.2
     # via
-    #   -r requirements/quality.txt
+    #   -r quality.txt
     #   edx-drf-extensions
     #   faker
 python-slugify==8.0.0
     # via
-    #   -r requirements/quality.txt
+    #   -r quality.txt
     #   code-annotations
 python3-openid==3.2.0
     # via
-    #   -r requirements/quality.txt
+    #   -r quality.txt
     #   social-auth-core
 pytz==2022.7.1
     # via
-    #   -r requirements/quality.txt
+    #   -r quality.txt
     #   django
     #   django-modelcluster
     #   djangorestframework
@@ -423,13 +419,13 @@ pytz==2022.7.1
     #   l18n
 pyyaml==6.0
     # via
-    #   -r requirements/quality.txt
+    #   -r quality.txt
     #   code-annotations
     #   edx-django-release-util
     #   edx-i18n-tools
 requests==2.28.2
     # via
-    #   -r requirements/quality.txt
+    #   -r quality.txt
     #   codecov
     #   coreapi
     #   edx-drf-extensions
@@ -441,23 +437,19 @@ requests==2.28.2
     #   wagtail
 requests-oauthlib==1.3.1
     # via
-    #   -r requirements/quality.txt
+    #   -r quality.txt
     #   social-auth-core
 ruamel-yaml==0.17.21
     # via
-    #   -r requirements/quality.txt
+    #   -r quality.txt
     #   drf-yasg
-ruamel-yaml-clib==0.2.7
-    # via
-    #   -r requirements/quality.txt
-    #   ruamel-yaml
 semantic-version==2.10.0
     # via
-    #   -r requirements/quality.txt
+    #   -r quality.txt
     #   edx-drf-extensions
 six==1.16.0
     # via
-    #   -r requirements/quality.txt
+    #   -r quality.txt
     #   django-dynamic-fixture
     #   edx-auth-backends
     #   edx-django-release-util
@@ -470,119 +462,109 @@ six==1.16.0
     #   tox
 slumber==0.7.1
     # via
-    #   -r requirements/quality.txt
+    #   -r quality.txt
     #   edx-rest-api-client
 snowballstemmer==2.2.0
     # via
-    #   -r requirements/quality.txt
+    #   -r quality.txt
     #   pydocstyle
 social-auth-app-django==5.0.0
     # via
-    #   -r requirements/quality.txt
+    #   -r quality.txt
     #   edx-auth-backends
 social-auth-core==4.3.0
     # via
-    #   -r requirements/quality.txt
+    #   -r quality.txt
     #   edx-auth-backends
     #   social-auth-app-django
 soupsieve==2.3.2.post1
     # via
-    #   -r requirements/quality.txt
+    #   -r quality.txt
     #   beautifulsoup4
 sqlparse==0.4.3
     # via
-    #   -r requirements/quality.txt
+    #   -r quality.txt
     #   django
     #   django-debug-toolbar
 stevedore==4.1.1
     # via
-    #   -r requirements/quality.txt
+    #   -r quality.txt
     #   code-annotations
     #   edx-django-utils
     #   edx-opaque-keys
 tablib[xls,xlsx]==3.3.0
     # via
-    #   -r requirements/quality.txt
+    #   -r quality.txt
     #   wagtail
 telepath==0.3
     # via
-    #   -r requirements/quality.txt
+    #   -r quality.txt
     #   wagtail
 text-unidecode==1.3
     # via
-    #   -r requirements/quality.txt
+    #   -r quality.txt
     #   python-slugify
 tomli==2.0.1
-    # via
-    #   -r requirements/pip-tools.txt
-    #   -r requirements/quality.txt
-    #   build
-    #   coverage
-    #   pylint
-    #   pyproject-hooks
-    #   pytest
-    #   tox
+    # via -r pip-tools.txt
 tomlkit==0.11.6
     # via
-    #   -r requirements/quality.txt
+    #   -r quality.txt
     #   pylint
 tox==3.28.0
     # via
-    #   -c requirements/common_constraints.txt
-    #   -r requirements/quality.txt
+    #   -c common_constraints.txt
+    #   -r quality.txt
 typing-extensions==4.4.0
     # via
-    #   -r requirements/quality.txt
-    #   astroid
+    #   -r quality.txt
     #   pydantic
-    #   pylint
 uritemplate==4.1.1
     # via
-    #   -r requirements/quality.txt
+    #   -r quality.txt
     #   coreapi
     #   drf-yasg
 urllib3==1.26.14
     # via
-    #   -r requirements/quality.txt
+    #   -r quality.txt
     #   requests
 virtualenv==20.17.1
     # via
-    #   -r requirements/quality.txt
+    #   -r quality.txt
     #   tox
 wagtail==2.16.3
     # via
-    #   -c requirements/constraints.txt
-    #   -r requirements/quality.txt
+    #   -c constraints.txt
+    #   -r quality.txt
 webencodings==0.5.1
     # via
-    #   -r requirements/quality.txt
+    #   -r quality.txt
     #   html5lib
 wheel==0.38.4
     # via
-    #   -r requirements/pip-tools.txt
+    #   -r pip-tools.txt
     #   pip-tools
 willow==1.4.1
     # via
-    #   -r requirements/quality.txt
+    #   -r quality.txt
     #   wagtail
 wrapt==1.14.1
     # via
-    #   -r requirements/quality.txt
+    #   -r quality.txt
     #   astroid
 xlrd==2.0.1
     # via
-    #   -r requirements/quality.txt
+    #   -r quality.txt
     #   tablib
 xlsxwriter==3.0.7
     # via
-    #   -r requirements/quality.txt
+    #   -r quality.txt
     #   wagtail
 xlwt==1.3.0
     # via
-    #   -r requirements/quality.txt
+    #   -r quality.txt
     #   tablib
 zipp==3.12.0
-    # via -r requirements/quality.txt
+    # via -r quality.txt
 
 # The following packages are considered to be unsafe in a requirements file:
 # pip
