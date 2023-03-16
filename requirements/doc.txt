@@ -6,7 +6,7 @@
 #
 alabaster==0.7.13
     # via sphinx
-anyascii==0.3.1
+anyascii==0.3.2
     # via
     #   -r requirements/test.txt
     #   wagtail
@@ -14,7 +14,7 @@ asgiref==3.6.0
     # via
     #   -r requirements/test.txt
     #   django
-astroid==2.14.2
+astroid==2.15.0
     # via
     #   -r requirements/test.txt
     #   pylint
@@ -40,7 +40,7 @@ cffi==1.15.1
     #   -r requirements/test.txt
     #   cryptography
     #   pynacl
-charset-normalizer==3.0.1
+charset-normalizer==3.1.0
     # via
     #   -r requirements/test.txt
     #   requests
@@ -70,12 +70,12 @@ coreschema==0.0.4
     #   -r requirements/test.txt
     #   coreapi
     #   drf-yasg
-coverage[toml]==7.2.1
+coverage[toml]==7.2.2
     # via
     #   -r requirements/test.txt
     #   codecov
     #   pytest-cov
-cryptography==39.0.1
+cryptography==39.0.2
     # via
     #   -r requirements/test.txt
     #   pyjwt
@@ -186,7 +186,7 @@ edx-django-utils==5.2.0
     #   edx-rest-api-client
 edx-drf-extensions==8.4.1
     # via -r requirements/test.txt
-edx-lint==5.3.2
+edx-lint==5.3.4
     # via -r requirements/test.txt
 edx-opaque-keys==2.3.0
     # via
@@ -200,17 +200,17 @@ et-xmlfile==1.1.0
     # via
     #   -r requirements/test.txt
     #   openpyxl
-exceptiongroup==1.1.0
+exceptiongroup==1.1.1
     # via
     #   -r requirements/test.txt
     #   pytest
 factory-boy==3.2.1
     # via -r requirements/test.txt
-faker==17.5.0
+faker==17.6.0
     # via
     #   -r requirements/test.txt
     #   factory-boy
-filelock==3.9.0
+filelock==3.10.0
     # via
     #   -r requirements/test.txt
     #   tox
@@ -284,7 +284,7 @@ oauthlib==3.2.2
     #   -r requirements/test.txt
     #   requests-oauthlib
     #   social-auth-core
-openpyxl==3.1.1
+openpyxl==3.1.2
     # via
     #   -r requirements/test.txt
     #   tablib
@@ -303,7 +303,7 @@ pillow==9.4.0
     # via
     #   -r requirements/test.txt
     #   wagtail
-platformdirs==3.0.0
+platformdirs==3.1.1
     # via
     #   -r requirements/test.txt
     #   pylint
@@ -329,7 +329,7 @@ pycryptodomex==3.17
     # via
     #   -r requirements/test.txt
     #   pyjwkest
-pydantic==1.10.5
+pydantic==1.10.6
     # via
     #   -r requirements/test.txt
     #   inflect
@@ -350,7 +350,7 @@ pyjwt[crypto]==2.6.0
     #   edx-drf-extensions
     #   edx-rest-api-client
     #   social-auth-core
-pylint==2.16.2
+pylint==2.17.0
     # via
     #   -r requirements/test.txt
     #   edx-lint
@@ -378,7 +378,7 @@ pynacl==1.5.0
     # via
     #   -r requirements/test.txt
     #   edx-django-utils
-pytest==7.2.1
+pytest==7.2.2
     # via
     #   -r requirements/test.txt
     #   pytest-cov
@@ -468,11 +468,11 @@ slumber==0.7.1
     #   edx-rest-api-client
 snowballstemmer==2.2.0
     # via sphinx
-social-auth-app-django==5.0.0
+social-auth-app-django==5.1.0
     # via
     #   -r requirements/test.txt
     #   edx-auth-backends
-social-auth-core==4.3.0
+social-auth-core==4.4.0
     # via
     #   -r requirements/test.txt
     #   edx-auth-backends
@@ -545,11 +545,11 @@ uritemplate==4.1.1
     #   -r requirements/test.txt
     #   coreapi
     #   drf-yasg
-urllib3==1.26.14
+urllib3==1.26.15
     # via
     #   -r requirements/test.txt
     #   requests
-virtualenv==20.20.0
+virtualenv==20.21.0
     # via
     #   -r requirements/test.txt
     #   tox
@@ -572,7 +572,7 @@ xlrd==2.0.1
     # via
     #   -r requirements/test.txt
     #   tablib
-xlsxwriter==3.0.8
+xlsxwriter==3.0.9
     # via
     #   -r requirements/test.txt
     #   wagtail
