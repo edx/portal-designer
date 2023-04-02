@@ -16,9 +16,9 @@ beautifulsoup4==4.9.3
     # via
     #   -r requirements/base.txt
     #   wagtail
-boto3==1.26.92
+boto3==1.26.104
     # via -r requirements/production.in
-botocore==1.29.92
+botocore==1.29.104
     # via
     #   boto3
     #   s3transfer
@@ -48,7 +48,7 @@ coreschema==0.0.4
     #   -r requirements/base.txt
     #   coreapi
     #   drf-yasg
-cryptography==39.0.2
+cryptography==40.0.1
     # via
     #   -r requirements/base.txt
     #   pyjwt
@@ -76,6 +76,7 @@ django==3.2.18
     #   edx-django-release-util
     #   edx-django-utils
     #   edx-drf-extensions
+    #   social-auth-app-django
     #   wagtail
 django-cors-headers==3.14.0
     # via -r requirements/base.txt
@@ -134,7 +135,7 @@ edx-auth-backends==4.1.0
     # via -r requirements/base.txt
 edx-django-release-util==1.2.0
     # via -r requirements/base.txt
-edx-django-utils==5.2.0
+edx-django-utils==5.3.0
     # via
     #   -r requirements/base.txt
     #   edx-drf-extensions
@@ -199,7 +200,7 @@ mock==5.0.1
     # via -r requirements/base.txt
 mysqlclient==2.1.1
     # via -r requirements/base.txt
-newrelic==8.7.0
+newrelic==8.8.0
     # via
     #   -r requirements/base.txt
     #   edx-django-utils
@@ -220,7 +221,7 @@ pbr==5.11.1
     # via
     #   -r requirements/base.txt
     #   stevedore
-pillow==9.4.0
+pillow==9.5.0
     # via
     #   -r requirements/base.txt
     #   wagtail
@@ -236,7 +237,7 @@ pycryptodomex==3.17
     # via
     #   -r requirements/base.txt
     #   pyjwkest
-pydantic==1.10.6
+pydantic==1.10.7
     # via
     #   -r requirements/base.txt
     #   inflect
@@ -271,7 +272,7 @@ python3-openid==3.2.0
     # via
     #   -r requirements/base.txt
     #   social-auth-core
-pytz==2022.7.1
+pytz==2023.3
     # via
     #   -r requirements/base.txt
     #   django
@@ -328,11 +329,11 @@ slumber==0.7.1
     # via
     #   -r requirements/base.txt
     #   edx-rest-api-client
-social-auth-app-django==5.1.0
+social-auth-app-django==5.2.0
     # via
     #   -r requirements/base.txt
     #   edx-auth-backends
-social-auth-core==4.4.0
+social-auth-core==4.4.1
     # via
     #   -r requirements/base.txt
     #   edx-auth-backends
@@ -350,7 +351,7 @@ stevedore==5.0.0
     #   -r requirements/base.txt
     #   edx-django-utils
     #   edx-opaque-keys
-tablib[xls,xlsx]==3.3.0
+tablib[xls,xlsx]==3.4.0
     # via
     #   -r requirements/base.txt
     #   wagtail
@@ -398,7 +399,7 @@ zipp==3.15.0
     # via -r requirements/base.txt
 zope-event==4.6
     # via gevent
-zope-interface==5.5.2
+zope-interface==6.0
     # via gevent
 
 # The following packages are considered to be unsafe in a requirements file:
