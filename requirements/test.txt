@@ -12,7 +12,7 @@ asgiref==3.6.0
     # via
     #   -r requirements/base.txt
     #   django
-astroid==2.15.0
+astroid==2.15.2
     # via
     #   pylint
     #   pylint-celery
@@ -64,7 +64,7 @@ coverage[toml]==7.2.2
     #   -r requirements/test.in
     #   codecov
     #   pytest-cov
-cryptography==39.0.2
+cryptography==40.0.1
     # via
     #   -r requirements/base.txt
     #   pyjwt
@@ -97,6 +97,7 @@ distlib==0.3.6
     #   edx-django-release-util
     #   edx-django-utils
     #   edx-drf-extensions
+    #   social-auth-app-django
     #   wagtail
 django-cors-headers==3.14.0
     # via -r requirements/base.txt
@@ -157,7 +158,7 @@ edx-auth-backends==4.1.0
     # via -r requirements/base.txt
 edx-django-release-util==1.2.0
     # via -r requirements/base.txt
-edx-django-utils==5.2.0
+edx-django-utils==5.3.0
     # via
     #   -r requirements/base.txt
     #   edx-drf-extensions
@@ -182,11 +183,11 @@ exceptiongroup==1.1.1
     # via pytest
 factory-boy==3.2.1
     # via -r requirements/test.in
-faker==17.6.0
+faker==18.3.2
     # via
     #   -r requirements/test.in
     #   factory-boy
-filelock==3.10.0
+filelock==3.10.7
     # via
     #   tox
     #   virtualenv
@@ -239,7 +240,7 @@ mock==5.0.1
     #   -r requirements/test.in
 mysqlclient==2.1.1
     # via -r requirements/base.txt
-newrelic==8.7.0
+newrelic==8.8.0
     # via
     #   -r requirements/base.txt
     #   edx-django-utils
@@ -262,11 +263,11 @@ pbr==5.11.1
     # via
     #   -r requirements/base.txt
     #   stevedore
-pillow==9.4.0
+pillow==9.5.0
     # via
     #   -r requirements/base.txt
     #   wagtail
-platformdirs==3.1.1
+platformdirs==3.2.0
     # via
     #   pylint
     #   virtualenv
@@ -288,7 +289,7 @@ pycryptodomex==3.17
     # via
     #   -r requirements/base.txt
     #   pyjwkest
-pydantic==1.10.6
+pydantic==1.10.7
     # via
     #   -r requirements/base.txt
     #   inflect
@@ -304,7 +305,7 @@ pyjwt[crypto]==2.6.0
     #   edx-drf-extensions
     #   edx-rest-api-client
     #   social-auth-core
-pylint==2.17.0
+pylint==2.17.2
     # via
     #   edx-lint
     #   pylint-celery
@@ -346,7 +347,7 @@ python3-openid==3.2.0
     # via
     #   -r requirements/base.txt
     #   social-auth-core
-pytz==2022.7.1
+pytz==2023.3
     # via
     #   -r requirements/base.txt
     #   django
@@ -404,11 +405,11 @@ slumber==0.7.1
     # via
     #   -r requirements/base.txt
     #   edx-rest-api-client
-social-auth-app-django==5.1.0
+social-auth-app-django==5.2.0
     # via
     #   -r requirements/base.txt
     #   edx-auth-backends
-social-auth-core==4.4.0
+social-auth-core==4.4.1
     # via
     #   -r requirements/base.txt
     #   edx-auth-backends
@@ -427,7 +428,7 @@ stevedore==5.0.0
     #   code-annotations
     #   edx-django-utils
     #   edx-opaque-keys
-tablib[xls,xlsx]==3.3.0
+tablib[xls,xlsx]==3.4.0
     # via
     #   -r requirements/base.txt
     #   wagtail
@@ -443,7 +444,7 @@ tomli==2.0.1
     #   pylint
     #   pytest
     #   tox
-tomlkit==0.11.6
+tomlkit==0.11.7
     # via pylint
 tox==3.28.0
     # via

@@ -26,7 +26,7 @@ coreschema==0.0.4
     # via
     #   coreapi
     #   drf-yasg
-cryptography==39.0.2
+cryptography==40.0.1
     # via
     #   pyjwt
     #   social-auth-core
@@ -54,6 +54,7 @@ django==3.2.18
     #   edx-django-release-util
     #   edx-django-utils
     #   edx-drf-extensions
+    #   social-auth-app-django
     #   wagtail
 django-cors-headers==3.14.0
     # via -r requirements/base.in
@@ -98,7 +99,7 @@ edx-auth-backends==4.1.0
     # via -r requirements/base.in
 edx-django-release-util==1.2.0
     # via -r requirements/base.in
-edx-django-utils==5.2.0
+edx-django-utils==5.3.0
     # via
     #   -r requirements/base.in
     #   edx-drf-extensions
@@ -135,7 +136,7 @@ mock==5.0.1
     # via -r requirements/base.in
 mysqlclient==2.1.1
     # via -r requirements/base.in
-newrelic==8.7.0
+newrelic==8.8.0
     # via edx-django-utils
 oauthlib==3.2.2
     # via
@@ -147,7 +148,7 @@ packaging==23.0
     # via drf-yasg
 pbr==5.11.1
     # via stevedore
-pillow==9.4.0
+pillow==9.5.0
     # via wagtail
 psutil==5.9.4
     # via edx-django-utils
@@ -155,7 +156,7 @@ pycparser==2.21
     # via cffi
 pycryptodomex==3.17
     # via pyjwkest
-pydantic==1.10.6
+pydantic==1.10.7
     # via inflect
 pyjwkest==1.4.2
     # via edx-drf-extensions
@@ -176,7 +177,7 @@ python-dateutil==2.8.2
     #   edx-drf-extensions
 python3-openid==3.2.0
     # via social-auth-core
-pytz==2022.7.1
+pytz==2023.3
     # via
     #   -r requirements/base.in
     #   django
@@ -215,11 +216,11 @@ six==1.16.0
     #   python-dateutil
 slumber==0.7.1
     # via edx-rest-api-client
-social-auth-app-django==5.1.0
+social-auth-app-django==5.2.0
     # via
     #   -r requirements/base.in
     #   edx-auth-backends
-social-auth-core==4.4.0
+social-auth-core==4.4.1
     # via
     #   -r requirements/base.in
     #   edx-auth-backends
@@ -232,7 +233,7 @@ stevedore==5.0.0
     # via
     #   edx-django-utils
     #   edx-opaque-keys
-tablib[xls,xlsx]==3.3.0
+tablib[xls,xlsx]==3.4.0
     # via wagtail
 telepath==0.3
     # via wagtail
