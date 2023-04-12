@@ -30,4 +30,4 @@ jobs:
       run: tox
     - name: Codecov
       if: matrix.python-version == '3.8' && matrix.toxenv == 'django32'
-      run: codecov
+      uses: codecov/codecov-action@v2
