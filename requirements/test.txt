@@ -12,12 +12,10 @@ asgiref==3.6.0
     # via
     #   -r requirements/base.txt
     #   django
-astroid==2.15.2
+astroid==2.15.3
     # via
     #   pylint
     #   pylint-celery
-attrs==22.2.0
-    # via pytest
 beautifulsoup4==4.9.3
     # via
     #   -r requirements/base.txt
@@ -57,12 +55,11 @@ coreschema==0.0.4
     #   -r requirements/base.txt
     #   coreapi
     #   drf-yasg
-coverage[toml]==7.2.2
+coverage[toml]==7.2.3
     # via
     #   -r requirements/test.in
-    #   codecov
     #   pytest-cov
-cryptography==40.0.1
+cryptography==40.0.2
     # via
     #   -r requirements/base.txt
     #   pyjwt
@@ -121,7 +118,7 @@ django-taggit==2.1.0
     # via
     #   -r requirements/base.txt
     #   wagtail
-django-treebeard==4.6.1
+django-treebeard==4.7
     # via
     #   -r requirements/base.txt
     #   wagtail
@@ -156,12 +153,12 @@ edx-auth-backends==4.1.0
     # via -r requirements/base.txt
 edx-django-release-util==1.2.0
     # via -r requirements/base.txt
-edx-django-utils==5.3.0
+edx-django-utils==5.4.0
     # via
     #   -r requirements/base.txt
     #   edx-drf-extensions
     #   edx-rest-api-client
-edx-drf-extensions==8.4.1
+edx-drf-extensions==8.7.0
     # via -r requirements/base.txt
 edx-lint==5.3.4
     # via -r requirements/test.in
@@ -181,11 +178,11 @@ exceptiongroup==1.1.1
     # via pytest
 factory-boy==3.2.1
     # via -r requirements/test.in
-faker==18.3.2
+faker==18.4.0
     # via
     #   -r requirements/test.in
     #   factory-boy
-filelock==3.10.7
+filelock==3.12.0
     # via
     #   tox
     #   virtualenv
@@ -201,7 +198,7 @@ idna==3.4
     # via
     #   -r requirements/base.txt
     #   requests
-inflect==6.0.2
+inflect==6.0.4
     # via -r requirements/base.txt
 inflection==0.5.1
     # via
@@ -232,7 +229,7 @@ markupsafe==2.1.2
     #   jinja2
 mccabe==0.7.0
     # via pylint
-mock==5.0.1
+mock==5.0.2
     # via
     #   -r requirements/base.txt
     #   -r requirements/test.in
@@ -251,7 +248,7 @@ openpyxl==3.1.2
     # via
     #   -r requirements/base.txt
     #   tablib
-packaging==23.0
+packaging==23.1
     # via
     #   -r requirements/base.txt
     #   drf-yasg
@@ -273,7 +270,7 @@ pluggy==1.0.0
     # via
     #   pytest
     #   tox
-psutil==5.9.4
+psutil==5.9.5
     # via
     #   -r requirements/base.txt
     #   edx-django-utils
@@ -325,7 +322,7 @@ pynacl==1.5.0
     # via
     #   -r requirements/base.txt
     #   edx-django-utils
-pytest==7.2.2
+pytest==7.3.1
     # via
     #   -r requirements/test.in
     #   pytest-cov
@@ -361,7 +358,6 @@ pyyaml==6.0
 requests==2.28.2
     # via
     #   -r requirements/base.txt
-    #   codecov
     #   coreapi
     #   edx-drf-extensions
     #   edx-rest-api-client
@@ -412,11 +408,11 @@ social-auth-core==4.4.1
     #   -r requirements/base.txt
     #   edx-auth-backends
     #   social-auth-app-django
-soupsieve==2.4
+soupsieve==2.4.1
     # via
     #   -r requirements/base.txt
     #   beautifulsoup4
-sqlparse==0.4.3
+sqlparse==0.4.4
     # via
     #   -r requirements/base.txt
     #   django
@@ -463,7 +459,7 @@ urllib3==1.26.15
     # via
     #   -r requirements/base.txt
     #   requests
-virtualenv==20.21.0
+virtualenv==20.22.0
     # via tox
 wagtail==2.16.3
     # via
@@ -483,7 +479,7 @@ xlrd==2.0.1
     # via
     #   -r requirements/base.txt
     #   tablib
-xlsxwriter==3.0.9
+xlsxwriter==3.1.0
     # via
     #   -r requirements/base.txt
     #   wagtail

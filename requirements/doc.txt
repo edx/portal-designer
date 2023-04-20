@@ -14,15 +14,11 @@ asgiref==3.6.0
     # via
     #   -r requirements/test.txt
     #   django
-astroid==2.15.2
+astroid==2.15.3
     # via
     #   -r requirements/test.txt
     #   pylint
     #   pylint-celery
-attrs==22.2.0
-    # via
-    #   -r requirements/test.txt
-    #   pytest
 babel==2.12.1
     # via sphinx
 beautifulsoup4==4.9.3
@@ -68,12 +64,11 @@ coreschema==0.0.4
     #   -r requirements/test.txt
     #   coreapi
     #   drf-yasg
-coverage[toml]==7.2.2
+coverage[toml]==7.2.3
     # via
     #   -r requirements/test.txt
-    #   codecov
     #   pytest-cov
-cryptography==40.0.1
+cryptography==40.0.2
     # via
     #   -r requirements/test.txt
     #   pyjwt
@@ -135,7 +130,7 @@ django-taggit==2.1.0
     # via
     #   -r requirements/test.txt
     #   wagtail
-django-treebeard==4.6.1
+django-treebeard==4.7
     # via
     #   -r requirements/test.txt
     #   wagtail
@@ -178,12 +173,12 @@ edx-auth-backends==4.1.0
     # via -r requirements/test.txt
 edx-django-release-util==1.2.0
     # via -r requirements/test.txt
-edx-django-utils==5.3.0
+edx-django-utils==5.4.0
     # via
     #   -r requirements/test.txt
     #   edx-drf-extensions
     #   edx-rest-api-client
-edx-drf-extensions==8.4.1
+edx-drf-extensions==8.7.0
     # via -r requirements/test.txt
 edx-lint==5.3.4
     # via -r requirements/test.txt
@@ -205,11 +200,11 @@ exceptiongroup==1.1.1
     #   pytest
 factory-boy==3.2.1
     # via -r requirements/test.txt
-faker==18.3.2
+faker==18.4.0
     # via
     #   -r requirements/test.txt
     #   factory-boy
-filelock==3.10.7
+filelock==3.12.0
     # via
     #   -r requirements/test.txt
     #   tox
@@ -228,9 +223,9 @@ idna==3.4
     #   requests
 imagesize==1.4.1
     # via sphinx
-importlib-metadata==6.1.0
+importlib-metadata==6.5.0
     # via sphinx
-inflect==6.0.2
+inflect==6.0.4
     # via -r requirements/test.txt
 inflection==0.5.1
     # via
@@ -270,7 +265,7 @@ mccabe==0.7.0
     # via
     #   -r requirements/test.txt
     #   pylint
-mock==5.0.1
+mock==5.0.2
     # via -r requirements/test.txt
 mysqlclient==2.1.1
     # via -r requirements/test.txt
@@ -287,7 +282,7 @@ openpyxl==3.1.2
     # via
     #   -r requirements/test.txt
     #   tablib
-packaging==23.0
+packaging==23.1
     # via
     #   -r requirements/test.txt
     #   drf-yasg
@@ -312,7 +307,7 @@ pluggy==1.0.0
     #   -r requirements/test.txt
     #   pytest
     #   tox
-psutil==5.9.4
+psutil==5.9.5
     # via
     #   -r requirements/test.txt
     #   edx-django-utils
@@ -332,7 +327,7 @@ pydantic==1.10.7
     # via
     #   -r requirements/test.txt
     #   inflect
-pygments==2.14.0
+pygments==2.15.1
     # via
     #   doc8
     #   readme-renderer
@@ -377,7 +372,7 @@ pynacl==1.5.0
     # via
     #   -r requirements/test.txt
     #   edx-django-utils
-pytest==7.2.2
+pytest==7.3.1
     # via
     #   -r requirements/test.txt
     #   pytest-cov
@@ -402,7 +397,6 @@ python3-openid==3.2.0
 pytz==2023.3
     # via
     #   -r requirements/test.txt
-    #   babel
     #   django
     #   django-modelcluster
     #   djangorestframework
@@ -418,7 +412,6 @@ readme-renderer==37.3
 requests==2.28.2
     # via
     #   -r requirements/test.txt
-    #   codecov
     #   coreapi
     #   edx-drf-extensions
     #   edx-rest-api-client
@@ -476,7 +469,7 @@ social-auth-core==4.4.1
     #   -r requirements/test.txt
     #   edx-auth-backends
     #   social-auth-app-django
-soupsieve==2.4
+soupsieve==2.4.1
     # via
     #   -r requirements/test.txt
     #   beautifulsoup4
@@ -496,7 +489,7 @@ sphinxcontrib-qthelp==1.0.3
     # via sphinx
 sphinxcontrib-serializinghtml==1.1.5
     # via sphinx
-sqlparse==0.4.3
+sqlparse==0.4.4
     # via
     #   -r requirements/test.txt
     #   django
@@ -548,7 +541,7 @@ urllib3==1.26.15
     # via
     #   -r requirements/test.txt
     #   requests
-virtualenv==20.21.0
+virtualenv==20.22.0
     # via
     #   -r requirements/test.txt
     #   tox
@@ -571,7 +564,7 @@ xlrd==2.0.1
     # via
     #   -r requirements/test.txt
     #   tablib
-xlsxwriter==3.0.9
+xlsxwriter==3.1.0
     # via
     #   -r requirements/test.txt
     #   wagtail
