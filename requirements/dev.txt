@@ -12,7 +12,7 @@ asgiref==3.6.0
     # via
     #   -r requirements/quality.txt
     #   django
-astroid==2.15.3
+astroid==2.15.4
     # via
     #   -r requirements/quality.txt
     #   pylint
@@ -204,7 +204,7 @@ exceptiongroup==1.1.1
     #   pytest
 factory-boy==3.2.1
     # via -r requirements/quality.txt
-faker==18.4.0
+faker==18.5.1
     # via
     #   -r requirements/quality.txt
     #   factory-boy
@@ -302,7 +302,7 @@ pillow==9.5.0
     #   wagtail
 pip-tools==6.13.0
     # via -r requirements/pip-tools.txt
-platformdirs==3.2.0
+platformdirs==3.3.0
     # via
     #   -r requirements/quality.txt
     #   pylint
@@ -353,7 +353,7 @@ pyjwt[crypto]==2.6.0
     #   edx-drf-extensions
     #   edx-rest-api-client
     #   social-auth-core
-pylint==2.17.2
+pylint==2.17.3
     # via
     #   -r requirements/quality.txt
     #   edx-lint
@@ -473,7 +473,7 @@ social-auth-app-django==5.2.0
     # via
     #   -r requirements/quality.txt
     #   edx-auth-backends
-social-auth-core==4.4.1
+social-auth-core==4.4.2
     # via
     #   -r requirements/quality.txt
     #   edx-auth-backends
