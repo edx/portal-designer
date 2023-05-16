@@ -25,3 +25,4 @@ zipp
 mock
 inflect
 social-auth-core
+boto3
