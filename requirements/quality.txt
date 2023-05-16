@@ -12,7 +12,7 @@ asgiref==3.6.0
     # via
     #   -r requirements/test.txt
     #   django
-astroid==2.15.4
+astroid==2.15.5
     # via
     #   -r requirements/test.txt
     #   pylint
@@ -21,7 +21,14 @@ beautifulsoup4==4.9.3
     # via
     #   -r requirements/test.txt
     #   wagtail
-certifi==2022.12.7
+boto3==1.26.135
+    # via -r requirements/test.txt
+botocore==1.29.135
+    # via
+    #   -r requirements/test.txt
+    #   boto3
+    #   s3transfer
+certifi==2023.5.7
     # via
     #   -r requirements/test.txt
     #   requests
@@ -80,7 +87,7 @@ distlib==0.3.6
     # via
     #   -r requirements/test.txt
     #   virtualenv
-django==3.2.18
+django==3.2.19
     # via
     #   -r requirements/test.txt
     #   django-cors-headers
@@ -100,7 +107,7 @@ django==3.2.18
     #   edx-drf-extensions
     #   social-auth-app-django
     #   wagtail
-django-cors-headers==3.14.0
+django-cors-headers==4.0.0
     # via -r requirements/test.txt
 django-crum==0.7.9
     # via
@@ -164,7 +171,7 @@ edx-django-utils==5.4.0
     #   -r requirements/test.txt
     #   edx-drf-extensions
     #   edx-rest-api-client
-edx-drf-extensions==8.7.0
+edx-drf-extensions==8.8.0
     # via -r requirements/test.txt
 edx-lint==5.3.4
     # via
@@ -186,7 +193,7 @@ exceptiongroup==1.1.1
     #   pytest
 factory-boy==3.2.1
     # via -r requirements/test.txt
-faker==18.6.1
+faker==18.9.0
     # via
     #   -r requirements/test.txt
     #   factory-boy
@@ -195,10 +202,6 @@ filelock==3.12.0
     #   -r requirements/test.txt
     #   tox
     #   virtualenv
-future==0.18.3
-    # via
-    #   -r requirements/test.txt
-    #   pyjwkest
 html5lib==1.1
     # via
     #   -r requirements/test.txt
@@ -231,6 +234,11 @@ jinja2==3.1.2
     #   -r requirements/test.txt
     #   code-annotations
     #   coreschema
+jmespath==1.0.1
+    # via
+    #   -r requirements/test.txt
+    #   boto3
+    #   botocore
 l18n==2021.3
     # via
     #   -r requirements/test.txt
@@ -278,7 +286,7 @@ pillow==9.5.0
     # via
     #   -r requirements/test.txt
     #   wagtail
-platformdirs==3.5.0
+platformdirs==3.5.1
     # via
     #   -r requirements/test.txt
     #   pylint
@@ -302,21 +310,13 @@ pycparser==2.21
     # via
     #   -r requirements/test.txt
     #   cffi
-pycryptodomex==3.17
-    # via
-    #   -r requirements/test.txt
-    #   pyjwkest
 pydantic==1.10.7
     # via
     #   -r requirements/test.txt
     #   inflect
 pydocstyle==6.3.0
     # via -r requirements/quality.in
-pyjwkest==1.4.2
-    # via
-    #   -r requirements/test.txt
-    #   edx-drf-extensions
-pyjwt[crypto]==2.6.0
+pyjwt[crypto]==2.7.0
     # via
     #   -r requirements/test.txt
     #   drf-jwt
@@ -324,7 +324,7 @@ pyjwt[crypto]==2.6.0
     #   edx-drf-extensions
     #   edx-rest-api-client
     #   social-auth-core
-pylint==2.17.3
+pylint==2.17.4
     # via
     #   -r requirements/test.txt
     #   edx-lint
@@ -339,7 +339,7 @@ pylint-django==2.5.3
     # via
     #   -r requirements/test.txt
     #   edx-lint
-pylint-plugin-utils==0.7
+pylint-plugin-utils==0.8.1
     # via
     #   -r requirements/test.txt
     #   pylint-celery
@@ -364,6 +364,7 @@ pytest-django==4.5.2
 python-dateutil==2.8.2
     # via
     #   -r requirements/test.txt
+    #   botocore
     #   edx-drf-extensions
     #   faker
 python-slugify==8.0.1
@@ -387,13 +388,12 @@ pyyaml==6.0
     #   -r requirements/test.txt
     #   code-annotations
     #   edx-django-release-util
-requests==2.29.0
+requests==2.30.0
     # via
     #   -r requirements/test.txt
     #   coreapi
     #   edx-drf-extensions
     #   edx-rest-api-client
-    #   pyjwkest
     #   requests-oauthlib
     #   slumber
     #   social-auth-core
@@ -402,7 +402,7 @@ requests-oauthlib==1.3.1
     # via
     #   -r requirements/test.txt
     #   social-auth-core
-ruamel-yaml==0.17.22
+ruamel-yaml==0.17.26
     # via
     #   -r requirements/test.txt
     #   drf-yasg
@@ -410,6 +410,10 @@ ruamel-yaml-clib==0.2.7
     # via
     #   -r requirements/test.txt
     #   ruamel-yaml
+s3transfer==0.6.1
+    # via
+    #   -r requirements/test.txt
+    #   boto3
 semantic-version==2.10.0
     # via
     #   -r requirements/test.txt
@@ -424,7 +428,6 @@ six==1.16.0
     #   edx-lint
     #   html5lib
     #   l18n
-    #   pyjwkest
     #   python-dateutil
     #   tox
 slumber==0.7.1
@@ -450,7 +453,7 @@ sqlparse==0.4.4
     # via
     #   -r requirements/test.txt
     #   django
-stevedore==5.0.0
+stevedore==5.1.0
     # via
     #   -r requirements/test.txt
     #   code-annotations
@@ -495,6 +498,7 @@ uritemplate==4.1.1
 urllib3==1.26.15
     # via
     #   -r requirements/test.txt
+    #   botocore
     #   requests
 virtualenv==20.23.0
     # via
