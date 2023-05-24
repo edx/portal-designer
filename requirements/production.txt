@@ -8,7 +8,7 @@ anyascii==0.3.2
     # via
     #   -r requirements/base.txt
     #   wagtail
-asgiref==3.6.0
+asgiref==3.7.1
     # via
     #   -r requirements/base.txt
     #   django
@@ -16,11 +16,11 @@ beautifulsoup4==4.9.3
     # via
     #   -r requirements/base.txt
     #   wagtail
-boto3==1.26.135
+boto3==1.26.139
     # via
     #   -r requirements/base.txt
     #   -r requirements/production.in
-botocore==1.29.135
+botocore==1.29.139
     # via
     #   -r requirements/base.txt
     #   boto3
@@ -233,7 +233,7 @@ pycparser==2.21
     # via
     #   -r requirements/base.txt
     #   cffi
-pydantic==1.10.7
+pydantic==1.10.8
     # via
     #   -r requirements/base.txt
     #   inflect
@@ -277,7 +277,7 @@ pyyaml==6.0
     #   -r requirements/base.txt
     #   -r requirements/production.in
     #   edx-django-release-util
-requests==2.30.0
+requests==2.31.0
     # via
     #   -r requirements/base.txt
     #   coreapi
@@ -351,16 +351,17 @@ telepath==0.3
     # via
     #   -r requirements/base.txt
     #   wagtail
-typing-extensions==4.5.0
+typing-extensions==4.6.1
     # via
     #   -r requirements/base.txt
+    #   asgiref
     #   pydantic
 uritemplate==4.1.1
     # via
     #   -r requirements/base.txt
     #   coreapi
     #   drf-yasg
-urllib3==1.26.15
+urllib3==1.26.16
     # via
     #   -r requirements/base.txt
     #   botocore
@@ -379,7 +380,7 @@ xlrd==2.0.1
     # via
     #   -r requirements/base.txt
     #   tablib
-xlsxwriter==3.1.0
+xlsxwriter==3.1.1
     # via
     #   -r requirements/base.txt
     #   wagtail
