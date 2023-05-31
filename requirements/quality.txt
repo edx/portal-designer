@@ -8,7 +8,7 @@ anyascii==0.3.2
     # via
     #   -r requirements/test.txt
     #   wagtail
-asgiref==3.7.1
+asgiref==3.7.2
     # via
     #   -r requirements/test.txt
     #   django
@@ -21,9 +21,9 @@ beautifulsoup4==4.9.3
     # via
     #   -r requirements/test.txt
     #   wagtail
-boto3==1.26.139
+boto3==1.26.142
     # via -r requirements/test.txt
-botocore==1.29.139
+botocore==1.29.142
     # via
     #   -r requirements/test.txt
     #   boto3
@@ -65,7 +65,7 @@ coreschema==0.0.4
     #   -r requirements/test.txt
     #   coreapi
     #   drf-yasg
-coverage[toml]==7.2.6
+coverage[toml]==7.2.7
     # via
     #   -r requirements/test.txt
     #   pytest-cov
@@ -357,7 +357,7 @@ pytest==7.3.1
     #   -r requirements/test.txt
     #   pytest-cov
     #   pytest-django
-pytest-cov==4.0.0
+pytest-cov==4.1.0
     # via -r requirements/test.txt
 pytest-django==4.5.2
     # via -r requirements/test.txt
@@ -402,7 +402,7 @@ requests-oauthlib==1.3.1
     # via
     #   -r requirements/test.txt
     #   social-auth-core
-ruamel-yaml==0.17.26
+ruamel-yaml==0.17.30
     # via
     #   -r requirements/test.txt
     #   drf-yasg
@@ -484,7 +484,7 @@ tomlkit==0.11.8
     #   pylint
 tox==3.28.0
     # via -r requirements/test.txt
-typing-extensions==4.6.1
+typing-extensions==4.6.2
     # via
     #   -r requirements/test.txt
     #   asgiref
@@ -523,7 +523,7 @@ xlrd==2.0.1
     # via
     #   -r requirements/test.txt
     #   tablib
-xlsxwriter==3.1.1
+xlsxwriter==3.1.2
     # via
     #   -r requirements/test.txt
     #   wagtail
