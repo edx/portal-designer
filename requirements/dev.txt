@@ -21,9 +21,9 @@ beautifulsoup4==4.9.3
     # via
     #   -r requirements/quality.txt
     #   wagtail
-boto3==1.26.147
+boto3==1.26.152
     # via -r requirements/quality.txt
-botocore==1.29.147
+botocore==1.29.152
     # via
     #   -r requirements/quality.txt
     #   boto3
@@ -87,7 +87,7 @@ defusedxml==0.7.1
     #   -r requirements/quality.txt
     #   python3-openid
     #   social-auth-core
-diff-cover==7.5.0
+diff-cover==7.6.0
     # via -r requirements/dev.in
 dill==0.3.6
     # via
@@ -215,7 +215,7 @@ faker==18.10.1
     # via
     #   -r requirements/quality.txt
     #   factory-boy
-filelock==3.12.0
+filelock==3.12.2
     # via
     #   -r requirements/quality.txt
     #   tox
@@ -310,7 +310,7 @@ pillow==9.5.0
     #   wagtail
 pip-tools==6.13.0
     # via -r requirements/pip-tools.txt
-platformdirs==3.5.1
+platformdirs==3.5.3
     # via
     #   -r requirements/quality.txt
     #   pylint
@@ -337,7 +337,7 @@ pycparser==2.21
     # via
     #   -r requirements/quality.txt
     #   cffi
-pydantic==1.10.8
+pydantic==1.10.9
     # via
     #   -r requirements/quality.txt
     #   inflect
@@ -385,7 +385,7 @@ pyproject-hooks==1.0.0
     # via
     #   -r requirements/pip-tools.txt
     #   build
-pytest==7.3.1
+pytest==7.3.2
     # via
     #   -r requirements/quality.txt
     #   pytest-cov
@@ -496,11 +496,11 @@ stevedore==5.1.0
     #   code-annotations
     #   edx-django-utils
     #   edx-opaque-keys
-tablib[xls,xlsx]==3.4.0
+tablib[xls,xlsx]==3.5.0
     # via
     #   -r requirements/quality.txt
     #   wagtail
-telepath==0.3
+telepath==0.3.1
     # via
     #   -r requirements/quality.txt
     #   wagtail

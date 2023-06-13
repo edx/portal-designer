@@ -10,9 +10,9 @@ asgiref==3.7.2
     # via django
 beautifulsoup4==4.9.3
     # via wagtail
-boto3==1.26.147
+boto3==1.26.152
     # via -r requirements/base.in
-botocore==1.29.147
+botocore==1.29.152
     # via
     #   boto3
     #   s3transfer
@@ -162,7 +162,7 @@ psutil==5.9.5
     # via edx-django-utils
 pycparser==2.21
     # via cffi
-pydantic==1.10.8
+pydantic==1.10.9
     # via inflect
 pyjwt[crypto]==2.7.0
     # via
@@ -238,9 +238,9 @@ stevedore==5.1.0
     # via
     #   edx-django-utils
     #   edx-opaque-keys
-tablib[xls,xlsx]==3.4.0
+tablib[xls,xlsx]==3.5.0
     # via wagtail
-telepath==0.3
+telepath==0.3.1
     # via wagtail
 typing-extensions==4.6.3
     # via

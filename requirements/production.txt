@@ -16,11 +16,11 @@ beautifulsoup4==4.9.3
     # via
     #   -r requirements/base.txt
     #   wagtail
-boto3==1.26.147
+boto3==1.26.152
     # via
     #   -r requirements/base.txt
     #   -r requirements/production.in
-botocore==1.29.147
+botocore==1.29.152
     # via
     #   -r requirements/base.txt
     #   boto3
@@ -233,7 +233,7 @@ pycparser==2.21
     # via
     #   -r requirements/base.txt
     #   cffi
-pydantic==1.10.8
+pydantic==1.10.9
     # via
     #   -r requirements/base.txt
     #   inflect
@@ -343,11 +343,11 @@ stevedore==5.1.0
     #   -r requirements/base.txt
     #   edx-django-utils
     #   edx-opaque-keys
-tablib[xls,xlsx]==3.4.0
+tablib[xls,xlsx]==3.5.0
     # via
     #   -r requirements/base.txt
     #   wagtail
-telepath==0.3
+telepath==0.3.1
     # via
     #   -r requirements/base.txt
     #   wagtail
