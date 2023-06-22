@@ -21,9 +21,9 @@ beautifulsoup4==4.9.3
     # via
     #   -r requirements/quality.txt
     #   wagtail
-boto3==1.26.152
+boto3==1.26.156
     # via -r requirements/quality.txt
-botocore==1.29.152
+botocore==1.29.156
     # via
     #   -r requirements/quality.txt
     #   boto3
@@ -64,15 +64,6 @@ code-annotations==1.3.0
     # via
     #   -r requirements/quality.txt
     #   edx-lint
-coreapi==2.3.3
-    # via
-    #   -r requirements/quality.txt
-    #   drf-yasg
-coreschema==0.0.4
-    # via
-    #   -r requirements/quality.txt
-    #   coreapi
-    #   drf-yasg
 coverage[toml]==7.2.7
     # via
     #   -r requirements/quality.txt
@@ -121,7 +112,7 @@ django==3.2.19
     #   edx-i18n-tools
     #   social-auth-app-django
     #   wagtail
-django-cors-headers==4.0.0
+django-cors-headers==4.1.0
     # via -r requirements/quality.txt
 django-crum==0.7.9
     # via
@@ -172,7 +163,7 @@ drf-jwt==1.19.2
     # via
     #   -r requirements/quality.txt
     #   edx-drf-extensions
-drf-yasg==1.21.5
+drf-yasg==1.21.6
     # via
     #   -r requirements/quality.txt
     #   edx-api-doc-tools
@@ -242,15 +233,10 @@ isort==5.12.0
     # via
     #   -r requirements/quality.txt
     #   pylint
-itypes==1.2.0
-    # via
-    #   -r requirements/quality.txt
-    #   coreapi
 jinja2==3.1.2
     # via
     #   -r requirements/quality.txt
     #   code-annotations
-    #   coreschema
     #   diff-cover
 jmespath==1.0.1
     # via
@@ -310,7 +296,7 @@ pillow==9.5.0
     #   wagtail
 pip-tools==6.13.0
     # via -r requirements/pip-tools.txt
-platformdirs==3.5.3
+platformdirs==3.6.0
     # via
     #   -r requirements/quality.txt
     #   pylint
@@ -420,12 +406,12 @@ pyyaml==6.0
     # via
     #   -r requirements/quality.txt
     #   code-annotations
+    #   drf-yasg
     #   edx-django-release-util
     #   edx-i18n-tools
 requests==2.31.0
     # via
     #   -r requirements/quality.txt
-    #   coreapi
     #   edx-drf-extensions
     #   edx-rest-api-client
     #   requests-oauthlib
@@ -436,14 +422,6 @@ requests-oauthlib==1.3.1
     # via
     #   -r requirements/quality.txt
     #   social-auth-core
-ruamel-yaml==0.17.31
-    # via
-    #   -r requirements/quality.txt
-    #   drf-yasg
-ruamel-yaml-clib==0.2.7
-    # via
-    #   -r requirements/quality.txt
-    #   ruamel-yaml
 s3transfer==0.6.1
     # via
     #   -r requirements/quality.txt
@@ -536,14 +514,13 @@ typing-extensions==4.6.3
 uritemplate==4.1.1
     # via
     #   -r requirements/quality.txt
-    #   coreapi
     #   drf-yasg
 urllib3==1.26.16
     # via
     #   -r requirements/quality.txt
     #   botocore
     #   requests
-virtualenv==20.23.0
+virtualenv==20.23.1
     # via
     #   -r requirements/quality.txt
     #   tox
