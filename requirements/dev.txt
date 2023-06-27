@@ -21,9 +21,9 @@ beautifulsoup4==4.9.3
     # via
     #   -r requirements/quality.txt
     #   wagtail
-boto3==1.26.156
+boto3==1.26.161
     # via -r requirements/quality.txt
-botocore==1.29.156
+botocore==1.29.161
     # via
     #   -r requirements/quality.txt
     #   boto3
@@ -202,7 +202,7 @@ exceptiongroup==1.1.1
     #   pytest
 factory-boy==3.2.1
     # via -r requirements/quality.txt
-faker==18.10.1
+faker==18.11.1
     # via
     #   -r requirements/quality.txt
     #   factory-boy
@@ -261,9 +261,9 @@ mccabe==0.7.0
     #   pylint
 mock==5.0.2
     # via -r requirements/quality.txt
-mysqlclient==2.1.1
+mysqlclient==2.2.0
     # via -r requirements/quality.txt
-newrelic==8.8.0
+newrelic==8.8.1
     # via
     #   -r requirements/quality.txt
     #   edx-django-utils
@@ -296,12 +296,12 @@ pillow==9.5.0
     #   wagtail
 pip-tools==6.13.0
     # via -r requirements/pip-tools.txt
-platformdirs==3.6.0
+platformdirs==3.8.0
     # via
     #   -r requirements/quality.txt
     #   pylint
     #   virtualenv
-pluggy==1.0.0
+pluggy==1.2.0
     # via
     #   -r requirements/quality.txt
     #   diff-cover
@@ -371,7 +371,7 @@ pyproject-hooks==1.0.0
     # via
     #   -r requirements/pip-tools.txt
     #   build
-pytest==7.3.2
+pytest==7.4.0
     # via
     #   -r requirements/quality.txt
     #   pytest-cov
