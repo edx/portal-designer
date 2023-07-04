@@ -4,6 +4,10 @@
 #
 #    make upgrade
 #
+annotated-types==0.5.0
+    # via
+    #   -r requirements/base.txt
+    #   pydantic
 anyascii==0.3.2
     # via
     #   -r requirements/base.txt
@@ -16,11 +20,11 @@ beautifulsoup4==4.9.3
     # via
     #   -r requirements/base.txt
     #   wagtail
-boto3==1.26.161
+boto3==1.27.0
     # via
     #   -r requirements/base.txt
     #   -r requirements/production.in
-botocore==1.29.161
+botocore==1.30.0
     # via
     #   -r requirements/base.txt
     #   boto3
@@ -52,7 +56,7 @@ defusedxml==0.7.1
     #   -r requirements/base.txt
     #   python3-openid
     #   social-auth-core
-django==3.2.19
+django==3.2.20
     # via
     #   -r requirements/base.txt
     #   django-cors-headers
@@ -160,7 +164,7 @@ idna==3.4
     # via
     #   -r requirements/base.txt
     #   requests
-inflect==6.0.4
+inflect==7.0.0
     # via -r requirements/base.txt
 inflection==0.5.1
     # via
@@ -212,10 +216,14 @@ pycparser==2.21
     # via
     #   -r requirements/base.txt
     #   cffi
-pydantic==1.10.9
+pydantic==2.0
     # via
     #   -r requirements/base.txt
     #   inflect
+pydantic-core==2.0.1
+    # via
+    #   -r requirements/base.txt
+    #   pydantic
 pyjwt[crypto]==2.7.0
     # via
     #   -r requirements/base.txt
@@ -322,11 +330,14 @@ telepath==0.3.1
     # via
     #   -r requirements/base.txt
     #   wagtail
-typing-extensions==4.6.3
+typing-extensions==4.7.1
     # via
     #   -r requirements/base.txt
+    #   annotated-types
     #   asgiref
+    #   inflect
     #   pydantic
+    #   pydantic-core
 uritemplate==4.1.1
     # via
     #   -r requirements/base.txt

@@ -4,15 +4,17 @@
 #
 #    make upgrade
 #
+annotated-types==0.5.0
+    # via pydantic
 anyascii==0.3.2
     # via wagtail
 asgiref==3.7.2
     # via django
 beautifulsoup4==4.9.3
     # via wagtail
-boto3==1.26.161
+boto3==1.27.0
     # via -r requirements/base.in
-botocore==1.29.161
+botocore==1.30.0
     # via
     #   boto3
     #   s3transfer
@@ -34,7 +36,7 @@ defusedxml==0.7.1
     # via
     #   python3-openid
     #   social-auth-core
-django==3.2.19
+django==3.2.20
     # via
     #   -c requirements/common_constraints.txt
     #   -c requirements/constraints.txt
@@ -118,7 +120,7 @@ html5lib==1.1
     # via wagtail
 idna==3.4
     # via requests
-inflect==6.0.4
+inflect==7.0.0
     # via -r requirements/base.in
 inflection==0.5.1
     # via drf-yasg
@@ -150,8 +152,10 @@ psutil==5.9.5
     # via edx-django-utils
 pycparser==2.21
     # via cffi
-pydantic==1.10.9
+pydantic==2.0
     # via inflect
+pydantic-core==2.0.1
+    # via pydantic
 pyjwt[crypto]==2.7.0
     # via
     #   drf-jwt
@@ -227,10 +231,13 @@ tablib[xls,xlsx]==3.5.0
     # via wagtail
 telepath==0.3.1
     # via wagtail
-typing-extensions==4.6.3
+typing-extensions==4.7.1
     # via
+    #   annotated-types
     #   asgiref
+    #   inflect
     #   pydantic
+    #   pydantic-core
 uritemplate==4.1.1
     # via drf-yasg
 urllib3==1.26.16
