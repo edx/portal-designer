@@ -4,6 +4,10 @@
 #
 #    make upgrade
 #
+annotated-types==0.5.0
+    # via
+    #   -r requirements/quality.txt
+    #   pydantic
 anyascii==0.3.2
     # via
     #   -r requirements/quality.txt
@@ -21,9 +25,9 @@ beautifulsoup4==4.9.3
     # via
     #   -r requirements/quality.txt
     #   wagtail
-boto3==1.26.161
+boto3==1.27.0
     # via -r requirements/quality.txt
-botocore==1.29.161
+botocore==1.30.0
     # via
     #   -r requirements/quality.txt
     #   boto3
@@ -88,7 +92,7 @@ distlib==0.3.6
     # via
     #   -r requirements/quality.txt
     #   virtualenv
-django==3.2.19
+django==3.2.20
     # via
     #   -c requirements/common_constraints.txt
     #   -c requirements/constraints.txt
@@ -196,13 +200,13 @@ et-xmlfile==1.1.0
     # via
     #   -r requirements/quality.txt
     #   openpyxl
-exceptiongroup==1.1.1
+exceptiongroup==1.1.2
     # via
     #   -r requirements/quality.txt
     #   pytest
 factory-boy==3.2.1
     # via -r requirements/quality.txt
-faker==18.11.1
+faker==18.11.2
     # via
     #   -r requirements/quality.txt
     #   factory-boy
@@ -219,7 +223,7 @@ idna==3.4
     # via
     #   -r requirements/quality.txt
     #   requests
-inflect==6.0.4
+inflect==7.0.0
     # via -r requirements/quality.txt
 inflection==0.5.1
     # via
@@ -294,7 +298,7 @@ pillow==9.5.0
     # via
     #   -r requirements/quality.txt
     #   wagtail
-pip-tools==6.13.0
+pip-tools==6.14.0
     # via -r requirements/pip-tools.txt
 platformdirs==3.8.0
     # via
@@ -323,10 +327,14 @@ pycparser==2.21
     # via
     #   -r requirements/quality.txt
     #   cffi
-pydantic==1.10.9
+pydantic==2.0
     # via
     #   -r requirements/quality.txt
     #   inflect
+pydantic-core==2.0.1
+    # via
+    #   -r requirements/quality.txt
+    #   pydantic
 pydocstyle==6.3.0
     # via -r requirements/quality.txt
 pygments==2.15.1
@@ -492,6 +500,7 @@ tomli==2.0.1
     #   -r requirements/quality.txt
     #   build
     #   coverage
+    #   pip-tools
     #   pylint
     #   pyproject-hooks
     #   pytest
@@ -504,12 +513,15 @@ tox==3.28.0
     # via
     #   -c requirements/common_constraints.txt
     #   -r requirements/quality.txt
-typing-extensions==4.6.3
+typing-extensions==4.7.1
     # via
     #   -r requirements/quality.txt
+    #   annotated-types
     #   asgiref
     #   astroid
+    #   inflect
     #   pydantic
+    #   pydantic-core
     #   pylint
 uritemplate==4.1.1
     # via
