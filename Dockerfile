@@ -1,12 +1,17 @@
 FROM ubuntu:focal as app
 MAINTAINER sre@edx.org
 
+# Packages installed:
+
+# pkg-config; mysqlclient>=2.2.0 requires pkg-config (https://github.com/PyMySQL/mysqlclient/issues/620)
+
 RUN apt-get update && apt-get -qy install --no-install-recommends \
  language-pack-en \
  locales \
  python3.8 \
  python3-pip \
  libmysqlclient-dev \
+ pkg-config \
  libssl-dev \
  python3-dev \
  gcc \
