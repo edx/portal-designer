@@ -24,9 +24,9 @@ beautifulsoup4==4.9.3
     # via
     #   -r requirements/base.txt
     #   wagtail
-boto3==1.28.19
+boto3==1.28.24
     # via -r requirements/base.txt
-botocore==1.31.19
+botocore==1.31.24
     # via
     #   -r requirements/base.txt
     #   boto3
@@ -165,7 +165,7 @@ edx-drf-extensions==8.8.0
     # via -r requirements/base.txt
 edx-lint==5.3.4
     # via -r requirements/test.in
-edx-opaque-keys==2.3.0
+edx-opaque-keys==2.4.0
     # via
     #   -r requirements/base.txt
     #   edx-drf-extensions
@@ -181,7 +181,7 @@ exceptiongroup==1.1.2
     # via pytest
 factory-boy==3.3.0
     # via -r requirements/test.in
-faker==19.2.0
+faker==19.3.0
     # via
     #   -r requirements/test.in
     #   factory-boy
@@ -230,7 +230,7 @@ mock==5.1.0
     #   -r requirements/test.in
 mysqlclient==2.2.0
     # via -r requirements/base.txt
-newrelic==8.9.0
+newrelic==8.10.0
     # via
     #   -r requirements/base.txt
     #   edx-django-utils

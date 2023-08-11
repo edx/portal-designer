@@ -25,9 +25,9 @@ beautifulsoup4==4.9.3
     # via
     #   -r requirements/quality.txt
     #   wagtail
-boto3==1.28.19
+boto3==1.28.24
     # via -r requirements/quality.txt
-botocore==1.31.19
+botocore==1.31.24
     # via
     #   -r requirements/quality.txt
     #   boto3
@@ -123,7 +123,7 @@ django-crum==0.7.9
     # via
     #   -r requirements/quality.txt
     #   edx-django-utils
-django-debug-toolbar==4.1.0
+django-debug-toolbar==4.2.0
     # via -r requirements/dev.in
 django-dynamic-fixture==3.1.2
     # via -r requirements/quality.txt
@@ -189,7 +189,7 @@ edx-i18n-tools==1.1.0
     # via -r requirements/dev.in
 edx-lint==5.3.4
     # via -r requirements/quality.txt
-edx-opaque-keys==2.3.0
+edx-opaque-keys==2.4.0
     # via
     #   -r requirements/quality.txt
     #   edx-drf-extensions
@@ -207,7 +207,7 @@ exceptiongroup==1.1.2
     #   pytest
 factory-boy==3.3.0
     # via -r requirements/quality.txt
-faker==19.2.0
+faker==19.3.0
     # via
     #   -r requirements/quality.txt
     #   factory-boy
@@ -268,7 +268,7 @@ mock==5.1.0
     # via -r requirements/quality.txt
 mysqlclient==2.2.0
     # via -r requirements/quality.txt
-newrelic==8.9.0
+newrelic==8.10.0
     # via
     #   -r requirements/quality.txt
     #   edx-django-utils
@@ -299,7 +299,7 @@ pillow==9.5.0
     # via
     #   -r requirements/quality.txt
     #   wagtail
-pip-tools==7.2.0
+pip-tools==7.3.0
     # via -r requirements/pip-tools.txt
 platformdirs==3.10.0
     # via
@@ -338,7 +338,7 @@ pydantic-core==2.4.0
     #   pydantic
 pydocstyle==6.3.0
     # via -r requirements/quality.txt
-pygments==2.15.1
+pygments==2.16.1
     # via diff-cover
 pyjwt[crypto]==2.8.0
     # via
@@ -546,7 +546,7 @@ webencodings==0.5.1
     # via
     #   -r requirements/quality.txt
     #   html5lib
-wheel==0.41.0
+wheel==0.41.1
     # via
     #   -r requirements/pip-tools.txt
     #   pip-tools
