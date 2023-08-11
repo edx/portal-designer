@@ -31,9 +31,9 @@ beautifulsoup4==4.9.3
     #   wagtail
 bleach==6.0.0
     # via readme-renderer
-boto3==1.28.19
+boto3==1.28.24
     # via -r requirements/test.txt
-botocore==1.31.19
+botocore==1.31.24
     # via
     #   -r requirements/test.txt
     #   boto3
@@ -185,7 +185,7 @@ edx-drf-extensions==8.8.0
     # via -r requirements/test.txt
 edx-lint==5.3.4
     # via -r requirements/test.txt
-edx-opaque-keys==2.3.0
+edx-opaque-keys==2.4.0
     # via
     #   -r requirements/test.txt
     #   edx-drf-extensions
@@ -203,7 +203,7 @@ exceptiongroup==1.1.2
     #   pytest
 factory-boy==3.3.0
     # via -r requirements/test.txt
-faker==19.2.0
+faker==19.3.0
     # via
     #   -r requirements/test.txt
     #   factory-boy
@@ -268,7 +268,7 @@ mock==5.1.0
     # via -r requirements/test.txt
 mysqlclient==2.2.0
     # via -r requirements/test.txt
-newrelic==8.9.0
+newrelic==8.10.0
     # via
     #   -r requirements/test.txt
     #   edx-django-utils
@@ -326,7 +326,7 @@ pydantic-core==2.4.0
     # via
     #   -r requirements/test.txt
     #   pydantic
-pygments==2.15.1
+pygments==2.16.1
     # via
     #   doc8
     #   readme-renderer
