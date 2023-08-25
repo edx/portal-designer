@@ -16,7 +16,3 @@
 Django<3.3
 
 edx_rest_api_client==4.0.1      # versions>4.0.1 have backward incompatible changes in timeout handling
-
-# wagtail>=3.0 causing test failures. Will be investigated and 
-# fixed in https://github.com/edx/portal-designer/issues/191
-wagtail<3.0.0

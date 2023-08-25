@@ -1,7 +1,7 @@
 """ Test the Designer Pages API """
 from django.test import TestCase
 from django.urls import reverse
-from wagtail.core.models import Page
+from wagtail.models import Page
 
 from designer.apps.core.tests.utils import DEFAULT_WAGTAIL_PAGES
 from designer.apps.pages.tests.utils import create_program_page, create_site

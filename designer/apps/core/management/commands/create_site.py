@@ -4,7 +4,7 @@ import re
 from django.contrib.auth.models import Group, Permission
 from django.core.management.base import BaseCommand, CommandError
 from django.db import transaction
-from wagtail.core.models import Page, Site, Collection, GroupPagePermission, GroupCollectionPermission
+from wagtail.models import Page, Site, Collection, GroupPagePermission, GroupCollectionPermission
 
 from designer.apps.pages.models import IndexPage
 
