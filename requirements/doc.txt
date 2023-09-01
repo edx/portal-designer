@@ -31,9 +31,9 @@ beautifulsoup4==4.9.3
     #   wagtail
 bleach==6.0.0
     # via readme-renderer
-boto3==1.28.26
+boto3==1.28.39
     # via -r requirements/test.txt
-botocore==1.31.26
+botocore==1.31.39
     # via
     #   -r requirements/test.txt
     #   boto3
@@ -51,7 +51,7 @@ charset-normalizer==3.2.0
     # via
     #   -r requirements/test.txt
     #   requests
-click==8.1.6
+click==8.1.7
     # via
     #   -r requirements/test.txt
     #   click-log
@@ -115,7 +115,7 @@ django-crum==0.7.9
     # via
     #   -r requirements/test.txt
     #   edx-django-utils
-django-dynamic-fixture==3.1.2
+django-dynamic-fixture==4.0.0
     # via -r requirements/test.txt
 django-extensions==3.2.3
     # via -r requirements/test.txt
@@ -181,11 +181,11 @@ edx-django-utils==5.7.0
     #   -r requirements/test.txt
     #   edx-drf-extensions
     #   edx-rest-api-client
-edx-drf-extensions==8.9.0
+edx-drf-extensions==8.9.2
     # via -r requirements/test.txt
 edx-lint==5.3.4
     # via -r requirements/test.txt
-edx-opaque-keys==2.4.0
+edx-opaque-keys==2.5.0
     # via
     #   -r requirements/test.txt
     #   edx-drf-extensions
@@ -203,11 +203,11 @@ exceptiongroup==1.1.3
     #   pytest
 factory-boy==3.3.0
     # via -r requirements/test.txt
-faker==19.3.0
+faker==19.3.1
     # via
     #   -r requirements/test.txt
     #   factory-boy
-filelock==3.12.2
+filelock==3.12.3
     # via
     #   -r requirements/test.txt
     #   tox
@@ -268,7 +268,7 @@ mock==5.1.0
     # via -r requirements/test.txt
 mysqlclient==2.2.0
     # via -r requirements/test.txt
-newrelic==8.10.0
+newrelic==9.0.0
     # via
     #   -r requirements/test.txt
     #   edx-django-utils
@@ -301,7 +301,7 @@ platformdirs==3.10.0
     #   -r requirements/test.txt
     #   pylint
     #   virtualenv
-pluggy==1.2.0
+pluggy==1.3.0
     # via
     #   -r requirements/test.txt
     #   pytest
@@ -318,11 +318,11 @@ pycparser==2.21
     # via
     #   -r requirements/test.txt
     #   cffi
-pydantic==2.1.1
+pydantic==2.3.0
     # via
     #   -r requirements/test.txt
     #   inflect
-pydantic-core==2.4.0
+pydantic-core==2.6.3
     # via
     #   -r requirements/test.txt
     #   pydantic
@@ -405,7 +405,7 @@ pyyaml==6.0.1
     #   code-annotations
     #   drf-yasg
     #   edx-django-release-util
-readme-renderer==40.0
+readme-renderer==41.0
     # via -r requirements/doc.in
 requests==2.31.0
     # via
@@ -423,7 +423,7 @@ requests-oauthlib==1.3.1
     #   social-auth-core
 restructuredtext-lint==1.4.0
     # via doc8
-s3transfer==0.6.1
+s3transfer==0.6.2
     # via
     #   -r requirements/test.txt
     #   boto3
@@ -435,7 +435,6 @@ six==1.16.0
     # via
     #   -r requirements/test.txt
     #   bleach
-    #   django-dynamic-fixture
     #   edx-auth-backends
     #   edx-django-release-util
     #   edx-drf-extensions
@@ -451,7 +450,7 @@ slumber==0.7.1
     #   edx-rest-api-client
 snowballstemmer==2.2.0
     # via sphinx
-social-auth-app-django==5.2.0
+social-auth-app-django==5.3.0
     # via
     #   -r requirements/test.txt
     #   edx-auth-backends
@@ -523,7 +522,9 @@ typing-extensions==4.7.1
     #   annotated-types
     #   asgiref
     #   astroid
+    #   edx-opaque-keys
     #   faker
+    #   filelock
     #   inflect
     #   pydantic
     #   pydantic-core
@@ -537,7 +538,7 @@ urllib3==1.26.16
     #   -r requirements/test.txt
     #   botocore
     #   requests
-virtualenv==20.24.3
+virtualenv==20.24.4
     # via
     #   -r requirements/test.txt
     #   tox
