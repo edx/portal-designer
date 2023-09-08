@@ -12,9 +12,9 @@ asgiref==3.7.2
     # via django
 beautifulsoup4==4.9.3
     # via wagtail
-boto3==1.28.39
+boto3==1.28.40
     # via -r requirements/base.in
-botocore==1.31.39
+botocore==1.31.40
     # via
     #   boto3
     #   s3transfer
@@ -36,7 +36,7 @@ defusedxml==0.7.1
     # via
     #   python3-openid
     #   social-auth-core
-django==3.2.20
+django==3.2.21
     # via
     #   -c requirements/common_constraints.txt
     #   -c requirements/constraints.txt
@@ -69,7 +69,7 @@ django-filter==21.1
     # via wagtail
 django-modelcluster==5.3
     # via wagtail
-django-storages==1.13.2
+django-storages==1.14
     # via -r requirements/base.in
 django-taggit==2.1.0
     # via wagtail
@@ -175,7 +175,7 @@ python-dateutil==2.8.2
     #   edx-drf-extensions
 python3-openid==3.2.0
     # via social-auth-core
-pytz==2023.3
+pytz==2023.3.post1
     # via
     #   -r requirements/base.in
     #   django
@@ -220,7 +220,7 @@ social-auth-core==4.4.2
     #   -r requirements/base.in
     #   edx-auth-backends
     #   social-auth-app-django
-soupsieve==2.4.1
+soupsieve==2.5
     # via beautifulsoup4
 sqlparse==0.4.4
     # via django
