@@ -7,3 +7,4 @@ gunicorn
 #mysqlclient
 PyYAML
 python-memcached
+pymemcache
