@@ -33,7 +33,7 @@ JWT_AUTH['JWT_ISSUERS'].append({
 #     'default': {
 #         'BACKEND': 'django.core.cache.backends.memcached.PyMemcacheCache',
 #         'LOCATION': os.environ.get('CACHE_LOCATION', 'memcached:11211'),
-#         'OPTIONS': {"no_delay": True, "ignore_exec": True, "use_pooling": True},
+#         'OPTIONS': {"no_delay": True, "ignore_exc": True, "use_pooling": True},
 #     }
 # }
 
