@@ -12,9 +12,9 @@ asgiref==3.7.2
     # via django
 beautifulsoup4==4.11.2
     # via wagtail
-boto3==1.28.34
+boto3==1.28.40
     # via -r requirements/base.in
-botocore==1.31.34
+botocore==1.31.40
     # via
     #   boto3
     #   s3transfer
@@ -36,8 +36,7 @@ defusedxml==0.7.1
     # via
     #   python3-openid
     #   social-auth-core
-    #   willow
-django==3.2.20
+django==3.2.21
     # via
     #   -c requirements/common_constraints.txt
     #   -c requirements/constraints.txt
@@ -74,7 +73,7 @@ django-modelcluster==6.0
     # via wagtail
 django-permissionedforms==0.1
     # via wagtail
-django-storages==1.13.2
+django-storages==1.14
     # via -r requirements/base.in
 django-taggit==4.0.0
     # via wagtail
@@ -112,7 +111,7 @@ edx-django-utils==5.7.0
     #   -r requirements/base.in
     #   edx-drf-extensions
     #   edx-rest-api-client
-edx-drf-extensions==8.9.1
+edx-drf-extensions==8.9.2
     # via -r requirements/base.in
 edx-opaque-keys==2.5.0
     # via edx-drf-extensions
@@ -142,7 +141,7 @@ mock==5.1.0
     # via -r requirements/base.in
 mysqlclient==2.2.0
     # via -r requirements/base.in
-newrelic==8.11.0
+newrelic==9.0.0
     # via edx-django-utils
 oauthlib==3.2.2
     # via
@@ -186,7 +185,7 @@ python-dateutil==2.8.2
     #   edx-drf-extensions
 python3-openid==3.2.0
     # via social-auth-core
-pytz==2023.3
+pytz==2023.3.post1
     # via
     #   -r requirements/base.in
     #   django
@@ -222,7 +221,7 @@ six==1.16.0
     #   python-dateutil
 slumber==0.7.1
     # via edx-rest-api-client
-social-auth-app-django==5.2.0
+social-auth-app-django==5.3.0
     # via
     #   -r requirements/base.in
     #   edx-auth-backends
@@ -231,7 +230,7 @@ social-auth-core==4.4.2
     #   -r requirements/base.in
     #   edx-auth-backends
     #   social-auth-app-django
-soupsieve==2.4.1
+soupsieve==2.5
     # via beautifulsoup4
 sqlparse==0.4.4
     # via django

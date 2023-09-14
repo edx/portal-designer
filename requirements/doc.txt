@@ -31,9 +31,9 @@ beautifulsoup4==4.11.2
     #   wagtail
 bleach==6.0.0
     # via readme-renderer
-boto3==1.28.34
+boto3==1.28.40
     # via -r requirements/test.txt
-botocore==1.31.34
+botocore==1.31.40
     # via
     #   -r requirements/test.txt
     #   boto3
@@ -89,7 +89,7 @@ distlib==0.3.7
     # via
     #   -r requirements/test.txt
     #   virtualenv
-django==3.2.20
+django==3.2.21
     # via
     #   -r requirements/test.txt
     #   django-cors-headers
@@ -118,7 +118,7 @@ django-crum==0.7.9
     # via
     #   -r requirements/test.txt
     #   edx-django-utils
-django-dynamic-fixture==3.1.3
+django-dynamic-fixture==4.0.0
     # via -r requirements/test.txt
 django-extensions==3.2.3
     # via -r requirements/test.txt
@@ -134,7 +134,7 @@ django-permissionedforms==0.1
     # via
     #   -r requirements/test.txt
     #   wagtail
-django-storages==1.13.2
+django-storages==1.14
     # via -r requirements/test.txt
 django-taggit==4.0.0
     # via
@@ -188,7 +188,7 @@ edx-django-utils==5.7.0
     #   -r requirements/test.txt
     #   edx-drf-extensions
     #   edx-rest-api-client
-edx-drf-extensions==8.9.1
+edx-drf-extensions==8.9.2
     # via -r requirements/test.txt
 edx-lint==5.3.4
     # via -r requirements/test.txt
@@ -214,7 +214,7 @@ faker==19.3.1
     # via
     #   -r requirements/test.txt
     #   factory-boy
-filelock==3.12.2
+filelock==3.12.3
     # via
     #   -r requirements/test.txt
     #   tox
@@ -279,7 +279,7 @@ mock==5.1.0
     # via -r requirements/test.txt
 mysqlclient==2.2.0
     # via -r requirements/test.txt
-newrelic==8.11.0
+newrelic==9.0.0
     # via
     #   -r requirements/test.txt
     #   edx-django-utils
@@ -317,7 +317,7 @@ platformdirs==3.10.0
     #   -r requirements/test.txt
     #   pylint
     #   virtualenv
-pluggy==1.2.0
+pluggy==1.3.0
     # via
     #   -r requirements/test.txt
     #   pytest
@@ -383,7 +383,7 @@ pynacl==1.5.0
     # via
     #   -r requirements/test.txt
     #   edx-django-utils
-pytest==7.4.0
+pytest==7.4.1
     # via
     #   -r requirements/test.txt
     #   pytest-cov
@@ -406,7 +406,7 @@ python3-openid==3.2.0
     # via
     #   -r requirements/test.txt
     #   social-auth-core
-pytz==2023.3
+pytz==2023.3.post1
     # via
     #   -r requirements/test.txt
     #   babel
@@ -451,7 +451,6 @@ six==1.16.0
     # via
     #   -r requirements/test.txt
     #   bleach
-    #   django-dynamic-fixture
     #   edx-auth-backends
     #   edx-django-release-util
     #   edx-drf-extensions
@@ -467,7 +466,7 @@ slumber==0.7.1
     #   edx-rest-api-client
 snowballstemmer==2.2.0
     # via sphinx
-social-auth-app-django==5.2.0
+social-auth-app-django==5.3.0
     # via
     #   -r requirements/test.txt
     #   edx-auth-backends
@@ -476,7 +475,7 @@ social-auth-core==4.4.2
     #   -r requirements/test.txt
     #   edx-auth-backends
     #   social-auth-app-django
-soupsieve==2.4.1
+soupsieve==2.5
     # via
     #   -r requirements/test.txt
     #   beautifulsoup4
@@ -537,6 +536,7 @@ typing-extensions==4.7.1
     #   astroid
     #   edx-opaque-keys
     #   faker
+    #   filelock
     #   inflect
     #   pydantic
     #   pydantic-core
@@ -550,7 +550,7 @@ urllib3==1.26.16
     #   -r requirements/test.txt
     #   botocore
     #   requests
-virtualenv==20.24.3
+virtualenv==20.24.4
     # via
     #   -r requirements/test.txt
     #   tox
