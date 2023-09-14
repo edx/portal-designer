@@ -20,13 +20,13 @@ astroid==2.15.6
     # via
     #   pylint
     #   pylint-celery
-beautifulsoup4==4.9.3
+beautifulsoup4==4.11.2
     # via
     #   -r requirements/base.txt
     #   wagtail
-boto3==1.28.40
+boto3==1.28.47
     # via -r requirements/base.txt
-botocore==1.31.40
+botocore==1.31.47
     # via
     #   -r requirements/base.txt
     #   boto3
@@ -57,7 +57,7 @@ code-annotations==1.5.0
     # via
     #   -r requirements/test.in
     #   edx-lint
-coverage[toml]==7.3.0
+coverage[toml]==7.3.1
     # via
     #   -r requirements/test.in
     #   pytest-cov
@@ -71,6 +71,7 @@ defusedxml==0.7.1
     #   -r requirements/base.txt
     #   python3-openid
     #   social-auth-core
+    #   willow
 dill==0.3.7
     # via pylint
 distlib==0.3.7
@@ -83,6 +84,8 @@ distlib==0.3.7
     #   django-crum
     #   django-extensions
     #   django-filter
+    #   django-modelcluster
+    #   django-permissionedforms
     #   django-storages
     #   django-taggit
     #   django-treebeard
@@ -107,17 +110,21 @@ django-dynamic-fixture==4.0.0
     # via -r requirements/test.in
 django-extensions==3.2.3
     # via -r requirements/base.txt
-django-filter==21.1
+django-filter==23.2
     # via
     #   -r requirements/base.txt
     #   wagtail
-django-modelcluster==5.3
+django-modelcluster==6.0
+    # via
+    #   -r requirements/base.txt
+    #   wagtail
+django-permissionedforms==0.1
     # via
     #   -r requirements/base.txt
     #   wagtail
 django-storages==1.14
     # via -r requirements/base.txt
-django-taggit==2.1.0
+django-taggit==4.0.0
     # via
     #   -r requirements/base.txt
     #   wagtail
@@ -161,7 +168,7 @@ edx-django-utils==5.7.0
     #   -r requirements/base.txt
     #   edx-drf-extensions
     #   edx-rest-api-client
-edx-drf-extensions==8.9.2
+edx-drf-extensions==8.9.3
     # via -r requirements/base.txt
 edx-lint==5.3.4
     # via -r requirements/test.in
@@ -181,14 +188,18 @@ exceptiongroup==1.1.3
     # via pytest
 factory-boy==3.3.0
     # via -r requirements/test.in
-faker==19.3.1
+faker==19.6.1
     # via
     #   -r requirements/test.in
     #   factory-boy
-filelock==3.12.3
+filelock==3.12.4
     # via
     #   tox
     #   virtualenv
+filetype==1.2.0
+    # via
+    #   -r requirements/base.txt
+    #   willow
 html5lib==1.1
     # via
     #   -r requirements/base.txt
@@ -242,7 +253,7 @@ oauthlib==3.2.2
 openpyxl==3.1.2
     # via
     #   -r requirements/base.txt
-    #   tablib
+    #   wagtail
 packaging==23.1
     # via
     #   -r requirements/base.txt
@@ -253,10 +264,15 @@ pbr==5.11.1
     # via
     #   -r requirements/base.txt
     #   stevedore
-pillow==9.5.0
+pillow==10.0.0
     # via
     #   -r requirements/base.txt
+    #   pillow-heif
     #   wagtail
+pillow-heif==0.13.0
+    # via
+    #   -r requirements/base.txt
+    #   willow
 platformdirs==3.10.0
     # via
     #   pylint
@@ -313,7 +329,7 @@ pynacl==1.5.0
     # via
     #   -r requirements/base.txt
     #   edx-django-utils
-pytest==7.4.1
+pytest==7.4.2
     # via
     #   -r requirements/test.in
     #   pytest-cov
@@ -326,7 +342,6 @@ python-dateutil==2.8.2
     # via
     #   -r requirements/base.txt
     #   botocore
-    #   edx-drf-extensions
     #   faker
 python-slugify==8.0.1
     # via code-annotations
@@ -374,7 +389,6 @@ six==1.16.0
     #   -r requirements/base.txt
     #   edx-auth-backends
     #   edx-django-release-util
-    #   edx-drf-extensions
     #   edx-lint
     #   html5lib
     #   l18n
@@ -407,10 +421,6 @@ stevedore==5.1.0
     #   code-annotations
     #   edx-django-utils
     #   edx-opaque-keys
-tablib[xls,xlsx]==3.5.0
-    # via
-    #   -r requirements/base.txt
-    #   wagtail
 telepath==0.3.1
     # via
     #   -r requirements/base.txt
@@ -437,7 +447,6 @@ typing-extensions==4.7.1
     #   astroid
     #   edx-opaque-keys
     #   faker
-    #   filelock
     #   inflect
     #   pydantic
     #   pydantic-core
@@ -451,33 +460,19 @@ urllib3==1.26.16
     #   -r requirements/base.txt
     #   botocore
     #   requests
-virtualenv==20.24.4
+virtualenv==20.24.5
     # via tox
-wagtail==2.16.3
-    # via
-    #   -c requirements/constraints.txt
-    #   -r requirements/base.txt
+wagtail==5.1.1
+    # via -r requirements/base.txt
 webencodings==0.5.1
     # via
     #   -r requirements/base.txt
     #   html5lib
-willow==1.4.1
+willow[heif]==1.6.2
     # via
     #   -r requirements/base.txt
     #   wagtail
 wrapt==1.15.0
     # via astroid
-xlrd==2.0.1
-    # via
-    #   -r requirements/base.txt
-    #   tablib
-xlsxwriter==3.1.2
-    # via
-    #   -r requirements/base.txt
-    #   wagtail
-xlwt==1.3.0
-    # via
-    #   -r requirements/base.txt
-    #   tablib
 zipp==3.16.2
     # via -r requirements/base.txt

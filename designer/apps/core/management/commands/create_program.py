@@ -3,7 +3,7 @@ import uuid
 
 from django.core.management import BaseCommand, CommandError
 from django.db import transaction
-from wagtail.core.models import Site
+from wagtail.models import Site
 
 from designer.apps.pages.models import ProgramPage
 

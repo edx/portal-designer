@@ -6,7 +6,7 @@ from django.urls import reverse
 from django.utils.text import slugify
 from faker import Faker
 from faker.providers import color, internet, lorem, misc
-from wagtail.core.models import Page
+from wagtail.models import Page
 
 from designer.apps.core.tests.utils import (DocumentFactory, ImageFactory,
                                             SiteFactory, UserFactory)

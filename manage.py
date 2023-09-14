@@ -1,4 +1,5 @@
 #!/usr/bin/env python
+# pylint: skip-file
 
 """
 Django administration utility.

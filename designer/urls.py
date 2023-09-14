@@ -26,7 +26,7 @@ from edx_api_doc_tools import make_api_info
 from rest_framework import permissions
 from wagtail.admin import urls as wagtailadmin_urls
 from wagtail.documents import urls as wagtaildocs_urls
-from wagtail.core import urls as wagtail_urls
+from wagtail import urls as wagtail_urls
 
 from designer.apps.core import views as core_views
 from designer.apps.core.wagtailadmin.views import SiteCreationView

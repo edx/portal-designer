@@ -10,11 +10,11 @@ anyascii==0.3.2
     # via wagtail
 asgiref==3.7.2
     # via django
-beautifulsoup4==4.9.3
+beautifulsoup4==4.11.2
     # via wagtail
-boto3==1.28.40
+boto3==1.28.47
     # via -r requirements/base.in
-botocore==1.31.40
+botocore==1.31.47
     # via
     #   boto3
     #   s3transfer
@@ -36,6 +36,7 @@ defusedxml==0.7.1
     # via
     #   python3-openid
     #   social-auth-core
+    #   willow
 django==3.2.21
     # via
     #   -c requirements/common_constraints.txt
@@ -45,6 +46,8 @@ django==3.2.21
     #   django-crum
     #   django-extensions
     #   django-filter
+    #   django-modelcluster
+    #   django-permissionedforms
     #   django-storages
     #   django-taggit
     #   django-treebeard
@@ -65,13 +68,15 @@ django-crum==0.7.9
     # via edx-django-utils
 django-extensions==3.2.3
     # via -r requirements/base.in
-django-filter==21.1
+django-filter==23.2
     # via wagtail
-django-modelcluster==5.3
+django-modelcluster==6.0
+    # via wagtail
+django-permissionedforms==0.1
     # via wagtail
 django-storages==1.14
     # via -r requirements/base.in
-django-taggit==2.1.0
+django-taggit==4.0.0
     # via wagtail
 django-treebeard==4.7
     # via wagtail
@@ -107,7 +112,7 @@ edx-django-utils==5.7.0
     #   -r requirements/base.in
     #   edx-drf-extensions
     #   edx-rest-api-client
-edx-drf-extensions==8.9.2
+edx-drf-extensions==8.9.3
     # via -r requirements/base.in
 edx-opaque-keys==2.5.0
     # via edx-drf-extensions
@@ -117,6 +122,8 @@ edx-rest-api-client==4.0.1
     #   -r requirements/base.in
 et-xmlfile==1.1.0
     # via openpyxl
+filetype==1.2.0
+    # via willow
 html5lib==1.1
     # via wagtail
 idna==3.4
@@ -142,13 +149,17 @@ oauthlib==3.2.2
     #   requests-oauthlib
     #   social-auth-core
 openpyxl==3.1.2
-    # via tablib
+    # via wagtail
 packaging==23.1
     # via drf-yasg
 pbr==5.11.1
     # via stevedore
-pillow==9.5.0
-    # via wagtail
+pillow==10.0.0
+    # via
+    #   pillow-heif
+    #   wagtail
+pillow-heif==0.13.0
+    # via willow
 psutil==5.9.5
     # via edx-django-utils
 pycparser==2.21
@@ -172,7 +183,6 @@ python-dateutil==2.8.2
     # via
     #   -r requirements/base.in
     #   botocore
-    #   edx-drf-extensions
 python3-openid==3.2.0
     # via social-auth-core
 pytz==2023.3.post1
@@ -205,7 +215,6 @@ six==1.16.0
     # via
     #   edx-auth-backends
     #   edx-django-release-util
-    #   edx-drf-extensions
     #   html5lib
     #   l18n
     #   python-dateutil
@@ -228,8 +237,6 @@ stevedore==5.1.0
     # via
     #   edx-django-utils
     #   edx-opaque-keys
-tablib[xls,xlsx]==3.5.0
-    # via wagtail
 telepath==0.3.1
     # via wagtail
 typing-extensions==4.7.1
@@ -246,19 +253,11 @@ urllib3==1.26.16
     # via
     #   botocore
     #   requests
-wagtail==2.16.3
-    # via
-    #   -c requirements/constraints.txt
-    #   -r requirements/base.in
+wagtail==5.1.1
+    # via -r requirements/base.in
 webencodings==0.5.1
     # via html5lib
-willow==1.4.1
+willow[heif]==1.6.2
     # via wagtail
-xlrd==2.0.1
-    # via tablib
-xlsxwriter==3.1.2
-    # via wagtail
-xlwt==1.3.0
-    # via tablib
 zipp==3.16.2
     # via -r requirements/base.in

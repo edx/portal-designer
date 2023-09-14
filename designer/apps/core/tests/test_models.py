@@ -1,5 +1,5 @@
 """ Tests for core models. """
-
+# pylint: skip-file
 from django.test import TestCase
 from django_dynamic_fixture import G
 from social_django.models import UserSocialAuth

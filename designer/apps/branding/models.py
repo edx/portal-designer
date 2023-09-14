@@ -1,7 +1,6 @@
 """ Models related to the branding of individual sites """
 from django.db import models
-from wagtail.admin.edit_handlers import FieldPanel, MultiFieldPanel
-from wagtail.images.edit_handlers import ImageChooserPanel
+from wagtail.admin.panels import FieldPanel, MultiFieldPanel
 from wagtail.images.models import Image
 from designer.apps.branding.utils import validate_hexadecimal_color
 
@@ -38,7 +37,7 @@ class Branding(models.Model):
     panels = [
         MultiFieldPanel(
             [
-                ImageChooserPanel('organization_logo_image'),
+                FieldPanel('organization_logo_image'),
                 FieldPanel('organization_logo_alt_text'),
             ],
             heading='Organization Logo',
