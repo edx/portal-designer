@@ -1,8 +1,8 @@
 """ API v1 URLs. """
-from django.conf.urls import url
+from django.urls import re_path
 from designer.apps.api.v1.views import DesignerPagesAPIEndpoint, ProgramDetailView
 
 urlpatterns = [
-    url(r'^pages/', DesignerPagesAPIEndpoint.as_view(), name="pages"),
-    url(r'^programs/', ProgramDetailView.as_view(), name="programs"),
+    re_path(r'^pages/', DesignerPagesAPIEndpoint.as_view(), name="pages"),
+    re_path(r'^programs/', ProgramDetailView.as_view(), name="programs"),
 ]
