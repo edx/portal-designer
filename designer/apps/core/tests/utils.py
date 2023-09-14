@@ -1,11 +1,10 @@
 """Utilities to enabling testing of Site related code"""
-# pylint: skip-file
 import random
 import factory
 
 from faker import Faker
 from faker.providers import company, internet, lorem, misc, person
-from wagtail.models import Site, Page
+from wagtail.core.models import Site, Page
 from wagtail.images.models import Image
 from wagtail.documents.models import Document
 from designer.apps.core.models import User

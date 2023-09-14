@@ -1,5 +1,4 @@
 """ Page Factories """
-# pylint: skip-file
 import json
 from random import getrandbits, randint
 

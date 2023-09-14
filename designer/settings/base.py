@@ -57,7 +57,7 @@ WAGTAIL_APPS = (
     'wagtail.images',
     'wagtail.search',
     'wagtail.admin',
-    'wagtail',
+    'wagtail.core',
     'wagtail.api.v2',
 )
 
@@ -272,6 +272,6 @@ MEDIA_STORAGE_BACKEND = {
 
 WAGTAILADMIN_RICH_TEXT_EDITORS = {
     'default': {
-        'WIDGET': 'designer.rich_text.RichTextArea'
+        'WIDGET': 'wagtail.admin.rich_text.HalloRichTextArea'
     }
 }
