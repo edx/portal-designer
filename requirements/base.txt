@@ -12,9 +12,9 @@ asgiref==3.7.2
     # via django
 beautifulsoup4==4.11.2
     # via wagtail
-boto3==1.28.40
+boto3==1.28.47
     # via -r requirements/base.in
-botocore==1.31.40
+botocore==1.31.47
     # via
     #   boto3
     #   s3transfer
@@ -36,6 +36,7 @@ defusedxml==0.7.1
     # via
     #   python3-openid
     #   social-auth-core
+    #   willow
 django==3.2.21
     # via
     #   -c requirements/common_constraints.txt
@@ -111,7 +112,7 @@ edx-django-utils==5.7.0
     #   -r requirements/base.in
     #   edx-drf-extensions
     #   edx-rest-api-client
-edx-drf-extensions==8.9.2
+edx-drf-extensions==8.9.3
     # via -r requirements/base.in
 edx-opaque-keys==2.5.0
     # via edx-drf-extensions
@@ -182,7 +183,6 @@ python-dateutil==2.8.2
     # via
     #   -r requirements/base.in
     #   botocore
-    #   edx-drf-extensions
 python3-openid==3.2.0
     # via social-auth-core
 pytz==2023.3.post1
@@ -215,7 +215,6 @@ six==1.16.0
     # via
     #   edx-auth-backends
     #   edx-django-release-util
-    #   edx-drf-extensions
     #   html5lib
     #   l18n
     #   python-dateutil
@@ -258,7 +257,7 @@ wagtail==5.1.1
     # via -r requirements/base.in
 webencodings==0.5.1
     # via html5lib
-willow[heif]==1.6.1
+willow[heif]==1.6.2
     # via wagtail
 zipp==3.16.2
     # via -r requirements/base.in
