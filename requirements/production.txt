@@ -20,11 +20,11 @@ beautifulsoup4==4.11.2
     # via
     #   -r requirements/base.txt
     #   wagtail
-boto3==1.28.47
+boto3==1.28.48
     # via
     #   -r requirements/base.txt
     #   -r requirements/production.in
-botocore==1.31.47
+botocore==1.31.48
     # via
     #   -r requirements/base.txt
     #   boto3
