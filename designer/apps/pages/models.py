@@ -1,21 +1,15 @@
 """ Page models """
+# pylint: skip-file
 import re
+
 from django.db import models
 from modelcluster.fields import ParentalKey
-from wagtail.admin.edit_handlers import (
-    FieldPanel,
-    InlinePanel,
-    StreamFieldPanel,
-    RichTextField,
-    RichTextFieldPanel,
-    MultiFieldPanel,
-)
-from wagtail.images.edit_handlers import ImageChooserPanel
-from wagtail.core.blocks import CharBlock, StructBlock, URLBlock
-from wagtail.core.fields import StreamField
-from wagtail.core.models import Page
+from wagtail.admin.panels import FieldPanel, InlinePanel, MultiFieldPanel
+from wagtail.blocks import CharBlock, StructBlock, URLBlock
 from wagtail.documents.blocks import DocumentChooserBlock
+from wagtail.fields import RichTextField, StreamField
 from wagtail.images.models import Image
+from wagtail.models import Page
 
 from designer.apps.branding.models import Branding
 from designer.apps.branding.utils import validate_hexadecimal_color
@@ -122,7 +116,7 @@ class ExternalProgramWebsite(models.Model):
     panels = [
         FieldPanel('display'),
         FieldPanel('header'),
-        RichTextFieldPanel('description'),
+        FieldPanel('description'),
         MultiFieldPanel(
             [
                 FieldPanel('link_display_text'),
@@ -171,7 +165,8 @@ class ProgramDocuments(models.Model):
             ))
         ],
         blank=True,
-        verbose_name="Documents"
+        verbose_name="Documents",
+        use_json_field=True
     )
 
     page = ParentalKey(ProgramPage, on_delete=models.CASCADE, related_name='program_documents', unique=True)
@@ -179,7 +174,7 @@ class ProgramDocuments(models.Model):
     panels = [
         FieldPanel('display'),
         FieldPanel('header'),
-        StreamFieldPanel('documents'),
+        FieldPanel('documents'),
     ]
 
 
@@ -209,8 +204,8 @@ class ProgramPageBranding(Branding):
     )
 
     panels = Branding.panels + [
-        ImageChooserPanel('cover_image'),
-        ImageChooserPanel('texture_image'),
+        FieldPanel('cover_image'),
+        FieldPanel('texture_image'),
     ]
 
 

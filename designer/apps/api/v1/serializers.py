@@ -1,6 +1,6 @@
 """ Serializers for Page APIs """
 from rest_framework import serializers
-from wagtail.core.models import Page
+from wagtail.models import Page
 from designer.apps.pages.models import EnterprisePage, IndexPage, ProgramPage
 
 
