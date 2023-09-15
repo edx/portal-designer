@@ -17,7 +17,7 @@ import os
 
 from auth_backends.urls import oauth2_urlpatterns
 from django.conf import settings
-from django.urls import re_path, include
+from django.urls import include, path
 from django.conf.urls.static import static
 from django.contrib import admin
 from django.views.generic import RedirectView
@@ -42,21 +42,21 @@ schema_view = get_schema_view(
 )
 
 urlpatterns = oauth2_urlpatterns + [
-    re_path(r'^api/', include('designer.apps.api.urls')),
-    re_path(r'^api-docs/$', schema_view.with_ui('swagger', cache_timeout=0), name='schema-swagger-ui'),
+    path('api/', include('designer.apps.api.urls')),
+    path('api-docs/', schema_view.with_ui('swagger', cache_timeout=0), name='schema-swagger-ui'),
     # Use the same auth views for all logins, including those originating from the browseable API.
-    re_path(r'^api-auth/', include(oauth2_urlpatterns)),
-    re_path(r'^auto_auth/$', core_views.AutoAuth.as_view(), name='auto_auth'),
-    re_path(r'^health/$', core_views.health, name='health'),
-    re_path(r'^documents/', include(wagtaildocs_urls)),
-    re_path(r'^pages/', include(wagtail_urls)),
-    re_path(r'^cms/login/$', core_views.wagtail_admin_access_check),
-    re_path(r'^cms/logout/$', RedirectView.as_view(url='/logout/')),
-    re_path(r'^cms/sites/new/$', SiteCreationView.as_view(), name='create-new-site'),
-    re_path(r'^cms/', include(wagtailadmin_urls)),
-    re_path(r'^$', RedirectView.as_view(url='/cms/'))
+    path('api-auth/', include(oauth2_urlpatterns)),
+    path('auto_auth/', core_views.AutoAuth.as_view(), name='auto_auth'),
+    path('health/', core_views.health, name='health'),
+    path('documents/', include(wagtaildocs_urls)),
+    path('pages/', include(wagtail_urls)),
+    path('cms/login/', core_views.wagtail_admin_access_check),
+    path('cms/logout/', RedirectView.as_view(url='/logout/')),
+    path('cms/sites/new/', SiteCreationView.as_view(), name='create-new-site'),
+    path('cms/', include(wagtailadmin_urls)),
+    path('', RedirectView.as_view(url='/cms/'))
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
 if settings.DEBUG and os.environ.get('ENABLE_DJANGO_TOOLBAR', False):  # pragma: no cover
     import debug_toolbar
-    urlpatterns.append(re_path(r'^__debug__/', include(debug_toolbar.urls)))
+    urlpatterns.append(path('__debug__/', include(debug_toolbar.urls)))
