@@ -21,6 +21,10 @@ astroid==2.15.6
     #   -r requirements/test.txt
     #   pylint
     #   pylint-celery
+backports-zoneinfo==0.2.1
+    # via
+    #   -r requirements/test.txt
+    #   django
 beautifulsoup4==4.11.2
     # via
     #   -r requirements/test.txt
@@ -83,7 +87,7 @@ distlib==0.3.7
     # via
     #   -r requirements/test.txt
     #   virtualenv
-django==3.2.21
+django==4.2.5
     # via
     #   -r requirements/test.txt
     #   django-cors-headers
@@ -388,7 +392,6 @@ python3-openid==3.2.0
 pytz==2023.3.post1
     # via
     #   -r requirements/test.txt
-    #   django
     #   django-modelcluster
     #   djangorestframework
     #   drf-yasg
