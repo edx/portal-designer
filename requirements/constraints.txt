@@ -13,3 +13,7 @@
 -c common_constraints.txt
 
 edx_rest_api_client==4.0.1      # versions>4.0.1 have backward incompatible changes in timeout handling
+
+
+# Django5 release is inline. So better to add constraint.
+Django<4.3
