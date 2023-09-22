@@ -12,8 +12,7 @@
 # This file contains all common constraints for edx-repos
 -c common_constraints.txt
 
+# We need to stay on LTS version
+Django<3.3
+
 edx_rest_api_client==4.0.1      # versions>4.0.1 have backward incompatible changes in timeout handling
-
-
-# Django5 release is inline. So better to add constraint.
-Django<4.3

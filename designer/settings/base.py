@@ -118,6 +118,8 @@ LOCALE_PATHS = (
     root('conf', 'locale'),
 )
 
+DEFAULT_HASHING_ALGORITHM = "sha1"
+
 DEFAULT_AUTO_FIELD = "django.db.models.AutoField"
 
 
