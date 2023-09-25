@@ -5,6 +5,9 @@ MAINTAINER sre@edx.org
 
 # pkg-config; mysqlclient>=2.2.0 requires pkg-config (https://github.com/PyMySQL/mysqlclient/issues/620)
 
+ARG DEBIAN_FRONTEND=noninteractive
+ENV TZ=Etc/UTC
+
 RUN apt-get update && apt-get -qy install --no-install-recommends \
  language-pack-en \
  locales \
@@ -15,8 +18,10 @@ RUN apt-get update && apt-get -qy install --no-install-recommends \
  libssl-dev \
  python3-dev \
  gcc \
- make
-
+ make \
+#  sqlite not needed in this fix
+ sqlite3 \ 
+ tzdata
 
 RUN pip install --upgrade pip setuptools
 # delete apt package lists because we do not need them inflating our image
@@ -59,5 +64,9 @@ COPY . /edx/app/designer
 FROM app as devstack
 # Install dependencies as root and revert back to application user
 USER root
+ENV DJANGO_SETTINGS_MODULE designer.settings.local
 RUN pip install -r /edx/app/designer/requirements/dev.txt
+
+CMD while true; do python ./manage.py runserver 0.0.0.0:8080; sleep 2; done
+
 USER app

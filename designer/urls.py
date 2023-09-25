@@ -54,6 +54,7 @@ urlpatterns = oauth2_urlpatterns + [
     path('cms/logout/', RedirectView.as_view(url='/logout/')),
     path('cms/sites/new/', SiteCreationView.as_view(), name='create-new-site'),
     path('cms/', include(wagtailadmin_urls)),
+    path('admin/', admin.site.urls),
     path('', RedirectView.as_view(url='/cms/'))
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
