@@ -12,9 +12,9 @@ asgiref==3.7.2
     # via django
 beautifulsoup4==4.11.2
     # via wagtail
-boto3==1.28.50
+boto3==1.28.54
     # via -r requirements/base.in
-botocore==1.31.50
+botocore==1.31.54
     # via
     #   boto3
     #   s3transfer
@@ -28,7 +28,7 @@ charset-normalizer==3.2.0
     # via requests
 click==8.1.7
     # via edx-django-utils
-cryptography==41.0.3
+cryptography==41.0.4
     # via
     #   pyjwt
     #   social-auth-core
@@ -114,7 +114,7 @@ edx-django-utils==5.7.0
     #   edx-rest-api-client
 edx-drf-extensions==8.10.0
     # via -r requirements/base.in
-edx-opaque-keys==2.5.0
+edx-opaque-keys==2.5.1
     # via edx-drf-extensions
 edx-rest-api-client==4.0.1
     # via
@@ -142,7 +142,7 @@ mock==5.1.0
     # via -r requirements/base.in
 mysqlclient==2.2.0
     # via -r requirements/base.in
-newrelic==9.0.0
+newrelic==9.1.0
     # via edx-django-utils
 oauthlib==3.2.2
     # via
@@ -164,9 +164,9 @@ psutil==5.9.5
     # via edx-django-utils
 pycparser==2.21
     # via cffi
-pydantic==2.3.0
+pydantic==2.4.1
     # via inflect
-pydantic-core==2.6.3
+pydantic-core==2.10.1
     # via pydantic
 pyjwt[crypto]==2.8.0
     # via
@@ -253,7 +253,7 @@ urllib3==1.26.16
     # via
     #   botocore
     #   requests
-wagtail==5.1.1
+wagtail==5.1.2
     # via -r requirements/base.in
 webencodings==0.5.1
     # via html5lib
