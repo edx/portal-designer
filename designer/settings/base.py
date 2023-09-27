@@ -108,6 +108,8 @@ LANGUAGE_CODE = 'en'
 
 TIME_ZONE = 'UTC'
 
+USE_DEPRECATED_PYTZ = True
+
 USE_I18N = True
 
 USE_L10N = True
@@ -117,8 +119,6 @@ USE_TZ = True
 LOCALE_PATHS = (
     root('conf', 'locale'),
 )
-
-DEFAULT_HASHING_ALGORITHM = "sha1"
 
 DEFAULT_AUTO_FIELD = "django.db.models.AutoField"
 

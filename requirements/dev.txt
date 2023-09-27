@@ -21,6 +21,10 @@ astroid==2.15.6
     #   -r requirements/quality.txt
     #   pylint
     #   pylint-celery
+backports-zoneinfo==0.2.1
+    # via
+    #   -r requirements/quality.txt
+    #   django
 beautifulsoup4==4.11.2
     # via
     #   -r requirements/quality.txt
@@ -93,10 +97,8 @@ distlib==0.3.7
     # via
     #   -r requirements/quality.txt
     #   virtualenv
-django==3.2.21
+django==4.2.5
     # via
-    #   -c requirements/common_constraints.txt
-    #   -c requirements/constraints.txt
     #   -r requirements/quality.txt
     #   django-cors-headers
     #   django-crum
@@ -425,7 +427,6 @@ python3-openid==3.2.0
 pytz==2023.3.post1
     # via
     #   -r requirements/quality.txt
-    #   django
     #   django-modelcluster
     #   djangorestframework
     #   drf-yasg
