@@ -16,7 +16,7 @@ asgiref==3.7.2
     # via
     #   -r requirements/test.txt
     #   django
-astroid==2.15.6
+astroid==2.15.8
     # via
     #   -r requirements/test.txt
     #   pylint
@@ -29,9 +29,9 @@ beautifulsoup4==4.11.2
     # via
     #   -r requirements/test.txt
     #   wagtail
-boto3==1.28.50
+boto3==1.28.58
     # via -r requirements/test.txt
-botocore==1.31.50
+botocore==1.31.58
     # via
     #   -r requirements/test.txt
     #   boto3
@@ -40,12 +40,12 @@ certifi==2023.7.22
     # via
     #   -r requirements/test.txt
     #   requests
-cffi==1.15.1
+cffi==1.16.0
     # via
     #   -r requirements/test.txt
     #   cryptography
     #   pynacl
-charset-normalizer==3.2.0
+charset-normalizer==3.3.0
     # via
     #   -r requirements/test.txt
     #   requests
@@ -64,16 +64,16 @@ code-annotations==1.5.0
     # via
     #   -r requirements/test.txt
     #   edx-lint
-coverage[toml]==7.3.1
+coverage[toml]==7.3.2
     # via
     #   -r requirements/test.txt
     #   pytest-cov
-cryptography==41.0.3
+cryptography==41.0.4
     # via
     #   -r requirements/test.txt
     #   pyjwt
     #   social-auth-core
-defusedxml==0.7.1
+defusedxml==0.8.0rc2
     # via
     #   -r requirements/test.txt
     #   python3-openid
@@ -132,7 +132,7 @@ django-permissionedforms==0.1
     # via
     #   -r requirements/test.txt
     #   wagtail
-django-storages==1.14
+django-storages==1.14.1
     # via -r requirements/test.txt
 django-taggit==4.0.0
     # via
@@ -184,7 +184,7 @@ edx-lint==5.3.4
     # via
     #   -r requirements/quality.in
     #   -r requirements/test.txt
-edx-opaque-keys==2.5.0
+edx-opaque-keys==2.5.1
     # via
     #   -r requirements/test.txt
     #   edx-drf-extensions
@@ -200,7 +200,7 @@ exceptiongroup==1.1.3
     #   pytest
 factory-boy==3.3.0
     # via -r requirements/test.txt
-faker==19.6.1
+faker==19.6.2
     # via
     #   -r requirements/test.txt
     #   factory-boy
@@ -265,7 +265,7 @@ mock==5.1.0
     # via -r requirements/test.txt
 mysqlclient==2.2.0
     # via -r requirements/test.txt
-newrelic==9.0.0
+newrelic==9.1.0
     # via
     #   -r requirements/test.txt
     #   edx-django-utils
@@ -278,7 +278,7 @@ openpyxl==3.1.2
     # via
     #   -r requirements/test.txt
     #   wagtail
-packaging==23.1
+packaging==23.2
     # via
     #   -r requirements/test.txt
     #   drf-yasg
@@ -297,7 +297,7 @@ pillow-heif==0.13.0
     # via
     #   -r requirements/test.txt
     #   willow
-platformdirs==3.10.0
+platformdirs==3.11.0
     # via
     #   -r requirements/test.txt
     #   pylint
@@ -321,11 +321,11 @@ pycparser==2.21
     # via
     #   -r requirements/test.txt
     #   cffi
-pydantic==2.3.0
+pydantic==2.4.2
     # via
     #   -r requirements/test.txt
     #   inflect
-pydantic-core==2.6.3
+pydantic-core==2.10.1
     # via
     #   -r requirements/test.txt
     #   pydantic
@@ -339,7 +339,7 @@ pyjwt[crypto]==2.8.0
     #   edx-drf-extensions
     #   edx-rest-api-client
     #   social-auth-core
-pylint==2.17.5
+pylint==2.17.7
     # via
     #   -r requirements/test.txt
     #   edx-lint
@@ -415,7 +415,7 @@ requests-oauthlib==1.3.1
     # via
     #   -r requirements/test.txt
     #   social-auth-core
-s3transfer==0.6.2
+s3transfer==0.7.0
     # via
     #   -r requirements/test.txt
     #   boto3
@@ -499,7 +499,7 @@ uritemplate==4.1.1
     # via
     #   -r requirements/test.txt
     #   drf-yasg
-urllib3==1.26.16
+urllib3==1.26.17
     # via
     #   -r requirements/test.txt
     #   botocore
@@ -508,7 +508,7 @@ virtualenv==20.24.5
     # via
     #   -r requirements/test.txt
     #   tox
-wagtail==5.1.1
+wagtail==5.1.2
     # via -r requirements/test.txt
 webencodings==0.5.1
     # via
