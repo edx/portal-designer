@@ -14,33 +14,34 @@ backports-zoneinfo==0.2.1
     # via django
 beautifulsoup4==4.11.2
     # via wagtail
-boto3==1.28.50
+boto3==1.28.58
     # via -r requirements/base.in
-botocore==1.31.50
+botocore==1.31.58
     # via
     #   boto3
     #   s3transfer
 certifi==2023.7.22
     # via requests
-cffi==1.15.1
+cffi==1.16.0
     # via
     #   cryptography
     #   pynacl
-charset-normalizer==3.2.0
+charset-normalizer==3.3.0
     # via requests
 click==8.1.7
     # via edx-django-utils
-cryptography==41.0.3
+cryptography==41.0.4
     # via
     #   pyjwt
     #   social-auth-core
-defusedxml==0.7.1
+defusedxml==0.8.0rc2
     # via
     #   python3-openid
     #   social-auth-core
     #   willow
 django==4.2.5
     # via
+    #   -c requirements/constraints.txt
     #   -r requirements/base.in
     #   django-cors-headers
     #   django-crum
@@ -74,7 +75,7 @@ django-modelcluster==6.0
     # via wagtail
 django-permissionedforms==0.1
     # via wagtail
-django-storages==1.14
+django-storages==1.14.1
     # via -r requirements/base.in
 django-taggit==4.0.0
     # via wagtail
@@ -114,7 +115,7 @@ edx-django-utils==5.7.0
     #   edx-rest-api-client
 edx-drf-extensions==8.10.0
     # via -r requirements/base.in
-edx-opaque-keys==2.5.0
+edx-opaque-keys==2.5.1
     # via edx-drf-extensions
 edx-rest-api-client==4.0.1
     # via
@@ -142,7 +143,7 @@ mock==5.1.0
     # via -r requirements/base.in
 mysqlclient==2.2.0
     # via -r requirements/base.in
-newrelic==9.0.0
+newrelic==9.1.0
     # via edx-django-utils
 oauthlib==3.2.2
     # via
@@ -150,7 +151,7 @@ oauthlib==3.2.2
     #   social-auth-core
 openpyxl==3.1.2
     # via wagtail
-packaging==23.1
+packaging==23.2
     # via drf-yasg
 pbr==5.11.1
     # via stevedore
@@ -164,9 +165,9 @@ psutil==5.9.5
     # via edx-django-utils
 pycparser==2.21
     # via cffi
-pydantic==2.3.0
+pydantic==2.4.2
     # via inflect
-pydantic-core==2.6.3
+pydantic-core==2.10.1
     # via pydantic
 pyjwt[crypto]==2.8.0
     # via
@@ -206,7 +207,7 @@ requests==2.31.0
     #   wagtail
 requests-oauthlib==1.3.1
     # via social-auth-core
-s3transfer==0.6.2
+s3transfer==0.7.0
     # via boto3
 semantic-version==2.10.0
     # via edx-drf-extensions
@@ -248,11 +249,11 @@ typing-extensions==4.8.0
     #   pydantic-core
 uritemplate==4.1.1
     # via drf-yasg
-urllib3==1.26.16
+urllib3==1.26.17
     # via
     #   botocore
     #   requests
-wagtail==5.1.1
+wagtail==5.1.2
     # via -r requirements/base.in
 webencodings==0.5.1
     # via html5lib
