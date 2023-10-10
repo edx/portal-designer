@@ -4,7 +4,7 @@
 #
 #    make upgrade
 #
-annotated-types==0.5.0
+annotated-types==0.6.0
     # via
     #   -r requirements/quality.txt
     #   pydantic
@@ -29,9 +29,9 @@ beautifulsoup4==4.11.2
     # via
     #   -r requirements/quality.txt
     #   wagtail
-boto3==1.28.58
+boto3==1.28.62
     # via -r requirements/quality.txt
-botocore==1.31.58
+botocore==1.31.62
     # via
     #   -r requirements/quality.txt
     #   boto3
@@ -97,7 +97,7 @@ distlib==0.3.7
     # via
     #   -r requirements/quality.txt
     #   virtualenv
-django==4.2.5
+django==4.2.6
     # via
     #   -c requirements/constraints.txt
     #   -r requirements/quality.txt
@@ -139,7 +139,7 @@ django-filter==23.3
     # via
     #   -r requirements/quality.txt
     #   wagtail
-django-modelcluster==6.0
+django-modelcluster==6.1
     # via
     #   -r requirements/quality.txt
     #   wagtail
@@ -147,7 +147,7 @@ django-permissionedforms==0.1
     # via
     #   -r requirements/quality.txt
     #   wagtail
-django-storages==1.14.1
+django-storages==1.14.2
     # via -r requirements/quality.txt
 django-taggit==4.0.0
     # via
@@ -195,7 +195,7 @@ edx-django-utils==5.7.0
     #   edx-rest-api-client
 edx-drf-extensions==8.10.0
     # via -r requirements/quality.txt
-edx-i18n-tools==1.2.0
+edx-i18n-tools==1.3.0
     # via -r requirements/dev.in
 edx-lint==5.3.4
     # via -r requirements/quality.txt
@@ -217,7 +217,7 @@ exceptiongroup==1.1.3
     #   pytest
 factory-boy==3.3.0
     # via -r requirements/quality.txt
-faker==19.6.2
+faker==19.8.0
     # via
     #   -r requirements/quality.txt
     #   factory-boy
@@ -274,6 +274,8 @@ lazy-object-proxy==1.9.0
     # via
     #   -r requirements/quality.txt
     #   astroid
+lxml==4.9.3
+    # via edx-i18n-tools
 markupsafe==2.1.3
     # via
     #   -r requirements/quality.txt
