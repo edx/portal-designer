@@ -4,7 +4,7 @@
 #
 #    make upgrade
 #
-annotated-types==0.5.0
+annotated-types==0.6.0
     # via
     #   -r requirements/test.txt
     #   pydantic
@@ -29,9 +29,9 @@ beautifulsoup4==4.11.2
     # via
     #   -r requirements/test.txt
     #   wagtail
-boto3==1.28.58
+boto3==1.28.62
     # via -r requirements/test.txt
-botocore==1.31.58
+botocore==1.31.62
     # via
     #   -r requirements/test.txt
     #   boto3
@@ -87,7 +87,7 @@ distlib==0.3.7
     # via
     #   -r requirements/test.txt
     #   virtualenv
-django==4.2.5
+django==4.2.6
     # via
     #   -r requirements/test.txt
     #   django-cors-headers
@@ -124,7 +124,7 @@ django-filter==23.3
     # via
     #   -r requirements/test.txt
     #   wagtail
-django-modelcluster==6.0
+django-modelcluster==6.1
     # via
     #   -r requirements/test.txt
     #   wagtail
@@ -132,7 +132,7 @@ django-permissionedforms==0.1
     # via
     #   -r requirements/test.txt
     #   wagtail
-django-storages==1.14.1
+django-storages==1.14.2
     # via -r requirements/test.txt
 django-taggit==4.0.0
     # via
@@ -200,7 +200,7 @@ exceptiongroup==1.1.3
     #   pytest
 factory-boy==3.3.0
     # via -r requirements/test.txt
-faker==19.6.2
+faker==19.8.0
     # via
     #   -r requirements/test.txt
     #   factory-boy
