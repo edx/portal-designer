@@ -14,9 +14,9 @@ backports-zoneinfo==0.2.1
     # via django
 beautifulsoup4==4.11.2
     # via wagtail
-boto3==1.28.62
+boto3==1.28.64
     # via -r requirements/base.in
-botocore==1.31.62
+botocore==1.31.64
     # via
     #   boto3
     #   s3transfer
@@ -63,7 +63,7 @@ django==4.2.6
     #   edx-drf-extensions
     #   social-auth-app-django
     #   wagtail
-django-cors-headers==4.2.0
+django-cors-headers==4.3.0
     # via -r requirements/base.in
 django-crum==0.7.9
     # via edx-django-utils
@@ -113,7 +113,7 @@ edx-django-utils==5.7.0
     #   -r requirements/base.in
     #   edx-drf-extensions
     #   edx-rest-api-client
-edx-drf-extensions==8.10.0
+edx-drf-extensions==8.12.0
     # via -r requirements/base.in
 edx-opaque-keys==2.5.1
     # via edx-drf-extensions
@@ -155,13 +155,13 @@ packaging==23.2
     # via drf-yasg
 pbr==5.11.1
     # via stevedore
-pillow==10.0.1
+pillow==10.1.0
     # via
     #   pillow-heif
     #   wagtail
-pillow-heif==0.13.0
+pillow-heif==0.13.1
     # via willow
-psutil==5.9.5
+psutil==5.9.6
     # via edx-django-utils
 pycparser==2.21
     # via cffi
@@ -175,6 +175,7 @@ pyjwt[crypto]==2.8.0
     #   edx-auth-backends
     #   edx-drf-extensions
     #   edx-rest-api-client
+    #   pyjwt
     #   social-auth-core
 pymongo==3.13.0
     # via edx-opaque-keys
@@ -220,7 +221,7 @@ six==1.16.0
     #   python-dateutil
 slumber==0.7.1
     # via edx-rest-api-client
-social-auth-app-django==5.3.0
+social-auth-app-django==5.4.0
     # via
     #   -r requirements/base.in
     #   edx-auth-backends
@@ -258,6 +259,8 @@ wagtail==5.1.2
 webencodings==0.5.1
     # via html5lib
 willow[heif]==1.6.2
-    # via wagtail
+    # via
+    #   wagtail
+    #   willow
 zipp==3.17.0
     # via -r requirements/base.in
