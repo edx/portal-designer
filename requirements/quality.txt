@@ -16,7 +16,7 @@ asgiref==3.7.2
     # via
     #   -r requirements/test.txt
     #   django
-astroid==2.15.8
+astroid==3.0.1
     # via
     #   -r requirements/test.txt
     #   pylint
@@ -29,9 +29,9 @@ beautifulsoup4==4.11.2
     # via
     #   -r requirements/test.txt
     #   wagtail
-boto3==1.28.66
+boto3==1.28.69
     # via -r requirements/test.txt
-botocore==1.31.66
+botocore==1.31.69
     # via
     #   -r requirements/test.txt
     #   boto3
@@ -45,7 +45,7 @@ cffi==1.16.0
     #   -r requirements/test.txt
     #   cryptography
     #   pynacl
-charset-normalizer==3.3.0
+charset-normalizer==3.3.1
     # via
     #   -r requirements/test.txt
     #   requests
@@ -181,7 +181,7 @@ edx-django-utils==5.7.0
     #   edx-rest-api-client
 edx-drf-extensions==8.12.0
     # via -r requirements/test.txt
-edx-lint==5.3.4
+edx-lint==5.3.6
     # via
     #   -r requirements/quality.in
     #   -r requirements/test.txt
@@ -250,10 +250,6 @@ l18n==2021.3
     # via
     #   -r requirements/test.txt
     #   wagtail
-lazy-object-proxy==1.9.0
-    # via
-    #   -r requirements/test.txt
-    #   astroid
 markupsafe==2.1.3
     # via
     #   -r requirements/test.txt
@@ -266,7 +262,7 @@ mock==5.1.0
     # via -r requirements/test.txt
 mysqlclient==2.2.0
     # via -r requirements/test.txt
-newrelic==9.1.0
+newrelic==9.1.1
     # via
     #   -r requirements/test.txt
     #   edx-django-utils
@@ -341,7 +337,7 @@ pyjwt[crypto]==2.8.0
     #   edx-rest-api-client
     #   pyjwt
     #   social-auth-core
-pylint==2.17.7
+pylint==3.0.2
     # via
     #   -r requirements/test.txt
     #   edx-lint
@@ -352,7 +348,7 @@ pylint-celery==0.3
     # via
     #   -r requirements/test.txt
     #   edx-lint
-pylint-django==2.5.3
+pylint-django==2.5.5
     # via
     #   -r requirements/test.txt
     #   edx-lint
@@ -506,7 +502,7 @@ urllib3==1.26.18
     #   -r requirements/test.txt
     #   botocore
     #   requests
-virtualenv==20.24.5
+virtualenv==20.24.6
     # via
     #   -r requirements/test.txt
     #   tox
@@ -521,9 +517,5 @@ willow[heif]==1.6.2
     #   -r requirements/test.txt
     #   wagtail
     #   willow
-wrapt==1.15.0
-    # via
-    #   -r requirements/test.txt
-    #   astroid
 zipp==3.17.0
     # via -r requirements/test.txt
