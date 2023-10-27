@@ -24,11 +24,11 @@ beautifulsoup4==4.11.2
     # via
     #   -r requirements/base.txt
     #   wagtail
-boto3==1.28.66
+boto3==1.28.69
     # via
     #   -r requirements/base.txt
     #   -r requirements/production.in
-botocore==1.31.66
+botocore==1.31.69
     # via
     #   -r requirements/base.txt
     #   boto3
@@ -42,7 +42,7 @@ cffi==1.16.0
     #   -r requirements/base.txt
     #   cryptography
     #   pynacl
-charset-normalizer==3.3.0
+charset-normalizer==3.3.1
     # via
     #   -r requirements/base.txt
     #   requests
@@ -199,7 +199,7 @@ mock==5.1.0
     # via -r requirements/base.txt
 mysqlclient==2.2.0
     # via -r requirements/base.txt
-newrelic==9.1.0
+newrelic==9.1.1
     # via
     #   -r requirements/base.txt
     #   edx-django-utils
