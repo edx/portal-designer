@@ -24,11 +24,11 @@ beautifulsoup4==4.11.2
     # via
     #   -r requirements/base.txt
     #   wagtail
-boto3==1.28.79
+boto3==1.28.85
     # via
     #   -r requirements/base.txt
     #   -r requirements/production.in
-botocore==1.31.79
+botocore==1.31.85
     # via
     #   -r requirements/base.txt
     #   boto3
@@ -199,7 +199,7 @@ mock==5.1.0
     # via -r requirements/base.txt
 mysqlclient==2.2.0
     # via -r requirements/base.txt
-newrelic==9.1.1
+newrelic==9.1.2
     # via
     #   -r requirements/base.txt
     #   edx-django-utils
@@ -217,7 +217,7 @@ packaging==23.2
     #   -r requirements/base.txt
     #   drf-yasg
     #   gunicorn
-pbr==5.11.1
+pbr==6.0.0
     # via
     #   -r requirements/base.txt
     #   stevedore
@@ -238,11 +238,11 @@ pycparser==2.21
     # via
     #   -r requirements/base.txt
     #   cffi
-pydantic==2.4.2
+pydantic==2.5.0
     # via
     #   -r requirements/base.txt
     #   inflect
-pydantic-core==2.10.1
+pydantic-core==2.14.1
     # via
     #   -r requirements/base.txt
     #   pydantic
