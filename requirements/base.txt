@@ -16,9 +16,9 @@ backports-zoneinfo==0.2.1
     # via django
 beautifulsoup4==4.11.2
     # via wagtail
-boto3==1.33.1
+boto3==1.34.1
     # via -r requirements/base.in
-botocore==1.33.1
+botocore==1.34.1
     # via
     #   boto3
     #   s3transfer
@@ -41,7 +41,7 @@ defusedxml==0.8.0rc2
     #   python3-openid
     #   social-auth-core
     #   willow
-django==4.2.7
+django==4.2.8
     # via
     #   -c requirements/constraints.txt
     #   -r requirements/base.in
@@ -71,7 +71,7 @@ django-crum==0.7.9
     # via edx-django-utils
 django-extensions==3.2.3
     # via -r requirements/base.in
-django-filter==23.4
+django-filter==23.5
     # via wagtail
 django-modelcluster==6.1
     # via wagtail
@@ -83,7 +83,7 @@ django-taggit==4.0.0
     # via wagtail
 django-treebeard==4.7
     # via wagtail
-django-waffle==4.0.0
+django-waffle==4.1.0
     # via
     #   -r requirements/base.in
     #   edx-django-utils
@@ -115,7 +115,7 @@ edx-django-utils==5.9.0
     #   -r requirements/base.in
     #   edx-drf-extensions
     #   edx-rest-api-client
-edx-drf-extensions==9.0.0
+edx-drf-extensions==9.0.1
     # via -r requirements/base.in
 edx-opaque-keys==2.5.1
     # via edx-drf-extensions
@@ -143,9 +143,9 @@ l18n==2021.3
     # via wagtail
 mock==5.1.0
     # via -r requirements/base.in
-mysqlclient==2.2.0
+mysqlclient==2.2.1
     # via -r requirements/base.in
-newrelic==9.2.0
+newrelic==9.3.0
     # via edx-django-utils
 oauthlib==3.2.2
     # via
@@ -161,7 +161,7 @@ pillow==10.1.0
     # via
     #   pillow-heif
     #   wagtail
-pillow-heif==0.13.1
+pillow-heif==0.14.0
     # via willow
 psutil==5.9.6
     # via edx-django-utils
@@ -210,7 +210,7 @@ requests==2.31.0
     #   wagtail
 requests-oauthlib==1.3.1
     # via social-auth-core
-s3transfer==0.8.0
+s3transfer==0.9.0
     # via boto3
 semantic-version==2.10.0
     # via edx-drf-extensions
@@ -227,7 +227,7 @@ social-auth-app-django==5.4.0
     # via
     #   -r requirements/base.in
     #   edx-auth-backends
-social-auth-core==4.5.0
+social-auth-core==4.5.1
     # via
     #   -r requirements/base.in
     #   edx-auth-backends
@@ -242,7 +242,7 @@ stevedore==5.1.0
     #   edx-opaque-keys
 telepath==0.3.1
     # via wagtail
-typing-extensions==4.8.0
+typing-extensions==4.9.0
     # via
     #   annotated-types
     #   asgiref
@@ -256,7 +256,7 @@ urllib3==1.26.18
     # via
     #   botocore
     #   requests
-wagtail==5.2.1
+wagtail==5.2.2
     # via -r requirements/base.in
 webencodings==0.5.1
     # via html5lib
