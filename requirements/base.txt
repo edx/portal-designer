@@ -16,9 +16,9 @@ backports-zoneinfo==0.2.1
     # via django
 beautifulsoup4==4.11.2
     # via wagtail
-boto3==1.34.1
+boto3==1.34.3
     # via -r requirements/base.in
-botocore==1.34.1
+botocore==1.34.3
     # via
     #   boto3
     #   s3transfer
@@ -163,7 +163,7 @@ pillow==10.1.0
     #   wagtail
 pillow-heif==0.14.0
     # via willow
-psutil==5.9.6
+psutil==5.9.7
     # via edx-django-utils
 pycparser==2.21
     # via cffi
