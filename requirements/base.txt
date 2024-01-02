@@ -16,9 +16,9 @@ backports-zoneinfo==0.2.1
     # via django
 beautifulsoup4==4.11.2
     # via wagtail
-boto3==1.34.1
+boto3==1.34.11
     # via -r requirements/base.in
-botocore==1.34.1
+botocore==1.34.11
     # via
     #   boto3
     #   s3transfer
@@ -41,7 +41,7 @@ defusedxml==0.8.0rc2
     #   python3-openid
     #   social-auth-core
     #   willow
-django==4.2.8
+django==4.2.9
     # via
     #   -c requirements/constraints.txt
     #   -r requirements/base.in
@@ -157,19 +157,19 @@ packaging==23.2
     # via drf-yasg
 pbr==6.0.0
     # via stevedore
-pillow==10.1.0
+pillow==10.2.0
     # via
     #   pillow-heif
     #   wagtail
 pillow-heif==0.14.0
     # via willow
-psutil==5.9.6
+psutil==5.9.7
     # via edx-django-utils
 pycparser==2.21
     # via cffi
-pydantic==2.5.2
+pydantic==2.5.3
     # via inflect
-pydantic-core==2.14.5
+pydantic-core==2.14.6
     # via pydantic
 pyjwt[crypto]==2.8.0
     # via
@@ -210,7 +210,7 @@ requests==2.31.0
     #   wagtail
 requests-oauthlib==1.3.1
     # via social-auth-core
-s3transfer==0.9.0
+s3transfer==0.10.0
     # via boto3
 semantic-version==2.10.0
     # via edx-drf-extensions
