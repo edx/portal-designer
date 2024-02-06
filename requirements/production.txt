@@ -25,16 +25,16 @@ beautifulsoup4==4.11.2
     # via
     #   -r requirements/base.txt
     #   wagtail
-boto3==1.34.30
+boto3==1.34.35
     # via
     #   -r requirements/base.txt
     #   -r requirements/production.in
-botocore==1.34.30
+botocore==1.34.35
     # via
     #   -r requirements/base.txt
     #   boto3
     #   s3transfer
-certifi==2023.11.17
+certifi==2024.2.2
     # via
     #   -r requirements/base.txt
     #   requests
@@ -51,7 +51,7 @@ click==8.1.7
     # via
     #   -r requirements/base.txt
     #   edx-django-utils
-cryptography==42.0.1
+cryptography==42.0.2
     # via
     #   -r requirements/base.txt
     #   pyjwt
@@ -62,7 +62,7 @@ defusedxml==0.8.0rc2
     #   python3-openid
     #   social-auth-core
     #   willow
-django==4.2.9
+django==4.2.10
     # via
     #   -r requirements/base.txt
     #   django-cors-headers
@@ -111,7 +111,7 @@ django-taggit==4.0.0
     # via
     #   -r requirements/base.txt
     #   wagtail
-django-treebeard==4.7
+django-treebeard==4.7.1
     # via
     #   -r requirements/base.txt
     #   wagtail
@@ -151,7 +151,7 @@ edx-django-utils==5.10.1
     #   -r requirements/base.txt
     #   edx-drf-extensions
     #   edx-rest-api-client
-edx-drf-extensions==10.1.0
+edx-drf-extensions==10.2.0
     # via -r requirements/base.txt
 edx-opaque-keys==2.5.1
     # via
@@ -198,7 +198,7 @@ l18n==2021.3
     #   wagtail
 mock==5.1.0
     # via -r requirements/base.txt
-mysqlclient==2.2.1
+mysqlclient==2.2.3
     # via -r requirements/base.txt
 newrelic==9.6.0
     # via
@@ -227,7 +227,7 @@ pillow==10.2.0
     #   -r requirements/base.txt
     #   pillow-heif
     #   wagtail
-pillow-heif==0.14.0
+pillow-heif==0.15.0
     # via
     #   -r requirements/base.txt
     #   willow
@@ -239,11 +239,11 @@ pycparser==2.21
     # via
     #   -r requirements/base.txt
     #   cffi
-pydantic==2.6.0
+pydantic==2.6.1
     # via
     #   -r requirements/base.txt
     #   inflect
-pydantic-core==2.16.1
+pydantic-core==2.16.2
     # via
     #   -r requirements/base.txt
     #   pydantic
@@ -276,7 +276,7 @@ python3-openid==3.2.0
     # via
     #   -r requirements/base.txt
     #   social-auth-core
-pytz==2023.4
+pytz==2024.1
     # via
     #   -r requirements/base.txt
     #   django-modelcluster
