@@ -25,13 +25,13 @@ backports-zoneinfo==0.2.1
     # via
     #   -r requirements/base.txt
     #   django
-beautifulsoup4==4.11.2
+beautifulsoup4==4.12.3
     # via
     #   -r requirements/base.txt
     #   wagtail
-boto3==1.34.35
+boto3==1.34.40
     # via -r requirements/base.txt
-botocore==1.34.35
+botocore==1.34.40
     # via
     #   -r requirements/base.txt
     #   boto3
@@ -108,6 +108,7 @@ distlib==0.3.8
     #   edx-django-release-util
     #   edx-django-utils
     #   edx-drf-extensions
+    #   laces
     #   social-auth-app-django
     #   wagtail
 django-cors-headers==4.3.1
@@ -134,7 +135,7 @@ django-permissionedforms==0.1
     #   wagtail
 django-storages==1.14.2
     # via -r requirements/base.txt
-django-taggit==4.0.0
+django-taggit==5.0.1
     # via
     #   -r requirements/base.txt
     #   wagtail
@@ -155,7 +156,7 @@ djangorestframework==3.14.0
     #   edx-api-doc-tools
     #   edx-drf-extensions
     #   wagtail
-draftjs-exporter==2.1.7
+draftjs-exporter==5.0.0
     # via
     #   -r requirements/base.txt
     #   wagtail
@@ -198,7 +199,7 @@ exceptiongroup==1.2.0
     # via pytest
 factory-boy==3.3.0
     # via -r requirements/test.in
-faker==22.7.0
+faker==23.1.0
     # via
     #   -r requirements/test.in
     #   factory-boy
@@ -239,6 +240,10 @@ l18n==2021.3
     # via
     #   -r requirements/base.txt
     #   wagtail
+laces==0.1.1
+    # via
+    #   -r requirements/base.txt
+    #   wagtail
 markupsafe==2.1.5
     # via jinja2
 mccabe==0.7.0
@@ -247,7 +252,7 @@ mock==5.1.0
     # via
     #   -r requirements/base.txt
     #   -r requirements/test.in
-mysqlclient==2.2.3
+mysqlclient==2.2.4
     # via -r requirements/base.txt
 newrelic==9.6.0
     # via
@@ -354,7 +359,7 @@ python-dateutil==2.8.2
     #   -r requirements/base.txt
     #   botocore
     #   faker
-python-slugify==8.0.3
+python-slugify==8.0.4
     # via code-annotations
 python3-openid==3.2.0
     # via
@@ -470,13 +475,13 @@ urllib3==1.26.18
     #   requests
 virtualenv==20.25.0
     # via tox
-wagtail==5.2.3
+wagtail==6.0
     # via -r requirements/base.txt
 webencodings==0.5.1
     # via
     #   -r requirements/base.txt
     #   html5lib
-willow[heif]==1.6.3
+willow[heif]==1.8.0
     # via
     #   -r requirements/base.txt
     #   wagtail
