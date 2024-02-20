@@ -26,13 +26,13 @@ backports-zoneinfo==0.2.1
     # via
     #   -r requirements/test.txt
     #   django
-beautifulsoup4==4.11.2
+beautifulsoup4==4.12.3
     # via
     #   -r requirements/test.txt
     #   wagtail
-boto3==1.34.35
+boto3==1.34.45
     # via -r requirements/test.txt
-botocore==1.34.35
+botocore==1.34.45
     # via
     #   -r requirements/test.txt
     #   boto3
@@ -80,9 +80,8 @@ colorama==0.4.6
 coverage[toml]==7.4.1
     # via
     #   -r requirements/test.txt
-    #   coverage
     #   pytest-cov
-cryptography==42.0.2
+cryptography==42.0.3
     # via
     #   -r requirements/test.txt
     #   pyjwt
@@ -122,6 +121,7 @@ django==4.2.10
     #   edx-django-release-util
     #   edx-django-utils
     #   edx-drf-extensions
+    #   laces
     #   social-auth-app-django
     #   wagtail
 django-cors-headers==4.3.1
@@ -148,7 +148,7 @@ django-permissionedforms==0.1
     #   wagtail
 django-storages==1.14.2
     # via -r requirements/test.txt
-django-taggit==4.0.0
+django-taggit==5.0.1
     # via
     #   -r requirements/test.txt
     #   wagtail
@@ -169,7 +169,7 @@ djangorestframework==3.14.0
     #   edx-api-doc-tools
     #   edx-drf-extensions
     #   wagtail
-draftjs-exporter==2.1.7
+draftjs-exporter==5.0.0
     # via
     #   -r requirements/test.txt
     #   wagtail
@@ -214,7 +214,7 @@ exceptiongroup==1.2.0
     #   pytest
 factory-boy==3.3.0
     # via -r requirements/test.txt
-faker==22.7.0
+faker==23.2.1
     # via
     #   -r requirements/test.txt
     #   factory-boy
@@ -263,6 +263,10 @@ l18n==2021.3
     # via
     #   -r requirements/test.txt
     #   wagtail
+laces==0.1.1
+    # via
+    #   -r requirements/test.txt
+    #   wagtail
 markupsafe==2.1.5
     # via
     #   -r requirements/test.txt
@@ -273,7 +277,7 @@ mccabe==0.7.0
     #   pylint
 mock==5.1.0
     # via -r requirements/test.txt
-mysqlclient==2.2.3
+mysqlclient==2.2.4
     # via -r requirements/test.txt
 newrelic==9.6.0
     # via
@@ -346,7 +350,6 @@ pyjwt[crypto]==2.8.0
     #   edx-auth-backends
     #   edx-drf-extensions
     #   edx-rest-api-client
-    #   pyjwt
     #   social-auth-core
 pylint==3.0.3
     # via
@@ -380,7 +383,7 @@ pyproject-api==1.6.1
     # via
     #   -r requirements/test.txt
     #   tox
-pytest==8.0.0
+pytest==8.0.1
     # via
     #   -r requirements/test.txt
     #   pytest-cov
@@ -394,7 +397,7 @@ python-dateutil==2.8.2
     #   -r requirements/test.txt
     #   botocore
     #   faker
-python-slugify==8.0.3
+python-slugify==8.0.4
     # via
     #   -r requirements/test.txt
     #   code-annotations
@@ -455,7 +458,7 @@ social-auth-app-django==5.4.0
     # via
     #   -r requirements/test.txt
     #   edx-auth-backends
-social-auth-core==4.5.2
+social-auth-core==4.5.3
     # via
     #   -r requirements/test.txt
     #   edx-auth-backends
@@ -494,7 +497,7 @@ tomlkit==0.12.3
     # via
     #   -r requirements/test.txt
     #   pylint
-tox==4.12.1
+tox==4.13.0
     # via -r requirements/test.txt
 typing-extensions==4.9.0
     # via
@@ -521,16 +524,15 @@ virtualenv==20.25.0
     # via
     #   -r requirements/test.txt
     #   tox
-wagtail==5.2.3
+wagtail==6.0.1
     # via -r requirements/test.txt
 webencodings==0.5.1
     # via
     #   -r requirements/test.txt
     #   html5lib
-willow[heif]==1.6.3
+willow[heif]==1.8.0
     # via
     #   -r requirements/test.txt
     #   wagtail
-    #   willow
 zipp==3.17.0
     # via -r requirements/test.txt
