@@ -17,7 +17,7 @@ asgiref==3.7.2
     #   -r requirements/test.txt
     #   django
     #   django-cors-headers
-astroid==3.0.3
+astroid==3.1.0
     # via
     #   -r requirements/test.txt
     #   pylint
@@ -30,14 +30,14 @@ beautifulsoup4==4.12.3
     # via
     #   -r requirements/test.txt
     #   wagtail
-boto3==1.34.45
+boto3==1.34.55
     # via -r requirements/test.txt
-botocore==1.34.45
+botocore==1.34.55
     # via
     #   -r requirements/test.txt
     #   boto3
     #   s3transfer
-cachetools==5.3.2
+cachetools==5.3.3
     # via
     #   -r requirements/test.txt
     #   tox
@@ -77,11 +77,11 @@ colorama==0.4.6
     # via
     #   -r requirements/test.txt
     #   tox
-coverage[toml]==7.4.1
+coverage[toml]==7.4.3
     # via
     #   -r requirements/test.txt
     #   pytest-cov
-cryptography==42.0.3
+cryptography==42.0.5
     # via
     #   -r requirements/test.txt
     #   pyjwt
@@ -100,7 +100,7 @@ distlib==0.3.8
     # via
     #   -r requirements/test.txt
     #   virtualenv
-django==4.2.10
+django==4.2.11
     # via
     #   -r requirements/test.txt
     #   django-cors-headers
@@ -138,7 +138,7 @@ django-filter==23.5
     # via
     #   -r requirements/test.txt
     #   wagtail
-django-modelcluster==6.2.1
+django-modelcluster==6.3
     # via
     #   -r requirements/test.txt
     #   wagtail
@@ -214,7 +214,7 @@ exceptiongroup==1.2.0
     #   pytest
 factory-boy==3.3.0
     # via -r requirements/test.txt
-faker==23.2.1
+faker==24.0.0
     # via
     #   -r requirements/test.txt
     #   factory-boy
@@ -279,7 +279,7 @@ mock==5.1.0
     # via -r requirements/test.txt
 mysqlclient==2.2.4
     # via -r requirements/test.txt
-newrelic==9.6.0
+newrelic==9.7.0
     # via
     #   -r requirements/test.txt
     #   edx-django-utils
@@ -333,11 +333,11 @@ pycparser==2.21
     # via
     #   -r requirements/test.txt
     #   cffi
-pydantic==2.6.1
+pydantic==2.6.3
     # via
     #   -r requirements/test.txt
     #   inflect
-pydantic-core==2.16.2
+pydantic-core==2.16.3
     # via
     #   -r requirements/test.txt
     #   pydantic
@@ -351,7 +351,7 @@ pyjwt[crypto]==2.8.0
     #   edx-drf-extensions
     #   edx-rest-api-client
     #   social-auth-core
-pylint==3.0.3
+pylint==3.1.0
     # via
     #   -r requirements/test.txt
     #   edx-lint
@@ -383,7 +383,7 @@ pyproject-api==1.6.1
     # via
     #   -r requirements/test.txt
     #   tox
-pytest==8.0.1
+pytest==8.0.2
     # via
     #   -r requirements/test.txt
     #   pytest-cov
@@ -392,7 +392,7 @@ pytest-cov==4.1.0
     # via -r requirements/test.txt
 pytest-django==4.8.0
     # via -r requirements/test.txt
-python-dateutil==2.8.2
+python-dateutil==2.9.0.post0
     # via
     #   -r requirements/test.txt
     #   botocore
@@ -471,7 +471,7 @@ sqlparse==0.4.4
     # via
     #   -r requirements/test.txt
     #   django
-stevedore==5.1.0
+stevedore==5.2.0
     # via
     #   -r requirements/test.txt
     #   code-annotations
@@ -493,13 +493,13 @@ tomli==2.0.1
     #   pyproject-api
     #   pytest
     #   tox
-tomlkit==0.12.3
+tomlkit==0.12.4
     # via
     #   -r requirements/test.txt
     #   pylint
 tox==4.13.0
     # via -r requirements/test.txt
-typing-extensions==4.9.0
+typing-extensions==4.10.0
     # via
     #   -r requirements/test.txt
     #   annotated-types
@@ -520,7 +520,7 @@ urllib3==1.26.18
     #   -r requirements/test.txt
     #   botocore
     #   requests
-virtualenv==20.25.0
+virtualenv==20.25.1
     # via
     #   -r requirements/test.txt
     #   tox
