@@ -12,7 +12,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        python-version: ["3.8"]
+        python-version: ["3.8", "3.11"]
         toxenv: [django42, quality, pii_check, check_keywords]
     steps:
     - uses: actions/checkout@v2
