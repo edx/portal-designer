@@ -26,4 +26,3 @@ mock
 inflect
 social-auth-core
 boto3
-setuptools
