@@ -8,17 +8,20 @@ annotated-types==0.6.0
     # via pydantic
 anyascii==0.3.2
     # via wagtail
-asgiref==3.7.2
+asgiref==3.8.1
     # via
     #   django
     #   django-cors-headers
-backports-zoneinfo==0.2.1
-    # via django
+backports-zoneinfo==0.2.1 ; python_version < "3.9"
+    # via
+    #   -c requirements/constraints.txt
+    #   django
+    #   djangorestframework
 beautifulsoup4==4.12.3
     # via wagtail
-boto3==1.34.60
+boto3==1.34.71
     # via -r requirements/base.in
-botocore==1.34.60
+botocore==1.34.71
     # via
     #   boto3
     #   s3transfer
@@ -90,7 +93,7 @@ django-waffle==4.1.0
     #   -r requirements/base.in
     #   edx-django-utils
     #   edx-drf-extensions
-djangorestframework==3.14.0
+djangorestframework==3.15.1
     # via
     #   -r requirements/base.in
     #   drf-jwt
@@ -196,7 +199,6 @@ pytz==2024.1
     # via
     #   -r requirements/base.in
     #   django-modelcluster
-    #   djangorestframework
     #   drf-yasg
     #   l18n
 pyyaml==6.0.1
@@ -211,9 +213,9 @@ requests==2.31.0
     #   slumber
     #   social-auth-core
     #   wagtail
-requests-oauthlib==1.4.0
+requests-oauthlib==2.0.0
     # via social-auth-core
-s3transfer==0.10.0
+s3transfer==0.10.1
     # via boto3
 semantic-version==2.10.0
     # via edx-drf-extensions
@@ -267,5 +269,8 @@ willow[heif]==1.8.0
     # via
     #   wagtail
     #   willow
-zipp==3.17.0
+zipp==3.18.1
     # via -r requirements/base.in
+
+# The following packages are considered to be unsafe in a requirements file:
+# setuptools
