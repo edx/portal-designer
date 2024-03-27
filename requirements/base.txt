@@ -271,6 +271,3 @@ willow[heif]==1.8.0
     #   willow
 zipp==3.18.1
     # via -r requirements/base.in
-
-# The following packages are considered to be unsafe in a requirements file:
-# setuptools
