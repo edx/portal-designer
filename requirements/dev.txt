@@ -562,3 +562,7 @@ zipp==3.18.1
     # via
     #   -r requirements/quality.txt
     #   importlib-metadata
+
+# The following packages are considered to be unsafe in a requirements file:
+setuptools==69.2.0
+    # via -r requirements/quality.txt
