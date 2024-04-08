@@ -17,3 +17,7 @@ edx_rest_api_client==4.0.1      # versions>4.0.1 have backward incompatible chan
 
 # Django5 release is inline. So better to add constraint.
 Django<4.3
+
+
+# Temporary to Support the python 3.11 Upgrade
+backports.zoneinfo;python_version<"3.9"  # Newer versions have zoneinfo available in the standard library

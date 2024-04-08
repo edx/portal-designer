@@ -10,15 +10,16 @@ asgiref==3.8.1
     # via
     #   django
     #   django-cors-headers
-backports-zoneinfo==0.2.1
+backports-zoneinfo==0.2.1 ; python_version < "3.9"
     # via
+    #   -c requirements/constraints.txt
     #   django
     #   djangorestframework
 beautifulsoup4==4.12.3
     # via wagtail
-boto3==1.34.75
+boto3==1.34.79
     # via -r requirements/base.in
-botocore==1.34.75
+botocore==1.34.79
     # via
     #   boto3
     #   s3transfer
@@ -106,7 +107,7 @@ drf-yasg==1.21.7
     # via
     #   -r requirements/base.in
     #   edx-api-doc-tools
-edx-api-doc-tools==1.7.0
+edx-api-doc-tools==1.8.0
     # via -r requirements/base.in
 edx-auth-backends==4.3.0
     # via -r requirements/base.in
@@ -248,7 +249,7 @@ telepath==0.3.1
     # via wagtail
 typeguard==4.2.1
     # via inflect
-typing-extensions==4.10.0
+typing-extensions==4.11.0
     # via
     #   asgiref
     #   edx-opaque-keys
@@ -260,7 +261,7 @@ urllib3==1.26.18
     # via
     #   botocore
     #   requests
-wagtail==6.0.1
+wagtail==6.0.2
     # via -r requirements/base.in
 webencodings==0.5.1
     # via html5lib
@@ -272,3 +273,7 @@ zipp==3.18.1
     # via
     #   -r requirements/base.in
     #   importlib-metadata
+
+# The following packages are considered to be unsafe in a requirements file:
+setuptools==69.2.0
+    # via -r requirements/base.in
