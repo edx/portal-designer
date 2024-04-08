@@ -492,6 +492,4 @@ zipp==3.18.1
 
 # The following packages are considered to be unsafe in a requirements file:
 setuptools==69.2.0
-    # via
-    #   -r requirements/base.txt
-    #   -r requirements/test.in
+    # via -r requirements/base.txt
