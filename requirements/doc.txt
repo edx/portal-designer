@@ -31,9 +31,9 @@ beautifulsoup4==4.12.3
     # via
     #   -r requirements/test.txt
     #   wagtail
-boto3==1.34.75
+boto3==1.34.80
     # via -r requirements/test.txt
-botocore==1.34.75
+botocore==1.34.80
     # via
     #   -r requirements/test.txt
     #   boto3
@@ -70,7 +70,7 @@ click-log==0.4.0
     # via
     #   -r requirements/test.txt
     #   edx-lint
-code-annotations==1.7.0
+code-annotations==1.8.0
     # via
     #   -r requirements/test.txt
     #   edx-lint
@@ -190,7 +190,7 @@ drf-yasg==1.21.7
     # via
     #   -r requirements/test.txt
     #   edx-api-doc-tools
-edx-api-doc-tools==1.7.0
+edx-api-doc-tools==1.8.0
     # via -r requirements/test.txt
 edx-auth-backends==4.3.0
     # via -r requirements/test.txt
@@ -223,7 +223,7 @@ exceptiongroup==1.2.0
     #   pytest
 factory-boy==3.3.0
     # via -r requirements/test.txt
-faker==24.4.0
+faker==24.7.1
     # via
     #   -r requirements/test.txt
     #   factory-boy
@@ -543,7 +543,7 @@ typeguard==4.2.1
     # via
     #   -r requirements/test.txt
     #   inflect
-typing-extensions==4.10.0
+typing-extensions==4.11.0
     # via
     #   -r requirements/test.txt
     #   asgiref
@@ -566,7 +566,7 @@ virtualenv==20.25.1
     # via
     #   -r requirements/test.txt
     #   tox
-wagtail==6.0.1
+wagtail==6.0.2
     # via -r requirements/test.txt
 webencodings==0.5.1
     # via
