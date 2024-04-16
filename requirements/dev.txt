@@ -27,9 +27,9 @@ beautifulsoup4==4.12.3
     # via
     #   -r requirements/quality.txt
     #   wagtail
-boto3==1.34.80
+boto3==1.34.84
     # via -r requirements/quality.txt
-botocore==1.34.80
+botocore==1.34.84
     # via
     #   -r requirements/quality.txt
     #   boto3
@@ -90,7 +90,7 @@ defusedxml==0.8.0rc2
     #   python3-openid
     #   social-auth-core
     #   willow
-diff-cover==8.0.3
+diff-cover==9.0.0
     # via -r requirements/dev.in
 dill==0.3.8
     # via
@@ -200,7 +200,7 @@ edx-django-utils==5.12.0
     #   edx-rest-api-client
 edx-drf-extensions==10.3.0
     # via -r requirements/quality.txt
-edx-i18n-tools==1.3.0
+edx-i18n-tools==1.5.0
     # via -r requirements/dev.in
 edx-lint==5.3.6
     # via -r requirements/quality.txt
@@ -222,11 +222,11 @@ exceptiongroup==1.2.0
     #   pytest
 factory-boy==3.3.0
     # via -r requirements/quality.txt
-faker==24.7.1
+faker==24.9.0
     # via
     #   -r requirements/quality.txt
     #   factory-boy
-filelock==3.13.3
+filelock==3.13.4
     # via
     #   -r requirements/quality.txt
     #   tox
@@ -239,7 +239,7 @@ html5lib==1.1
     # via
     #   -r requirements/quality.txt
     #   wagtail
-idna==3.6
+idna==3.7
     # via
     #   -r requirements/quality.txt
     #   requests
@@ -487,7 +487,7 @@ soupsieve==2.5
     # via
     #   -r requirements/quality.txt
     #   beautifulsoup4
-sqlparse==0.4.4
+sqlparse==0.5.0
     # via
     #   -r requirements/quality.txt
     #   django
