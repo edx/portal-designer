@@ -31,9 +31,9 @@ beautifulsoup4==4.12.3
     # via
     #   -r requirements/test.txt
     #   wagtail
-boto3==1.34.89
+boto3==1.34.94
     # via -r requirements/test.txt
-botocore==1.34.89
+botocore==1.34.94
     # via
     #   -r requirements/test.txt
     #   boto3
@@ -78,7 +78,7 @@ colorama==0.4.6
     # via
     #   -r requirements/test.txt
     #   tox
-coverage[toml]==7.4.4
+coverage[toml]==7.5.0
     # via
     #   -r requirements/test.txt
     #   pytest-cov
@@ -170,6 +170,10 @@ djangorestframework==3.15.1
     #   edx-api-doc-tools
     #   edx-drf-extensions
     #   wagtail
+dnspython==2.6.1
+    # via
+    #   -r requirements/test.txt
+    #   pymongo
 doc8==1.1.1
     # via -r requirements/doc.in
 docutils==0.19
@@ -205,7 +209,7 @@ edx-drf-extensions==10.3.0
     # via -r requirements/test.txt
 edx-lint==5.3.6
     # via -r requirements/test.txt
-edx-opaque-keys==2.8.0
+edx-opaque-keys==2.9.0
     # via
     #   -r requirements/test.txt
     #   edx-drf-extensions
@@ -223,11 +227,11 @@ exceptiongroup==1.2.1
     #   pytest
 factory-boy==3.3.0
     # via -r requirements/test.txt
-faker==24.11.0
+faker==25.0.0
     # via
     #   -r requirements/test.txt
     #   factory-boy
-filelock==3.13.4
+filelock==3.14.0
     # via
     #   -r requirements/test.txt
     #   tox
@@ -251,7 +255,7 @@ importlib-metadata==6.11.0
     #   -r requirements/test.txt
     #   sphinx
     #   typeguard
-inflect==7.2.0
+inflect==7.2.1
     # via -r requirements/test.txt
 inflection==0.5.1
     # via
@@ -335,7 +339,7 @@ pillow-heif==0.16.0
     # via
     #   -r requirements/test.txt
     #   willow
-platformdirs==4.2.0
+platformdirs==4.2.1
     # via
     #   -r requirements/test.txt
     #   pylint
@@ -387,7 +391,7 @@ pylint-plugin-utils==0.8.2
     #   -r requirements/test.txt
     #   pylint-celery
     #   pylint-django
-pymongo==3.13.0
+pymongo==4.4.0
     # via
     #   -r requirements/test.txt
     #   edx-opaque-keys
@@ -399,7 +403,7 @@ pyproject-api==1.6.1
     # via
     #   -r requirements/test.txt
     #   tox
-pytest==8.1.1
+pytest==8.2.0
     # via
     #   -r requirements/test.txt
     #   pytest-cov
@@ -476,11 +480,11 @@ slumber==0.7.1
     #   edx-rest-api-client
 snowballstemmer==2.2.0
     # via sphinx
-social-auth-app-django==5.4.0
+social-auth-app-django==5.4.1
     # via
     #   -r requirements/test.txt
     #   edx-auth-backends
-social-auth-core==4.5.3
+social-auth-core==4.5.4
     # via
     #   -r requirements/test.txt
     #   edx-auth-backends
@@ -537,7 +541,7 @@ tomlkit==0.12.4
     # via
     #   -r requirements/test.txt
     #   pylint
-tox==4.14.2
+tox==4.15.0
     # via -r requirements/test.txt
 typeguard==4.2.1
     # via
@@ -549,7 +553,6 @@ typing-extensions==4.11.0
     #   asgiref
     #   astroid
     #   edx-opaque-keys
-    #   faker
     #   inflect
     #   pylint
     #   typeguard
@@ -562,7 +565,7 @@ urllib3==1.26.18
     #   -r requirements/test.txt
     #   botocore
     #   requests
-virtualenv==20.25.3
+virtualenv==20.26.1
     # via
     #   -r requirements/test.txt
     #   tox
