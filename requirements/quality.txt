@@ -27,9 +27,9 @@ beautifulsoup4==4.12.3
     # via
     #   -r requirements/test.txt
     #   wagtail
-boto3==1.34.94
+boto3==1.34.99
     # via -r requirements/test.txt
-botocore==1.34.94
+botocore==1.34.99
     # via
     #   -r requirements/test.txt
     #   boto3
@@ -74,11 +74,11 @@ colorama==0.4.6
     # via
     #   -r requirements/test.txt
     #   tox
-coverage[toml]==7.5.0
+coverage[toml]==7.5.1
     # via
     #   -r requirements/test.txt
     #   pytest-cov
-cryptography==42.0.5
+cryptography==42.0.7
     # via
     #   -r requirements/test.txt
     #   pyjwt
@@ -131,7 +131,7 @@ django-dynamic-fixture==4.0.1
     # via -r requirements/test.txt
 django-extensions==3.2.3
     # via -r requirements/test.txt
-django-filter==23.5
+django-filter==24.2
     # via
     #   -r requirements/test.txt
     #   wagtail
@@ -143,7 +143,7 @@ django-permissionedforms==0.1
     # via
     #   -r requirements/test.txt
     #   wagtail
-django-storages==1.14.2
+django-storages==1.14.3
     # via -r requirements/test.txt
 django-taggit==5.0.1
     # via
@@ -188,7 +188,7 @@ edx-auth-backends==4.3.0
     # via -r requirements/test.txt
 edx-django-release-util==1.4.0
     # via -r requirements/test.txt
-edx-django-utils==5.12.0
+edx-django-utils==5.13.0
     # via
     #   -r requirements/test.txt
     #   edx-drf-extensions
@@ -215,7 +215,7 @@ exceptiongroup==1.2.1
     #   pytest
 factory-boy==3.3.0
     # via -r requirements/test.txt
-faker==25.0.0
+faker==25.0.1
     # via
     #   -r requirements/test.txt
     #   factory-boy
@@ -228,10 +228,6 @@ filetype==1.2.0
     # via
     #   -r requirements/test.txt
     #   willow
-html5lib==1.1
-    # via
-    #   -r requirements/test.txt
-    #   wagtail
 idna==3.7
     # via
     #   -r requirements/test.txt
@@ -255,7 +251,7 @@ isort==5.13.2
     #   -r requirements/quality.in
     #   -r requirements/test.txt
     #   pylint
-jinja2==3.1.3
+jinja2==3.1.4
     # via
     #   -r requirements/test.txt
     #   code-annotations
@@ -445,7 +441,6 @@ six==1.16.0
     #   edx-auth-backends
     #   edx-django-release-util
     #   edx-lint
-    #   html5lib
     #   l18n
     #   python-dateutil
 slumber==0.7.1
@@ -525,12 +520,8 @@ virtualenv==20.26.1
     # via
     #   -r requirements/test.txt
     #   tox
-wagtail==6.0.2
+wagtail==6.1
     # via -r requirements/test.txt
-webencodings==0.5.1
-    # via
-    #   -r requirements/test.txt
-    #   html5lib
 willow[heif]==1.8.0
     # via
     #   -r requirements/test.txt
