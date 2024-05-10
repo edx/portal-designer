@@ -16,9 +16,9 @@ backports-zoneinfo==0.2.1
     #   djangorestframework
 beautifulsoup4==4.12.3
     # via wagtail
-boto3==1.34.94
+boto3==1.34.99
     # via -r requirements/base.in
-botocore==1.34.94
+botocore==1.34.99
     # via
     #   boto3
     #   s3transfer
@@ -32,7 +32,7 @@ charset-normalizer==3.3.2
     # via requests
 click==8.1.7
     # via edx-django-utils
-cryptography==42.0.5
+cryptography==42.0.7
     # via
     #   pyjwt
     #   social-auth-core
@@ -73,13 +73,13 @@ django-crum==0.7.9
     # via edx-django-utils
 django-extensions==3.2.3
     # via -r requirements/base.in
-django-filter==23.5
+django-filter==24.2
     # via wagtail
 django-modelcluster==6.3
     # via wagtail
 django-permissionedforms==0.1
     # via wagtail
-django-storages==1.14.2
+django-storages==1.14.3
     # via -r requirements/base.in
 django-taggit==5.0.1
     # via wagtail
@@ -114,7 +114,7 @@ edx-auth-backends==4.3.0
     # via -r requirements/base.in
 edx-django-release-util==1.4.0
     # via -r requirements/base.in
-edx-django-utils==5.12.0
+edx-django-utils==5.13.0
     # via
     #   -r requirements/base.in
     #   edx-drf-extensions
@@ -131,8 +131,6 @@ et-xmlfile==1.1.0
     # via openpyxl
 filetype==1.2.0
     # via willow
-html5lib==1.1
-    # via wagtail
 idna==3.7
     # via requests
 importlib-metadata==6.11.0
@@ -224,7 +222,6 @@ six==1.16.0
     # via
     #   edx-auth-backends
     #   edx-django-release-util
-    #   html5lib
     #   l18n
     #   python-dateutil
 slumber==0.7.1
@@ -262,10 +259,8 @@ urllib3==1.26.18
     # via
     #   botocore
     #   requests
-wagtail==6.0.2
+wagtail==6.1
     # via -r requirements/base.in
-webencodings==0.5.1
-    # via html5lib
 willow[heif]==1.8.0
     # via
     #   wagtail
