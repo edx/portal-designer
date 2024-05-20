@@ -63,6 +63,8 @@ wagtailcore.PageViewRestriction:
   ".. no_pii:": "This model has no PII"
 wagtailcore.Site:
   ".. no_pii:": "This model has no PII"
+wagtailcore.UploadedFile:
+  ".. no_pii:": "This model has no PII"
 wagtaildocs.Document:
   ".. no_pii:": "This model has no PII"
 wagtaildocs.UploadedDocument:
