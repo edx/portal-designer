@@ -24,7 +24,7 @@ class User(AbstractUser):
         """
         try:
             return self.social_auth.first().extra_data['access_token']  # pylint: disable=no-member
-        except Exception:  # pylint: disable=broad-except
+        except Exception:
             return None
 
     class Meta:
