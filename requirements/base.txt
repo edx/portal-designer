@@ -16,9 +16,9 @@ backports-zoneinfo==0.2.1
     #   djangorestframework
 beautifulsoup4==4.12.3
     # via wagtail
-boto3==1.34.104
+boto3==1.34.109
     # via -r requirements/base.in
-botocore==1.34.104
+botocore==1.34.109
     # via
     #   boto3
     #   s3transfer
@@ -204,7 +204,7 @@ pyyaml==6.0.1
     # via
     #   drf-yasg
     #   edx-django-release-util
-requests==2.31.0
+requests==2.32.1
     # via
     #   edx-drf-extensions
     #   edx-rest-api-client
@@ -259,13 +259,13 @@ urllib3==1.26.18
     # via
     #   botocore
     #   requests
-wagtail==6.1
+wagtail==6.1.1
     # via -r requirements/base.in
 willow[heif]==1.8.0
     # via
     #   wagtail
     #   willow
-zipp==3.18.1
+zipp==3.18.2
     # via
     #   -r requirements/base.in
     #   importlib-metadata
