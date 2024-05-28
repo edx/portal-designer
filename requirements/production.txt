@@ -22,11 +22,11 @@ beautifulsoup4==4.12.3
     # via
     #   -r requirements/base.txt
     #   wagtail
-boto3==1.34.109
+boto3==1.34.113
     # via
     #   -r requirements/base.txt
     #   -r requirements/production.in
-botocore==1.34.109
+botocore==1.34.113
     # via
     #   -r requirements/base.txt
     #   boto3
@@ -148,7 +148,7 @@ edx-auth-backends==4.3.0
     # via -r requirements/base.txt
 edx-django-release-util==1.4.0
     # via -r requirements/base.txt
-edx-django-utils==5.13.0
+edx-django-utils==5.14.1
     # via
     #   -r requirements/base.txt
     #   edx-drf-extensions
@@ -210,7 +210,7 @@ more-itertools==10.2.0
     #   inflect
 mysqlclient==2.2.4
     # via -r requirements/base.txt
-newrelic==9.9.1
+newrelic==9.10.0
     # via
     #   -r requirements/base.txt
     #   edx-django-utils
@@ -289,7 +289,7 @@ pyyaml==6.0.1
     #   -r requirements/production.in
     #   drf-yasg
     #   edx-django-release-util
-requests==2.32.1
+requests==2.32.2
     # via
     #   -r requirements/base.txt
     #   edx-drf-extensions
@@ -347,11 +347,11 @@ telepath==0.3.1
     # via
     #   -r requirements/base.txt
     #   wagtail
-typeguard==4.2.1
+typeguard==4.3.0
     # via
     #   -r requirements/base.txt
     #   inflect
-typing-extensions==4.11.0
+typing-extensions==4.12.0
     # via
     #   -r requirements/base.txt
     #   asgiref
@@ -373,13 +373,13 @@ willow[heif]==1.8.0
     # via
     #   -r requirements/base.txt
     #   wagtail
-zipp==3.18.2
+zipp==3.19.0
     # via
     #   -r requirements/base.txt
     #   importlib-metadata
 zope-event==5.0
     # via gevent
-zope-interface==6.4
+zope-interface==6.4.post2
     # via gevent
 
 # The following packages are considered to be unsafe in a requirements file:

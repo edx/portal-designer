@@ -27,9 +27,9 @@ beautifulsoup4==4.12.3
     # via
     #   -r requirements/quality.txt
     #   wagtail
-boto3==1.34.109
+boto3==1.34.113
     # via -r requirements/quality.txt
-botocore==1.34.109
+botocore==1.34.113
     # via
     #   -r requirements/quality.txt
     #   boto3
@@ -75,7 +75,7 @@ colorama==0.4.6
     # via
     #   -r requirements/quality.txt
     #   tox
-coverage[toml]==7.5.1
+coverage[toml]==7.5.3
     # via
     #   -r requirements/quality.txt
     #   pytest-cov
@@ -134,7 +134,7 @@ django-crum==0.7.9
     # via
     #   -r requirements/quality.txt
     #   edx-django-utils
-django-debug-toolbar==4.3.0
+django-debug-toolbar==4.4.2
     # via -r requirements/dev.in
 django-dynamic-fixture==4.0.1
     # via -r requirements/quality.txt
@@ -197,7 +197,7 @@ edx-auth-backends==4.3.0
     # via -r requirements/quality.txt
 edx-django-release-util==1.4.0
     # via -r requirements/quality.txt
-edx-django-utils==5.13.0
+edx-django-utils==5.14.1
     # via
     #   -r requirements/quality.txt
     #   edx-drf-extensions
@@ -226,7 +226,7 @@ exceptiongroup==1.2.1
     #   pytest
 factory-boy==3.3.0
     # via -r requirements/quality.txt
-faker==25.2.0
+faker==25.3.0
     # via
     #   -r requirements/quality.txt
     #   factory-boy
@@ -302,7 +302,7 @@ more-itertools==10.2.0
     #   inflect
 mysqlclient==2.2.4
     # via -r requirements/quality.txt
-newrelic==9.9.1
+newrelic==9.10.0
     # via
     #   -r requirements/quality.txt
     #   edx-django-utils
@@ -440,7 +440,7 @@ pyyaml==6.0.1
     #   drf-yasg
     #   edx-django-release-util
     #   edx-i18n-tools
-requests==2.32.1
+requests==2.32.2
     # via
     #   -r requirements/quality.txt
     #   edx-drf-extensions
@@ -523,11 +523,11 @@ tomlkit==0.12.5
     #   pylint
 tox==4.15.0
     # via -r requirements/quality.txt
-typeguard==4.2.1
+typeguard==4.3.0
     # via
     #   -r requirements/quality.txt
     #   inflect
-typing-extensions==4.11.0
+typing-extensions==4.12.0
     # via
     #   -r requirements/quality.txt
     #   asgiref
@@ -555,7 +555,7 @@ willow[heif]==1.8.0
     # via
     #   -r requirements/quality.txt
     #   wagtail
-zipp==3.18.2
+zipp==3.19.0
     # via
     #   -r requirements/quality.txt
     #   importlib-metadata
