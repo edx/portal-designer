@@ -69,7 +69,7 @@
 | designer/apps/pages/migrations/\_\_init\_\_.py                                 |        0 |        0 |        0 |        0 |    100% |           |
 | designer/apps/pages/models.py                                                  |       64 |        0 |        6 |        2 |     97% |47->46, 234->233 |
 | designer/apps/pages/tests/\_\_init\_\_.py                                      |        0 |        0 |        0 |        0 |    100% |           |
-| designer/apps/pages/tests/test\_create\_pages.py                               |      117 |       10 |       22 |        4 |     87% |140->145, 152->154, 162-172, 176-177, 186->188, 199 |
+| designer/apps/pages/tests/test\_create\_pages.py                               |      117 |       11 |       22 |        5 |     86% |92, 140->145, 152->154, 162-172, 176-177, 186->188, 199 |
 | designer/apps/pages/tests/utils.py                                             |       63 |        0 |       32 |        3 |     97% |33->exit, 53->exit, 106->exit |
 | designer/apps/pages/utils.py                                                   |        5 |        0 |        4 |        0 |    100% |           |
 | designer/docker\_gunicorn\_configuration.py                                    |       22 |       22 |        8 |        0 |      0% |      4-74 |
@@ -82,7 +82,7 @@
 | designer/settings/test.py                                                      |        3 |        0 |        0 |        0 |    100% |           |
 | designer/settings/utils.py                                                     |       23 |        7 |        4 |        2 |     67% |11-15, 34, 110 |
 | designer/urls.py                                                               |       19 |        0 |        0 |        0 |    100% |           |
-|                                                                      **TOTAL** | **1208** |  **160** |  **262** |   **38** | **84%** |           |
+|                                                                      **TOTAL** | **1208** |  **161** |  **262** |   **39** | **84%** |           |
 
 
 ## Setup coverage badge
