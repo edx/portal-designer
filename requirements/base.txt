@@ -16,13 +16,13 @@ backports-zoneinfo==0.2.1
     #   djangorestframework
 beautifulsoup4==4.12.3
     # via wagtail
-boto3==1.34.137
+boto3==1.34.141
     # via -r requirements/base.in
-botocore==1.34.137
+botocore==1.34.141
     # via
     #   boto3
     #   s3transfer
-certifi==2024.6.2
+certifi==2024.7.4
     # via requests
 cffi==1.16.0
     # via
@@ -41,7 +41,7 @@ defusedxml==0.8.0rc2
     #   python3-openid
     #   social-auth-core
     #   willow
-django==4.2.13
+django==4.2.14
     # via
     #   -c requirements/common_constraints.txt
     #   -c requirements/constraints.txt
@@ -79,7 +79,7 @@ django-modelcluster==6.3
     # via wagtail
 django-permissionedforms==0.1
     # via wagtail
-django-storages==1.14.3
+django-storages==1.14.4
     # via -r requirements/base.in
 django-taggit==5.0.1
     # via wagtail
