@@ -27,9 +27,9 @@ beautifulsoup4==4.12.3
     # via
     #   -r requirements/test.txt
     #   wagtail
-boto3==1.34.137
+boto3==1.34.141
     # via -r requirements/test.txt
-botocore==1.34.137
+botocore==1.34.141
     # via
     #   -r requirements/test.txt
     #   boto3
@@ -38,7 +38,7 @@ cachetools==5.3.3
     # via
     #   -r requirements/test.txt
     #   tox
-certifi==2024.6.2
+certifi==2024.7.4
     # via
     #   -r requirements/test.txt
     #   requests
@@ -97,7 +97,7 @@ distlib==0.3.8
     # via
     #   -r requirements/test.txt
     #   virtualenv
-django==4.2.13
+django==4.2.14
     # via
     #   -r requirements/test.txt
     #   django-cors-headers
@@ -143,7 +143,7 @@ django-permissionedforms==0.1
     # via
     #   -r requirements/test.txt
     #   wagtail
-django-storages==1.14.3
+django-storages==1.14.4
     # via -r requirements/test.txt
 django-taggit==5.0.1
     # via
@@ -492,7 +492,7 @@ tomlkit==0.12.5
     # via
     #   -r requirements/test.txt
     #   pylint
-tox==4.15.1
+tox==4.16.0
     # via -r requirements/test.txt
 typeguard==4.3.0
     # via

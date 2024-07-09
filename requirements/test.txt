@@ -26,16 +26,16 @@ beautifulsoup4==4.12.3
     # via
     #   -r requirements/base.txt
     #   wagtail
-boto3==1.34.137
+boto3==1.34.141
     # via -r requirements/base.txt
-botocore==1.34.137
+botocore==1.34.141
     # via
     #   -r requirements/base.txt
     #   boto3
     #   s3transfer
 cachetools==5.3.3
     # via tox
-certifi==2024.6.2
+certifi==2024.7.4
     # via
     #   -r requirements/base.txt
     #   requests
@@ -131,7 +131,7 @@ django-permissionedforms==0.1
     # via
     #   -r requirements/base.txt
     #   wagtail
-django-storages==1.14.3
+django-storages==1.14.4
     # via -r requirements/base.txt
 django-taggit==5.0.1
     # via
@@ -446,7 +446,7 @@ tomli==2.0.1
     #   tox
 tomlkit==0.12.5
     # via pylint
-tox==4.15.1
+tox==4.16.0
     # via -r requirements/test.in
 typeguard==4.3.0
     # via
