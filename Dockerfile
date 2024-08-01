@@ -1,28 +1,49 @@
 FROM ubuntu:focal as app
 MAINTAINER sre@edx.org
 
+# ENV variables for Python 3.12 support
+ARG PYTHON_VERSION=3.12
+ENV TZ=UTC
+ENV TERM=xterm-256color
+ENV DEBIAN_FRONTEND=noninteractive
+
+# software-properties-common is needed to setup Python 3.12 env
+RUN apt-get update && \
+  apt-get install -y software-properties-common && \
+  apt-add-repository -y ppa:deadsnakes/ppa
+  
 # Packages installed:
 
 # pkg-config; mysqlclient>=2.2.0 requires pkg-config (https://github.com/PyMySQL/mysqlclient/issues/620)
 
 RUN apt-get update && apt-get -qy install --no-install-recommends \
+ build-essential \
  language-pack-en \
  locales \
- python3.8 \
- python3-pip \
  libmysqlclient-dev \
  pkg-config \
  libssl-dev \
- python3-dev \
  gcc \
- make
-
+ make \
+ curl \
+ python3-pip \
+ python${PYTHON_VERSION} \
+ python${PYTHON_VERSION}-dev \
+ python${PYTHON_VERSION}-distutils
 
 RUN pip install --upgrade pip setuptools
 # delete apt package lists because we do not need them inflating our image
 RUN rm -rf /var/lib/apt/lists/*
 
 RUN ln -s /usr/bin/python3 /usr/bin/python
+
+# Setup zoneinfo for Python 3.12
+RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
+
+# need to use virtualenv pypi package with Python 3.12
+RUN pip install --upgrade pip setuptools
+RUN curl -sS https://bootstrap.pypa.io/get-pip.py | python${PYTHON_VERSION}
+RUN pip install virtualenv
 
 RUN locale-gen en_US.UTF-8
 ENV LANG en_US.UTF-8
@@ -34,10 +55,15 @@ EXPOSE 18808
 RUN useradd -m --shell /bin/false app
 
 WORKDIR /edx/app/designer
+ARG DESIGNER_VENV_DIR="/edx/app/venvs/designer"
+ENV PATH="$DESIGNER_VENV_DIR/bin:$PATH"
 
 # Copy the requirements explicitly even though we copy everything below
 # this prevents the image cache from busting unless the dependencies have changed.
 COPY requirements/production.txt /edx/app/designer/requirements/production.txt
+
+# Create virtualenv to install requirements
+RUN virtualenv -p python${PYTHON_VERSION} --always-copy ${DESIGNER_VENV_DIR}
 
 # Dependencies are installed as root so they cannot be modified by the application user.
 RUN pip install -r requirements/production.txt
