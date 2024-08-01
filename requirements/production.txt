@@ -351,7 +351,7 @@ uritemplate==4.1.1
     # via
     #   -r requirements/base.txt
     #   drf-yasg
-urllib3==2.2.2
+urllib3==1.26.19
     # via
     #   -r requirements/base.txt
     #   botocore

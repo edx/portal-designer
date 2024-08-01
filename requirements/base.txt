@@ -245,8 +245,9 @@ typing-extensions==4.12.2
     #   typeguard
 uritemplate==4.1.1
     # via drf-yasg
-urllib3==2.2.2
+urllib3==1.26.19
     # via
+    #   -c requirements/constraints.txt
     #   botocore
     #   requests
 wagtail==6.1.3
