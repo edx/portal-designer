@@ -11,14 +11,44 @@
 # serve to show the default.
 
 import os
-import edx_theme
+import sphinx_book_theme
 
 # If you wish to publish docs to readthedocs.org you'll need to make sure to
 # follow the steps here:
 # https://edx-sphinx-theme.readthedocs.io/en/latest/readme.html#read-the-docs-configuration
 
-html_theme = 'edx_theme'
-html_theme_path = [edx_theme.get_html_theme_path()]
+html_theme = 'sphinx_book_theme'
+html_theme_options = {
+
+    "repository_url": 'https://github.com/edx/portal-designer',
+    "repository_branch": 'master',
+    "path_to_docs": "docs/",
+    "use_repository_button": True,
+    "use_issues_button": True,
+    "use_edit_page_button": True,
+    # Please don't change unless you know what you're doing.
+    "extra_footer": """
+        <a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/">
+            <img
+                alt="Creative Commons License"
+                style="border-width:0"
+                src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png"/>
+        </a>
+        <br>
+        These works by
+            <a
+                xmlns:cc="https://creativecommons.org/ns#"
+                href="https://openedx.org"
+                property="cc:attributionName"
+                rel="cc:attributionURL"
+            >Axim Collaborative</a>
+        are licensed under a
+            <a
+                rel="license"
+                href="https://creativecommons.org/licenses/by-sa/4.0/"
+            >Creative Commons Attribution-ShareAlike 4.0 International License</a>.
+    """
+}
 
 # If extensions (or modules to document with autodoc) are in another directory,
 # add these directories to sys.path here. If the directory is relative to the
@@ -29,10 +59,6 @@ html_theme_path = [edx_theme.get_html_theme_path()]
 
 # If your documentation needs a minimal Sphinx version, state it here.
 # needs_sphinx = '1.0'
-
-# Add any Sphinx extension module names here, as strings. They can be extensions
-# coming with Sphinx (named 'sphinx.ext.*') or your custom ones.
-extensions = ['edx_theme']
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
@@ -48,7 +74,7 @@ master_doc = 'index'
 
 # General information about the project.
 project = 'designer'
-copyright = edx_theme.COPYRIGHT
+copyright = 'edX 2024'
 author = 'edX'
 
 # The version info for the project you're documenting, acts as replacement for
@@ -123,7 +149,11 @@ pygments_style = 'sphinx'
 # The name of an image file (within the static path) to use as favicon of the
 # docs.  This file should be a Windows icon file (.ico) being 16x16 or 32x32
 # pixels large.
-html_favicon = os.path.join(html_theme_path[0], 'edx_theme', 'static', 'css', 'favicon.ico')
+html_logo = "https://logos.openedx.org/open-edx-logo-color.png"
+html_favicon = "https://logos.openedx.org/open-edx-favicon.ico"
+
+if not os.environ.get('DJANGO_SETTINGS_MODULE'):
+   os.environ['DJANGO_SETTINGS_MODULE'] = 'test_utils.test_settings'
 
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
