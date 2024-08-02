@@ -27,9 +27,9 @@ beautifulsoup4==4.12.3
     # via
     #   -r requirements/test.txt
     #   wagtail
-boto3==1.34.151
+boto3==1.34.152
     # via -r requirements/test.txt
-botocore==1.34.151
+botocore==1.34.152
     # via
     #   -r requirements/test.txt
     #   boto3
@@ -131,7 +131,7 @@ django-dynamic-fixture==4.0.1
     # via -r requirements/test.txt
 django-extensions==3.2.3
     # via -r requirements/test.txt
-django-filter==24.2
+django-filter==24.3
     # via
     #   -r requirements/test.txt
     #   wagtail
@@ -215,7 +215,7 @@ exceptiongroup==1.2.2
     #   pytest
 factory-boy==3.3.0
     # via -r requirements/test.txt
-faker==26.0.0
+faker==26.1.0
     # via
     #   -r requirements/test.txt
     #   factory-boy
@@ -340,7 +340,7 @@ pycparser==2.22
     #   cffi
 pydocstyle==6.3.0
     # via -r requirements/quality.in
-pyjwt[crypto]==2.8.0
+pyjwt[crypto]==2.9.0
     # via
     #   -r requirements/test.txt
     #   drf-jwt
@@ -520,7 +520,7 @@ virtualenv==20.26.3
     # via
     #   -r requirements/test.txt
     #   tox
-wagtail==6.1.3
+wagtail==6.2
     # via -r requirements/test.txt
 willow[heif]==1.8.0
     # via
