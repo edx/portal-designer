@@ -22,11 +22,11 @@ beautifulsoup4==4.12.3
     # via
     #   -r requirements/base.txt
     #   wagtail
-boto3==1.34.151
+boto3==1.34.152
     # via
     #   -r requirements/base.txt
     #   -r requirements/production.in
-botocore==1.34.151
+botocore==1.34.152
     # via
     #   -r requirements/base.txt
     #   boto3
@@ -91,7 +91,7 @@ django-crum==0.7.9
     #   edx-django-utils
 django-extensions==3.2.3
     # via -r requirements/base.txt
-django-filter==24.2
+django-filter==24.3
     # via
     #   -r requirements/base.txt
     #   wagtail
@@ -249,7 +249,7 @@ pycparser==2.22
     # via
     #   -r requirements/base.txt
     #   cffi
-pyjwt[crypto]==2.8.0
+pyjwt[crypto]==2.9.0
     # via
     #   -r requirements/base.txt
     #   drf-jwt
@@ -367,7 +367,7 @@ urllib3==1.26.19
     #   -r requirements/base.txt
     #   botocore
     #   requests
-wagtail==6.1.3
+wagtail==6.2
     # via -r requirements/base.txt
 willow[heif]==1.8.0
     # via
