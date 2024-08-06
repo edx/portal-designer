@@ -31,9 +31,9 @@ beautifulsoup4==4.12.3
     # via
     #   -r requirements/test.txt
     #   wagtail
-boto3==1.34.152
+boto3==1.34.154
     # via -r requirements/test.txt
-botocore==1.34.152
+botocore==1.34.154
     # via
     #   -r requirements/test.txt
     #   boto3
@@ -78,7 +78,7 @@ colorama==0.4.6
     # via
     #   -r requirements/test.txt
     #   tox
-coverage[toml]==7.6.0
+coverage[toml]==7.6.1
     # via
     #   -r requirements/test.txt
     #   pytest-cov
@@ -101,7 +101,7 @@ distlib==0.3.8
     # via
     #   -r requirements/test.txt
     #   virtualenv
-django==4.2.14
+django==4.2.15
     # via
     #   -r requirements/test.txt
     #   django-cors-headers
@@ -227,7 +227,7 @@ exceptiongroup==1.2.2
     #   pytest
 factory-boy==3.3.0
     # via -r requirements/test.txt
-faker==26.1.0
+faker==26.2.0
     # via
     #   -r requirements/test.txt
     #   factory-boy
@@ -536,7 +536,7 @@ tomlkit==0.13.0
     # via
     #   -r requirements/test.txt
     #   pylint
-tox==4.16.0
+tox==4.17.0
     # via -r requirements/test.txt
 typeguard==4.3.0
     # via
