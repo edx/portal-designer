@@ -22,11 +22,11 @@ beautifulsoup4==4.12.3
     # via
     #   -r requirements/base.txt
     #   wagtail
-boto3==1.34.154
+boto3==1.34.159
     # via
     #   -r requirements/base.txt
     #   -r requirements/production.in
-botocore==1.34.154
+botocore==1.34.159
     # via
     #   -r requirements/base.txt
     #   boto3
@@ -35,7 +35,7 @@ certifi==2024.7.4
     # via
     #   -r requirements/base.txt
     #   requests
-cffi==1.16.0
+cffi==1.17.0
     # via
     #   -r requirements/base.txt
     #   cryptography
@@ -173,13 +173,13 @@ gevent==24.2.1
     # via -r requirements/production.in
 greenlet==3.0.3
     # via gevent
-gunicorn==22.0.0
+gunicorn==23.0.0
     # via -r requirements/production.in
 idna==3.7
     # via
     #   -r requirements/base.txt
     #   requests
-importlib-metadata==6.11.0
+importlib-metadata==8.2.0
     # via
     #   -r requirements/base.txt
     #   typeguard
@@ -204,13 +204,13 @@ laces==0.1.1
     #   wagtail
 mock==5.1.0
     # via -r requirements/base.txt
-more-itertools==10.3.0
+more-itertools==10.4.0
     # via
     #   -r requirements/base.txt
     #   inflect
 mysqlclient==2.2.4
     # via -r requirements/base.txt
-newrelic==9.12.0
+newrelic==9.13.0
     # via
     #   -r requirements/base.txt
     #   edx-django-utils
@@ -283,7 +283,7 @@ pytz==2024.1
     #   django-modelcluster
     #   drf-yasg
     #   l18n
-pyyaml==6.0.1
+pyyaml==6.0.2
     # via
     #   -r requirements/base.txt
     #   -r requirements/production.in
@@ -330,7 +330,7 @@ social-auth-core==4.5.4
     #   -r requirements/base.txt
     #   edx-auth-backends
     #   social-auth-app-django
-soupsieve==2.5
+soupsieve==2.6
     # via
     #   -r requirements/base.txt
     #   beautifulsoup4
@@ -373,13 +373,13 @@ willow[heif]==1.8.0
     # via
     #   -r requirements/base.txt
     #   wagtail
-zipp==3.19.2
+zipp==3.20.0
     # via
     #   -r requirements/base.txt
     #   importlib-metadata
 zope-event==5.0
     # via gevent
-zope-interface==7.0
+zope-interface==7.0.1
     # via gevent
 
 # The following packages are considered to be unsafe in a requirements file:

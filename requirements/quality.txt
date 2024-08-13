@@ -27,9 +27,9 @@ beautifulsoup4==4.12.3
     # via
     #   -r requirements/test.txt
     #   wagtail
-boto3==1.34.154
+boto3==1.34.159
     # via -r requirements/test.txt
-botocore==1.34.154
+botocore==1.34.159
     # via
     #   -r requirements/test.txt
     #   boto3
@@ -42,7 +42,7 @@ certifi==2024.7.4
     # via
     #   -r requirements/test.txt
     #   requests
-cffi==1.16.0
+cffi==1.17.0
     # via
     #   -r requirements/test.txt
     #   cryptography
@@ -215,7 +215,7 @@ exceptiongroup==1.2.2
     #   pytest
 factory-boy==3.3.0
     # via -r requirements/test.txt
-faker==26.2.0
+faker==27.0.0
     # via
     #   -r requirements/test.txt
     #   factory-boy
@@ -232,7 +232,7 @@ idna==3.7
     # via
     #   -r requirements/test.txt
     #   requests
-importlib-metadata==6.11.0
+importlib-metadata==8.2.0
     # via
     #   -r requirements/test.txt
     #   typeguard
@@ -278,13 +278,13 @@ mccabe==0.7.0
     #   pylint
 mock==5.1.0
     # via -r requirements/test.txt
-more-itertools==10.3.0
+more-itertools==10.4.0
     # via
     #   -r requirements/test.txt
     #   inflect
 mysqlclient==2.2.4
     # via -r requirements/test.txt
-newrelic==9.12.0
+newrelic==9.13.0
     # via
     #   -r requirements/test.txt
     #   edx-django-utils
@@ -408,7 +408,7 @@ pytz==2024.1
     #   django-modelcluster
     #   drf-yasg
     #   l18n
-pyyaml==6.0.1
+pyyaml==6.0.2
     # via
     #   -r requirements/test.txt
     #   code-annotations
@@ -458,7 +458,7 @@ social-auth-core==4.5.4
     #   -r requirements/test.txt
     #   edx-auth-backends
     #   social-auth-app-django
-soupsieve==2.5
+soupsieve==2.6
     # via
     #   -r requirements/test.txt
     #   beautifulsoup4
@@ -492,7 +492,7 @@ tomlkit==0.13.0
     # via
     #   -r requirements/test.txt
     #   pylint
-tox==4.17.0
+tox==4.17.1
     # via -r requirements/test.txt
 typeguard==4.3.0
     # via
@@ -526,7 +526,7 @@ willow[heif]==1.8.0
     # via
     #   -r requirements/test.txt
     #   wagtail
-zipp==3.19.2
+zipp==3.20.0
     # via
     #   -r requirements/test.txt
     #   importlib-metadata
