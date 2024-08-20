@@ -22,11 +22,11 @@ beautifulsoup4==4.12.3
     # via
     #   -r requirements/base.txt
     #   wagtail
-boto3==1.34.159
+boto3==1.35.1
     # via
     #   -r requirements/base.txt
     #   -r requirements/production.in
-botocore==1.34.159
+botocore==1.35.1
     # via
     #   -r requirements/base.txt
     #   boto3
@@ -179,7 +179,7 @@ idna==3.7
     # via
     #   -r requirements/base.txt
     #   requests
-importlib-metadata==8.2.0
+importlib-metadata==8.3.0
     # via
     #   -r requirements/base.txt
     #   typeguard
