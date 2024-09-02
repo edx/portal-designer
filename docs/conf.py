@@ -12,43 +12,13 @@
 
 import os
 import sphinx_book_theme
+from datetime import datetime
 
 # If you wish to publish docs to readthedocs.org you'll need to make sure to
 # follow the steps here:
 # https://edx-sphinx-theme.readthedocs.io/en/latest/readme.html#read-the-docs-configuration
 
 html_theme = 'sphinx_book_theme'
-html_theme_options = {
-
-    "repository_url": 'https://github.com/edx/portal-designer',
-    "repository_branch": 'master',
-    "path_to_docs": "docs/",
-    "use_repository_button": True,
-    "use_issues_button": True,
-    "use_edit_page_button": True,
-    # Please don't change unless you know what you're doing.
-    "extra_footer": """
-        <a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/">
-            <img
-                alt="Creative Commons License"
-                style="border-width:0"
-                src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png"/>
-        </a>
-        <br>
-        These works by
-            <a
-                xmlns:cc="https://creativecommons.org/ns#"
-                href="https://openedx.org"
-                property="cc:attributionName"
-                rel="cc:attributionURL"
-            >Axim Collaborative</a>
-        are licensed under a
-            <a
-                rel="license"
-                href="https://creativecommons.org/licenses/by-sa/4.0/"
-            >Creative Commons Attribution-ShareAlike 4.0 International License</a>.
-    """
-}
 
 # If extensions (or modules to document with autodoc) are in another directory,
 # add these directories to sys.path here. If the directory is relative to the
@@ -74,7 +44,7 @@ master_doc = 'index'
 
 # General information about the project.
 project = 'designer'
-copyright = 'edX 2024'
+copyright = f'{datetime.now().year}, edX Inc'
 author = 'edX'
 
 # The version info for the project you're documenting, acts as replacement for
