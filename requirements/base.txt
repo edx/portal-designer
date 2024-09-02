@@ -17,15 +17,15 @@ backports-zoneinfo==0.2.1 ; python_version < "3.9"
     #   djangorestframework
 beautifulsoup4==4.12.3
     # via wagtail
-boto3==1.34.151
+boto3==1.35.1
     # via -r requirements/base.in
-botocore==1.34.151
+botocore==1.35.1
     # via
     #   boto3
     #   s3transfer
 certifi==2024.7.4
     # via requests
-cffi==1.16.0
+cffi==1.17.0
     # via
     #   cryptography
     #   pynacl
@@ -42,7 +42,7 @@ defusedxml==0.8.0rc2
     #   python3-openid
     #   social-auth-core
     #   willow
-django==4.2.14
+django==4.2.15
     # via
     #   -c requirements/common_constraints.txt
     #   -c requirements/constraints.txt
@@ -74,7 +74,7 @@ django-crum==0.7.9
     # via edx-django-utils
 django-extensions==3.2.3
     # via -r requirements/base.in
-django-filter==24.2
+django-filter==24.3
     # via wagtail
 django-modelcluster==6.3
     # via wagtail
@@ -134,10 +134,8 @@ filetype==1.2.0
     # via willow
 idna==3.7
     # via requests
-importlib-metadata==6.11.0
-    # via
-    #   -c requirements/common_constraints.txt
-    #   typeguard
+importlib-metadata==8.3.0
+    # via typeguard
 inflect==7.3.1
     # via -r requirements/base.in
 inflection==0.5.1
@@ -152,11 +150,11 @@ laces==0.1.1
     # via wagtail
 mock==5.1.0
     # via -r requirements/base.in
-more-itertools==10.3.0
+more-itertools==10.4.0
     # via inflect
 mysqlclient==2.2.4
     # via -r requirements/base.in
-newrelic==9.12.0
+newrelic==9.13.0
     # via edx-django-utils
 oauthlib==3.2.2
     # via
@@ -178,7 +176,7 @@ psutil==6.0.0
     # via edx-django-utils
 pycparser==2.22
     # via cffi
-pyjwt[crypto]==2.8.0
+pyjwt[crypto]==2.9.0
     # via
     #   drf-jwt
     #   edx-auth-backends
@@ -201,7 +199,7 @@ pytz==2024.1
     #   django-modelcluster
     #   drf-yasg
     #   l18n
-pyyaml==6.0.1
+pyyaml==6.0.2
     # via
     #   drf-yasg
     #   edx-django-release-util
@@ -236,7 +234,7 @@ social-auth-core==4.5.4
     #   -r requirements/base.in
     #   edx-auth-backends
     #   social-auth-app-django
-soupsieve==2.5
+soupsieve==2.6
     # via beautifulsoup4
 sqlparse==0.5.1
     # via django
@@ -260,13 +258,13 @@ urllib3==1.26.19
     # via
     #   botocore
     #   requests
-wagtail==6.1.3
+wagtail==6.2
     # via -r requirements/base.in
 willow[heif]==1.8.0
     # via
     #   wagtail
     #   willow
-zipp==3.19.2
+zipp==3.20.0
     # via
     #   -r requirements/base.in
     #   importlib-metadata
