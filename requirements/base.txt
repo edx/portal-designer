@@ -17,15 +17,15 @@ backports-zoneinfo==0.2.1 ; python_version < "3.9"
     #   djangorestframework
 beautifulsoup4==4.12.3
     # via wagtail
-boto3==1.35.1
+boto3==1.35.12
     # via -r requirements/base.in
-botocore==1.35.1
+botocore==1.35.12
     # via
     #   boto3
     #   s3transfer
-certifi==2024.7.4
+certifi==2024.8.30
     # via requests
-cffi==1.17.0
+cffi==1.17.1
     # via
     #   cryptography
     #   pynacl
@@ -33,7 +33,7 @@ charset-normalizer==3.3.2
     # via requests
 click==8.1.7
     # via edx-django-utils
-cryptography==43.0.0
+cryptography==43.0.1
     # via
     #   pyjwt
     #   social-auth-core
@@ -42,7 +42,7 @@ defusedxml==0.8.0rc2
     #   python3-openid
     #   social-auth-core
     #   willow
-django==4.2.15
+django==4.2.16
     # via
     #   -c requirements/common_constraints.txt
     #   -c requirements/constraints.txt
@@ -120,9 +120,9 @@ edx-django-utils==5.15.0
     #   -r requirements/base.in
     #   edx-drf-extensions
     #   edx-rest-api-client
-edx-drf-extensions==10.3.0
+edx-drf-extensions==10.4.0
     # via -r requirements/base.in
-edx-opaque-keys==2.10.0
+edx-opaque-keys==2.11.0
     # via edx-drf-extensions
 edx-rest-api-client==4.0.1
     # via
@@ -132,9 +132,9 @@ et-xmlfile==1.1.0
     # via openpyxl
 filetype==1.2.0
     # via willow
-idna==3.7
+idna==3.8
     # via requests
-importlib-metadata==8.3.0
+importlib-metadata==8.4.0
     # via typeguard
 inflect==7.3.1
     # via -r requirements/base.in
@@ -164,7 +164,7 @@ openpyxl==3.1.5
     # via wagtail
 packaging==24.1
     # via drf-yasg
-pbr==6.0.0
+pbr==6.1.0
     # via stevedore
 pillow==10.4.0
     # via
@@ -238,7 +238,7 @@ soupsieve==2.6
     # via beautifulsoup4
 sqlparse==0.5.1
     # via django
-stevedore==5.2.0
+stevedore==5.3.0
     # via
     #   edx-django-utils
     #   edx-opaque-keys
@@ -254,17 +254,17 @@ typing-extensions==4.12.2
     #   typeguard
 uritemplate==4.1.1
     # via drf-yasg
-urllib3==1.26.19
+urllib3==1.26.20
     # via
     #   botocore
     #   requests
-wagtail==6.2
+wagtail==6.2.1
     # via -r requirements/base.in
 willow[heif]==1.8.0
     # via
     #   wagtail
     #   willow
-zipp==3.20.0
+zipp==3.20.1
     # via
     #   -r requirements/base.in
     #   importlib-metadata
