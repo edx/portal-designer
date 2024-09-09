@@ -11,10 +11,10 @@
 | designer/apps/api/urls.py                                                      |        3 |        0 |        0 |        0 |    100% |           |
 | designer/apps/api/v1/\_\_init\_\_.py                                           |        0 |        0 |        0 |        0 |    100% |           |
 | designer/apps/api/v1/serializers.py                                            |       59 |        2 |       18 |        4 |     92% |53->57, 57->61, 62, 138 |
-| designer/apps/api/v1/test\_pages\_api.py                                       |      105 |        1 |       48 |        5 |     96% |35->34, 75->79, 79->83, 84, 108->100 |
+| designer/apps/api/v1/test\_pages\_api.py                                       |      105 |        1 |       48 |        4 |     97% |75->79, 79->83, 84, 108->100 |
 | designer/apps/api/v1/tests/\_\_init\_\_.py                                     |        0 |        0 |        0 |        0 |    100% |           |
 | designer/apps/api/v1/urls.py                                                   |        3 |        0 |        0 |        0 |    100% |           |
-| designer/apps/api/v1/views.py                                                  |       78 |       29 |       20 |        4 |     60% |38-39, 42, 47-50, 67->66, 71-76, 79->78, 129-153, 158-161 |
+| designer/apps/api/v1/views.py                                                  |       78 |       29 |       20 |        2 |     62% |38-39, 42, 47-50, 71-76, 129-153, 158-161 |
 | designer/apps/branding/\_\_init\_\_.py                                         |        0 |        0 |        0 |        0 |    100% |           |
 | designer/apps/branding/migrations/0001\_initial.py                             |        7 |        0 |        0 |        0 |    100% |           |
 | designer/apps/branding/migrations/0002\_auto\_20190703\_1512.py                |        5 |        0 |        0 |        0 |    100% |           |
@@ -28,23 +28,23 @@
 | designer/apps/core/apps.py                                                     |        5 |        0 |        0 |        0 |    100% |           |
 | designer/apps/core/constants.py                                                |        3 |        0 |        0 |        0 |    100% |           |
 | designer/apps/core/context\_processors.py                                      |        3 |        0 |        0 |        0 |    100% |           |
-| designer/apps/core/management/commands/create\_program.py                      |       32 |        2 |        2 |        1 |     91% |58->57, 73-74 |
+| designer/apps/core/management/commands/create\_program.py                      |       32 |        2 |        2 |        0 |     94% |     73-74 |
 | designer/apps/core/management/commands/tests/\_\_init\_\_.py                   |        0 |        0 |        0 |        0 |    100% |           |
-| designer/apps/core/management/commands/tests/test\_create\_program.py          |       31 |        0 |        4 |        1 |     97% |    25->33 |
+| designer/apps/core/management/commands/tests/test\_create\_program.py          |       31 |        0 |        4 |        0 |    100% |           |
 | designer/apps/core/migrations/0001\_initial.py                                 |        8 |        0 |        0 |        0 |    100% |           |
 | designer/apps/core/migrations/0002\_auto\_20190819\_1515.py                    |       13 |        2 |        0 |        0 |     85% |     13-14 |
 | designer/apps/core/migrations/0003\_last\_name\_max\_length\_150.py            |        4 |        0 |        0 |        0 |    100% |           |
 | designer/apps/core/migrations/0004\_alter\_user\_first\_name.py                |        4 |        0 |        0 |        0 |    100% |           |
 | designer/apps/core/migrations/\_\_init\_\_.py                                  |        0 |        0 |        0 |        0 |    100% |           |
-| designer/apps/core/models.py                                                   |       17 |        0 |        2 |        1 |     95% |    20->19 |
-| designer/apps/core/signals.py                                                  |       11 |        0 |        6 |        1 |     94% |    21->20 |
+| designer/apps/core/models.py                                                   |       17 |        0 |        2 |        0 |    100% |           |
+| designer/apps/core/signals.py                                                  |       11 |        0 |        6 |        0 |    100% |           |
 | designer/apps/core/tests/\_\_init\_\_.py                                       |        0 |        0 |        0 |        0 |    100% |           |
-| designer/apps/core/tests/test\_context\_processors.py                          |        8 |        0 |        2 |        1 |     90% |    14->13 |
+| designer/apps/core/tests/test\_context\_processors.py                          |        8 |        0 |        2 |        0 |    100% |           |
 | designer/apps/core/tests/test\_models.py                                       |       30 |        0 |        0 |        0 |    100% |           |
 | designer/apps/core/tests/test\_signals.py                                      |       24 |        0 |        0 |        0 |    100% |           |
-| designer/apps/core/tests/test\_views.py                                        |       32 |        0 |        4 |        2 |     94% |50->49, 56->55 |
+| designer/apps/core/tests/test\_views.py                                        |       32 |        0 |        4 |        0 |    100% |           |
 | designer/apps/core/tests/utils.py                                              |       60 |        0 |       34 |        0 |    100% |           |
-| designer/apps/core/views.py                                                    |       41 |        6 |        8 |        2 |     80% |20->19, 43-44, 58, 96-98 |
+| designer/apps/core/views.py                                                    |       41 |        6 |        8 |        1 |     82% |43-44, 58, 96-98 |
 | designer/apps/core/wagtailadmin/views.py                                       |       27 |       15 |        6 |        0 |     36% |19-21, 27-48 |
 | designer/apps/pages/\_\_init\_\_.py                                            |        0 |        0 |        0 |        0 |    100% |           |
 | designer/apps/pages/apps.py                                                    |        4 |        0 |        0 |        0 |    100% |           |
@@ -67,7 +67,7 @@
 | designer/apps/pages/migrations/0017\_copy\_existing\_program\_branding.py      |       15 |        6 |        2 |        1 |     59% | 10-14, 17 |
 | designer/apps/pages/migrations/0018\_rename\_cover\_texture\_image\_fields.py  |        4 |        0 |        0 |        0 |    100% |           |
 | designer/apps/pages/migrations/\_\_init\_\_.py                                 |        0 |        0 |        0 |        0 |    100% |           |
-| designer/apps/pages/models.py                                                  |       64 |        0 |        6 |        2 |     97% |47->46, 234->233 |
+| designer/apps/pages/models.py                                                  |       64 |        0 |        6 |        0 |    100% |           |
 | designer/apps/pages/tests/\_\_init\_\_.py                                      |        0 |        0 |        0 |        0 |    100% |           |
 | designer/apps/pages/tests/test\_create\_pages.py                               |      117 |       10 |       22 |        4 |     87% |140->145, 152->154, 162-172, 176-177, 186->188, 199 |
 | designer/apps/pages/tests/utils.py                                             |       63 |        0 |       32 |        3 |     97% |33->exit, 53->exit, 106->exit |
@@ -82,7 +82,7 @@
 | designer/settings/test.py                                                      |        3 |        0 |        0 |        0 |    100% |           |
 | designer/settings/utils.py                                                     |       23 |        7 |        4 |        2 |     67% |11-15, 34, 110 |
 | designer/urls.py                                                               |       19 |        0 |        0 |        0 |    100% |           |
-|                                                                      **TOTAL** | **1208** |  **160** |  **262** |   **38** | **84%** |           |
+|                                                                      **TOTAL** | **1208** |  **160** |  **262** |   **25** | **85%** |           |
 
 
 ## Setup coverage badge
