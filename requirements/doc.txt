@@ -26,9 +26,9 @@ beautifulsoup4==4.12.3
     # via
     #   -r requirements/test.txt
     #   wagtail
-boto3==1.35.14
+boto3==1.35.15
     # via -r requirements/test.txt
-botocore==1.35.14
+botocore==1.35.15
     # via
     #   -r requirements/test.txt
     #   boto3
@@ -191,7 +191,7 @@ drf-yasg==1.21.7
     #   edx-api-doc-tools
 edx-api-doc-tools==1.8.0
     # via -r requirements/test.txt
-edx-auth-backends==4.3.0
+edx-auth-backends==4.4.0
     # via -r requirements/test.txt
 edx-django-release-util==1.4.0
     # via -r requirements/test.txt
@@ -385,7 +385,7 @@ pyproject-api==1.7.1
     # via
     #   -r requirements/test.txt
     #   tox
-pytest==8.3.2
+pytest==8.3.3
     # via
     #   -r requirements/test.txt
     #   pytest-cov
