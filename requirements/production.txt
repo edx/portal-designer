@@ -17,11 +17,11 @@ beautifulsoup4==4.12.3
     # via
     #   -r requirements/base.txt
     #   wagtail
-boto3==1.35.14
+boto3==1.35.20
     # via
     #   -r requirements/base.txt
     #   -r requirements/production.in
-botocore==1.35.14
+botocore==1.35.20
     # via
     #   -r requirements/base.txt
     #   boto3
@@ -137,9 +137,9 @@ drf-yasg==1.21.7
     # via
     #   -r requirements/base.txt
     #   edx-api-doc-tools
-edx-api-doc-tools==1.8.0
+edx-api-doc-tools==2.0.0
     # via -r requirements/base.txt
-edx-auth-backends==4.3.0
+edx-auth-backends==4.4.0
     # via -r requirements/base.txt
 edx-django-release-util==1.4.0
     # via -r requirements/base.txt
@@ -166,11 +166,11 @@ filetype==1.2.0
     #   willow
 gevent==24.2.1
     # via -r requirements/production.in
-greenlet==3.0.3
+greenlet==3.1.0
     # via gevent
 gunicorn==23.0.0
     # via -r requirements/production.in
-idna==3.8
+idna==3.10
     # via
     #   -r requirements/base.txt
     #   requests
@@ -268,7 +268,7 @@ python3-openid==3.2.0
     # via
     #   -r requirements/base.txt
     #   social-auth-core
-pytz==2024.1
+pytz==2024.2
     # via
     #   -r requirements/base.txt
     #   django-modelcluster
@@ -362,7 +362,7 @@ willow[heif]==1.8.0
     # via
     #   -r requirements/base.txt
     #   wagtail
-zipp==3.20.1
+zipp==3.20.2
     # via -r requirements/base.txt
 zope-event==5.0
     # via gevent
