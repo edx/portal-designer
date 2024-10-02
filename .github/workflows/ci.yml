@@ -12,7 +12,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        python-version: ["3.8", "3.12"]
+        python-version: ["3.12"]
         toxenv: [django42, quality, pii_check, check_keywords]
     steps:
     - uses: actions/checkout@v2
@@ -29,7 +29,7 @@ jobs:
         TOXENV: ${{ matrix.toxenv }}
       run: tox
     - name: Codecov
-      if: matrix.python-version == '3.8' && matrix.toxenv == 'django42'
+      if: matrix.python-version == '3.12' && matrix.toxenv == 'django42'
       uses: py-cov-action/python-coverage-comment-action@v3
       with:
         GITHUB_TOKEN: ${{ github.token }}
