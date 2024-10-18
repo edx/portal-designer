@@ -12,9 +12,9 @@ asgiref==3.8.1
     #   django-cors-headers
 beautifulsoup4==4.12.3
     # via wagtail
-boto3==1.35.14
+boto3==1.35.40
     # via -r requirements/base.in
-botocore==1.35.14
+botocore==1.35.40
     # via
     #   boto3
     #   s3transfer
@@ -24,7 +24,7 @@ cffi==1.17.1
     # via
     #   cryptography
     #   pynacl
-charset-normalizer==3.3.2
+charset-normalizer==3.4.0
     # via requests
 click==8.1.7
     # via edx-django-utils
@@ -63,7 +63,7 @@ django==4.2.16
     #   laces
     #   social-auth-app-django
     #   wagtail
-django-cors-headers==4.4.0
+django-cors-headers==4.5.0
     # via -r requirements/base.in
 django-crum==0.7.9
     # via edx-django-utils
@@ -94,7 +94,7 @@ djangorestframework==3.15.2
     #   edx-api-doc-tools
     #   edx-drf-extensions
     #   wagtail
-dnspython==2.6.1
+dnspython==2.7.0
     # via pymongo
 draftjs-exporter==5.0.0
     # via wagtail
@@ -104,13 +104,13 @@ drf-yasg==1.21.7
     # via
     #   -r requirements/base.in
     #   edx-api-doc-tools
-edx-api-doc-tools==1.8.0
+edx-api-doc-tools==2.0.0
     # via -r requirements/base.in
-edx-auth-backends==4.3.0
+edx-auth-backends==4.4.0
     # via -r requirements/base.in
 edx-django-release-util==1.4.0
     # via -r requirements/base.in
-edx-django-utils==5.15.0
+edx-django-utils==6.0.0
     # via
     #   -r requirements/base.in
     #   edx-drf-extensions
@@ -127,7 +127,7 @@ et-xmlfile==1.1.0
     # via openpyxl
 filetype==1.2.0
     # via willow
-idna==3.8
+idna==3.10
     # via requests
 inflect==7.4.0
     # via -r requirements/base.in
@@ -147,7 +147,7 @@ more-itertools==10.5.0
     # via inflect
 mysqlclient==2.2.4
     # via -r requirements/base.in
-newrelic==9.13.0
+newrelic==10.1.0
     # via edx-django-utils
 oauthlib==3.2.2
     # via
@@ -176,7 +176,7 @@ pyjwt[crypto]==2.9.0
     #   edx-drf-extensions
     #   edx-rest-api-client
     #   social-auth-core
-pymongo==4.8.0
+pymongo==4.10.1
     # via edx-opaque-keys
 pynacl==1.5.0
     # via edx-django-utils
@@ -186,7 +186,7 @@ python-dateutil==2.9.0.post0
     #   botocore
 python3-openid==3.2.0
     # via social-auth-core
-pytz==2024.1
+pytz==2024.2
     # via
     #   -r requirements/base.in
     #   django-modelcluster
@@ -206,7 +206,7 @@ requests==2.32.3
     #   wagtail
 requests-oauthlib==2.0.0
     # via social-auth-core
-s3transfer==0.10.2
+s3transfer==0.10.3
     # via boto3
 semantic-version==2.10.0
     # via edx-drf-extensions
@@ -250,13 +250,13 @@ urllib3==1.26.20
     #   -c requirements/constraints.txt
     #   botocore
     #   requests
-wagtail==6.2.1
+wagtail==6.2.2
     # via -r requirements/base.in
 willow[heif]==1.8.0
     # via
     #   wagtail
     #   willow
-zipp==3.20.1
+zipp==3.20.2
     # via -r requirements/base.in
 
 # The following packages are considered to be unsafe in a requirements file:
