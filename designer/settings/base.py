@@ -68,6 +68,7 @@ INSTALLED_APPS += WAGTAIL_APPS
 MIDDLEWARE = (
     'edx_django_utils.monitoring.CookieMonitoringMiddleware',
     'edx_django_utils.monitoring.DeploymentMonitoringMiddleware',
+    'edx_django_utils.cache.middleware.RequestCacheMiddleware',
     'waffle.middleware.WaffleMiddleware',
     'wagtail.contrib.redirects.middleware.RedirectMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -78,6 +79,7 @@ MIDDLEWARE = (
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'social_django.middleware.SocialAuthExceptionMiddleware',
+    'edx_rest_framework_extensions.middleware.RequestCustomAttributesMiddleware',
 )
 
 ROOT_URLCONF = 'designer.urls'
