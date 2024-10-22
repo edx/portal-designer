@@ -21,9 +21,9 @@ beautifulsoup4==4.12.3
     # via
     #   -r requirements/base.txt
     #   wagtail
-boto3==1.35.40
+boto3==1.35.45
     # via -r requirements/base.txt
-botocore==1.35.40
+botocore==1.35.45
     # via
     #   -r requirements/base.txt
     #   boto3
@@ -60,11 +60,11 @@ code-annotations==1.8.0
     #   edx-lint
 colorama==0.4.6
     # via tox
-coverage[toml]==7.6.3
+coverage[toml]==7.6.4
     # via
     #   -r requirements/test.in
     #   pytest-cov
-cryptography==43.0.1
+cryptography==43.0.3
     # via
     #   -r requirements/base.txt
     #   pyjwt
@@ -161,7 +161,7 @@ drf-jwt==1.19.2
     # via
     #   -r requirements/base.txt
     #   edx-drf-extensions
-drf-yasg==1.21.7
+drf-yasg==1.21.8
     # via
     #   -r requirements/base.txt
     #   edx-api-doc-tools
@@ -171,7 +171,7 @@ edx-auth-backends==4.4.0
     # via -r requirements/base.txt
 edx-django-release-util==1.4.0
     # via -r requirements/base.txt
-edx-django-utils==6.0.0
+edx-django-utils==7.0.0
     # via
     #   -r requirements/base.txt
     #   edx-drf-extensions
@@ -194,7 +194,7 @@ et-xmlfile==1.1.0
     #   openpyxl
 factory-boy==3.3.1
     # via -r requirements/test.in
-faker==30.3.0
+faker==30.8.0
     # via
     #   -r requirements/test.in
     #   factory-boy
@@ -235,7 +235,7 @@ laces==0.1.1
     # via
     #   -r requirements/base.txt
     #   wagtail
-markupsafe==3.0.1
+markupsafe==3.0.2
     # via jinja2
 mccabe==0.7.0
     # via pylint
@@ -247,9 +247,9 @@ more-itertools==10.5.0
     # via
     #   -r requirements/base.txt
     #   inflect
-mysqlclient==2.2.4
+mysqlclient==2.2.5
     # via -r requirements/base.txt
-newrelic==10.1.0
+newrelic==10.2.0
     # via
     #   -r requirements/base.txt
     #   edx-django-utils
@@ -278,7 +278,7 @@ pillow==10.4.0
     #   -r requirements/base.txt
     #   pillow-heif
     #   wagtail
-pillow-heif==0.18.0
+pillow-heif==0.20.0
     # via
     #   -r requirements/base.txt
     #   willow
@@ -291,7 +291,7 @@ pluggy==1.5.0
     # via
     #   pytest
     #   tox
-psutil==6.0.0
+psutil==6.1.0
     # via
     #   -r requirements/base.txt
     #   edx-django-utils
@@ -427,7 +427,7 @@ text-unidecode==1.3
     # via python-slugify
 tomlkit==0.13.2
     # via pylint
-tox==4.21.2
+tox==4.23.2
     # via -r requirements/test.in
 typeguard==4.3.0
     # via
@@ -449,7 +449,7 @@ urllib3==1.26.20
     #   -r requirements/base.txt
     #   botocore
     #   requests
-virtualenv==20.26.6
+virtualenv==20.27.0
     # via tox
 wagtail==6.2.2
     # via -r requirements/base.txt

@@ -12,9 +12,9 @@ asgiref==3.8.1
     #   django-cors-headers
 beautifulsoup4==4.12.3
     # via wagtail
-boto3==1.35.40
+boto3==1.35.45
     # via -r requirements/base.in
-botocore==1.35.40
+botocore==1.35.45
     # via
     #   boto3
     #   s3transfer
@@ -28,7 +28,7 @@ charset-normalizer==3.4.0
     # via requests
 click==8.1.7
     # via edx-django-utils
-cryptography==43.0.1
+cryptography==43.0.3
     # via
     #   pyjwt
     #   social-auth-core
@@ -100,7 +100,7 @@ draftjs-exporter==5.0.0
     # via wagtail
 drf-jwt==1.19.2
     # via edx-drf-extensions
-drf-yasg==1.21.7
+drf-yasg==1.21.8
     # via
     #   -r requirements/base.in
     #   edx-api-doc-tools
@@ -110,7 +110,7 @@ edx-auth-backends==4.4.0
     # via -r requirements/base.in
 edx-django-release-util==1.4.0
     # via -r requirements/base.in
-edx-django-utils==6.0.0
+edx-django-utils==7.0.0
     # via
     #   -r requirements/base.in
     #   edx-drf-extensions
@@ -145,9 +145,9 @@ mock==5.1.0
     # via -r requirements/base.in
 more-itertools==10.5.0
     # via inflect
-mysqlclient==2.2.4
+mysqlclient==2.2.5
     # via -r requirements/base.in
-newrelic==10.1.0
+newrelic==10.2.0
     # via edx-django-utils
 oauthlib==3.2.2
     # via
@@ -163,9 +163,9 @@ pillow==10.4.0
     # via
     #   pillow-heif
     #   wagtail
-pillow-heif==0.18.0
+pillow-heif==0.20.0
     # via willow
-psutil==6.0.0
+psutil==6.1.0
     # via edx-django-utils
 pycparser==2.22
     # via cffi
