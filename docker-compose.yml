@@ -16,11 +16,7 @@ services:
     #  - "3307:3306"
 
   designer:
-    # Uncomment this line to use the official designer base image
-    # image: edxops/designer:devstack
-    build:
-      context: .
-      dockerfile: Dockerfile
+    image: edxops/designer:devstack
     container_name: designer.app
     volumes:
       - .:/edx/app/designer
