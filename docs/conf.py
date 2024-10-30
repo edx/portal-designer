@@ -44,8 +44,8 @@ master_doc = 'index'
 
 # General information about the project.
 project = 'designer'
-copyright = f'{datetime.now().year}, edX Inc'
-author = 'edX'
+copyright = f'{datetime.now().year}, edX LLC'
+author = 'edX LLC'
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
