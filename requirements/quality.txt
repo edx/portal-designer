@@ -13,7 +13,7 @@ asgiref==3.8.1
     #   -r requirements/test.txt
     #   django
     #   django-cors-headers
-astroid==3.2.4
+astroid==3.3.5
     # via
     #   -r requirements/test.txt
     #   pylint
@@ -22,9 +22,9 @@ beautifulsoup4==4.12.3
     # via
     #   -r requirements/test.txt
     #   wagtail
-boto3==1.35.14
+boto3==1.35.45
     # via -r requirements/test.txt
-botocore==1.35.14
+botocore==1.35.45
     # via
     #   -r requirements/test.txt
     #   boto3
@@ -46,7 +46,7 @@ chardet==5.2.0
     # via
     #   -r requirements/test.txt
     #   tox
-charset-normalizer==3.3.2
+charset-normalizer==3.4.0
     # via
     #   -r requirements/test.txt
     #   requests
@@ -69,11 +69,11 @@ colorama==0.4.6
     # via
     #   -r requirements/test.txt
     #   tox
-coverage[toml]==7.6.1
+coverage[toml]==7.6.4
     # via
     #   -r requirements/test.txt
     #   pytest-cov
-cryptography==43.0.1
+cryptography==43.0.3
     # via
     #   -r requirements/test.txt
     #   pyjwt
@@ -84,11 +84,11 @@ defusedxml==0.8.0rc2
     #   python3-openid
     #   social-auth-core
     #   willow
-dill==0.3.8
+dill==0.3.9
     # via
     #   -r requirements/test.txt
     #   pylint
-distlib==0.3.8
+distlib==0.3.9
     # via
     #   -r requirements/test.txt
     #   virtualenv
@@ -116,7 +116,7 @@ django==4.2.16
     #   laces
     #   social-auth-app-django
     #   wagtail
-django-cors-headers==4.4.0
+django-cors-headers==4.5.0
     # via -r requirements/test.txt
 django-crum==0.7.9
     # via
@@ -161,7 +161,7 @@ djangorestframework==3.15.2
     #   edx-api-doc-tools
     #   edx-drf-extensions
     #   wagtail
-dnspython==2.6.1
+dnspython==2.7.0
     # via
     #   -r requirements/test.txt
     #   pymongo
@@ -173,17 +173,17 @@ drf-jwt==1.19.2
     # via
     #   -r requirements/test.txt
     #   edx-drf-extensions
-drf-yasg==1.21.7
+drf-yasg==1.21.8
     # via
     #   -r requirements/test.txt
     #   edx-api-doc-tools
-edx-api-doc-tools==1.8.0
+edx-api-doc-tools==2.0.0
     # via -r requirements/test.txt
-edx-auth-backends==4.3.0
+edx-auth-backends==4.4.0
     # via -r requirements/test.txt
 edx-django-release-util==1.4.0
     # via -r requirements/test.txt
-edx-django-utils==5.15.0
+edx-django-utils==7.0.0
     # via
     #   -r requirements/test.txt
     #   edx-drf-extensions
@@ -206,11 +206,11 @@ et-xmlfile==1.1.0
     #   openpyxl
 factory-boy==3.3.1
     # via -r requirements/test.txt
-faker==28.4.1
+faker==30.8.0
     # via
     #   -r requirements/test.txt
     #   factory-boy
-filelock==3.16.0
+filelock==3.16.1
     # via
     #   -r requirements/test.txt
     #   tox
@@ -219,7 +219,7 @@ filetype==1.2.0
     # via
     #   -r requirements/test.txt
     #   willow
-idna==3.8
+idna==3.10
     # via
     #   -r requirements/test.txt
     #   requests
@@ -255,7 +255,7 @@ laces==0.1.1
     # via
     #   -r requirements/test.txt
     #   wagtail
-markupsafe==2.1.5
+markupsafe==3.0.2
     # via
     #   -r requirements/test.txt
     #   jinja2
@@ -269,9 +269,9 @@ more-itertools==10.5.0
     # via
     #   -r requirements/test.txt
     #   inflect
-mysqlclient==2.2.4
+mysqlclient==2.2.5
     # via -r requirements/test.txt
-newrelic==9.13.0
+newrelic==10.2.0
     # via
     #   -r requirements/test.txt
     #   edx-django-utils
@@ -300,11 +300,11 @@ pillow==10.4.0
     #   -r requirements/test.txt
     #   pillow-heif
     #   wagtail
-pillow-heif==0.18.0
+pillow-heif==0.20.0
     # via
     #   -r requirements/test.txt
     #   willow
-platformdirs==4.3.2
+platformdirs==4.3.6
     # via
     #   -r requirements/test.txt
     #   pylint
@@ -315,7 +315,7 @@ pluggy==1.5.0
     #   -r requirements/test.txt
     #   pytest
     #   tox
-psutil==6.0.0
+psutil==6.1.0
     # via
     #   -r requirements/test.txt
     #   edx-django-utils
@@ -335,7 +335,7 @@ pyjwt[crypto]==2.9.0
     #   edx-drf-extensions
     #   edx-rest-api-client
     #   social-auth-core
-pylint==3.2.7
+pylint==3.3.1
     # via
     #   -r requirements/test.txt
     #   edx-lint
@@ -346,7 +346,7 @@ pylint-celery==0.3
     # via
     #   -r requirements/test.txt
     #   edx-lint
-pylint-django==2.5.5
+pylint-django==2.6.1
     # via
     #   -r requirements/test.txt
     #   edx-lint
@@ -355,7 +355,7 @@ pylint-plugin-utils==0.8.2
     #   -r requirements/test.txt
     #   pylint-celery
     #   pylint-django
-pymongo==4.8.0
+pymongo==4.10.1
     # via
     #   -r requirements/test.txt
     #   edx-opaque-keys
@@ -363,11 +363,11 @@ pynacl==1.5.0
     # via
     #   -r requirements/test.txt
     #   edx-django-utils
-pyproject-api==1.7.1
+pyproject-api==1.8.0
     # via
     #   -r requirements/test.txt
     #   tox
-pytest==8.3.2
+pytest==8.3.3
     # via
     #   -r requirements/test.txt
     #   pytest-cov
@@ -389,7 +389,7 @@ python3-openid==3.2.0
     # via
     #   -r requirements/test.txt
     #   social-auth-core
-pytz==2024.1
+pytz==2024.2
     # via
     #   -r requirements/test.txt
     #   django-modelcluster
@@ -414,7 +414,7 @@ requests-oauthlib==2.0.0
     # via
     #   -r requirements/test.txt
     #   social-auth-core
-s3transfer==0.10.2
+s3transfer==0.10.3
     # via
     #   -r requirements/test.txt
     #   boto3
@@ -471,7 +471,7 @@ tomlkit==0.13.2
     # via
     #   -r requirements/test.txt
     #   pylint
-tox==4.18.1
+tox==4.23.2
     # via -r requirements/test.txt
 typeguard==4.3.0
     # via
@@ -481,6 +481,7 @@ typing-extensions==4.12.2
     # via
     #   -r requirements/test.txt
     #   edx-opaque-keys
+    #   faker
     #   typeguard
 uritemplate==4.1.1
     # via
@@ -491,15 +492,18 @@ urllib3==1.26.20
     #   -r requirements/test.txt
     #   botocore
     #   requests
-virtualenv==20.26.4
+virtualenv==20.27.0
     # via
     #   -r requirements/test.txt
     #   tox
-wagtail==6.2.1
+wagtail==6.2.2
     # via -r requirements/test.txt
 willow[heif]==1.8.0
     # via
     #   -r requirements/test.txt
     #   wagtail
-zipp==3.20.1
+zipp==3.20.2
     # via -r requirements/test.txt
+
+# The following packages are considered to be unsafe in a requirements file:
+# setuptools
