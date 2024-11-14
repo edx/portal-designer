@@ -12,9 +12,9 @@ asgiref==3.8.1
     #   django-cors-headers
 beautifulsoup4==4.12.3
     # via wagtail
-boto3==1.35.45
+boto3==1.35.58
     # via -r requirements/base.in
-botocore==1.35.45
+botocore==1.35.58
     # via
     #   boto3
     #   s3transfer
@@ -39,8 +39,8 @@ defusedxml==0.8.0rc2
     #   willow
 django==4.2.16
     # via
-    #   -c requirements/common_constraints.txt
-    #   -c requirements/constraints.txt
+    #   -c /home/runner/work/portal-designer/portal-designer/requirements/common_constraints.txt
+    #   -c /home/runner/work/portal-designer/portal-designer/requirements/constraints.txt
     #   -r requirements/base.in
     #   django-cors-headers
     #   django-crum
@@ -63,7 +63,7 @@ django==4.2.16
     #   laces
     #   social-auth-app-django
     #   wagtail
-django-cors-headers==4.5.0
+django-cors-headers==4.6.0
     # via -r requirements/base.in
 django-crum==0.7.9
     # via edx-django-utils
@@ -77,7 +77,7 @@ django-permissionedforms==0.1
     # via wagtail
 django-storages==1.14.4
     # via -r requirements/base.in
-django-taggit==5.0.1
+django-taggit==6.1.0
     # via wagtail
 django-treebeard==4.7.1
     # via wagtail
@@ -115,15 +115,15 @@ edx-django-utils==7.0.0
     #   -r requirements/base.in
     #   edx-drf-extensions
     #   edx-rest-api-client
-edx-drf-extensions==10.4.0
+edx-drf-extensions==10.5.0
     # via -r requirements/base.in
 edx-opaque-keys==2.11.0
     # via edx-drf-extensions
 edx-rest-api-client==4.0.1
     # via
-    #   -c requirements/constraints.txt
+    #   -c /home/runner/work/portal-designer/portal-designer/requirements/constraints.txt
     #   -r requirements/base.in
-et-xmlfile==1.1.0
+et-xmlfile==2.0.0
     # via openpyxl
 filetype==1.2.0
     # via willow
@@ -155,11 +155,11 @@ oauthlib==3.2.2
     #   social-auth-core
 openpyxl==3.1.5
     # via wagtail
-packaging==24.1
+packaging==24.2
     # via drf-yasg
 pbr==6.1.0
     # via stevedore
-pillow==10.4.0
+pillow==11.0.0
     # via
     #   pillow-heif
     #   wagtail
@@ -237,7 +237,7 @@ stevedore==5.3.0
     #   edx-opaque-keys
 telepath==0.3.1
     # via wagtail
-typeguard==4.3.0
+typeguard==4.4.1
     # via inflect
 typing-extensions==4.12.2
     # via
@@ -247,16 +247,16 @@ uritemplate==4.1.1
     # via drf-yasg
 urllib3==1.26.20
     # via
-    #   -c requirements/constraints.txt
+    #   -c /home/runner/work/portal-designer/portal-designer/requirements/constraints.txt
     #   botocore
     #   requests
-wagtail==6.2.2
+wagtail==6.3
     # via -r requirements/base.in
-willow[heif]==1.8.0
+willow[heif]==1.9.0
     # via
     #   wagtail
     #   willow
-zipp==3.20.2
+zipp==3.21.0
     # via -r requirements/base.in
 
 # The following packages are considered to be unsafe in a requirements file:
