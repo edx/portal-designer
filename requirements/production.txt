@@ -17,11 +17,11 @@ beautifulsoup4==4.12.3
     # via
     #   -r /home/runner/work/portal-designer/portal-designer/requirements/base.txt
     #   wagtail
-boto3==1.35.58
+boto3==1.35.64
     # via
     #   -r /home/runner/work/portal-designer/portal-designer/requirements/base.txt
     #   -r requirements/production.in
-botocore==1.35.58
+botocore==1.35.64
     # via
     #   -r /home/runner/work/portal-designer/portal-designer/requirements/base.txt
     #   boto3
@@ -108,7 +108,7 @@ django-treebeard==4.7.1
     # via
     #   -r /home/runner/work/portal-designer/portal-designer/requirements/base.txt
     #   wagtail
-django-waffle==4.1.0
+django-waffle==4.2.0
     # via
     #   -r /home/runner/work/portal-designer/portal-designer/requirements/base.txt
     #   edx-django-utils
@@ -199,9 +199,9 @@ more-itertools==10.5.0
     # via
     #   -r /home/runner/work/portal-designer/portal-designer/requirements/base.txt
     #   inflect
-mysqlclient==2.2.5
+mysqlclient==2.2.6
     # via -r /home/runner/work/portal-designer/portal-designer/requirements/base.txt
-newrelic==10.2.0
+newrelic==10.3.0
     # via
     #   -r /home/runner/work/portal-designer/portal-designer/requirements/base.txt
     #   edx-django-utils
@@ -240,7 +240,7 @@ pycparser==2.22
     # via
     #   -r /home/runner/work/portal-designer/portal-designer/requirements/base.txt
     #   cffi
-pyjwt[crypto]==2.9.0
+pyjwt[crypto]==2.10.0
     # via
     #   -r /home/runner/work/portal-designer/portal-designer/requirements/base.txt
     #   drf-jwt
@@ -325,7 +325,7 @@ soupsieve==2.6
     # via
     #   -r /home/runner/work/portal-designer/portal-designer/requirements/base.txt
     #   beautifulsoup4
-sqlparse==0.5.1
+sqlparse==0.5.2
     # via
     #   -r /home/runner/work/portal-designer/portal-designer/requirements/base.txt
     #   django
