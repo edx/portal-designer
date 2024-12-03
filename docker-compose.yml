@@ -16,7 +16,7 @@ services:
     #  - "3307:3306"
 
   designer:
-    image: edxops/designer:devstack
+    image: edxops/designer:latest
     container_name: designer.app
     volumes:
       - .:/edx/app/designer
