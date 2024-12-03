@@ -12,9 +12,9 @@ asgiref==3.8.1
     #   django-cors-headers
 beautifulsoup4==4.12.3
     # via wagtail
-boto3==1.35.58
+boto3==1.35.73
     # via -r requirements/base.in
-botocore==1.35.58
+botocore==1.35.73
     # via
     #   boto3
     #   s3transfer
@@ -28,7 +28,7 @@ charset-normalizer==3.4.0
     # via requests
 click==8.1.7
     # via edx-django-utils
-cryptography==43.0.3
+cryptography==44.0.0
     # via
     #   pyjwt
     #   social-auth-core
@@ -81,7 +81,7 @@ django-taggit==6.1.0
     # via wagtail
 django-treebeard==4.7.1
     # via wagtail
-django-waffle==4.1.0
+django-waffle==4.2.0
     # via
     #   -r requirements/base.in
     #   edx-django-utils
@@ -110,7 +110,7 @@ edx-auth-backends==4.4.0
     # via -r requirements/base.in
 edx-django-release-util==1.4.0
     # via -r requirements/base.in
-edx-django-utils==7.0.0
+edx-django-utils==7.0.1
     # via
     #   -r requirements/base.in
     #   edx-drf-extensions
@@ -145,9 +145,9 @@ mock==5.1.0
     # via -r requirements/base.in
 more-itertools==10.5.0
     # via inflect
-mysqlclient==2.2.5
+mysqlclient==2.2.6
     # via -r requirements/base.in
-newrelic==10.2.0
+newrelic==10.3.1
     # via edx-django-utils
 oauthlib==3.2.2
     # via
@@ -163,13 +163,13 @@ pillow==11.0.0
     # via
     #   pillow-heif
     #   wagtail
-pillow-heif==0.20.0
+pillow-heif==0.21.0
     # via willow
 psutil==6.1.0
     # via edx-django-utils
 pycparser==2.22
     # via cffi
-pyjwt[crypto]==2.9.0
+pyjwt[crypto]==2.10.1
     # via
     #   drf-jwt
     #   edx-auth-backends
@@ -206,7 +206,7 @@ requests==2.32.3
     #   wagtail
 requests-oauthlib==2.0.0
     # via social-auth-core
-s3transfer==0.10.3
+s3transfer==0.10.4
     # via boto3
 semantic-version==2.10.0
     # via edx-drf-extensions
@@ -229,9 +229,9 @@ social-auth-core==4.5.4
     #   social-auth-app-django
 soupsieve==2.6
     # via beautifulsoup4
-sqlparse==0.5.1
+sqlparse==0.5.2
     # via django
-stevedore==5.3.0
+stevedore==5.4.0
     # via
     #   edx-django-utils
     #   edx-opaque-keys
@@ -250,7 +250,7 @@ urllib3==1.26.20
     #   -c /home/runner/work/portal-designer/portal-designer/requirements/constraints.txt
     #   botocore
     #   requests
-wagtail==6.3
+wagtail==6.3.1
     # via -r requirements/base.in
 willow[heif]==1.9.0
     # via
