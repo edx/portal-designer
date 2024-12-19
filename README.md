@@ -80,7 +80,7 @@
 | designer/settings/local.py                                                     |       18 |       18 |        4 |        0 |      0% |      1-73 |
 | designer/settings/production.py                                                |       22 |       22 |        6 |        0 |      0% |      1-48 |
 | designer/settings/test.py                                                      |        3 |        0 |        0 |        0 |    100% |           |
-| designer/settings/utils.py                                                     |       23 |        7 |        4 |        2 |     67% |11-15, 34, 110 |
+| designer/settings/utils.py                                                     |       23 |        7 |        4 |        2 |     67% |11-15, 35, 111 |
 | designer/urls.py                                                               |       19 |        0 |        0 |        0 |    100% |           |
 |                                                                      **TOTAL** | **1208** |  **160** |  **162** |   **21** | **84%** |           |
 
