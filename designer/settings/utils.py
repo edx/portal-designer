@@ -14,6 +14,7 @@ def get_env_setting(setting):
         error_msg = "Set the [%s] env variable!" % setting
         raise ImproperlyConfigured(error_msg)
 
+
 def get_logger_config(log_dir='/var/tmp',
                       logging_env="no_env",
                       edx_filename="edx.log",
@@ -51,8 +52,8 @@ def get_logger_config(log_dir='/var/tmp',
         'disable_existing_loggers': False,
         'formatters': {
             'standard': {
-                'format': '%(asctime)s %(levelname)s %(process)d '
-                          '[%(name)s] %(filename)s:%(lineno)d - %(message)s',
+                'format': '%(asctime)s %(levelname)s [%(name)s] [%(filename)s:%(lineno)d] '
+                '[dd.trace_id=%(dd.trace_id)s dd.span_id=%(dd.span_id)s] - %(message)s',
             },
             'syslog_format': {'format': syslog_format},
             'raw': {'format': '%(message)s'},
