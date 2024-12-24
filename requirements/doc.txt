@@ -17,7 +17,7 @@ asgiref==3.8.1
     #   -r /home/runner/work/portal-designer/portal-designer/requirements/test.txt
     #   django
     #   django-cors-headers
-astroid==3.3.6
+astroid==3.3.8
     # via
     #   -r /home/runner/work/portal-designer/portal-designer/requirements/test.txt
     #   pylint
@@ -31,9 +31,9 @@ beautifulsoup4==4.12.3
     #   -r /home/runner/work/portal-designer/portal-designer/requirements/test.txt
     #   pydata-sphinx-theme
     #   wagtail
-boto3==1.35.82
+boto3==1.35.87
     # via -r /home/runner/work/portal-designer/portal-designer/requirements/test.txt
-botocore==1.35.82
+botocore==1.35.87
     # via
     #   -r /home/runner/work/portal-designer/portal-designer/requirements/test.txt
     #   boto3
@@ -59,7 +59,7 @@ charset-normalizer==3.4.0
     # via
     #   -r /home/runner/work/portal-designer/portal-designer/requirements/test.txt
     #   requests
-click==8.1.7
+click==8.1.8
     # via
     #   -r /home/runner/work/portal-designer/portal-designer/requirements/test.txt
     #   click-log
@@ -139,7 +139,7 @@ django-filter==24.3
     # via
     #   -r /home/runner/work/portal-designer/portal-designer/requirements/test.txt
     #   wagtail
-django-modelcluster==6.3
+django-modelcluster==6.4
     # via
     #   -r /home/runner/work/portal-designer/portal-designer/requirements/test.txt
     #   wagtail
@@ -255,7 +255,7 @@ isort==5.13.2
     # via
     #   -r /home/runner/work/portal-designer/portal-designer/requirements/test.txt
     #   pylint
-jinja2==3.1.4
+jinja2==3.1.5
     # via
     #   -r /home/runner/work/portal-designer/portal-designer/requirements/test.txt
     #   code-annotations
@@ -336,7 +336,7 @@ pluggy==1.5.0
     #   -r /home/runner/work/portal-designer/portal-designer/requirements/test.txt
     #   pytest
     #   tox
-psutil==6.1.0
+psutil==6.1.1
     # via
     #   -r /home/runner/work/portal-designer/portal-designer/requirements/test.txt
     #   edx-django-utils
@@ -361,7 +361,7 @@ pyjwt[crypto]==2.10.1
     #   edx-drf-extensions
     #   edx-rest-api-client
     #   social-auth-core
-pylint==3.3.2
+pylint==3.3.3
     # via
     #   -r /home/runner/work/portal-designer/portal-designer/requirements/test.txt
     #   edx-lint
@@ -418,7 +418,6 @@ python3-openid==3.2.0
 pytz==2024.2
     # via
     #   -r /home/runner/work/portal-designer/portal-designer/requirements/test.txt
-    #   django-modelcluster
     #   drf-yasg
     #   l18n
 pyyaml==6.0.2
