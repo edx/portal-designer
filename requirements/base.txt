@@ -12,9 +12,9 @@ asgiref==3.8.1
     #   django-cors-headers
 beautifulsoup4==4.12.3
     # via wagtail
-boto3==1.35.82
+boto3==1.35.90
     # via -r requirements/base.in
-botocore==1.35.82
+botocore==1.35.90
     # via
     #   boto3
     #   s3transfer
@@ -24,9 +24,9 @@ cffi==1.17.1
     # via
     #   cryptography
     #   pynacl
-charset-normalizer==3.4.0
+charset-normalizer==3.4.1
     # via requests
-click==8.1.7
+click==8.1.8
     # via edx-django-utils
 cryptography==44.0.0
     # via
@@ -71,7 +71,7 @@ django-extensions==3.2.3
     # via -r requirements/base.in
 django-filter==24.3
     # via wagtail
-django-modelcluster==6.3
+django-modelcluster==6.4
     # via wagtail
 django-permissionedforms==0.1
     # via wagtail
@@ -129,7 +129,7 @@ filetype==1.2.0
     # via willow
 idna==3.10
     # via requests
-inflect==7.4.0
+inflect==7.5.0
     # via -r requirements/base.in
 inflection==0.5.1
     # via drf-yasg
@@ -165,7 +165,7 @@ pillow==11.0.0
     #   wagtail
 pillow-heif==0.21.0
     # via willow
-psutil==6.1.0
+psutil==6.1.1
     # via edx-django-utils
 pycparser==2.22
     # via cffi
@@ -189,7 +189,6 @@ python3-openid==3.2.0
 pytz==2024.2
     # via
     #   -r requirements/base.in
-    #   django-modelcluster
     #   drf-yasg
     #   l18n
 pyyaml==6.0.2

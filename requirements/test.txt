@@ -13,7 +13,7 @@ asgiref==3.8.1
     #   -r /home/runner/work/portal-designer/portal-designer/requirements/base.txt
     #   django
     #   django-cors-headers
-astroid==3.3.6
+astroid==3.3.8
     # via
     #   pylint
     #   pylint-celery
@@ -21,9 +21,9 @@ beautifulsoup4==4.12.3
     # via
     #   -r /home/runner/work/portal-designer/portal-designer/requirements/base.txt
     #   wagtail
-boto3==1.35.82
+boto3==1.35.90
     # via -r /home/runner/work/portal-designer/portal-designer/requirements/base.txt
-botocore==1.35.82
+botocore==1.35.90
     # via
     #   -r /home/runner/work/portal-designer/portal-designer/requirements/base.txt
     #   boto3
@@ -41,11 +41,11 @@ cffi==1.17.1
     #   pynacl
 chardet==5.2.0
     # via tox
-charset-normalizer==3.4.0
+charset-normalizer==3.4.1
     # via
     #   -r /home/runner/work/portal-designer/portal-designer/requirements/base.txt
     #   requests
-click==8.1.7
+click==8.1.8
     # via
     #   -r /home/runner/work/portal-designer/portal-designer/requirements/base.txt
     #   click-log
@@ -60,7 +60,7 @@ code-annotations==2.1.0
     #   edx-lint
 colorama==0.4.6
     # via tox
-coverage[toml]==7.6.9
+coverage[toml]==7.6.10
     # via
     #   -r requirements/test.in
     #   pytest-cov
@@ -118,7 +118,7 @@ django-filter==24.3
     # via
     #   -r /home/runner/work/portal-designer/portal-designer/requirements/base.txt
     #   wagtail
-django-modelcluster==6.3
+django-modelcluster==6.4
     # via
     #   -r /home/runner/work/portal-designer/portal-designer/requirements/base.txt
     #   wagtail
@@ -210,7 +210,7 @@ idna==3.10
     # via
     #   -r /home/runner/work/portal-designer/portal-designer/requirements/base.txt
     #   requests
-inflect==7.4.0
+inflect==7.5.0
     # via -r /home/runner/work/portal-designer/portal-designer/requirements/base.txt
 inflection==0.5.1
     # via
@@ -220,7 +220,7 @@ iniconfig==2.0.0
     # via pytest
 isort==5.13.2
     # via pylint
-jinja2==3.1.4
+jinja2==3.1.5
     # via code-annotations
 jmespath==1.0.1
     # via
@@ -291,7 +291,7 @@ pluggy==1.5.0
     # via
     #   pytest
     #   tox
-psutil==6.1.0
+psutil==6.1.1
     # via
     #   -r /home/runner/work/portal-designer/portal-designer/requirements/base.txt
     #   edx-django-utils
@@ -307,7 +307,7 @@ pyjwt[crypto]==2.10.1
     #   edx-drf-extensions
     #   edx-rest-api-client
     #   social-auth-core
-pylint==3.3.2
+pylint==3.3.3
     # via
     #   edx-lint
     #   pylint-celery
@@ -354,7 +354,6 @@ python3-openid==3.2.0
 pytz==2024.2
     # via
     #   -r /home/runner/work/portal-designer/portal-designer/requirements/base.txt
-    #   django-modelcluster
     #   drf-yasg
     #   l18n
 pyyaml==6.0.2
