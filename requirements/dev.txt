@@ -22,9 +22,9 @@ beautifulsoup4==4.12.3
     # via
     #   -r /home/runner/work/portal-designer/portal-designer/requirements/quality.txt
     #   wagtail
-boto3==1.35.90
+boto3==1.35.93
     # via -r /home/runner/work/portal-designer/portal-designer/requirements/quality.txt
-botocore==1.35.90
+botocore==1.35.93
     # via
     #   -r /home/runner/work/portal-designer/portal-designer/requirements/quality.txt
     #   boto3
@@ -217,7 +217,7 @@ et-xmlfile==2.0.0
     #   openpyxl
 factory-boy==3.3.1
     # via -r /home/runner/work/portal-designer/portal-designer/requirements/quality.txt
-faker==33.1.0
+faker==33.3.0
     # via
     #   -r /home/runner/work/portal-designer/portal-designer/requirements/quality.txt
     #   factory-boy
@@ -314,7 +314,7 @@ pbr==6.1.0
     # via
     #   -r /home/runner/work/portal-designer/portal-designer/requirements/quality.txt
     #   stevedore
-pillow==11.0.0
+pillow==11.1.0
     # via
     #   -r /home/runner/work/portal-designer/portal-designer/requirements/quality.txt
     #   pillow-heif
@@ -349,7 +349,7 @@ pycparser==2.22
     #   cffi
 pydocstyle==6.3.0
     # via -r /home/runner/work/portal-designer/portal-designer/requirements/quality.txt
-pygments==2.18.0
+pygments==2.19.1
     # via diff-cover
 pyjwt[crypto]==2.10.1
     # via
@@ -516,15 +516,16 @@ uritemplate==4.1.1
     #   drf-yasg
 urllib3==1.26.20
     # via
+    #   -c /home/runner/work/portal-designer/portal-designer/requirements/common_constraints.txt
     #   -c /home/runner/work/portal-designer/portal-designer/requirements/constraints.txt
     #   -r /home/runner/work/portal-designer/portal-designer/requirements/quality.txt
     #   botocore
     #   requests
-virtualenv==20.28.0
+virtualenv==20.28.1
     # via
     #   -r /home/runner/work/portal-designer/portal-designer/requirements/quality.txt
     #   tox
-wagtail==6.3.1
+wagtail==6.3.2
     # via -r /home/runner/work/portal-designer/portal-designer/requirements/quality.txt
 willow[heif]==1.9.0
     # via
