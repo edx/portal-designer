@@ -17,11 +17,11 @@ beautifulsoup4==4.12.3
     # via
     #   -r /home/runner/work/portal-designer/portal-designer/requirements/base.txt
     #   wagtail
-boto3==1.35.93
+boto3==1.35.98
     # via
     #   -r /home/runner/work/portal-designer/portal-designer/requirements/base.txt
     #   -r requirements/production.in
-botocore==1.35.93
+botocore==1.35.98
     # via
     #   -r /home/runner/work/portal-designer/portal-designer/requirements/base.txt
     #   boto3
@@ -54,7 +54,7 @@ defusedxml==0.8.0rc2
     #   python3-openid
     #   social-auth-core
     #   willow
-django==4.2.17
+django==4.2.18
     # via
     #   -r /home/runner/work/portal-designer/portal-designer/requirements/base.txt
     #   django-cors-headers
@@ -189,7 +189,7 @@ l18n==2021.3
     # via
     #   -r /home/runner/work/portal-designer/portal-designer/requirements/base.txt
     #   wagtail
-laces==0.1.1
+laces==0.1.2
     # via
     #   -r /home/runner/work/portal-designer/portal-designer/requirements/base.txt
     #   wagtail
@@ -199,7 +199,7 @@ more-itertools==10.5.0
     # via
     #   -r /home/runner/work/portal-designer/portal-designer/requirements/base.txt
     #   inflect
-mysqlclient==2.2.6
+mysqlclient==2.2.7
     # via -r /home/runner/work/portal-designer/portal-designer/requirements/base.txt
 newrelic==10.4.0
     # via

@@ -12,9 +12,9 @@ asgiref==3.8.1
     #   django-cors-headers
 beautifulsoup4==4.12.3
     # via wagtail
-boto3==1.35.93
+boto3==1.35.98
     # via -r requirements/base.in
-botocore==1.35.93
+botocore==1.35.98
     # via
     #   boto3
     #   s3transfer
@@ -37,7 +37,7 @@ defusedxml==0.8.0rc2
     #   python3-openid
     #   social-auth-core
     #   willow
-django==4.2.17
+django==4.2.18
     # via
     #   -c /home/runner/work/portal-designer/portal-designer/requirements/common_constraints.txt
     #   -c /home/runner/work/portal-designer/portal-designer/requirements/constraints.txt
@@ -139,13 +139,13 @@ jmespath==1.0.1
     #   botocore
 l18n==2021.3
     # via wagtail
-laces==0.1.1
+laces==0.1.2
     # via wagtail
 mock==5.1.0
     # via -r requirements/base.in
 more-itertools==10.5.0
     # via inflect
-mysqlclient==2.2.6
+mysqlclient==2.2.7
     # via -r requirements/base.in
 newrelic==10.4.0
     # via edx-django-utils
