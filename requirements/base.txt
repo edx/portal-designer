@@ -12,9 +12,9 @@ asgiref==3.8.1
     #   django-cors-headers
 beautifulsoup4==4.12.3
     # via wagtail
-boto3==1.35.98
+boto3==1.36.2
     # via -r requirements/base.in
-botocore==1.35.98
+botocore==1.36.2
     # via
     #   boto3
     #   s3transfer
@@ -143,7 +143,7 @@ laces==0.1.2
     # via wagtail
 mock==5.1.0
     # via -r requirements/base.in
-more-itertools==10.5.0
+more-itertools==10.6.0
     # via inflect
 mysqlclient==2.2.7
     # via -r requirements/base.in
@@ -205,7 +205,7 @@ requests==2.32.3
     #   wagtail
 requests-oauthlib==2.0.0
     # via social-auth-core
-s3transfer==0.10.4
+s3transfer==0.11.1
     # via boto3
 semantic-version==2.10.0
     # via edx-drf-extensions
