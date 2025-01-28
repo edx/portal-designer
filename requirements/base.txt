@@ -12,9 +12,9 @@ asgiref==3.8.1
     #   django-cors-headers
 beautifulsoup4==4.12.3
     # via wagtail
-boto3==1.36.2
+boto3==1.36.7
     # via -r requirements/base.in
-botocore==1.36.2
+botocore==1.36.7
     # via
     #   boto3
     #   s3transfer
@@ -205,7 +205,7 @@ requests==2.32.3
     #   wagtail
 requests-oauthlib==2.0.0
     # via social-auth-core
-s3transfer==0.11.1
+s3transfer==0.11.2
     # via boto3
 semantic-version==2.10.0
     # via edx-drf-extensions

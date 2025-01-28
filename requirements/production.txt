@@ -17,11 +17,11 @@ beautifulsoup4==4.12.3
     # via
     #   -r /home/runner/work/portal-designer/portal-designer/requirements/base.txt
     #   wagtail
-boto3==1.36.2
+boto3==1.36.7
     # via
     #   -r /home/runner/work/portal-designer/portal-designer/requirements/base.txt
     #   -r requirements/production.in
-botocore==1.36.2
+botocore==1.36.7
     # via
     #   -r /home/runner/work/portal-designer/portal-designer/requirements/base.txt
     #   boto3
@@ -292,7 +292,7 @@ requests-oauthlib==2.0.0
     # via
     #   -r /home/runner/work/portal-designer/portal-designer/requirements/base.txt
     #   social-auth-core
-s3transfer==0.11.1
+s3transfer==0.11.2
     # via
     #   -r /home/runner/work/portal-designer/portal-designer/requirements/base.txt
     #   boto3

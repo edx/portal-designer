@@ -31,14 +31,14 @@ beautifulsoup4==4.12.3
     #   -r /home/runner/work/portal-designer/portal-designer/requirements/test.txt
     #   pydata-sphinx-theme
     #   wagtail
-boto3==1.36.2
+boto3==1.36.7
     # via -r /home/runner/work/portal-designer/portal-designer/requirements/test.txt
-botocore==1.36.2
+botocore==1.36.7
     # via
     #   -r /home/runner/work/portal-designer/portal-designer/requirements/test.txt
     #   boto3
     #   s3transfer
-cachetools==5.5.0
+cachetools==5.5.1
     # via
     #   -r /home/runner/work/portal-designer/portal-designer/requirements/test.txt
     #   tox
@@ -208,7 +208,7 @@ edx-django-utils==7.1.0
     #   edx-rest-api-client
 edx-drf-extensions==10.5.0
     # via -r /home/runner/work/portal-designer/portal-designer/requirements/test.txt
-edx-lint==5.4.1
+edx-lint==5.6.0
     # via -r /home/runner/work/portal-designer/portal-designer/requirements/test.txt
 edx-opaque-keys==2.11.0
     # via
@@ -222,11 +222,11 @@ et-xmlfile==2.0.0
     #   openpyxl
 factory-boy==3.3.1
     # via -r /home/runner/work/portal-designer/portal-designer/requirements/test.txt
-faker==33.3.1
+faker==35.0.0
     # via
     #   -r /home/runner/work/portal-designer/portal-designer/requirements/test.txt
     #   factory-boy
-filelock==3.16.1
+filelock==3.17.0
     # via
     #   -r /home/runner/work/portal-designer/portal-designer/requirements/test.txt
     #   tox
@@ -251,7 +251,7 @@ iniconfig==2.0.0
     # via
     #   -r /home/runner/work/portal-designer/portal-designer/requirements/test.txt
     #   pytest
-isort==5.13.2
+isort==6.0.0
     # via
     #   -r /home/runner/work/portal-designer/portal-designer/requirements/test.txt
     #   pylint
@@ -361,7 +361,7 @@ pyjwt[crypto]==2.10.1
     #   edx-drf-extensions
     #   edx-rest-api-client
     #   social-auth-core
-pylint==3.3.3
+pylint==3.3.4
     # via
     #   -r /home/runner/work/portal-designer/portal-designer/requirements/test.txt
     #   edx-lint
@@ -389,7 +389,7 @@ pynacl==1.5.0
     # via
     #   -r /home/runner/work/portal-designer/portal-designer/requirements/test.txt
     #   edx-django-utils
-pyproject-api==1.8.0
+pyproject-api==1.9.0
     # via
     #   -r /home/runner/work/portal-designer/portal-designer/requirements/test.txt
     #   tox
@@ -444,7 +444,7 @@ requests-oauthlib==2.0.0
     #   social-auth-core
 restructuredtext-lint==1.4.0
     # via doc8
-s3transfer==0.11.1
+s3transfer==0.11.2
     # via
     #   -r /home/runner/work/portal-designer/portal-designer/requirements/test.txt
     #   boto3
@@ -521,7 +521,7 @@ tomlkit==0.13.2
     # via
     #   -r /home/runner/work/portal-designer/portal-designer/requirements/test.txt
     #   pylint
-tox==4.23.2
+tox==4.24.1
     # via -r /home/runner/work/portal-designer/portal-designer/requirements/test.txt
 typeguard==4.4.1
     # via
