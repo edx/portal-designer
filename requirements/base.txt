@@ -12,13 +12,13 @@ asgiref==3.8.1
     #   django-cors-headers
 beautifulsoup4==4.12.3
     # via wagtail
-boto3==1.36.2
+boto3==1.36.12
     # via -r requirements/base.in
-botocore==1.36.2
+botocore==1.36.12
     # via
     #   boto3
     #   s3transfer
-certifi==2024.12.14
+certifi==2025.1.31
     # via requests
 cffi==1.17.1
     # via
@@ -49,7 +49,9 @@ django==4.2.18
     #   django-modelcluster
     #   django-permissionedforms
     #   django-storages
+    #   django-stubs-ext
     #   django-taggit
+    #   django-tasks
     #   django-treebeard
     #   django-waffle
     #   djangorestframework
@@ -77,7 +79,11 @@ django-permissionedforms==0.1
     # via wagtail
 django-storages==1.14.4
     # via -r requirements/base.in
+django-stubs-ext==5.1.2
+    # via django-tasks
 django-taggit==6.1.0
+    # via wagtail
+django-tasks==0.6.1
     # via wagtail
 django-treebeard==4.7.1
     # via wagtail
@@ -137,8 +143,6 @@ jmespath==1.0.1
     # via
     #   boto3
     #   botocore
-l18n==2021.3
-    # via wagtail
 laces==0.1.2
     # via wagtail
 mock==5.1.0
@@ -147,7 +151,7 @@ more-itertools==10.6.0
     # via inflect
 mysqlclient==2.2.7
     # via -r requirements/base.in
-newrelic==10.4.0
+newrelic==10.5.0
     # via edx-django-utils
 oauthlib==3.2.2
     # via
@@ -157,7 +161,7 @@ openpyxl==3.1.5
     # via wagtail
 packaging==24.2
     # via drf-yasg
-pbr==6.1.0
+pbr==6.1.1
     # via stevedore
 pillow==11.1.0
     # via
@@ -176,7 +180,7 @@ pyjwt[crypto]==2.10.1
     #   edx-drf-extensions
     #   edx-rest-api-client
     #   social-auth-core
-pymongo==4.10.1
+pymongo==4.11
     # via edx-opaque-keys
 pynacl==1.5.0
     # via edx-django-utils
@@ -186,11 +190,10 @@ python-dateutil==2.9.0.post0
     #   botocore
 python3-openid==3.2.0
     # via social-auth-core
-pytz==2024.2
+pytz==2025.1
     # via
     #   -r requirements/base.in
     #   drf-yasg
-    #   l18n
 pyyaml==6.0.2
     # via
     #   drf-yasg
@@ -205,7 +208,7 @@ requests==2.32.3
     #   wagtail
 requests-oauthlib==2.0.0
     # via social-auth-core
-s3transfer==0.11.1
+s3transfer==0.11.2
     # via boto3
 semantic-version==2.10.0
     # via edx-drf-extensions
@@ -213,7 +216,6 @@ six==1.17.0
     # via
     #   edx-auth-backends
     #   edx-django-release-util
-    #   l18n
     #   python-dateutil
 slumber==0.7.1
     # via edx-rest-api-client
@@ -240,6 +242,8 @@ typeguard==4.4.1
     # via inflect
 typing-extensions==4.12.2
     # via
+    #   django-stubs-ext
+    #   django-tasks
     #   edx-opaque-keys
     #   typeguard
 uritemplate==4.1.1
@@ -250,7 +254,7 @@ urllib3==1.26.20
     #   -c /home/runner/work/portal-designer/portal-designer/requirements/constraints.txt
     #   botocore
     #   requests
-wagtail==6.3.2
+wagtail==6.4
     # via -r requirements/base.in
 willow[heif]==1.9.0
     # via
