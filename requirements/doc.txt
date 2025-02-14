@@ -31,9 +31,9 @@ beautifulsoup4==4.12.3
     #   -r /home/runner/work/portal-designer/portal-designer/requirements/test.txt
     #   pydata-sphinx-theme
     #   wagtail
-boto3==1.36.12
+boto3==1.36.17
     # via -r /home/runner/work/portal-designer/portal-designer/requirements/test.txt
-botocore==1.36.12
+botocore==1.36.17
     # via
     #   -r /home/runner/work/portal-designer/portal-designer/requirements/test.txt
     #   boto3
@@ -78,7 +78,7 @@ colorama==0.4.6
     # via
     #   -r /home/runner/work/portal-designer/portal-designer/requirements/test.txt
     #   tox
-coverage[toml]==7.6.10
+coverage[toml]==7.6.12
     # via
     #   -r /home/runner/work/portal-designer/portal-designer/requirements/test.txt
     #   pytest-cov
@@ -101,7 +101,7 @@ distlib==0.3.9
     # via
     #   -r /home/runner/work/portal-designer/portal-designer/requirements/test.txt
     #   virtualenv
-django==4.2.18
+django==4.2.19
     # via
     #   -r /home/runner/work/portal-designer/portal-designer/requirements/test.txt
     #   django-cors-headers
@@ -127,7 +127,7 @@ django==4.2.18
     #   laces
     #   social-auth-app-django
     #   wagtail
-django-cors-headers==4.6.0
+django-cors-headers==4.7.0
     # via -r /home/runner/work/portal-designer/portal-designer/requirements/test.txt
 django-crum==0.7.9
     # via
@@ -151,7 +151,7 @@ django-permissionedforms==0.1
     #   wagtail
 django-storages==1.14.4
     # via -r /home/runner/work/portal-designer/portal-designer/requirements/test.txt
-django-stubs-ext==5.1.2
+django-stubs-ext==5.1.3
     # via
     #   -r /home/runner/work/portal-designer/portal-designer/requirements/test.txt
     #   django-tasks
@@ -232,7 +232,7 @@ et-xmlfile==2.0.0
     #   openpyxl
 factory-boy==3.3.3
     # via -r /home/runner/work/portal-designer/portal-designer/requirements/test.txt
-faker==35.2.0
+faker==36.1.0
     # via
     #   -r /home/runner/work/portal-designer/portal-designer/requirements/test.txt
     #   factory-boy
@@ -295,7 +295,7 @@ more-itertools==10.6.0
     #   inflect
 mysqlclient==2.2.7
     # via -r /home/runner/work/portal-designer/portal-designer/requirements/test.txt
-newrelic==10.5.0
+newrelic==10.6.0
     # via
     #   -r /home/runner/work/portal-designer/portal-designer/requirements/test.txt
     #   edx-django-utils
@@ -387,7 +387,7 @@ pylint-plugin-utils==0.8.2
     #   -r /home/runner/work/portal-designer/portal-designer/requirements/test.txt
     #   pylint-celery
     #   pylint-django
-pymongo==4.11
+pymongo==4.11.1
     # via
     #   -r /home/runner/work/portal-designer/portal-designer/requirements/test.txt
     #   edx-opaque-keys
@@ -406,13 +406,12 @@ pytest==8.3.4
     #   pytest-django
 pytest-cov==6.0.0
     # via -r /home/runner/work/portal-designer/portal-designer/requirements/test.txt
-pytest-django==4.9.0
+pytest-django==4.10.0
     # via -r /home/runner/work/portal-designer/portal-designer/requirements/test.txt
 python-dateutil==2.9.0.post0
     # via
     #   -r /home/runner/work/portal-designer/portal-designer/requirements/test.txt
     #   botocore
-    #   faker
 python-slugify==8.0.4
     # via
     #   -r /home/runner/work/portal-designer/portal-designer/requirements/test.txt
@@ -537,9 +536,12 @@ typing-extensions==4.12.2
     #   django-stubs-ext
     #   django-tasks
     #   edx-opaque-keys
-    #   faker
     #   pydata-sphinx-theme
     #   typeguard
+tzdata==2025.1
+    # via
+    #   -r /home/runner/work/portal-designer/portal-designer/requirements/test.txt
+    #   faker
 uritemplate==4.1.1
     # via
     #   -r /home/runner/work/portal-designer/portal-designer/requirements/test.txt
@@ -549,7 +551,7 @@ urllib3==1.26.20
     #   -r /home/runner/work/portal-designer/portal-designer/requirements/test.txt
     #   botocore
     #   requests
-virtualenv==20.29.1
+virtualenv==20.29.2
     # via
     #   -r /home/runner/work/portal-designer/portal-designer/requirements/test.txt
     #   tox
