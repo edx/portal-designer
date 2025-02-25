@@ -13,15 +13,15 @@ asgiref==3.8.1
     #   -r /home/runner/work/portal-designer/portal-designer/requirements/base.txt
     #   django
     #   django-cors-headers
-beautifulsoup4==4.12.3
+beautifulsoup4==4.13.3
     # via
     #   -r /home/runner/work/portal-designer/portal-designer/requirements/base.txt
     #   wagtail
-boto3==1.36.17
+boto3==1.37.0
     # via
     #   -r /home/runner/work/portal-designer/portal-designer/requirements/base.txt
     #   -r requirements/production.in
-botocore==1.36.17
+botocore==1.37.0
     # via
     #   -r /home/runner/work/portal-designer/portal-designer/requirements/base.txt
     #   boto3
@@ -43,12 +43,12 @@ click==8.1.8
     # via
     #   -r /home/runner/work/portal-designer/portal-designer/requirements/base.txt
     #   edx-django-utils
-cryptography==44.0.0
+cryptography==44.0.1
     # via
     #   -r /home/runner/work/portal-designer/portal-designer/requirements/base.txt
     #   pyjwt
     #   social-auth-core
-defusedxml==0.8.0rc2
+defusedxml==0.7.1
     # via
     #   -r /home/runner/work/portal-designer/portal-designer/requirements/base.txt
     #   python3-openid
@@ -88,7 +88,7 @@ django-crum==0.7.9
     #   edx-django-utils
 django-extensions==3.2.3
     # via -r /home/runner/work/portal-designer/portal-designer/requirements/base.txt
-django-filter==24.3
+django-filter==25.1
     # via
     #   -r /home/runner/work/portal-designer/portal-designer/requirements/base.txt
     #   wagtail
@@ -100,7 +100,7 @@ django-permissionedforms==0.1
     # via
     #   -r /home/runner/work/portal-designer/portal-designer/requirements/base.txt
     #   wagtail
-django-storages==1.14.4
+django-storages==1.14.5
     # via -r /home/runner/work/portal-designer/portal-designer/requirements/base.txt
 django-stubs-ext==5.1.3
     # via
@@ -135,7 +135,7 @@ dnspython==2.7.0
     # via
     #   -r /home/runner/work/portal-designer/portal-designer/requirements/base.txt
     #   pymongo
-draftjs-exporter==5.0.0
+draftjs-exporter==5.1.0
     # via
     #   -r /home/runner/work/portal-designer/portal-designer/requirements/base.txt
     #   wagtail
@@ -143,7 +143,7 @@ drf-jwt==1.19.2
     # via
     #   -r /home/runner/work/portal-designer/portal-designer/requirements/base.txt
     #   edx-drf-extensions
-drf-yasg==1.21.8
+drf-yasg==1.21.9
     # via
     #   -r /home/runner/work/portal-designer/portal-designer/requirements/base.txt
     #   edx-api-doc-tools
@@ -238,7 +238,7 @@ pillow-heif==0.21.0
     # via
     #   -r /home/runner/work/portal-designer/portal-designer/requirements/base.txt
     #   willow
-psutil==6.1.1
+psutil==7.0.0
     # via
     #   -r /home/runner/work/portal-designer/portal-designer/requirements/base.txt
     #   edx-django-utils
@@ -315,11 +315,11 @@ slumber==0.7.1
     # via
     #   -r /home/runner/work/portal-designer/portal-designer/requirements/base.txt
     #   edx-rest-api-client
-social-auth-app-django==5.4.2
+social-auth-app-django==5.4.3
     # via
     #   -r /home/runner/work/portal-designer/portal-designer/requirements/base.txt
     #   edx-auth-backends
-social-auth-core==4.5.4
+social-auth-core==4.5.6
     # via
     #   -r /home/runner/work/portal-designer/portal-designer/requirements/base.txt
     #   edx-auth-backends
@@ -332,7 +332,7 @@ sqlparse==0.5.3
     # via
     #   -r /home/runner/work/portal-designer/portal-designer/requirements/base.txt
     #   django
-stevedore==5.4.0
+stevedore==5.4.1
     # via
     #   -r /home/runner/work/portal-designer/portal-designer/requirements/base.txt
     #   edx-django-utils
@@ -341,13 +341,14 @@ telepath==0.3.1
     # via
     #   -r /home/runner/work/portal-designer/portal-designer/requirements/base.txt
     #   wagtail
-typeguard==4.4.1
+typeguard==4.4.2
     # via
     #   -r /home/runner/work/portal-designer/portal-designer/requirements/base.txt
     #   inflect
 typing-extensions==4.12.2
     # via
     #   -r /home/runner/work/portal-designer/portal-designer/requirements/base.txt
+    #   beautifulsoup4
     #   django-stubs-ext
     #   django-tasks
     #   edx-opaque-keys
@@ -361,7 +362,7 @@ urllib3==1.26.20
     #   -r /home/runner/work/portal-designer/portal-designer/requirements/base.txt
     #   botocore
     #   requests
-wagtail==6.4
+wagtail==6.4.1
     # via -r /home/runner/work/portal-designer/portal-designer/requirements/base.txt
 willow[heif]==1.9.0
     # via
