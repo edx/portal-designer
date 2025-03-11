@@ -12,9 +12,9 @@ asgiref==3.8.1
     #   django-cors-headers
 beautifulsoup4==4.13.3
     # via wagtail
-boto3==1.37.0
+boto3==1.37.10
     # via -r requirements/base.in
-botocore==1.37.0
+botocore==1.37.10
     # via
     #   boto3
     #   s3transfer
@@ -28,7 +28,7 @@ charset-normalizer==3.4.1
     # via requests
 click==8.1.8
     # via edx-django-utils
-cryptography==44.0.1
+cryptography==44.0.2
     # via
     #   pyjwt
     #   social-auth-core
@@ -37,7 +37,7 @@ defusedxml==0.7.1
     #   python3-openid
     #   social-auth-core
     #   willow
-django==4.2.19
+django==4.2.20
     # via
     #   -c /home/runner/work/portal-designer/portal-designer/requirements/common_constraints.txt
     #   -c /home/runner/work/portal-designer/portal-designer/requirements/constraints.txt
@@ -106,7 +106,7 @@ draftjs-exporter==5.1.0
     # via wagtail
 drf-jwt==1.19.2
     # via edx-drf-extensions
-drf-yasg==1.21.9
+drf-yasg==1.21.10
     # via
     #   -r requirements/base.in
     #   edx-api-doc-tools
@@ -116,7 +116,7 @@ edx-auth-backends==4.4.0
     # via -r requirements/base.in
 edx-django-release-util==1.4.0
     # via -r requirements/base.in
-edx-django-utils==7.1.0
+edx-django-utils==7.2.0
     # via
     #   -r requirements/base.in
     #   edx-drf-extensions
@@ -145,13 +145,13 @@ jmespath==1.0.1
     #   botocore
 laces==0.1.2
     # via wagtail
-mock==5.1.0
+mock==5.2.0
     # via -r requirements/base.in
 more-itertools==10.6.0
     # via inflect
 mysqlclient==2.2.7
     # via -r requirements/base.in
-newrelic==10.6.0
+newrelic==10.7.0
     # via edx-django-utils
 oauthlib==3.2.2
     # via
@@ -180,7 +180,7 @@ pyjwt[crypto]==2.10.1
     #   edx-drf-extensions
     #   edx-rest-api-client
     #   social-auth-core
-pymongo==4.11.1
+pymongo==4.11.2
     # via edx-opaque-keys
 pynacl==1.5.0
     # via edx-django-utils
@@ -208,7 +208,7 @@ requests==2.32.3
     #   wagtail
 requests-oauthlib==2.0.0
     # via social-auth-core
-s3transfer==0.11.2
+s3transfer==0.11.4
     # via boto3
 semantic-version==2.10.0
     # via edx-drf-extensions
