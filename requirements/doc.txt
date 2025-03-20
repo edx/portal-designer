@@ -31,9 +31,9 @@ beautifulsoup4==4.13.3
     #   -r /home/runner/work/portal-designer/portal-designer/requirements/test.txt
     #   pydata-sphinx-theme
     #   wagtail
-boto3==1.37.10
+boto3==1.37.14
     # via -r /home/runner/work/portal-designer/portal-designer/requirements/test.txt
-botocore==1.37.10
+botocore==1.37.14
     # via
     #   -r /home/runner/work/portal-designer/portal-designer/requirements/test.txt
     #   boto3
@@ -78,7 +78,7 @@ colorama==0.4.6
     # via
     #   -r /home/runner/work/portal-designer/portal-designer/requirements/test.txt
     #   tox
-coverage[toml]==7.6.12
+coverage[toml]==7.7.0
     # via
     #   -r /home/runner/work/portal-designer/portal-designer/requirements/test.txt
     #   pytest-cov
@@ -236,7 +236,7 @@ faker==37.0.0
     # via
     #   -r /home/runner/work/portal-designer/portal-designer/requirements/test.txt
     #   factory-boy
-filelock==3.17.0
+filelock==3.18.0
     # via
     #   -r /home/runner/work/portal-designer/portal-designer/requirements/test.txt
     #   tox
@@ -328,7 +328,7 @@ pillow==11.1.0
     #   -r /home/runner/work/portal-designer/portal-designer/requirements/test.txt
     #   pillow-heif
     #   wagtail
-pillow-heif==0.21.0
+pillow-heif==0.22.0
     # via
     #   -r /home/runner/work/portal-designer/portal-designer/requirements/test.txt
     #   willow
@@ -388,7 +388,7 @@ pylint-plugin-utils==0.8.2
     #   -r /home/runner/work/portal-designer/portal-designer/requirements/test.txt
     #   pylint-celery
     #   pylint-django
-pymongo==4.11.2
+pymongo==4.11.3
     # via
     #   -r /home/runner/work/portal-designer/portal-designer/requirements/test.txt
     #   edx-opaque-keys
