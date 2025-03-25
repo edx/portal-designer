@@ -21,9 +21,9 @@ beautifulsoup4==4.13.3
     # via
     #   -r /home/runner/work/portal-designer/portal-designer/requirements/base.txt
     #   wagtail
-boto3==1.37.14
+boto3==1.37.19
     # via -r /home/runner/work/portal-designer/portal-designer/requirements/base.txt
-botocore==1.37.14
+botocore==1.37.19
     # via
     #   -r /home/runner/work/portal-designer/portal-designer/requirements/base.txt
     #   boto3
@@ -60,7 +60,7 @@ code-annotations==2.2.0
     #   edx-lint
 colorama==0.4.6
     # via tox
-coverage[toml]==7.7.0
+coverage[toml]==7.7.1
     # via
     #   -r requirements/test.in
     #   pytest-cov
@@ -190,7 +190,7 @@ edx-drf-extensions==10.5.0
     # via -r /home/runner/work/portal-designer/portal-designer/requirements/base.txt
 edx-lint==5.6.0
     # via -r requirements/test.in
-edx-opaque-keys==2.11.0
+edx-opaque-keys==2.12.0
     # via
     #   -r /home/runner/work/portal-designer/portal-designer/requirements/base.txt
     #   edx-drf-extensions
@@ -204,7 +204,7 @@ et-xmlfile==2.0.0
     #   openpyxl
 factory-boy==3.3.3
     # via -r requirements/test.in
-faker==37.0.0
+faker==37.1.0
     # via
     #   -r requirements/test.in
     #   factory-boy
@@ -226,7 +226,7 @@ inflection==0.5.1
     # via
     #   -r /home/runner/work/portal-designer/portal-designer/requirements/base.txt
     #   drf-yasg
-iniconfig==2.0.0
+iniconfig==2.1.0
     # via pytest
 isort==6.0.1
     # via pylint
@@ -288,7 +288,7 @@ pillow-heif==0.22.0
     # via
     #   -r /home/runner/work/portal-designer/portal-designer/requirements/base.txt
     #   willow
-platformdirs==4.3.6
+platformdirs==4.3.7
     # via
     #   pylint
     #   tox
@@ -313,7 +313,7 @@ pyjwt[crypto]==2.10.1
     #   edx-drf-extensions
     #   edx-rest-api-client
     #   social-auth-core
-pylint==3.3.5
+pylint==3.3.6
     # via
     #   edx-lint
     #   pylint-celery
@@ -356,7 +356,7 @@ python3-openid==3.2.0
     # via
     #   -r /home/runner/work/portal-designer/portal-designer/requirements/base.txt
     #   social-auth-core
-pytz==2025.1
+pytz==2025.2
     # via
     #   -r /home/runner/work/portal-designer/portal-designer/requirements/base.txt
     #   drf-yasg
@@ -443,7 +443,7 @@ typing-extensions==4.12.2
     #   django-tasks
     #   edx-opaque-keys
     #   typeguard
-tzdata==2025.1
+tzdata==2025.2
     # via faker
 uritemplate==4.1.1
     # via
