@@ -31,9 +31,9 @@ beautifulsoup4==4.13.3
     #   -r /home/runner/work/portal-designer/portal-designer/requirements/test.txt
     #   pydata-sphinx-theme
     #   wagtail
-boto3==1.37.14
+boto3==1.37.24
     # via -r /home/runner/work/portal-designer/portal-designer/requirements/test.txt
-botocore==1.37.14
+botocore==1.37.24
     # via
     #   -r /home/runner/work/portal-designer/portal-designer/requirements/test.txt
     #   boto3
@@ -78,7 +78,7 @@ colorama==0.4.6
     # via
     #   -r /home/runner/work/portal-designer/portal-designer/requirements/test.txt
     #   tox
-coverage[toml]==7.7.0
+coverage[toml]==7.8.0
     # via
     #   -r /home/runner/work/portal-designer/portal-designer/requirements/test.txt
     #   pytest-cov
@@ -172,7 +172,7 @@ django-waffle==4.2.0
     #   -r /home/runner/work/portal-designer/portal-designer/requirements/test.txt
     #   edx-django-utils
     #   edx-drf-extensions
-djangorestframework==3.15.2
+djangorestframework==3.16.0
     # via
     #   -r /home/runner/work/portal-designer/portal-designer/requirements/test.txt
     #   drf-jwt
@@ -220,7 +220,7 @@ edx-drf-extensions==10.5.0
     # via -r /home/runner/work/portal-designer/portal-designer/requirements/test.txt
 edx-lint==5.6.0
     # via -r /home/runner/work/portal-designer/portal-designer/requirements/test.txt
-edx-opaque-keys==2.11.0
+edx-opaque-keys==2.12.0
     # via
     #   -r /home/runner/work/portal-designer/portal-designer/requirements/test.txt
     #   edx-drf-extensions
@@ -232,7 +232,7 @@ et-xmlfile==2.0.0
     #   openpyxl
 factory-boy==3.3.3
     # via -r /home/runner/work/portal-designer/portal-designer/requirements/test.txt
-faker==37.0.0
+faker==37.1.0
     # via
     #   -r /home/runner/work/portal-designer/portal-designer/requirements/test.txt
     #   factory-boy
@@ -257,7 +257,7 @@ inflection==0.5.1
     # via
     #   -r /home/runner/work/portal-designer/portal-designer/requirements/test.txt
     #   drf-yasg
-iniconfig==2.0.0
+iniconfig==2.1.0
     # via
     #   -r /home/runner/work/portal-designer/portal-designer/requirements/test.txt
     #   pytest
@@ -295,7 +295,7 @@ more-itertools==10.6.0
     #   inflect
 mysqlclient==2.2.7
     # via -r /home/runner/work/portal-designer/portal-designer/requirements/test.txt
-newrelic==10.7.0
+newrelic==10.8.1
     # via
     #   -r /home/runner/work/portal-designer/portal-designer/requirements/test.txt
     #   edx-django-utils
@@ -323,7 +323,7 @@ pbr==6.1.1
     # via
     #   -r /home/runner/work/portal-designer/portal-designer/requirements/test.txt
     #   stevedore
-pillow==11.1.0
+pillow==11.2.0
     # via
     #   -r /home/runner/work/portal-designer/portal-designer/requirements/test.txt
     #   pillow-heif
@@ -332,7 +332,7 @@ pillow-heif==0.22.0
     # via
     #   -r /home/runner/work/portal-designer/portal-designer/requirements/test.txt
     #   willow
-platformdirs==4.3.6
+platformdirs==4.3.7
     # via
     #   -r /home/runner/work/portal-designer/portal-designer/requirements/test.txt
     #   pylint
@@ -368,7 +368,7 @@ pyjwt[crypto]==2.10.1
     #   edx-drf-extensions
     #   edx-rest-api-client
     #   social-auth-core
-pylint==3.3.5
+pylint==3.3.6
     # via
     #   -r /home/runner/work/portal-designer/portal-designer/requirements/test.txt
     #   edx-lint
@@ -405,7 +405,7 @@ pytest==8.3.5
     #   -r /home/runner/work/portal-designer/portal-designer/requirements/test.txt
     #   pytest-cov
     #   pytest-django
-pytest-cov==6.0.0
+pytest-cov==6.1.0
     # via -r /home/runner/work/portal-designer/portal-designer/requirements/test.txt
 pytest-django==4.10.0
     # via -r /home/runner/work/portal-designer/portal-designer/requirements/test.txt
@@ -421,7 +421,7 @@ python3-openid==3.2.0
     # via
     #   -r /home/runner/work/portal-designer/portal-designer/requirements/test.txt
     #   social-auth-core
-pytz==2025.1
+pytz==2025.2
     # via
     #   -r /home/runner/work/portal-designer/portal-designer/requirements/test.txt
     #   drf-yasg
@@ -527,13 +527,13 @@ tomlkit==0.13.2
     # via
     #   -r /home/runner/work/portal-designer/portal-designer/requirements/test.txt
     #   pylint
-tox==4.24.2
+tox==4.25.0
     # via -r /home/runner/work/portal-designer/portal-designer/requirements/test.txt
 typeguard==4.4.2
     # via
     #   -r /home/runner/work/portal-designer/portal-designer/requirements/test.txt
     #   inflect
-typing-extensions==4.12.2
+typing-extensions==4.13.0
     # via
     #   -r /home/runner/work/portal-designer/portal-designer/requirements/test.txt
     #   beautifulsoup4
@@ -542,7 +542,7 @@ typing-extensions==4.12.2
     #   edx-opaque-keys
     #   pydata-sphinx-theme
     #   typeguard
-tzdata==2025.1
+tzdata==2025.2
     # via
     #   -r /home/runner/work/portal-designer/portal-designer/requirements/test.txt
     #   faker
@@ -555,7 +555,7 @@ urllib3==1.26.20
     #   -r /home/runner/work/portal-designer/portal-designer/requirements/test.txt
     #   botocore
     #   requests
-virtualenv==20.29.3
+virtualenv==20.30.0
     # via
     #   -r /home/runner/work/portal-designer/portal-designer/requirements/test.txt
     #   tox

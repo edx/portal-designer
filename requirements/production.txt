@@ -17,11 +17,11 @@ beautifulsoup4==4.13.3
     # via
     #   -r /home/runner/work/portal-designer/portal-designer/requirements/base.txt
     #   wagtail
-boto3==1.37.14
+boto3==1.37.24
     # via
     #   -r /home/runner/work/portal-designer/portal-designer/requirements/base.txt
     #   -r requirements/production.in
-botocore==1.37.14
+botocore==1.37.24
     # via
     #   -r /home/runner/work/portal-designer/portal-designer/requirements/base.txt
     #   boto3
@@ -123,7 +123,7 @@ django-waffle==4.2.0
     #   -r /home/runner/work/portal-designer/portal-designer/requirements/base.txt
     #   edx-django-utils
     #   edx-drf-extensions
-djangorestframework==3.15.2
+djangorestframework==3.16.0
     # via
     #   -r /home/runner/work/portal-designer/portal-designer/requirements/base.txt
     #   drf-jwt
@@ -160,7 +160,7 @@ edx-django-utils==7.2.0
     #   edx-rest-api-client
 edx-drf-extensions==10.5.0
     # via -r /home/runner/work/portal-designer/portal-designer/requirements/base.txt
-edx-opaque-keys==2.11.0
+edx-opaque-keys==2.12.0
     # via
     #   -r /home/runner/work/portal-designer/portal-designer/requirements/base.txt
     #   edx-drf-extensions
@@ -207,7 +207,7 @@ more-itertools==10.6.0
     #   inflect
 mysqlclient==2.2.7
     # via -r /home/runner/work/portal-designer/portal-designer/requirements/base.txt
-newrelic==10.7.0
+newrelic==10.8.1
     # via
     #   -r /home/runner/work/portal-designer/portal-designer/requirements/base.txt
     #   edx-django-utils
@@ -229,7 +229,7 @@ pbr==6.1.1
     # via
     #   -r /home/runner/work/portal-designer/portal-designer/requirements/base.txt
     #   stevedore
-pillow==11.1.0
+pillow==11.2.0
     # via
     #   -r /home/runner/work/portal-designer/portal-designer/requirements/base.txt
     #   pillow-heif
@@ -274,7 +274,7 @@ python3-openid==3.2.0
     # via
     #   -r /home/runner/work/portal-designer/portal-designer/requirements/base.txt
     #   social-auth-core
-pytz==2025.1
+pytz==2025.2
     # via
     #   -r /home/runner/work/portal-designer/portal-designer/requirements/base.txt
     #   drf-yasg
@@ -345,7 +345,7 @@ typeguard==4.4.2
     # via
     #   -r /home/runner/work/portal-designer/portal-designer/requirements/base.txt
     #   inflect
-typing-extensions==4.12.2
+typing-extensions==4.13.0
     # via
     #   -r /home/runner/work/portal-designer/portal-designer/requirements/base.txt
     #   beautifulsoup4
