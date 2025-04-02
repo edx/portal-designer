@@ -12,9 +12,9 @@ asgiref==3.8.1
     #   django-cors-headers
 beautifulsoup4==4.13.3
     # via wagtail
-boto3==1.37.14
+boto3==1.37.24
     # via -r requirements/base.in
-botocore==1.37.14
+botocore==1.37.24
     # via
     #   boto3
     #   s3transfer
@@ -92,7 +92,7 @@ django-waffle==4.2.0
     #   -r requirements/base.in
     #   edx-django-utils
     #   edx-drf-extensions
-djangorestframework==3.15.2
+djangorestframework==3.16.0
     # via
     #   -r requirements/base.in
     #   drf-jwt
@@ -123,7 +123,7 @@ edx-django-utils==7.2.0
     #   edx-rest-api-client
 edx-drf-extensions==10.5.0
     # via -r requirements/base.in
-edx-opaque-keys==2.11.0
+edx-opaque-keys==2.12.0
     # via edx-drf-extensions
 edx-rest-api-client==4.0.1
     # via
@@ -151,7 +151,7 @@ more-itertools==10.6.0
     # via inflect
 mysqlclient==2.2.7
     # via -r requirements/base.in
-newrelic==10.7.0
+newrelic==10.8.1
     # via edx-django-utils
 oauthlib==3.2.2
     # via
@@ -163,7 +163,7 @@ packaging==24.2
     # via drf-yasg
 pbr==6.1.1
     # via stevedore
-pillow==11.1.0
+pillow==11.2.0
     # via
     #   pillow-heif
     #   wagtail
@@ -190,7 +190,7 @@ python-dateutil==2.9.0.post0
     #   botocore
 python3-openid==3.2.0
     # via social-auth-core
-pytz==2025.1
+pytz==2025.2
     # via
     #   -r requirements/base.in
     #   drf-yasg
@@ -240,7 +240,7 @@ telepath==0.3.1
     # via wagtail
 typeguard==4.4.2
     # via inflect
-typing-extensions==4.12.2
+typing-extensions==4.13.0
     # via
     #   beautifulsoup4
     #   django-stubs-ext
