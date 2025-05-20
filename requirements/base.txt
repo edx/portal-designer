@@ -12,9 +12,9 @@ asgiref==3.8.1
     #   django-cors-headers
 beautifulsoup4==4.13.4
     # via wagtail
-boto3==1.38.4
+boto3==1.38.19
     # via -r requirements/base.in
-botocore==1.38.4
+botocore==1.38.19
     # via
     #   boto3
     #   s3transfer
@@ -24,11 +24,11 @@ cffi==1.17.1
     # via
     #   cryptography
     #   pynacl
-charset-normalizer==3.4.1
+charset-normalizer==3.4.2
     # via requests
-click==8.1.8
+click==8.2.0
     # via edx-django-utils
-cryptography==44.0.2
+cryptography==45.0.2
     # via
     #   pyjwt
     #   social-auth-core
@@ -37,7 +37,7 @@ defusedxml==0.7.1
     #   python3-openid
     #   social-auth-core
     #   willow
-django==4.2.20
+django==4.2.21
     # via
     #   -c /home/runner/work/portal-designer/portal-designer/requirements/common_constraints.txt
     #   -c /home/runner/work/portal-designer/portal-designer/requirements/constraints.txt
@@ -83,7 +83,7 @@ django-stubs-ext==5.2.0
     # via django-tasks
 django-taggit==6.1.0
     # via wagtail
-django-tasks==0.6.1
+django-tasks==0.7.0
     # via wagtail
 django-treebeard==4.7.1
     # via wagtail
@@ -110,7 +110,7 @@ drf-yasg==1.21.10
     # via
     #   -r requirements/base.in
     #   edx-api-doc-tools
-edx-api-doc-tools==2.0.0
+edx-api-doc-tools==2.1.0
     # via -r requirements/base.in
 edx-auth-backends==4.5.0
     # via -r requirements/base.in
@@ -151,7 +151,7 @@ more-itertools==10.7.0
     # via inflect
 mysqlclient==2.2.7
     # via -r requirements/base.in
-newrelic==10.10.0
+newrelic==10.12.0
     # via edx-django-utils
 oauthlib==3.2.2
     # via
@@ -180,7 +180,7 @@ pyjwt[crypto]==2.10.1
     #   edx-drf-extensions
     #   edx-rest-api-client
     #   social-auth-core
-pymongo==4.12.0
+pymongo==4.13.0
     # via edx-opaque-keys
 pynacl==1.5.0
     # via edx-django-utils
@@ -255,7 +255,7 @@ urllib3==1.26.20
     #   -c /home/runner/work/portal-designer/portal-designer/requirements/constraints.txt
     #   botocore
     #   requests
-wagtail==6.4.1
+wagtail==7.0
     # via -r requirements/base.in
 willow[heif]==1.10.0
     # via

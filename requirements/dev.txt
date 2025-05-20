@@ -13,7 +13,7 @@ asgiref==3.8.1
     #   -r /home/runner/work/portal-designer/portal-designer/requirements/quality.txt
     #   django
     #   django-cors-headers
-astroid==3.3.9
+astroid==3.3.10
     # via
     #   -r /home/runner/work/portal-designer/portal-designer/requirements/quality.txt
     #   pylint
@@ -22,9 +22,9 @@ beautifulsoup4==4.13.4
     # via
     #   -r /home/runner/work/portal-designer/portal-designer/requirements/quality.txt
     #   wagtail
-boto3==1.38.4
+boto3==1.38.19
     # via -r /home/runner/work/portal-designer/portal-designer/requirements/quality.txt
-botocore==1.38.4
+botocore==1.38.19
     # via
     #   -r /home/runner/work/portal-designer/portal-designer/requirements/quality.txt
     #   boto3
@@ -47,11 +47,11 @@ chardet==5.2.0
     #   -r /home/runner/work/portal-designer/portal-designer/requirements/quality.txt
     #   diff-cover
     #   tox
-charset-normalizer==3.4.1
+charset-normalizer==3.4.2
     # via
     #   -r /home/runner/work/portal-designer/portal-designer/requirements/quality.txt
     #   requests
-click==8.1.8
+click==8.2.0
     # via
     #   -r /home/runner/work/portal-designer/portal-designer/requirements/quality.txt
     #   click-log
@@ -74,7 +74,7 @@ coverage[toml]==7.8.0
     # via
     #   -r /home/runner/work/portal-designer/portal-designer/requirements/quality.txt
     #   pytest-cov
-cryptography==44.0.2
+cryptography==45.0.2
     # via
     #   -r /home/runner/work/portal-designer/portal-designer/requirements/quality.txt
     #   pyjwt
@@ -95,7 +95,7 @@ distlib==0.3.9
     # via
     #   -r /home/runner/work/portal-designer/portal-designer/requirements/quality.txt
     #   virtualenv
-django==4.2.20
+django==4.2.21
     # via
     #   -c /home/runner/work/portal-designer/portal-designer/requirements/common_constraints.txt
     #   -c /home/runner/work/portal-designer/portal-designer/requirements/constraints.txt
@@ -159,7 +159,7 @@ django-taggit==6.1.0
     # via
     #   -r /home/runner/work/portal-designer/portal-designer/requirements/quality.txt
     #   wagtail
-django-tasks==0.6.1
+django-tasks==0.7.0
     # via
     #   -r /home/runner/work/portal-designer/portal-designer/requirements/quality.txt
     #   wagtail
@@ -196,7 +196,7 @@ drf-yasg==1.21.10
     # via
     #   -r /home/runner/work/portal-designer/portal-designer/requirements/quality.txt
     #   edx-api-doc-tools
-edx-api-doc-tools==2.0.0
+edx-api-doc-tools==2.1.0
     # via -r /home/runner/work/portal-designer/portal-designer/requirements/quality.txt
 edx-auth-backends==4.5.0
     # via -r /home/runner/work/portal-designer/portal-designer/requirements/quality.txt
@@ -227,7 +227,7 @@ et-xmlfile==2.0.0
     #   openpyxl
 factory-boy==3.3.3
     # via -r /home/runner/work/portal-designer/portal-designer/requirements/quality.txt
-faker==37.1.0
+faker==37.3.0
     # via
     #   -r /home/runner/work/portal-designer/portal-designer/requirements/quality.txt
     #   factory-boy
@@ -294,7 +294,7 @@ more-itertools==10.7.0
     #   inflect
 mysqlclient==2.2.7
     # via -r /home/runner/work/portal-designer/portal-designer/requirements/quality.txt
-newrelic==10.10.0
+newrelic==10.12.0
     # via
     #   -r /home/runner/work/portal-designer/portal-designer/requirements/quality.txt
     #   edx-django-utils
@@ -329,13 +329,13 @@ pillow-heif==0.21.0
     # via
     #   -r /home/runner/work/portal-designer/portal-designer/requirements/quality.txt
     #   willow
-platformdirs==4.3.7
+platformdirs==4.3.8
     # via
     #   -r /home/runner/work/portal-designer/portal-designer/requirements/quality.txt
     #   pylint
     #   tox
     #   virtualenv
-pluggy==1.5.0
+pluggy==1.6.0
     # via
     #   -r /home/runner/work/portal-designer/portal-designer/requirements/quality.txt
     #   diff-cover
@@ -365,7 +365,7 @@ pyjwt[crypto]==2.10.1
     #   edx-drf-extensions
     #   edx-rest-api-client
     #   social-auth-core
-pylint==3.3.6
+pylint==3.3.7
     # via
     #   -r /home/runner/work/portal-designer/portal-designer/requirements/quality.txt
     #   edx-lint
@@ -385,7 +385,7 @@ pylint-plugin-utils==0.8.2
     #   -r /home/runner/work/portal-designer/portal-designer/requirements/quality.txt
     #   pylint-celery
     #   pylint-django
-pymongo==4.12.0
+pymongo==4.13.0
     # via
     #   -r /home/runner/work/portal-designer/portal-designer/requirements/quality.txt
     #   edx-opaque-keys
@@ -393,7 +393,7 @@ pynacl==1.5.0
     # via
     #   -r /home/runner/work/portal-designer/portal-designer/requirements/quality.txt
     #   edx-django-utils
-pyproject-api==1.9.0
+pyproject-api==1.9.1
     # via
     #   -r /home/runner/work/portal-designer/portal-designer/requirements/quality.txt
     #   tox
@@ -461,7 +461,7 @@ slumber==0.7.1
     # via
     #   -r /home/runner/work/portal-designer/portal-designer/requirements/quality.txt
     #   edx-rest-api-client
-snowballstemmer==2.2.0
+snowballstemmer==3.0.1
     # via
     #   -r /home/runner/work/portal-designer/portal-designer/requirements/quality.txt
     #   pydocstyle
@@ -501,7 +501,7 @@ tomlkit==0.13.2
     # via
     #   -r /home/runner/work/portal-designer/portal-designer/requirements/quality.txt
     #   pylint
-tox==4.25.0
+tox==4.26.0
     # via -r /home/runner/work/portal-designer/portal-designer/requirements/quality.txt
 typeguard==4.4.2
     # via
@@ -530,11 +530,11 @@ urllib3==1.26.20
     #   -r /home/runner/work/portal-designer/portal-designer/requirements/quality.txt
     #   botocore
     #   requests
-virtualenv==20.30.0
+virtualenv==20.31.2
     # via
     #   -r /home/runner/work/portal-designer/portal-designer/requirements/quality.txt
     #   tox
-wagtail==6.4.1
+wagtail==7.0
     # via -r /home/runner/work/portal-designer/portal-designer/requirements/quality.txt
 willow[heif]==1.10.0
     # via
