@@ -12,23 +12,23 @@ asgiref==3.8.1
     #   django-cors-headers
 beautifulsoup4==4.13.4
     # via wagtail
-boto3==1.38.4
+boto3==1.38.37
     # via -r requirements/base.in
-botocore==1.38.4
+botocore==1.38.37
     # via
     #   boto3
     #   s3transfer
-certifi==2025.4.26
+certifi==2025.6.15
     # via requests
 cffi==1.17.1
     # via
     #   cryptography
     #   pynacl
-charset-normalizer==3.4.1
+charset-normalizer==3.4.2
     # via requests
-click==8.1.8
+click==8.2.1
     # via edx-django-utils
-cryptography==44.0.2
+cryptography==45.0.4
     # via
     #   pyjwt
     #   social-auth-core
@@ -37,7 +37,7 @@ defusedxml==0.7.1
     #   python3-openid
     #   social-auth-core
     #   willow
-django==4.2.20
+django==4.2.23
     # via
     #   -c /home/runner/work/portal-designer/portal-designer/requirements/common_constraints.txt
     #   -c /home/runner/work/portal-designer/portal-designer/requirements/constraints.txt
@@ -83,11 +83,11 @@ django-stubs-ext==5.2.0
     # via django-tasks
 django-taggit==6.1.0
     # via wagtail
-django-tasks==0.6.1
+django-tasks==0.7.0
     # via wagtail
 django-treebeard==4.7.1
     # via wagtail
-django-waffle==4.2.0
+django-waffle==5.0.0
     # via
     #   -r requirements/base.in
     #   edx-django-utils
@@ -110,13 +110,13 @@ drf-yasg==1.21.10
     # via
     #   -r requirements/base.in
     #   edx-api-doc-tools
-edx-api-doc-tools==2.0.0
+edx-api-doc-tools==2.1.0
     # via -r requirements/base.in
 edx-auth-backends==4.5.0
     # via -r requirements/base.in
 edx-django-release-util==1.5.0
     # via -r requirements/base.in
-edx-django-utils==7.4.0
+edx-django-utils==8.0.0
     # via
     #   -r requirements/base.in
     #   edx-drf-extensions
@@ -151,8 +151,6 @@ more-itertools==10.7.0
     # via inflect
 mysqlclient==2.2.7
     # via -r requirements/base.in
-newrelic==10.10.0
-    # via edx-django-utils
 oauthlib==3.2.2
     # via
     #   requests-oauthlib
@@ -180,7 +178,7 @@ pyjwt[crypto]==2.10.1
     #   edx-drf-extensions
     #   edx-rest-api-client
     #   social-auth-core
-pymongo==4.12.0
+pymongo==4.13.2
     # via edx-opaque-keys
 pynacl==1.5.0
     # via edx-django-utils
@@ -198,7 +196,7 @@ pyyaml==6.0.2
     # via
     #   drf-yasg
     #   edx-django-release-util
-requests==2.32.3
+requests==2.32.4
     # via
     #   edx-drf-extensions
     #   edx-rest-api-client
@@ -208,7 +206,7 @@ requests==2.32.3
     #   wagtail
 requests-oauthlib==2.0.0
     # via social-auth-core
-s3transfer==0.12.0
+s3transfer==0.13.0
     # via boto3
 semantic-version==2.10.0
     # via edx-drf-extensions
@@ -238,16 +236,16 @@ stevedore==5.4.1
     #   edx-opaque-keys
 telepath==0.3.1
     # via wagtail
-typeguard==4.4.2
+typeguard==4.4.3
     # via inflect
-typing-extensions==4.13.2
+typing-extensions==4.14.0
     # via
     #   beautifulsoup4
     #   django-stubs-ext
     #   django-tasks
     #   edx-opaque-keys
     #   typeguard
-uritemplate==4.1.1
+uritemplate==4.2.0
     # via drf-yasg
 urllib3==1.26.20
     # via
@@ -255,13 +253,13 @@ urllib3==1.26.20
     #   -c /home/runner/work/portal-designer/portal-designer/requirements/constraints.txt
     #   botocore
     #   requests
-wagtail==6.4.1
+wagtail==7.0.1
     # via -r requirements/base.in
 willow[heif]==1.10.0
     # via
     #   wagtail
     #   willow
-zipp==3.21.0
+zipp==3.23.0
     # via -r requirements/base.in
 
 # The following packages are considered to be unsafe in a requirements file:
