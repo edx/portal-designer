@@ -4,16 +4,16 @@
 #
 #    make upgrade
 #
-anyascii==0.3.2
+anyascii==0.3.3
     # via
     #   -r /home/runner/work/portal-designer/portal-designer/requirements/base.txt
     #   wagtail
-asgiref==3.8.1
+asgiref==3.9.1
     # via
     #   -r /home/runner/work/portal-designer/portal-designer/requirements/base.txt
     #   django
     #   django-cors-headers
-astroid==3.3.9
+astroid==3.3.11
     # via
     #   pylint
     #   pylint-celery
@@ -21,16 +21,16 @@ beautifulsoup4==4.13.4
     # via
     #   -r /home/runner/work/portal-designer/portal-designer/requirements/base.txt
     #   wagtail
-boto3==1.38.4
+boto3==1.39.10
     # via -r /home/runner/work/portal-designer/portal-designer/requirements/base.txt
-botocore==1.38.4
+botocore==1.39.10
     # via
     #   -r /home/runner/work/portal-designer/portal-designer/requirements/base.txt
     #   boto3
     #   s3transfer
-cachetools==5.5.2
+cachetools==6.1.0
     # via tox
-certifi==2025.4.26
+certifi==2025.7.14
     # via
     #   -r /home/runner/work/portal-designer/portal-designer/requirements/base.txt
     #   requests
@@ -41,11 +41,11 @@ cffi==1.17.1
     #   pynacl
 chardet==5.2.0
     # via tox
-charset-normalizer==3.4.1
+charset-normalizer==3.4.2
     # via
     #   -r /home/runner/work/portal-designer/portal-designer/requirements/base.txt
     #   requests
-click==8.1.8
+click==8.2.1
     # via
     #   -r /home/runner/work/portal-designer/portal-designer/requirements/base.txt
     #   click-log
@@ -56,15 +56,17 @@ click-log==0.4.0
     # via edx-lint
 code-annotations==2.3.0
     # via
+    #   -r /home/runner/work/portal-designer/portal-designer/requirements/base.txt
     #   -r requirements/test.in
     #   edx-lint
+    #   edx-toggles
 colorama==0.4.6
     # via tox
-coverage[toml]==7.8.0
+coverage[toml]==7.9.2
     # via
     #   -r requirements/test.in
     #   pytest-cov
-cryptography==44.0.2
+cryptography==45.0.5
     # via
     #   -r /home/runner/work/portal-designer/portal-designer/requirements/base.txt
     #   pyjwt
@@ -77,7 +79,7 @@ defusedxml==0.7.1
     #   willow
 dill==0.4.0
     # via pylint
-distlib==0.3.9
+distlib==0.4.0
     # via virtualenv
     # via
     #   -c /home/runner/work/portal-designer/portal-designer/requirements/common_constraints.txt
@@ -103,6 +105,7 @@ distlib==0.3.9
     #   edx-django-release-util
     #   edx-django-utils
     #   edx-drf-extensions
+    #   edx-toggles
     #   laces
     #   social-auth-app-django
     #   wagtail
@@ -112,6 +115,7 @@ django-crum==0.7.9
     # via
     #   -r /home/runner/work/portal-designer/portal-designer/requirements/base.txt
     #   edx-django-utils
+    #   edx-toggles
 django-dynamic-fixture==4.0.1
     # via -r requirements/test.in
 django-extensions==4.1
@@ -130,7 +134,7 @@ django-permissionedforms==0.1
     #   wagtail
 django-storages==1.14.6
     # via -r /home/runner/work/portal-designer/portal-designer/requirements/base.txt
-django-stubs-ext==5.2.0
+django-stubs-ext==5.2.2
     # via
     #   -r /home/runner/work/portal-designer/portal-designer/requirements/base.txt
     #   django-tasks
@@ -138,7 +142,7 @@ django-taggit==6.1.0
     # via
     #   -r /home/runner/work/portal-designer/portal-designer/requirements/base.txt
     #   wagtail
-django-tasks==0.6.1
+django-tasks==0.7.0
     # via
     #   -r /home/runner/work/portal-designer/portal-designer/requirements/base.txt
     #   wagtail
@@ -146,11 +150,12 @@ django-treebeard==4.7.1
     # via
     #   -r /home/runner/work/portal-designer/portal-designer/requirements/base.txt
     #   wagtail
-django-waffle==4.2.0
+django-waffle==5.0.0
     # via
     #   -r /home/runner/work/portal-designer/portal-designer/requirements/base.txt
     #   edx-django-utils
     #   edx-drf-extensions
+    #   edx-toggles
 djangorestframework==3.16.0
     # via
     #   -r /home/runner/work/portal-designer/portal-designer/requirements/base.txt
@@ -175,17 +180,19 @@ drf-yasg==1.21.10
     # via
     #   -r /home/runner/work/portal-designer/portal-designer/requirements/base.txt
     #   edx-api-doc-tools
-edx-api-doc-tools==2.0.0
+edx-api-doc-tools==2.1.0
     # via -r /home/runner/work/portal-designer/portal-designer/requirements/base.txt
-edx-auth-backends==4.5.0
+edx-auth-backends==4.6.0
     # via -r /home/runner/work/portal-designer/portal-designer/requirements/base.txt
 edx-django-release-util==1.5.0
     # via -r /home/runner/work/portal-designer/portal-designer/requirements/base.txt
-edx-django-utils==7.4.0
+edx-django-utils==8.0.0
     # via
     #   -r /home/runner/work/portal-designer/portal-designer/requirements/base.txt
+    #   edx-auth-backends
     #   edx-drf-extensions
     #   edx-rest-api-client
+    #   edx-toggles
 edx-drf-extensions==10.6.0
     # via -r /home/runner/work/portal-designer/portal-designer/requirements/base.txt
 edx-lint==5.6.0
@@ -198,13 +205,17 @@ edx-rest-api-client==4.0.1
     # via
     #   -c /home/runner/work/portal-designer/portal-designer/requirements/constraints.txt
     #   -r /home/runner/work/portal-designer/portal-designer/requirements/base.txt
+edx-toggles==5.3.0
+    # via
+    #   -r /home/runner/work/portal-designer/portal-designer/requirements/base.txt
+    #   edx-auth-backends
 et-xmlfile==2.0.0
     # via
     #   -r /home/runner/work/portal-designer/portal-designer/requirements/base.txt
     #   openpyxl
 factory-boy==3.3.3
     # via -r requirements/test.in
-faker==37.1.0
+faker==37.4.2
     # via
     #   -r requirements/test.in
     #   factory-boy
@@ -231,7 +242,9 @@ iniconfig==2.1.0
 isort==6.0.1
     # via pylint
 jinja2==3.1.6
-    # via code-annotations
+    # via
+    #   -r /home/runner/work/portal-designer/portal-designer/requirements/base.txt
+    #   code-annotations
 jmespath==1.0.1
     # via
     #   -r /home/runner/work/portal-designer/portal-designer/requirements/base.txt
@@ -242,7 +255,9 @@ laces==0.1.2
     #   -r /home/runner/work/portal-designer/portal-designer/requirements/base.txt
     #   wagtail
 markupsafe==3.0.2
-    # via jinja2
+    # via
+    #   -r /home/runner/work/portal-designer/portal-designer/requirements/base.txt
+    #   jinja2
 mccabe==0.7.0
     # via pylint
 mock==5.2.0
@@ -255,11 +270,7 @@ more-itertools==10.7.0
     #   inflect
 mysqlclient==2.2.7
     # via -r /home/runner/work/portal-designer/portal-designer/requirements/base.txt
-newrelic==10.10.0
-    # via
-    #   -r /home/runner/work/portal-designer/portal-designer/requirements/base.txt
-    #   edx-django-utils
-oauthlib==3.2.2
+oauthlib==3.3.1
     # via
     #   -r /home/runner/work/portal-designer/portal-designer/requirements/base.txt
     #   requests-oauthlib
@@ -279,23 +290,24 @@ pbr==6.1.1
     # via
     #   -r /home/runner/work/portal-designer/portal-designer/requirements/base.txt
     #   stevedore
-pillow==11.2.1
+pillow==11.3.0
     # via
     #   -r /home/runner/work/portal-designer/portal-designer/requirements/base.txt
     #   pillow-heif
     #   wagtail
-pillow-heif==0.21.0
+pillow-heif==1.0.0
     # via
     #   -r /home/runner/work/portal-designer/portal-designer/requirements/base.txt
     #   willow
-platformdirs==4.3.7
+platformdirs==4.3.8
     # via
     #   pylint
     #   tox
     #   virtualenv
-pluggy==1.5.0
+pluggy==1.6.0
     # via
     #   pytest
+    #   pytest-cov
     #   tox
 psutil==7.0.0
     # via
@@ -305,6 +317,8 @@ pycparser==2.22
     # via
     #   -r /home/runner/work/portal-designer/portal-designer/requirements/base.txt
     #   cffi
+pygments==2.19.2
+    # via pytest
 pyjwt[crypto]==2.10.1
     # via
     #   -r /home/runner/work/portal-designer/portal-designer/requirements/base.txt
@@ -313,7 +327,7 @@ pyjwt[crypto]==2.10.1
     #   edx-drf-extensions
     #   edx-rest-api-client
     #   social-auth-core
-pylint==3.3.6
+pylint==3.3.7
     # via
     #   edx-lint
     #   pylint-celery
@@ -323,11 +337,11 @@ pylint-celery==0.3
     # via edx-lint
 pylint-django==2.6.1
     # via edx-lint
-pylint-plugin-utils==0.8.2
+pylint-plugin-utils==0.9.0
     # via
     #   pylint-celery
     #   pylint-django
-pymongo==4.12.0
+pymongo==4.13.2
     # via
     #   -r /home/runner/work/portal-designer/portal-designer/requirements/base.txt
     #   edx-opaque-keys
@@ -335,14 +349,14 @@ pynacl==1.5.0
     # via
     #   -r /home/runner/work/portal-designer/portal-designer/requirements/base.txt
     #   edx-django-utils
-pyproject-api==1.9.0
+pyproject-api==1.9.1
     # via tox
-pytest==8.3.5
+pytest==8.4.1
     # via
     #   -r requirements/test.in
     #   pytest-cov
     #   pytest-django
-pytest-cov==6.1.1
+pytest-cov==6.2.1
     # via -r requirements/test.in
 pytest-django==4.11.1
     # via -r requirements/test.in
@@ -351,7 +365,9 @@ python-dateutil==2.9.0.post0
     #   -r /home/runner/work/portal-designer/portal-designer/requirements/base.txt
     #   botocore
 python-slugify==8.0.4
-    # via code-annotations
+    # via
+    #   -r /home/runner/work/portal-designer/portal-designer/requirements/base.txt
+    #   code-annotations
 python3-openid==3.2.0
     # via
     #   -r /home/runner/work/portal-designer/portal-designer/requirements/base.txt
@@ -366,7 +382,7 @@ pyyaml==6.0.2
     #   code-annotations
     #   drf-yasg
     #   edx-django-release-util
-requests==2.32.3
+requests==2.32.4
     # via
     #   -r /home/runner/work/portal-designer/portal-designer/requirements/base.txt
     #   edx-drf-extensions
@@ -379,7 +395,7 @@ requests-oauthlib==2.0.0
     # via
     #   -r /home/runner/work/portal-designer/portal-designer/requirements/base.txt
     #   social-auth-core
-s3transfer==0.12.0
+s3transfer==0.13.1
     # via
     #   -r /home/runner/work/portal-designer/portal-designer/requirements/base.txt
     #   boto3
@@ -402,7 +418,7 @@ social-auth-app-django==5.4.3
     # via
     #   -r /home/runner/work/portal-designer/portal-designer/requirements/base.txt
     #   edx-auth-backends
-social-auth-core==4.6.1
+social-auth-core==4.7.0
     # via
     #   -r /home/runner/work/portal-designer/portal-designer/requirements/base.txt
     #   edx-auth-backends
@@ -426,16 +442,18 @@ telepath==0.3.1
     #   -r /home/runner/work/portal-designer/portal-designer/requirements/base.txt
     #   wagtail
 text-unidecode==1.3
-    # via python-slugify
-tomlkit==0.13.2
+    # via
+    #   -r /home/runner/work/portal-designer/portal-designer/requirements/base.txt
+    #   python-slugify
+tomlkit==0.13.3
     # via pylint
-tox==4.25.0
+tox==4.28.0
     # via -r requirements/test.in
-typeguard==4.4.2
+typeguard==4.4.4
     # via
     #   -r /home/runner/work/portal-designer/portal-designer/requirements/base.txt
     #   inflect
-typing-extensions==4.13.2
+typing-extensions==4.14.1
     # via
     #   -r /home/runner/work/portal-designer/portal-designer/requirements/base.txt
     #   beautifulsoup4
@@ -445,7 +463,7 @@ typing-extensions==4.13.2
     #   typeguard
 tzdata==2025.2
     # via faker
-uritemplate==4.1.1
+uritemplate==4.2.0
     # via
     #   -r /home/runner/work/portal-designer/portal-designer/requirements/base.txt
     #   drf-yasg
@@ -456,15 +474,15 @@ urllib3==1.26.20
     #   -r /home/runner/work/portal-designer/portal-designer/requirements/base.txt
     #   botocore
     #   requests
-virtualenv==20.30.0
+virtualenv==20.32.0
     # via tox
-wagtail==6.4.1
+wagtail==7.0.1
     # via -r /home/runner/work/portal-designer/portal-designer/requirements/base.txt
-willow[heif]==1.10.0
+willow[heif]==1.11.0
     # via
     #   -r /home/runner/work/portal-designer/portal-designer/requirements/base.txt
     #   wagtail
-zipp==3.21.0
+zipp==3.23.0
     # via -r /home/runner/work/portal-designer/portal-designer/requirements/base.txt
 
 # The following packages are considered to be unsafe in a requirements file:
