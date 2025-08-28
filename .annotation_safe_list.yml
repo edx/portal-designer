@@ -55,6 +55,8 @@ wagtailcore.GroupCollectionPermission:
   ".. no_pii:": "This model has no PII"
 wagtailcore.GroupPagePermission:
   ".. no_pii:": "This model has no PII"
+wagtailcore.GroupSitePermission:
+  ".. no_pii:": "This model has no PII"
 wagtailcore.Page:
   ".. no_pii:": "This model has no PII"
 wagtailcore.PageRevision:
