@@ -9,3 +9,6 @@ DISABLE+=
     invalid-name,
     django-not-configured,
     consider-using-with,
+
+[EXCEPTIONS]
+overgeneral-exceptions = builtins.Exception
