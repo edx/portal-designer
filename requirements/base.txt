@@ -12,9 +12,9 @@ asgiref==3.9.1
     #   django-cors-headers
 beautifulsoup4==4.13.5
     # via wagtail
-boto3==1.40.17
+boto3==1.40.21
     # via -r requirements/base.in
-botocore==1.40.17
+botocore==1.40.21
     # via
     #   boto3
     #   s3transfer
@@ -32,7 +32,7 @@ click==8.2.1
     #   edx-django-utils
 code-annotations==2.3.0
     # via edx-toggles
-cryptography==45.0.6
+cryptography==45.0.7
     # via
     #   pyjwt
     #   social-auth-core
@@ -243,7 +243,7 @@ social-auth-core==4.7.0
     #   -r requirements/base.in
     #   edx-auth-backends
     #   social-auth-app-django
-soupsieve==2.7
+soupsieve==2.8
     # via beautifulsoup4
 sqlparse==0.5.3
     # via django
@@ -272,7 +272,7 @@ urllib3==1.26.20
     #   -c requirements/constraints.txt
     #   botocore
     #   requests
-wagtail==7.1
+wagtail==7.1.1
     # via -r requirements/base.in
 willow[heif]==1.11.0
     # via
