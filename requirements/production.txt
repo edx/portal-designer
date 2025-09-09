@@ -17,11 +17,11 @@ beautifulsoup4==4.13.5
     # via
     #   -r requirements/base.txt
     #   wagtail
-boto3==1.40.17
+boto3==1.40.26
     # via
     #   -r requirements/base.txt
     #   -r requirements/production.in
-botocore==1.40.17
+botocore==1.40.26
     # via
     #   -r requirements/base.txt
     #   boto3
@@ -30,7 +30,7 @@ certifi==2025.8.3
     # via
     #   -r requirements/base.txt
     #   requests
-cffi==1.17.1
+cffi==2.0.0
     # via
     #   -r requirements/base.txt
     #   cryptography
@@ -48,7 +48,7 @@ code-annotations==2.3.0
     # via
     #   -r requirements/base.txt
     #   edx-toggles
-cryptography==45.0.6
+cryptography==45.0.7
     # via
     #   -r requirements/base.txt
     #   pyjwt
@@ -59,7 +59,7 @@ defusedxml==0.7.1
     #   python3-openid
     #   social-auth-core
     #   willow
-django==4.2.23
+django==4.2.24
     # via
     #   -r requirements/base.txt
     #   django-cors-headers
@@ -86,7 +86,7 @@ django==4.2.23
     #   laces
     #   social-auth-app-django
     #   wagtail
-django-cors-headers==4.7.0
+django-cors-headers==4.8.0
     # via -r requirements/base.txt
 django-crum==0.7.9
     # via
@@ -139,7 +139,7 @@ djangorestframework==3.16.1
     #   edx-api-doc-tools
     #   edx-drf-extensions
     #   wagtail
-dnspython==2.7.0
+dnspython==2.8.0
     # via
     #   -r requirements/base.txt
     #   pymongo
@@ -188,7 +188,7 @@ filetype==1.2.0
     # via
     #   -r requirements/base.txt
     #   willow
-gevent==25.5.1
+gevent==25.8.2
     # via -r requirements/production.in
 greenlet==3.2.4
     # via gevent
@@ -223,7 +223,7 @@ markupsafe==3.0.2
     #   jinja2
 mock==5.2.0
     # via -r requirements/base.txt
-more-itertools==10.7.0
+more-itertools==10.8.0
     # via
     #   -r requirements/base.txt
     #   inflect
@@ -256,7 +256,7 @@ psutil==7.0.0
     # via
     #   -r requirements/base.txt
     #   edx-django-utils
-pycparser==2.22
+pycparser==2.23
     # via
     #   -r requirements/base.txt
     #   cffi
@@ -343,7 +343,7 @@ social-auth-core==4.7.0
     #   -r requirements/base.txt
     #   edx-auth-backends
     #   social-auth-app-django
-soupsieve==2.7
+soupsieve==2.8
     # via
     #   -r requirements/base.txt
     #   beautifulsoup4
@@ -386,7 +386,7 @@ urllib3==1.26.20
     #   -r requirements/base.txt
     #   botocore
     #   requests
-wagtail==7.1
+wagtail==7.1.1
     # via -r requirements/base.txt
 willow[heif]==1.11.0
     # via
