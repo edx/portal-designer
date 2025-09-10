@@ -12,15 +12,15 @@ asgiref==3.9.1
     #   django-cors-headers
 beautifulsoup4==4.13.5
     # via wagtail
-boto3==1.40.17
+boto3==1.40.26
     # via -r requirements/base.in
-botocore==1.40.17
+botocore==1.40.26
     # via
     #   boto3
     #   s3transfer
 certifi==2025.8.3
     # via requests
-cffi==1.17.1
+cffi==2.0.0
     # via
     #   cryptography
     #   pynacl
@@ -32,7 +32,7 @@ click==8.2.1
     #   edx-django-utils
 code-annotations==2.3.0
     # via edx-toggles
-cryptography==45.0.6
+cryptography==45.0.7
     # via
     #   pyjwt
     #   social-auth-core
@@ -41,7 +41,7 @@ defusedxml==0.7.1
     #   python3-openid
     #   social-auth-core
     #   willow
-django==4.2.23
+django==4.2.24
     # via
     #   -c requirements/common_constraints.txt
     #   -c requirements/constraints.txt
@@ -70,7 +70,7 @@ django==4.2.23
     #   laces
     #   social-auth-app-django
     #   wagtail
-django-cors-headers==4.7.0
+django-cors-headers==4.8.0
     # via -r requirements/base.in
 django-crum==0.7.9
     # via
@@ -108,7 +108,7 @@ djangorestframework==3.16.1
     #   edx-api-doc-tools
     #   edx-drf-extensions
     #   wagtail
-dnspython==2.7.0
+dnspython==2.8.0
     # via pymongo
 draftjs-exporter==5.1.0
     # via wagtail
@@ -163,7 +163,7 @@ markupsafe==3.0.2
     # via jinja2
 mock==5.2.0
     # via -r requirements/base.in
-more-itertools==10.7.0
+more-itertools==10.8.0
     # via inflect
 mysqlclient==2.2.7
     # via -r requirements/base.in
@@ -183,7 +183,7 @@ pillow-heif==1.1.0
     # via willow
 psutil==7.0.0
     # via edx-django-utils
-pycparser==2.22
+pycparser==2.23
     # via cffi
 pyjwt[crypto]==2.10.1
     # via
@@ -243,7 +243,7 @@ social-auth-core==4.7.0
     #   -r requirements/base.in
     #   edx-auth-backends
     #   social-auth-app-django
-soupsieve==2.7
+soupsieve==2.8
     # via beautifulsoup4
 sqlparse==0.5.3
     # via django
@@ -272,7 +272,7 @@ urllib3==1.26.20
     #   -c requirements/constraints.txt
     #   botocore
     #   requests
-wagtail==7.1
+wagtail==7.1.1
     # via -r requirements/base.in
 willow[heif]==1.11.0
     # via
