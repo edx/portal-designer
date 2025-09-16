@@ -22,9 +22,9 @@ beautifulsoup4==4.13.5
     # via
     #   -r requirements/quality.txt
     #   wagtail
-boto3==1.40.26
+boto3==1.40.31
     # via -r requirements/quality.txt
-botocore==1.40.26
+botocore==1.40.31
     # via
     #   -r requirements/quality.txt
     #   boto3
@@ -154,7 +154,7 @@ django-permissionedforms==0.1
     #   wagtail
 django-storages==1.14.6
     # via -r requirements/quality.txt
-django-stubs-ext==5.2.2
+django-stubs-ext==5.2.5
     # via
     #   -r requirements/quality.txt
     #   django-tasks
@@ -237,7 +237,7 @@ et-xmlfile==2.0.0
     #   openpyxl
 factory-boy==3.3.3
     # via -r requirements/quality.txt
-faker==37.6.0
+faker==37.8.0
     # via
     #   -r requirements/quality.txt
     #   factory-boy
@@ -391,11 +391,11 @@ pylint-plugin-utils==0.9.0
     #   -r requirements/quality.txt
     #   pylint-celery
     #   pylint-django
-pymongo==4.14.1
+pymongo==4.15.0
     # via
     #   -r requirements/quality.txt
     #   edx-opaque-keys
-pynacl==1.5.0
+pynacl==1.6.0
     # via
     #   -r requirements/quality.txt
     #   edx-django-utils
@@ -448,7 +448,7 @@ requests-oauthlib==2.0.0
     # via
     #   -r requirements/quality.txt
     #   social-auth-core
-s3transfer==0.13.1
+s3transfer==0.14.0
     # via
     #   -r requirements/quality.txt
     #   boto3
