@@ -12,7 +12,7 @@ anyascii==0.3.3
     # via
     #   -r requirements/test.txt
     #   wagtail
-asgiref==3.9.1
+asgiref==3.9.2
     # via
     #   -r requirements/test.txt
     #   django
@@ -31,9 +31,9 @@ beautifulsoup4==4.13.5
     #   -r requirements/test.txt
     #   pydata-sphinx-theme
     #   wagtail
-boto3==1.40.26
+boto3==1.40.36
     # via -r requirements/test.txt
-botocore==1.40.26
+botocore==1.40.36
     # via
     #   -r requirements/test.txt
     #   boto3
@@ -59,7 +59,7 @@ charset-normalizer==3.4.3
     # via
     #   -r requirements/test.txt
     #   requests
-click==8.2.1
+click==8.3.0
     # via
     #   -r requirements/test.txt
     #   click-log
@@ -79,11 +79,11 @@ colorama==0.4.6
     # via
     #   -r requirements/test.txt
     #   tox
-coverage[toml]==7.10.6
+coverage[toml]==7.10.7
     # via
     #   -r requirements/test.txt
     #   pytest-cov
-cryptography==45.0.7
+cryptography==46.0.1
     # via
     #   -r requirements/test.txt
     #   pyjwt
@@ -129,7 +129,7 @@ django==4.2.24
     #   laces
     #   social-auth-app-django
     #   wagtail
-django-cors-headers==4.8.0
+django-cors-headers==4.9.0
     # via -r requirements/test.txt
 django-crum==0.7.9
     # via
@@ -154,7 +154,7 @@ django-permissionedforms==0.1
     #   wagtail
 django-storages==1.14.6
     # via -r requirements/test.txt
-django-stubs-ext==5.2.2
+django-stubs-ext==5.2.5
     # via
     #   -r requirements/test.txt
     #   django-tasks
@@ -242,7 +242,7 @@ et-xmlfile==2.0.0
     #   openpyxl
 factory-boy==3.3.3
     # via -r requirements/test.txt
-faker==37.6.0
+faker==37.8.0
     # via
     #   -r requirements/test.txt
     #   factory-boy
@@ -346,7 +346,7 @@ pluggy==1.6.0
     #   pytest
     #   pytest-cov
     #   tox
-psutil==7.0.0
+psutil==7.1.0
     # via
     #   -r requirements/test.txt
     #   edx-django-utils
@@ -393,11 +393,11 @@ pylint-plugin-utils==0.9.0
     #   -r requirements/test.txt
     #   pylint-celery
     #   pylint-django
-pymongo==4.14.1
+pymongo==4.15.1
     # via
     #   -r requirements/test.txt
     #   edx-opaque-keys
-pynacl==1.5.0
+pynacl==1.6.0
     # via
     #   -r requirements/test.txt
     #   edx-django-utils
@@ -456,7 +456,7 @@ restructuredtext-lint==1.4.0
     # via doc8
 roman-numerals-py==3.1.0
     # via sphinx
-s3transfer==0.13.1
+s3transfer==0.14.0
     # via
     #   -r requirements/test.txt
     #   boto3

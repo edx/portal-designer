@@ -6,15 +6,15 @@
 #
 anyascii==0.3.3
     # via wagtail
-asgiref==3.9.1
+asgiref==3.9.2
     # via
     #   django
     #   django-cors-headers
 beautifulsoup4==4.13.5
     # via wagtail
-boto3==1.40.26
+boto3==1.40.36
     # via -r requirements/base.in
-botocore==1.40.26
+botocore==1.40.36
     # via
     #   boto3
     #   s3transfer
@@ -26,13 +26,13 @@ cffi==2.0.0
     #   pynacl
 charset-normalizer==3.4.3
     # via requests
-click==8.2.1
+click==8.3.0
     # via
     #   code-annotations
     #   edx-django-utils
 code-annotations==2.3.0
     # via edx-toggles
-cryptography==45.0.7
+cryptography==46.0.1
     # via
     #   pyjwt
     #   social-auth-core
@@ -70,7 +70,7 @@ django==4.2.24
     #   laces
     #   social-auth-app-django
     #   wagtail
-django-cors-headers==4.8.0
+django-cors-headers==4.9.0
     # via -r requirements/base.in
 django-crum==0.7.9
     # via
@@ -86,7 +86,7 @@ django-permissionedforms==0.1
     # via wagtail
 django-storages==1.14.6
     # via -r requirements/base.in
-django-stubs-ext==5.2.2
+django-stubs-ext==5.2.5
     # via django-tasks
 django-taggit==6.1.0
     # via wagtail
@@ -181,7 +181,7 @@ pillow==11.3.0
     #   wagtail
 pillow-heif==1.1.0
     # via willow
-psutil==7.0.0
+psutil==7.1.0
     # via edx-django-utils
 pycparser==2.23
     # via cffi
@@ -192,9 +192,9 @@ pyjwt[crypto]==2.10.1
     #   edx-drf-extensions
     #   edx-rest-api-client
     #   social-auth-core
-pymongo==4.14.1
+pymongo==4.15.1
     # via edx-opaque-keys
-pynacl==1.5.0
+pynacl==1.6.0
     # via edx-django-utils
 python-dateutil==2.9.0.post0
     # via
@@ -223,7 +223,7 @@ requests==2.32.5
     #   wagtail
 requests-oauthlib==2.0.0
     # via social-auth-core
-s3transfer==0.13.1
+s3transfer==0.14.0
     # via boto3
 semantic-version==2.10.0
     # via edx-drf-extensions

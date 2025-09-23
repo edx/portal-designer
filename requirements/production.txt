@@ -8,7 +8,7 @@ anyascii==0.3.3
     # via
     #   -r requirements/base.txt
     #   wagtail
-asgiref==3.9.1
+asgiref==3.9.2
     # via
     #   -r requirements/base.txt
     #   django
@@ -17,11 +17,11 @@ beautifulsoup4==4.13.5
     # via
     #   -r requirements/base.txt
     #   wagtail
-boto3==1.40.26
+boto3==1.40.36
     # via
     #   -r requirements/base.txt
     #   -r requirements/production.in
-botocore==1.40.26
+botocore==1.40.36
     # via
     #   -r requirements/base.txt
     #   boto3
@@ -39,7 +39,7 @@ charset-normalizer==3.4.3
     # via
     #   -r requirements/base.txt
     #   requests
-click==8.2.1
+click==8.3.0
     # via
     #   -r requirements/base.txt
     #   code-annotations
@@ -48,7 +48,7 @@ code-annotations==2.3.0
     # via
     #   -r requirements/base.txt
     #   edx-toggles
-cryptography==45.0.7
+cryptography==46.0.1
     # via
     #   -r requirements/base.txt
     #   pyjwt
@@ -86,7 +86,7 @@ django==4.2.24
     #   laces
     #   social-auth-app-django
     #   wagtail
-django-cors-headers==4.8.0
+django-cors-headers==4.9.0
     # via -r requirements/base.txt
 django-crum==0.7.9
     # via
@@ -109,7 +109,7 @@ django-permissionedforms==0.1
     #   wagtail
 django-storages==1.14.6
     # via -r requirements/base.txt
-django-stubs-ext==5.2.2
+django-stubs-ext==5.2.5
     # via
     #   -r requirements/base.txt
     #   django-tasks
@@ -188,7 +188,7 @@ filetype==1.2.0
     # via
     #   -r requirements/base.txt
     #   willow
-gevent==25.8.2
+gevent==25.9.1
     # via -r requirements/production.in
 greenlet==3.2.4
     # via gevent
@@ -252,7 +252,7 @@ pillow-heif==1.1.0
     # via
     #   -r requirements/base.txt
     #   willow
-psutil==7.0.0
+psutil==7.1.0
     # via
     #   -r requirements/base.txt
     #   edx-django-utils
@@ -270,11 +270,11 @@ pyjwt[crypto]==2.10.1
     #   social-auth-core
 pymemcache==4.0.0
     # via -r requirements/production.in
-pymongo==4.14.1
+pymongo==4.15.1
     # via
     #   -r requirements/base.txt
     #   edx-opaque-keys
-pynacl==1.5.0
+pynacl==1.6.0
     # via
     #   -r requirements/base.txt
     #   edx-django-utils
@@ -316,7 +316,7 @@ requests-oauthlib==2.0.0
     # via
     #   -r requirements/base.txt
     #   social-auth-core
-s3transfer==0.13.1
+s3transfer==0.14.0
     # via
     #   -r requirements/base.txt
     #   boto3
@@ -394,9 +394,9 @@ willow[heif]==1.11.0
     #   wagtail
 zipp==3.23.0
     # via -r requirements/base.txt
-zope-event==5.1.1
+zope-event==6.0
     # via gevent
-zope-interface==7.2
+zope-interface==8.0
     # via gevent
 
 # The following packages are considered to be unsafe in a requirements file:
