@@ -10,11 +10,11 @@ asgiref==3.9.2
     # via
     #   django
     #   django-cors-headers
-beautifulsoup4==4.13.5
+beautifulsoup4==4.14.2
     # via wagtail
-boto3==1.40.36
+boto3==1.40.41
     # via -r requirements/base.in
-botocore==1.40.36
+botocore==1.40.41
     # via
     #   boto3
     #   s3transfer
@@ -114,17 +114,17 @@ draftjs-exporter==5.1.0
     # via wagtail
 drf-jwt==1.19.2
     # via edx-drf-extensions
-drf-yasg==1.21.10
+drf-yasg==1.21.11
     # via
     #   -r requirements/base.in
     #   edx-api-doc-tools
 edx-api-doc-tools==2.1.0
     # via -r requirements/base.in
-edx-auth-backends==4.6.0
+edx-auth-backends==4.6.1
     # via -r requirements/base.in
 edx-django-release-util==1.5.0
     # via -r requirements/base.in
-edx-django-utils==8.0.0
+edx-django-utils==8.0.1
     # via
     #   -r requirements/base.in
     #   edx-auth-backends
@@ -159,7 +159,7 @@ jmespath==1.0.1
     #   botocore
 laces==0.1.2
     # via wagtail
-markupsafe==3.0.2
+markupsafe==3.0.3
     # via jinja2
 mock==5.2.0
     # via -r requirements/base.in
@@ -208,7 +208,7 @@ pytz==2025.2
     # via
     #   -r requirements/base.in
     #   drf-yasg
-pyyaml==6.0.2
+pyyaml==6.0.3
     # via
     #   code-annotations
     #   drf-yasg

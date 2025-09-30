@@ -18,13 +18,13 @@ astroid==3.3.11
     #   -r requirements/test.txt
     #   pylint
     #   pylint-celery
-beautifulsoup4==4.13.5
+beautifulsoup4==4.14.2
     # via
     #   -r requirements/test.txt
     #   wagtail
-boto3==1.40.36
+boto3==1.40.41
     # via -r requirements/test.txt
-botocore==1.40.36
+botocore==1.40.41
     # via
     #   -r requirements/test.txt
     #   boto3
@@ -187,17 +187,17 @@ drf-jwt==1.19.2
     # via
     #   -r requirements/test.txt
     #   edx-drf-extensions
-drf-yasg==1.21.10
+drf-yasg==1.21.11
     # via
     #   -r requirements/test.txt
     #   edx-api-doc-tools
 edx-api-doc-tools==2.1.0
     # via -r requirements/test.txt
-edx-auth-backends==4.6.0
+edx-auth-backends==4.6.1
     # via -r requirements/test.txt
 edx-django-release-util==1.5.0
     # via -r requirements/test.txt
-edx-django-utils==8.0.0
+edx-django-utils==8.0.1
     # via
     #   -r requirements/test.txt
     #   edx-auth-backends
@@ -271,7 +271,7 @@ laces==0.1.2
     # via
     #   -r requirements/test.txt
     #   wagtail
-markupsafe==3.0.2
+markupsafe==3.0.3
     # via
     #   -r requirements/test.txt
     #   jinja2
@@ -405,7 +405,7 @@ pytz==2025.2
     # via
     #   -r requirements/test.txt
     #   drf-yasg
-pyyaml==6.0.2
+pyyaml==6.0.3
     # via
     #   -r requirements/test.txt
     #   code-annotations
