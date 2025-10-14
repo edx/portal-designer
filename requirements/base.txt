@@ -6,25 +6,25 @@
 #
 anyascii==0.3.3
     # via wagtail
-asgiref==3.9.2
+asgiref==3.10.0
     # via
     #   django
     #   django-cors-headers
-beautifulsoup4==4.13.5
+beautifulsoup4==4.14.2
     # via wagtail
-boto3==1.40.36
+boto3==1.40.51
     # via -r requirements/base.in
-botocore==1.40.36
+botocore==1.40.51
     # via
     #   boto3
     #   s3transfer
-certifi==2025.8.3
+certifi==2025.10.5
     # via requests
 cffi==2.0.0
     # via
     #   cryptography
     #   pynacl
-charset-normalizer==3.4.3
+charset-normalizer==3.4.4
     # via requests
 click==8.3.0
     # via
@@ -32,16 +32,14 @@ click==8.3.0
     #   edx-django-utils
 code-annotations==2.3.0
     # via edx-toggles
-cryptography==46.0.1
-    # via
-    #   pyjwt
-    #   social-auth-core
+cryptography==46.0.2
+    # via pyjwt
 defusedxml==0.7.1
     # via
     #   python3-openid
     #   social-auth-core
     #   willow
-django==4.2.24
+django==4.2.25
     # via
     #   -c requirements/common_constraints.txt
     #   -c requirements/constraints.txt
@@ -86,7 +84,7 @@ django-permissionedforms==0.1
     # via wagtail
 django-storages==1.14.6
     # via -r requirements/base.in
-django-stubs-ext==5.2.5
+django-stubs-ext==5.2.7
     # via django-tasks
 django-taggit==6.1.0
     # via wagtail
@@ -114,17 +112,17 @@ draftjs-exporter==5.1.0
     # via wagtail
 drf-jwt==1.19.2
     # via edx-drf-extensions
-drf-yasg==1.21.10
+drf-yasg==1.21.11
     # via
     #   -r requirements/base.in
     #   edx-api-doc-tools
 edx-api-doc-tools==2.1.0
     # via -r requirements/base.in
-edx-auth-backends==4.6.0
+edx-auth-backends==4.6.1
     # via -r requirements/base.in
 edx-django-release-util==1.5.0
     # via -r requirements/base.in
-edx-django-utils==8.0.0
+edx-django-utils==8.0.1
     # via
     #   -r requirements/base.in
     #   edx-auth-backends
@@ -145,7 +143,7 @@ et-xmlfile==2.0.0
     # via openpyxl
 filetype==1.2.0
     # via willow
-idna==3.10
+idna==3.11
     # via requests
 inflect==7.5.0
     # via -r requirements/base.in
@@ -159,7 +157,7 @@ jmespath==1.0.1
     #   botocore
 laces==0.1.2
     # via wagtail
-markupsafe==3.0.2
+markupsafe==3.0.3
     # via jinja2
 mock==5.2.0
     # via -r requirements/base.in
@@ -179,7 +177,7 @@ pillow==11.3.0
     # via
     #   pillow-heif
     #   wagtail
-pillow-heif==1.1.0
+pillow-heif==1.1.1
     # via willow
 psutil==7.1.0
     # via edx-django-utils
@@ -192,7 +190,7 @@ pyjwt[crypto]==2.10.1
     #   edx-drf-extensions
     #   edx-rest-api-client
     #   social-auth-core
-pymongo==4.15.1
+pymongo==4.15.3
     # via edx-opaque-keys
 pynacl==1.6.0
     # via edx-django-utils
@@ -208,7 +206,7 @@ pytz==2025.2
     # via
     #   -r requirements/base.in
     #   drf-yasg
-pyyaml==6.0.2
+pyyaml==6.0.3
     # via
     #   code-annotations
     #   drf-yasg
@@ -238,7 +236,7 @@ social-auth-app-django==5.4.3
     # via
     #   -r requirements/base.in
     #   edx-auth-backends
-social-auth-core==4.7.0
+social-auth-core==4.8.1
     # via
     #   -r requirements/base.in
     #   edx-auth-backends
