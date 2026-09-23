@@ -10,8 +10,8 @@
 | designer/apps/api/tests/\_\_init\_\_.py                                        |        0 |        0 |        0 |        0 |    100% |           |
 | designer/apps/api/urls.py                                                      |        3 |        0 |        0 |        0 |    100% |           |
 | designer/apps/api/v1/\_\_init\_\_.py                                           |        0 |        0 |        0 |        0 |    100% |           |
-| designer/apps/api/v1/serializers.py                                            |       59 |        2 |       18 |        4 |     92% |53->57, 57->61, 62, 138 |
-| designer/apps/api/v1/test\_pages\_api.py                                       |      105 |        1 |       42 |        4 |     97% |75->79, 79->83, 84, 108->100 |
+| designer/apps/api/v1/serializers.py                                            |       59 |        2 |       18 |        4 |     92% |53-\>57, 57-\>61, 62, 138 |
+| designer/apps/api/v1/test\_pages\_api.py                                       |      105 |        1 |       42 |        4 |     97% |75-\>79, 79-\>83, 84, 108-\>100 |
 | designer/apps/api/v1/tests/\_\_init\_\_.py                                     |        0 |        0 |        0 |        0 |    100% |           |
 | designer/apps/api/v1/urls.py                                                   |        3 |        0 |        0 |        0 |    100% |           |
 | designer/apps/api/v1/views.py                                                  |       78 |       29 |       16 |        2 |     61% |38-39, 42, 47-50, 71-76, 129-153, 158-161 |
@@ -69,11 +69,11 @@
 | designer/apps/pages/migrations/\_\_init\_\_.py                                 |        0 |        0 |        0 |        0 |    100% |           |
 | designer/apps/pages/models.py                                                  |       64 |        0 |        2 |        0 |    100% |           |
 | designer/apps/pages/tests/\_\_init\_\_.py                                      |        0 |        0 |        0 |        0 |    100% |           |
-| designer/apps/pages/tests/test\_create\_pages.py                               |      117 |       10 |       22 |        4 |     87% |140->145, 152->154, 162-172, 176-177, 186->188, 199 |
+| designer/apps/pages/tests/test\_create\_pages.py                               |      117 |       10 |       22 |        4 |     87% |140-\>145, 152-\>154, 162-172, 176-177, 186-\>188, 199 |
 | designer/apps/pages/tests/utils.py                                             |       63 |        0 |       10 |        0 |    100% |           |
 | designer/apps/pages/utils.py                                                   |        5 |        0 |        4 |        0 |    100% |           |
 | designer/docker\_gunicorn\_configuration.py                                    |       22 |       22 |        8 |        0 |      0% |      4-74 |
-| designer/rich\_text.py                                                         |       11 |        1 |        4 |        2 |     80% |17, 19->22 |
+| designer/rich\_text.py                                                         |       11 |        1 |        4 |        2 |     80% |17, 19-\>22 |
 | designer/settings/\_\_init\_\_.py                                              |        0 |        0 |        0 |        0 |    100% |           |
 | designer/settings/base.py                                                      |       69 |        0 |        0 |        0 |    100% |           |
 | designer/settings/devstack.py                                                  |       16 |       16 |        0 |        0 |      0% |      1-40 |
@@ -82,7 +82,7 @@
 | designer/settings/test.py                                                      |        3 |        0 |        0 |        0 |    100% |           |
 | designer/settings/utils.py                                                     |       23 |        7 |        4 |        2 |     67% |11-15, 35, 111 |
 | designer/urls.py                                                               |       19 |        0 |        0 |        0 |    100% |           |
-|                                                                      **TOTAL** | **1208** |  **160** |  **162** |   **21** | **84%** |           |
+| **TOTAL**                                                                      | **1208** |  **160** |  **162** |   **21** | **84%** |           |
 
 
 ## Setup coverage badge
