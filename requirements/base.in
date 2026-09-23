@@ -17,6 +17,7 @@ edx-django-utils
 edx-drf-extensions
 edx_rest_api_client
 mysqlclient
+openedx-atlas             # pulls translations from edx/openedx-translations at build time (make pull_translations)
 pytz
 python-dateutil
 social-auth-app-django

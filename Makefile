@@ -3,7 +3,7 @@
 TOX = ''
 
 .PHONY: clean compile_translations dummy_translations extract_translations fake_translations help html_coverage \
-	migrate pull_translations push_translations quality pii_check requirements test update_translations validate \
+	migrate pull_translations quality pii_check requirements test update_translations validate \
 	dev_requirements test_requirements quality_requirements doc_requirements prod_requirements check_keywords
 
 help:
@@ -21,8 +21,7 @@ help:
 	@echo "  quality_requirements       install requirements for quality"
 	@echo "  doc_requirements           install requirements for documentation"
 	@echo "  prod_requirements          install requirements for production"
-	@echo "  pull_translations          pull translations from Transifex"
-	@echo "  push_translations          push source translation files (.po) from Transifex"
+	@echo "  pull_translations          pull translations from edx/openedx-translations via atlas"
 	@echo "  quality                    run Pycodestyle and Pylint"
 	@echo "  pii_check                  check for PII annotations on all Django models"
 	@echo "  requirements               install requirements for local development"
@@ -122,11 +121,10 @@ compile_translations:
 
 fake_translations: extract_translations dummy_translations compile_translations
 
-pull_translations: ## pull translations from Transifex
-	tx pull -t -af --mode reviewed
-
-push_translations:
-	tx push -s
+pull_translations: ## pull translations from edx/openedx-translations via atlas (OEP-58)
+	find designer/conf/locale -mindepth 1 -maxdepth 1 -type d -exec rm -r {} \;
+	atlas pull $(ATLAS_OPTIONS) translations/portal-designer/designer/conf/locale:designer/conf/locale
+	python manage.py compilemessages
 
 detect_changed_source_translations:
 	cd designer && i18n_tool changed
