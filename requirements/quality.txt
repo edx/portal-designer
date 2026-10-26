@@ -33,7 +33,7 @@ cachetools==6.2.0
     # via
     #   -r requirements/test.txt
     #   tox
-certifi==2025.8.3
+certifi==2026.10.19
     # via
     #   -r requirements/test.txt
     #   requests
